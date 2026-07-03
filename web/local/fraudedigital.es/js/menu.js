@@ -45,13 +45,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 <!-- Enlaces -->
                 <ul class="nav-list" style="display: flex; align-items: center; gap: 0.5rem 1.5rem; list-style: none; padding: 0; margin: 0; flex-wrap: wrap;">
-                    ${links.map(l => `
+                    ${links.map(l => {
+                        const isLegal = l.key === 'legal';
+                        const style = isLegal
+                            ? "text-decoration:none; color:#ffffff; font-weight:700; font-size:0.85rem; background:#dc2626; padding:6px 16px; border-radius:20px; transition: background 0.2s; display: flex; align-items: center; gap: 6px;"
+                            : "text-decoration:none; color:#334155; font-weight:600; font-size:0.95rem; transition: color 0.2s; display: flex; align-items: center; gap: 6px;";
+                        return `
                         <li>
-                            <a href="${l.href}" class="menu-link" data-page="${l.key}" style="text-decoration:none; color:#334155; font-weight:600; font-size:0.95rem; transition: color 0.2s; display: flex; align-items: center; gap: 6px;">
+                            <a href="${l.href}" class="menu-link${isLegal ? ' menu-link-cta' : ''}" data-page="${l.key}" style="${style}">
                                 ${l.label}
                             </a>
                         </li>
-                    `).join('')}
+                    `;
+                    }).join('')}
                 </ul>
             </div>
         </nav>
@@ -106,14 +112,21 @@ document.addEventListener("DOMContentLoaded", function() {
         else if (cleanHref === 'sobre-mi.html' && currentPath.includes('sobre-mi')) isActive = true;
         else if (cleanHref === 'legal/aviso-legal.html' && currentPath.includes('/legal/')) isActive = true;
 
-        if (isActive) {
+        if (isActive && link.dataset.page !== 'legal') {
             link.style.color = '#dc2626';
+            link.setAttribute('data-active', 'true');
+        } else if (isActive) {
             link.setAttribute('data-active', 'true');
         }
     });
 
     // Hover
     menuContainer.querySelectorAll('.menu-link').forEach(link => {
+        if (link.dataset.page === 'legal') {
+            link.addEventListener('mouseover', function() { this.style.background = '#b91c1c'; });
+            link.addEventListener('mouseout', function() { this.style.background = '#dc2626'; });
+            return;
+        }
         link.addEventListener('mouseover', function() {
             if (this.getAttribute('data-active') !== 'true') this.style.color = '#dc2626';
         });

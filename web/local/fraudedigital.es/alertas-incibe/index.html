@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0">
 <title>Alertas INCIBE · Últimas amenazas detectadas · FraudeDigital.es</title>
-<meta name="description" content="Últimas alertas y avisos de seguridad publicados por INCIBE-CERT: vulnerabilidades, boletines técnicos y campañas de fraude activas en España.">
-<meta name="keywords" content="alertas incibe, avisos seguridad incibe, vulnerabilidades cve, boletin incibe cert, ciberseguridad españa">
+<meta name="description" content="Últimas alertas de fraude publicadas por INCIBE: phishing, smishing, suplantaciones y filtraciones de datos. Qué está pasando y qué hacer si te ha afectado.">
+<meta name="keywords" content="alertas incibe, avisos seguridad incibe, phishing españa, smishing, ciberseguridad ciudadanos">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://fraudedigital.es/alertas-incibe/">
 
 <meta property="og:title" content="Alertas INCIBE · FraudeDigital.es">
-<meta property="og:description" content="Últimas alertas y avisos de seguridad publicados por INCIBE-CERT, actualizados automáticamente.">
+<meta property="og:description" content="Últimas alertas de fraude publicadas por INCIBE, actualizadas automáticamente. Qué está pasando y qué hacer.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://fraudedigital.es/alertas-incibe/">
 <meta property="og:image" content="https://fraudedigital.es/img/og-amenazas.png">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Alertas INCIBE · FraudeDigital.es">
-<meta name="twitter:description" content="Últimas alertas y avisos de seguridad publicados por INCIBE-CERT.">
+<meta name="twitter:description" content="Últimas alertas de fraude publicadas por INCIBE, actualizadas automáticamente.">
 <meta name="twitter:image" content="https://fraudedigital.es/img/og-amenazas.png">
 
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -40,7 +40,7 @@
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "Alertas INCIBE",
-  "description": "Últimas alertas y avisos de seguridad publicados por INCIBE-CERT.",
+  "description": "Últimas alertas de fraude publicadas por INCIBE.",
   "url": "https://fraudedigital.es/alertas-incibe/",
   "inLanguage": "es-ES"
 }
@@ -92,23 +92,15 @@
   .ai-list {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 20px;
   }
 
   .ai-card {
     background: #fff;
     border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    padding: 20px 24px;
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    transition: all 0.2s ease;
-  }
-  .ai-card:hover {
-    border-color: #dc2626;
-    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
-    transform: translateY(-1px);
+    border-radius: 10px;
+    padding: 26px 28px;
+    scroll-margin-top: 90px;
   }
 
   .ai-card-header {
@@ -116,18 +108,7 @@
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
-    margin-bottom: 8px;
-  }
-
-  .ai-badge {
-    font-family: 'Courier New', monospace;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    padding: 3px 9px;
-    border-radius: 3px;
-    color: #fff;
+    margin-bottom: 12px;
   }
   .ai-fecha {
     font-family: 'Courier New', monospace;
@@ -140,27 +121,79 @@
     font-weight: 700;
     color: #b91c1c;
     background: #fef2f2;
-    padding: 2px 8px;
+    padding: 3px 9px;
     border-radius: 3px;
   }
 
   .ai-card h2 {
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 800;
     color: #0f172a;
-    margin: 0 0 8px;
-    line-height: 1.35;
+    margin: 0 0 16px;
+    line-height: 1.3;
   }
-  .ai-card .resumen {
-    font-size: 14px;
-    color: #475569;
-    line-height: 1.55;
-    margin: 0 0 10px;
+
+  .ai-section {
+    margin-bottom: 16px;
   }
-  .ai-card .cta {
-    font-size: 12.5px;
+  .ai-section-label {
+    font-family: 'Courier New', monospace;
+    font-size: 10.5px;
     font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     color: #dc2626;
+    margin-bottom: 6px;
+  }
+  .ai-section p {
+    font-size: 14px;
+    color: #334155;
+    line-height: 1.6;
+    margin: 0;
+  }
+  .ai-section ul {
+    margin: 4px 0 0;
+    padding-left: 20px;
+  }
+  .ai-section li {
+    font-size: 14px;
+    color: #334155;
+    line-height: 1.65;
+    margin-bottom: 6px;
+  }
+
+  .ai-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+  .ai-tag {
+    font-family: 'Courier New', monospace;
+    font-size: 10.5px;
+    background: #f1f5f9;
+    color: #475569;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.02em;
+  }
+
+  /* Botón CTA: rectángulo redondeado, color sólido, letra blanca */
+  .ai-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #dc2626;
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    transition: background 0.15s ease;
+  }
+  .ai-cta:hover {
+    background: #b91c1c;
   }
 
   .ai-empty {
@@ -183,7 +216,7 @@
   @media (max-width: 768px) {
     .ai-wrapper { padding: 20px 16px 30px; }
     .ai-intro { padding: 18px 20px; }
-    .ai-card { padding: 16px 18px; }
+    .ai-card { padding: 20px 18px; }
   }
 </style>
 </head>
@@ -196,7 +229,7 @@
   <div class="accent-bar"></div>
 
   <div class="ds-meta">
-    <span><span class="dot"></span>FraudeDigital // fuente: INCIBE-CERT</span>
+    <span><span class="dot"></span>FraudeDigital // fuente: INCIBE Ciudadanía</span>
     <span>estado: <strong>actualización automática</strong></span>
   </div>
 
@@ -204,7 +237,7 @@
 
     <div class="ai-intro">
       <h1>Alertas INCIBE</h1>
-      <p>Últimos avisos de seguridad publicados por INCIBE-CERT: vulnerabilidades críticas, boletines técnicos y campañas de fraude activas. Se actualiza automáticamente desde la fuente oficial. Cada tarjeta enlaza al aviso completo en incibe.es.</p>
+      <p>Últimas alertas de fraude publicadas por INCIBE: phishing, smishing, suplantaciones de empresas y organismos, filtraciones de datos. Para cada aviso: a quién afecta, qué está pasando y qué hacer si ya te ha ocurrido. Se actualiza automáticamente desde la fuente oficial.</p>
     </div>
 
     <div class="ai-updated" id="ai-updated"></div>
@@ -214,7 +247,7 @@
     </div>
 
     <div class="ai-footnote">
-      Fuente: <a href="https://www.incibe.es/ciudadania/avisos" target="_blank" rel="noopener" style="color:#dc2626;">INCIBE — Instituto Nacional de Ciberseguridad</a>. Los resúmenes de esta página son extractos orientativos; consulta siempre el aviso original enlazado para el detalle técnico completo (CVEs, versiones afectadas, solución).
+      Fuente: <a href="https://www.incibe.es/ciudadania/avisos" target="_blank" rel="noopener" style="color:#dc2626;">INCIBE — Instituto Nacional de Ciberseguridad</a>. Los textos de esta página son extractos y resúmenes orientativos de cada aviso; consulta siempre el aviso oficial enlazado para el detalle completo y actualizado.
     </div>
 
   </div>
@@ -247,24 +280,53 @@
         return;
       }
 
-      const meta = window.FDIncibe.TIPO_META;
       const fmtFecha = window.FDIncibe.formatFecha;
+      const truncar = window.FDIncibe.truncar;
 
-      list.innerHTML = alertas.map(a => {
-        const tipoMeta = meta[a.tipo] || { label: 'Aviso', color: '#dc2626' };
-        return `
-          <a href="${a.url}" target="_blank" rel="noopener" class="ai-card">
-            <div class="ai-card-header">
-              <span class="ai-badge" style="background:${tipoMeta.color};">${tipoMeta.label}</span>
-              <span class="ai-fecha">${fmtFecha(a.fecha)}</span>
-              ${a.importancia ? `<span class="ai-importancia">Importancia ${a.importancia}</span>` : ''}
-            </div>
-            <h2>${a.titulo}</h2>
-            <p class="resumen">${a.resumen}</p>
-            <span class="cta">Ver aviso completo en INCIBE →</span>
-          </a>
-        `;
-      }).join('');
+      list.innerHTML = alertas.map(a => `
+        <article class="ai-card" id="alerta-${a.id}">
+          <div class="ai-card-header">
+            <span class="ai-fecha">${fmtFecha(a.fecha)}</span>
+            ${a.importancia ? `<span class="ai-importancia">Importancia ${a.importancia}</span>` : ''}
+          </div>
+          <h2>${a.titulo}</h2>
+
+          ${a.afectados ? `
+          <div class="ai-section">
+            <div class="ai-section-label">🎯 A quién afecta</div>
+            <p>${truncar(a.afectados, 220)}</p>
+          </div>` : ''}
+
+          ${a.descripcion ? `
+          <div class="ai-section">
+            <div class="ai-section-label">📋 Qué está pasando</div>
+            <p>${truncar(a.descripcion, 320)}</p>
+          </div>` : ''}
+
+          ${a.solucion && a.solucion.length ? `
+          <div class="ai-section">
+            <div class="ai-section-label">✅ Qué hacer</div>
+            <ul>${a.solucion.slice(0, 6).map(s => `<li>${s}</li>`).join('')}</ul>
+          </div>` : ''}
+
+          ${a.detalle ? `
+          <div class="ai-section">
+            <div class="ai-section-label">🔍 Cómo funciona el fraude</div>
+            <p>${truncar(a.detalle, 350)}</p>
+          </div>` : ''}
+
+          ${a.etiquetas && a.etiquetas.length ? `
+          <div class="ai-tags">${a.etiquetas.map(t => `<span class="ai-tag">#${t}</span>`).join('')}</div>` : ''}
+
+          <a href="${a.url}" target="_blank" rel="noopener" class="ai-cta">Ver aviso oficial en INCIBE →</a>
+        </article>
+      `).join('');
+
+      // Si la URL trae un ancla (#alerta-xxx desde el home), hacer scroll suave
+      if (window.location.hash) {
+        const target = document.querySelector(window.location.hash);
+        if (target) setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 100);
+      }
     })
     .catch(err => {
       console.error('Error cargando alertas INCIBE:', err);

@@ -72,27 +72,20 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         const MAX_HOME = 4;
-        const meta = (window.FDIncibe && window.FDIncibe.TIPO_META) || {};
         const fmtFecha = (window.FDIncibe && window.FDIncibe.formatFecha) || (f => f);
+        const truncar = (window.FDIncibe && window.FDIncibe.truncar) || (t => t);
 
-        container.innerHTML = alertasParseadas.slice(0, MAX_HOME).map(a => {
-            const tipoMeta = meta[a.tipo] || { label: 'Aviso', color: '#dc2626' };
-            return `
-            <a href="${a.url}" target="_blank" rel="noopener" class="alert-card">
-                <span style="display:inline-block; font-family:'Courier New',monospace; font-size:10px; font-weight:700; letter-spacing:0.05em; color:${tipoMeta.color}; text-transform:uppercase; margin-right:8px;">${tipoMeta.label} · ${fmtFecha(a.fecha)}</span><br>
+        container.innerHTML = alertasParseadas.slice(0, MAX_HOME).map(a => `
+            <a href="${basePath}alertas-incibe/index.html#alerta-${a.id}" class="alert-card">
+                <span style="display:inline-block; font-family:'Courier New',monospace; font-size:10px; font-weight:700; letter-spacing:0.05em; color:#dc2626; text-transform:uppercase; margin-right:8px;">INCIBE · ${fmtFecha(a.fecha)}</span><br>
                 <strong>${a.titulo}</strong>
+                <span style="display:block; font-size:0.85rem; color:#64748b; font-weight:400; margin-top:4px;">${truncar(a.descripcion, 110)}</span>
             </a>
-        `;
-        }).join('');
-
-        // Enlace "ver todas" si hay más de las mostradas
-        if (alertasParseadas.length > MAX_HOME) {
-            container.innerHTML += `
-                <a href="${basePath}alertas-incibe/index.html" class="alert-card" style="text-align:center; font-weight:700; color:#dc2626; display:flex; align-items:center; justify-content:center;">
-                    Ver las ${alertasParseadas.length} alertas de INCIBE →
-                </a>
-            `;
-        }
+        `).join('') + (alertasParseadas.length > MAX_HOME ? `
+            <a href="${basePath}alertas-incibe/index.html" class="alert-card" style="text-align:center; font-weight:700; color:#dc2626; display:flex; align-items:center; justify-content:center;">
+                Ver las ${alertasParseadas.length} alertas de INCIBE →
+            </a>
+        ` : '');
     }
 
     // ==============================
