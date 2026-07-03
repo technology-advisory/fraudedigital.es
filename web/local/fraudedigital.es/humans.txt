@@ -1,0 +1,25 @@
+/* TEAM */
+
+Autor y responsable: Miguel Ángel Carriazo Álvarez
+Rol: vCISO · Arquitecto de Infraestructura y Ciberseguridad
+LinkedIn: https://www.linkedin.com/in/macarriazo/
+Localización: España
+
+/* THANKS */
+
+A la comunidad de ciberseguridad hispanohablante que compartió trinchera durante estos +25 años.
+A quien reporta amenazas nuevas: sois el eslabón silencioso más valioso.
+
+/* SITE */
+
+Última actualización: 2026-07-02
+Lenguaje: Español (es-ES)
+Doctrina: sin cookies · sin formularios · sin recolección de datos
+Estándares: HTML5, CSS3, ES6+
+Sin frameworks. Sin trackers. Sin dependencias.
+
+/* PROPÓSITO */
+
+Divulgación técnica sobre fraude digital, ingeniería social y protección
+frente a estafas en línea. Contenido dual para público general y para
+profesionales de ciberseguridad. Free forever.

@@ -1,0 +1,19 @@
+{
+  "_doc": "Panel de control del home. Edita 'destacadas' para elegir qué amenazas salen en portada. Los IDs deben coincidir con los de amenazas.json. Las 'alertas' rotan en la banda roja superior.",
+
+  "alertas": [
+    { "tipo": "Smishing",       "descripcion": "Campaña masiva suplantando a Correos mediante SMS falsos de entrega." },
+    { "tipo": "Fraude del CEO", "descripcion": "Ataques dirigidos a administraciones de PYMEs mediante emails modificados." },
+    { "tipo": "Estafas con IA", "descripcion": "Incremento de casos de phishing de voz (Vishing) usando deepfakes de voz." },
+    { "tipo": "SIM Swapping",   "descripcion": "Aumento de fraudes por duplicación de tarjeta SIM mediante ingeniería social a operadoras." }
+  ],
+
+  "destacadas": [
+    "phishing-tradicional",
+    "vishing",
+    "smishing",
+    "qrishing",
+    "ia-estafas",
+    "ingenieria-social"
+  ]
+}

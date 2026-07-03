@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0">
+<title>Copias de Seguridad · FraudeDigital.es</title>
+<meta name="description" content="La regla 3-2-1, backups automáticos y por qué es la única defensa real que funciona contra el ransomware. Guía para todos y técnicos.">
+<meta name="keywords" content="backup, copia de seguridad, ransomware, 3-2-1, recuperación de datos">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://fraudedigital.es/defensas/copias-seguridad.html">
+
+<meta property="og:title" content="Copias de Seguridad: la única defensa que funciona de verdad contra el ransomware">
+<meta property="og:description" content="La regla 3-2-1, backups automáticos y por qué es la única defensa real contra el ransomware.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fraudedigital.es/defensas/copias-seguridad.html">
+<meta property="og:image" content="https://fraudedigital.es/img/og-copias-seguridad.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Copias de Seguridad · FraudeDigital.es">
+<meta name="twitter:description" content="La única defensa real contra el ransomware.">
+<meta name="twitter:image" content="https://fraudedigital.es/img/og-copias-seguridad.png">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<link rel="stylesheet" href="../css/global.css">
+<link rel="stylesheet" href="../css/dossier-core.css">
+<link rel="stylesheet" href="../css/dossier-defensa.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Copias de Seguridad: la única defensa que funciona de verdad contra el ransomware",
+  "description": "La regla 3-2-1, backups automáticos y por qué es la única defensa real contra el ransomware.",
+  "author": {
+    "@type": "Person",
+    "name": "Miguel Ángel Carriazo",
+    "url": "https://www.linkedin.com/in/macarriazo/",
+    "sameAs": ["https://www.linkedin.com/in/macarriazo/"]
+  },
+  "datePublished": "2026-07-03",
+  "publisher": {
+    "@type": "Organization",
+    "name": "FraudeDigital",
+    "logo": {"@type": "ImageObject", "url": "https://fraudedigital.es/apple-touch-icon.png"}
+  },
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://fraudedigital.es/defensas/copias-seguridad.html"},
+  "dateModified": "2026-07-03",
+  "inLanguage": "es-ES"
+}
+</script>
+
+<style>
+  .defensa-meta {
+    border-top: none !important;
+    border-bottom: none !important;
+    padding: 10px 0 0 0 !important;
+    margin: 5px 0 0 0 !important;
+  }
+</style>
+
+<meta name="author" content="Miguel Ángel Carriazo">
+<meta name="theme-color" content="#16a34a">
+<meta http-equiv="Content-Language" content="es">
+<meta property="og:site_name" content="FraudeDigital.es">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-07-03">
+<meta property="article:author" content="Miguel Ángel Carriazo">
+<link rel="manifest" href="/manifest.json">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://fraudedigital.es/"},
+    {"@type": "ListItem", "position": 2, "name": "Defensas", "item": "https://fraudedigital.es/defensas/"},
+    {"@type": "ListItem", "position": 3, "name": "Copias de Seguridad", "item": "https://fraudedigital.es/defensas/copias-seguridad.html"}
+  ]
+}
+</script>
+</head>
+<body style="margin:0; padding:0; background-color:#f8fafc;">
+
+<div class="card-wrapper ds-page">
+<div class="card">
+
+  <div id="menu-container"></div>
+  <div class="accent-bar" style="background: #16a34a;"></div>
+
+  <div class="ds-meta">
+    <span><span class="dot" style="background:#16a34a;"></span>FraudeDigital // defensa: copias-seguridad</span>
+    <span>clase: <strong>guía dual · público + técnico</strong></span>
+  </div>
+
+  <div style="padding: 32px 48px 24px; border-bottom: 1px solid #e2e8f0;">
+
+    <div style="font-family:monospace; font-size:11px; text-transform:uppercase; color:#16a34a; letter-spacing:0.1em; font-weight:700; margin-bottom:6px;">Defensa Básica · Resiliencia de Datos</div>
+    <h1 style="font-size: clamp(28px, 5vw, 42px); font-weight: 800; color: #0f172a; margin: 0 0 10px; line-height: 1.15;">Copias de Seguridad: <span style="color:#16a34a;">la única defensa que funciona de verdad contra el ransomware</span></h1>
+    <p style="font-size: 17px; color: #475569; line-height: 1.6; margin: 0; max-width: 900px; padding-bottom: 16px;">
+      <strong>Para todos:</strong> la regla 3-2-1 explicada sin tecnicismos, y cómo automatizarla en 15 minutos.
+      <strong>Para profesionales:</strong> inmutabilidad, air-gapping y por qué el backup también puede ser cifrado por el atacante.
+    </p>
+
+    <div class="defensa-meta">
+      <span class="defensa-meta-item">
+        <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="6" r="2.6"/><path d="M3.5 15c0-2.6 2.5-4.6 5.5-4.6s5.5 2 5.5 4.6"/></svg>
+        <strong>Miguel Ángel Carriazo</strong>
+      </span>
+      <span class="defensa-meta-item">
+        <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="3" width="13" height="12.5" rx="1.3"/><path d="M2.5 6.5h13M6 2v2.4M12 2v2.4"/></svg>
+        3 julio 2026
+      </span>
+      <span class="defensa-meta-item">
+        <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="6.8"/><path d="M9 5.3V9l2.8 1.7"/></svg>
+        4 min de lectura
+      </span>
+    </div>
+  </div>
+
+  <div style="padding: 24px 48px 24px;">
+    <a href="../defensas/index.html" class="defensa-btn-back">← Volver a Defensas</a>
+  </div>
+
+  <div class="defensa-layout">
+
+    <div class="defensa-main">
+
+      <div class="block" id="s1">
+        <div class="block-meta">
+          01 // Para todos
+          <span class="defensa-badge-all">Público general</span>
+        </div>
+        <h2>¿Por qué la copia de seguridad es tu única red de rescate real?</h2>
+        <div class="body-text">
+          <p>Cuando el ransomware cifra tus archivos (fotos, documentos, todo), <strong>pagar el rescate no garantiza recuperarlos</strong>, y además financia al criminal para el siguiente ataque. La única garantía real de recuperación es tener una copia de esos archivos <strong>en otro lugar</strong>, hecha antes del ataque.</p>
+
+          <p>Piensa en la copia de seguridad no como algo técnico, sino como un <strong>seguro</strong>: no evita que pase el problema, pero hace que sus consecuencias sean gestionables en vez de catastróficas.</p>
+
+          <div class="defensa-box-warning">
+            <strong>⚠️ Ejemplo real que te puede pasar mañana:</strong>
+            <p>Abres un adjunto de una factura falsa (ver nuestro expediente de <a href="../amenazas/ransomware-estafa.html">Ransomware como Estafa</a>). En segundos, todos tus documentos, fotos familiares y archivos de trabajo quedan cifrados con extensión desconocida. Aparece una nota pidiendo 500€ en Bitcoin. Sin copia de seguridad, tu única opción real es perder esos archivos para siempre o pagar sin garantías.</p>
+          </div>
+
+          <p><strong>La regla que lo resume todo: 3-2-1</strong></p>
+
+          <ul class="defensa-signal-list">
+            <li>
+              <span class="signal-num">①</span>
+              <span><strong>3 copias</strong> de tus datos importantes: el original + 2 copias.</span>
+            </li>
+            <li>
+              <span class="signal-num">②</span>
+              <span><strong>2 soportes distintos:</strong> por ejemplo, tu disco duro + un disco externo. No sirve tener 3 copias en el mismo disco.</span>
+            </li>
+            <li>
+              <span class="signal-num">③</span>
+              <span><strong>1 copia fuera de casa</strong> (en la nube, o un disco externo que no esté siempre conectado). Si un ransomware cifra tu ordenador y el disco externo está conectado permanentemente, cifra también ese disco.</span>
+            </li>
+          </ul>
+
+          <div class="defensa-box-success">
+            <strong>✅ Regla de oro:</strong> al menos una copia debe estar <strong>desconectada</strong> de tu red habitual (un disco externo que solo conectas para hacer backup, o un servicio en la nube con versionado). Si todo está siempre conectado, todo puede cifrarse a la vez.
+          </div>
+        </div>
+      </div>
+
+      <div class="block" id="s2">
+        <div class="block-meta">
+          02 // Para todos
+          <span class="defensa-badge-all">Cómo automatizarlo en 15 minutos</span>
+        </div>
+        <h2>Cómo montar tu copia de seguridad sin complicarte</h2>
+        <div class="body-text">
+          <p>No necesitas ser técnico. Con esto tienes cubierto lo esencial:</p>
+
+          <ol>
+            <li><strong>Activa el backup automático en la nube</strong> que ya tienes: Google Fotos/Drive, iCloud, OneDrive. La mayoría de móviles ya suben fotos automáticamente si lo activas en ajustes.</li>
+            <li><strong>Para documentos importantes del ordenador</strong>, usa la carpeta sincronizada de tu servicio en la nube (Google Drive, Dropbox, OneDrive) — cualquier archivo que guardes ahí queda respaldado automáticamente.</li>
+            <li><strong>Añade un disco externo</strong> como segunda capa para todo lo que no cabe cómodamente en la nube gratuita (vídeos, archivos grandes). Conéctalo una vez a la semana, copia, desconecta.</li>
+            <li><strong>Verifica que funciona</strong> — de vez en cuando abre un archivo desde la copia para confirmar que realmente se puede recuperar. Un backup que nunca has probado no es un backup fiable.</li>
+          </ol>
+
+          <p>El tiempo real de configuración inicial: <strong>15 minutos</strong> para activar el backup en la nube. El disco externo añade otros 10 minutos de compra + configuración inicial.</p>
+        </div>
+      </div>
+
+      <div class="defensa-divider">
+        <span class="label"><span class="gear">🛡️</span> A PARTIR DE AQUÍ · PARA ADMINISTRADORES Y TÉCNICOS <span class="gear">🛡️</span></span>
+      </div>
+
+      <div class="block" id="s3">
+        <div class="block-meta">
+          03 // Para técnicos
+          <span class="defensa-badge-tech">Inmutabilidad · Air-gapping</span>
+        </div>
+        <h2>Por qué el ransomware moderno también ataca los backups</h2>
+        <div class="body-text">
+          <p>El ransomware actual no se limita a cifrar archivos activos: busca activamente <strong>destruir también las copias de seguridad</strong> antes de exigir el rescate, para eliminar la vía de recuperación gratuita.</p>
+
+          <div class="defensa-box-tech">
+            <div style="margin-bottom: 14px;">
+              <strong style="color: #0f172a; font-size: 15px;">🔹 Enumeración y borrado de shadow copies</strong>
+              <p style="margin: 4px 0 0 0; color: #334155;">Familias como Conti o LockBit ejecutan comandos (<code>vssadmin delete shadows /all</code>) para eliminar las copias de sombra de Windows antes de cifrar, impidiendo la restauración local nativa del sistema operativo.</p>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+              <strong style="color: #0f172a; font-size: 15px;">🔹 Backups conectados = backups vulnerables</strong>
+              <p style="margin: 4px 0 0 0; color: #334155;">Si el disco de backup está permanentemente montado con permisos de escritura (NAS en red, disco externo siempre conectado), el ransomware puede cifrarlo igual que cualquier otro volumen accesible.</p>
+            </div>
+
+            <div>
+              <strong style="color: #0f172a; font-size: 15px;">🔹 Backups en la nube con acceso comprometido</strong>
+              <p style="margin: 4px 0 0 0; color: #334155;">Si las credenciales de la cuenta de backup en la nube están comprometidas (por reutilización de contraseña, ver nuestra <a href="contrasenas-seguras.html">guía de contraseñas</a>), el atacante puede eliminar también esas copias antes de cifrar el equipo local.</p>
+            </div>
+          </div>
+
+          <p><strong>Concepto clave — air-gapping:</strong> una copia verdaderamente resiliente debe estar <em>físicamente o lógicamente desconectada</em> la mayor parte del tiempo, de forma que ningún proceso malicioso en ejecución pueda alcanzarla.</p>
+        </div>
+      </div>
+
+      <div class="block" id="s4">
+        <div class="block-meta">
+          04 // Para técnicos
+          <span class="defensa-badge-tech">Estrategia organizativa</span>
+        </div>
+        <h2>Estrategia de backup a nivel organizativo</h2>
+        <div class="body-text">
+          <p>Para empresas y organizaciones, la regla 3-2-1 se refuerza con capas adicionales:</p>
+
+          <div class="defensa-box-tech">
+            <div style="margin-bottom: 14px;">
+              <strong style="color: #0f172a; font-size: 15px;">🔹 Backups inmutables (WORM)</strong>
+              <p style="margin: 4px 0 0 0; color: #334155;">Soluciones tipo Object Lock (S3 Object Lock, Azure Immutable Blob Storage) permiten configurar copias que <strong>no pueden ser modificadas ni eliminadas</strong> durante un periodo fijo, ni siquiera por una cuenta administrativa comprometida.</p>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+              <strong style="color: #0f172a; font-size: 15px;">🔹 Segregación de credenciales de backup</strong>
+              <p style="margin: 4px 0 0 0; color: #334155;">Las credenciales de acceso al sistema de backup deben ser distintas de las credenciales de administración habituales, idealmente con MFA reforzado (FIDO2) y sin pertenecer al mismo dominio/tenant que podría verse comprometido.</p>
+            </div>
+
+            <div>
+              <strong style="color: #0f172a; font-size: 15px;">🔹 Pruebas de restauración periódicas (DR drills)</strong>
+              <p style="margin: 4px 0 0 0; color: #334155;">Un backup sin prueba de restauración periódica es una suposición, no una garantía. La cadencia recomendada depende de la criticidad, pero como mínimo debe validarse trimestralmente en un entorno aislado.</p>
+            </div>
+          </div>
+
+          <p><strong>Resumen:</strong> la regla 3-2-1 sigue siendo la base, pero contra ransomware dirigido hay que añadir <strong>inmutabilidad</strong> y <strong>segregación de credenciales</strong> — de lo contrario, el atacante con acceso administrativo puede destruir también la red de rescate.</p>
+        </div>
+      </div>
+
+      <div class="defensa-foot" style="padding: 32px 0 0; margin-top: 40px; border-top: 1px solid #e2e8f0; display: flex; gap: 48px; flex-wrap: wrap; align-items: flex-start;">
+        <div class="defensa-author" style="flex: 1 1 0%; min-width: 0;">
+          <div class="defensa-foot-label">Sobre el autor</div>
+          <div class="defensa-author-name">Miguel Ángel Carriazo <span>· vCISO</span></div>
+          <p class="defensa-author-bio">vCISO · Arquitecto de Soluciones de Infraestructura y Ciberseguridad | Gobierno, Riesgo y Cumplimiento (GRC) | Gobierno de IA · ISO 42001 | Fundador de FraudeDigital.es</p>
+        </div>
+        <div class="defensa-share" style="flex: 0 0 auto; padding-left: 40px; border-left: 1px solid #e2e8f0;">
+          <div class="defensa-foot-label">Compartir artículo</div>
+          <a href="#" id="shareLinkedin" target="_blank" class="defensa-share-btn" aria-label="Compartir en LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <aside class="defensa-toc">
+
+      <div class="defensa-control">
+        <div class="title">Ficha de Control</div>
+        <table>
+            <tr><td class="label">Público objetivo</td><td class="value">Todos + Técnicos</td></tr>
+            <tr><td class="label">Defensa básica</td><td class="value">Regla 3-2-1</td></tr>
+            <tr><td class="label">Defensa avanzada</td><td class="value highlight">Inmutabilidad (WORM) · Air-gapping</td></tr>
+            <tr><td class="label">Estándar</td><td class="value">ISO 22301 · NIST SP 800-34</td></tr>
+        </table>
+      </div>
+
+      <div>
+        <div class="defensa-toc-label">Contenido</div>
+        <nav class="defensa-toc-nav" id="artTocNav">
+          <a href="#s1" class="active">01. Para todos · Por qué importa</a>
+          <a href="#s2">02. Para todos · Cómo montarlo</a>
+          <a href="#s3">03. Técnico · Ataques al backup</a>
+          <a href="#s4">04. Técnico · Estrategia organizativa</a>
+        </nav>
+        <div style="margin-top: 14px; font-size: 12px; color: #94a3b8; border-top: 1px solid #e2e8f0; padding-top: 10px;">
+          <span style="display: block; background: #16a34a; color: #fff; padding: 4px 10px; border-radius: 4px; text-align: center; font-weight: 700; font-size: 11px;">🛡️ Dual · Para todos + técnicos</span>
+        </div>
+      </div>
+
+      <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid #e2e8f0;">
+        <div class="defensa-toc-label">Neutraliza estas amenazas</div>
+        <div style="display: flex; flex-direction: column; gap: 6px; margin-top: 8px;">
+          <a href="../amenazas/ransomware-estafa.html" style="font-size: 13px; color: #dc2626; text-decoration: none; font-weight: 600;">→ Ransomware como Estafa</a>
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <div class="defensa-related">
+    <div class="defensa-related-label">Sigue leyendo</div>
+    <div class="defensa-related-title">Defensas relacionadas</div>
+    <div class="defensa-related-grid">
+      <a href="contrasenas-seguras.html" class="defensa-related-card">
+        <span class="defensa-related-pill">Contraseñas</span>
+        <h3>Gestión de Contraseñas Seguras</h3>
+        <p>La puerta que dejas abierta sin saberlo.</p>
+        <div class="defensa-related-meta"><span>3 julio 2026</span><span>4 min</span></div>
+      </a>
+      <a href="../amenazas/ransomware-estafa.html" class="defensa-related-card">
+        <span class="defensa-related-pill">Amenaza</span>
+        <h3>Ransomware como Estafa</h3>
+        <p>Malware que cifra tus datos y exige rescate.</p>
+        <div class="defensa-related-meta"><span>18 junio 2026</span><span>3 min</span></div>
+      </a>
+      <a href="../herramientas/generador-denuncias.html" class="defensa-related-card">
+        <span class="defensa-related-pill">Herramienta</span>
+        <h3>Generador de Denuncias</h3>
+        <p>Si ya te ha pasado, prepara la denuncia.</p>
+        <div class="defensa-related-meta"><span>2 julio 2026</span><span>—</span></div>
+      </a>
+    </div>
+  </div>
+
+  <div id="footer-container"></div>
+
+</div>
+</div>
+
+<script src="../js/menu.js"></script>
+<script src="../js/footer.js"></script>
+
+<script>
+  var shareBtn = document.getElementById('shareLinkedin');
+  if (shareBtn) {
+    shareBtn.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(window.location.href);
+  }
+</script>
+
+<script>
+  var tocLinks = Array.from(document.querySelectorAll('.defensa-toc-nav a'));
+  var sections = tocLinks.map(a => document.querySelector(a.getAttribute('href')));
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          var id = '#' + entry.target.id;
+          tocLinks.forEach(a => {
+            if (a.getAttribute('href') === id) {
+              a.classList.add('active');
+            } else {
+              a.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, { rootMargin: '-20% 0px -60% 0px' });
+    sections.forEach(function(s){ if (s) observer.observe(s); });
+  }
+</script>
+
+</body>
+</html>

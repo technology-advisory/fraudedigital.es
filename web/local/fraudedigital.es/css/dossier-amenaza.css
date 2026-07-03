@@ -1,0 +1,648 @@
+/* ==========================================================================
+   DOSSIER-AMENAZA.CSS — Maquetación de Artículos y Barra Lateral Derecha
+   Versión dual: Público general + Técnicos
+   ========================================================================== */
+
+/* ── LAYOUT PRINCIPAL ── */
+.amenaza-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 48px;
+  align-items: start;
+  padding: 0 48px 40px;
+}
+
+@media (max-width: 1024px) {
+  .amenaza-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 0 24px 32px;
+  }
+}
+
+/* ── COLUMNA DERECHA (STICKY) ── */
+.amenaza-toc {
+  position: sticky;
+  top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (max-width: 1024px) {
+  .amenaza-toc {
+    position: static;
+    width: 100%;
+  }
+}
+
+/* ── FICHA DE CONTROL ── */
+.amenaza-control {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.amenaza-control .title {
+  font-family: monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #0f172a;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 6px;
+  margin-bottom: 16px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.amenaza-control table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.amenaza-control td {
+  padding: 10px 0;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: middle;
+}
+
+.amenaza-control tr:last-child td {
+  border-bottom: none;
+}
+
+.amenaza-control td.label {
+  color: #64748b;
+  font-weight: 700;
+  text-align: left;
+}
+
+.amenaza-control td.value {
+  color: #0f172a;
+  font-weight: 600;
+  text-align: right;
+}
+
+.amenaza-control td.value.highlight {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+/* ── ÍNDICE DE CONTENIDO ── */
+.amenaza-toc-label {
+  font-family: monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #64748b;
+  letter-spacing: 0.1em;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+.amenaza-toc-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-left: 2px solid #e2e8f0;
+  padding-left: 14px;
+}
+
+.amenaza-toc-nav a {
+  text-decoration: none;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s;
+  border-left: 2px solid transparent;
+  margin-left: -16px;
+  padding-left: 14px;
+}
+
+.amenaza-toc-nav a.active {
+  color: #dc2626 !important;
+  border-left: 2px solid #dc2626 !important;
+  font-weight: 700;
+}
+
+/* ── ETIQUETAS / BADGES ── */
+.amenaza-badge-all {
+  display: inline-block;
+  background: #dc2626;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 10px;
+  border-radius: 12px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.amenaza-badge-tech {
+  display: inline-block;
+  background: #1e293b;
+  color: #f8fafc;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 10px;
+  border-radius: 12px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+/* ── BOTÓN DE VOLVER ── */
+.amenaza-btn-back {
+  display: inline-block;
+  background: #dc2626;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  border: none;
+}
+
+.amenaza-btn-back:hover {
+  background: #b91c1c;
+  color: #ffffff !important;
+}
+
+/* ── METADATOS (FORZADOS EN UNA SOLA LÍNEA) ── */
+.amenaza-meta {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 8px 24px !important;
+  padding: 14px 0 !important;
+  border-top: 1px solid #e2e8f0 !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  margin: 8px 0 0 0 !important;
+}
+
+.amenaza-meta-item {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  font-size: 13px !important;
+  color: #5b6670 !important;
+  white-space: nowrap !important;
+}
+
+.amenaza-meta-item svg {
+  width: 15px !important;
+  height: 15px !important;
+  color: #dc2626 !important;
+  flex-shrink: 0 !important;
+  stroke: #dc2626 !important;
+  stroke-width: 1.6 !important;
+  fill: none !important;
+}
+
+.amenaza-meta-item strong {
+  color: #0f172a !important;
+  font-weight: 600 !important;
+}
+
+/* ── SEPARADOR ENTRE METADATOS Y BOTÓN ── */
+.amenaza-meta-sep {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 0;
+}
+
+/* ── PIE DE ARTÍCULO: AUTOR + COMPARTIR ── */
+.amenaza-foot {
+  display: flex;
+  gap: 48px;
+  max-width: 1320px;
+  padding: 32px 56px 0;
+  border-top: 1px solid #e2e8f0;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 24px;
+}
+
+.amenaza-author {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.amenaza-share {
+  flex: 0 0 auto;
+  padding-left: 40px;
+  border-left: 1px solid #e2e8f0;
+}
+
+.amenaza-foot-label {
+  font-family: monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7c8790;
+  margin-bottom: 8px;
+}
+
+.amenaza-author-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.amenaza-author-name span {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.amenaza-author-bio {
+  font-size: 13.5px;
+  color: #5b6670;
+  line-height: 1.6;
+  max-width: none;
+  white-space: normal;
+  margin: 0;
+}
+
+.amenaza-share-btn {
+  width: 42px;
+  height: 42px;
+  border: 1.5px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+  border-radius: 50%;
+}
+
+.amenaza-share-btn:hover {
+  background: #0a66c2;
+  border-color: #0a66c2;
+  color: #fff;
+}
+
+.amenaza-share-btn svg {
+  width: 19px;
+  height: 19px;
+  fill: currentColor;
+}
+
+/* ── DIVISOR ── */
+.amenaza-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 40px 0;
+  color: #94a3b8;
+}
+
+.amenaza-divider::before,
+.amenaza-divider::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #94a3b8, transparent);
+}
+
+.amenaza-divider .label {
+  font-family: monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #475569;
+  background: #f8fafc;
+  padding: 0 16px;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.amenaza-divider .label .gear {
+  color: #dc2626;
+}
+
+/* ── BLOQUES DE CONTENIDO ── */
+.amenaza-main .block {
+  margin-bottom: 40px;
+}
+
+.amenaza-main .block .block-meta {
+  font-family: monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.amenaza-main .block h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.amenaza-main .block .body-text {
+  font-size: 15.5px;
+  line-height: 1.8;
+  color: #334155;
+  text-align: justify;
+}
+
+.amenaza-main .block .body-text p {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+/* ── CAJAS DE DESTAQUE ── */
+.amenaza-box-danger {
+  background: #fef2f2;
+  border-left: 4px solid #dc2626;
+  padding: 16px 20px;
+  margin: 16px 0;
+  border-radius: 4px;
+}
+
+.amenaza-box-danger strong {
+  color: #dc2626;
+}
+
+.amenaza-box-danger p {
+  margin: 8px 0 0 0 !important;
+  font-size: 15px !important;
+}
+
+.amenaza-box-success {
+  background: #f0fdf4;
+  border-left: 4px solid #16a34a;
+  padding: 14px 18px;
+  margin-top: 16px;
+  border-radius: 4px;
+}
+
+.amenaza-box-success strong {
+  color: #16a34a;
+}
+
+.amenaza-box-tech {
+  background: #f1f5f9;
+  padding: 16px 20px;
+  border-radius: 6px;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.amenaza-box-tech code {
+  display: block;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  font-size: 12px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.amenaza-box-tech .code-label {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.amenaza-box-dark {
+  background: #1e293b;
+  color: #f1f5f9;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 13px;
+  margin-top: 12px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+/* ── LISTAS ── */
+.amenaza-main .block ul,
+.amenaza-main .block ol {
+  padding-left: 24px;
+  margin: 10px 0;
+}
+
+.amenaza-main .block ul li,
+.amenaza-main .block ol li {
+  margin-bottom: 6px;
+}
+
+.amenaza-signal-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+}
+
+.amenaza-signal-list li {
+  padding: 6px 0;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  gap: 10px;
+}
+
+.amenaza-signal-list li:last-child {
+  border-bottom: none;
+}
+
+.amenaza-signal-list .signal-num {
+  color: #dc2626;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ── ARTÍCULOS RELACIONADOS ── */
+.amenaza-related {
+  max-width: 1320px;
+  padding: 32px 56px 20px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.amenaza-related-label {
+  font-family: monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #dc2626;
+  margin-bottom: 8px;
+}
+
+.amenaza-related-title {
+  font-size: 23px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+.amenaza-related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.amenaza-related-card {
+  background: #f1f5f9;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.2s;
+  border: 1px solid #e2e8f0;
+}
+
+.amenaza-related-card:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+  border-color: #dc2626;
+}
+
+.amenaza-related-pill {
+  align-self: flex-start;
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #dc2626;
+  border: 1px solid #dc2626;
+  padding: 2px 9px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+}
+
+.amenaza-related-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.35;
+  margin: 0 0 8px;
+}
+
+.amenaza-related-card p {
+  font-size: 13.5px;
+  color: #475569;
+  line-height: 1.55;
+  margin: 0 0 14px;
+  flex-grow: 1;
+}
+
+.amenaza-related-meta {
+  display: flex;
+  gap: 14px;
+  font-size: 11.5px;
+  color: #94a3b8;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 12px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 980px) {
+  .amenaza-foot {
+    padding: 24px 24px 0;
+    gap: 24px;
+  }
+  
+  .amenaza-share {
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 20px;
+    flex-basis: 100%;
+  }
+
+  .amenaza-related-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .amenaza-related {
+    padding: 24px 24px 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .amenaza-main .block h2 {
+    font-size: 19px;
+  }
+  
+  .amenaza-main .block .body-text {
+    font-size: 14.5px;
+  }
+  
+  .amenaza-control {
+    padding: 16px;
+  }
+  
+  .amenaza-control table {
+    font-size: 12px;
+  }
+  
+  .amenaza-badge-all,
+  .amenaza-badge-tech {
+    font-size: 9px;
+    padding: 1px 8px;
+    margin-left: 4px;
+  }
+
+  .amenaza-btn-back {
+    font-size: 12px;
+    padding: 6px 16px;
+  }
+
+  .amenaza-meta {
+    gap: 6px 14px !important;
+    padding: 10px 0 !important;
+  }
+
+  .amenaza-meta-item {
+    font-size: 12px !important;
+  }
+
+  .amenaza-meta-item svg {
+    width: 13px !important;
+    height: 13px !important;
+  }
+
+  .amenaza-foot {
+    flex-direction: column;
+    padding: 20px 16px 0;
+    gap: 16px;
+  }
+
+  .amenaza-share {
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 16px;
+    width: 100%;
+  }
+
+  .amenaza-author-bio {
+    font-size: 12.5px;
+  }
+
+  .amenaza-related {
+    padding: 20px 16px 12px;
+  }
+  
+  .amenaza-related-title {
+    font-size: 19px;
+  }
+
+  .amenaza-related-grid {
+    grid-template-columns: 1fr;
+  }
+}

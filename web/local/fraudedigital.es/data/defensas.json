@@ -1,0 +1,49 @@
+{
+  "_doc": "Catálogo de defensas / buenas prácticas de ciberhigiene. Cada defensa debería enlazar qué amenazas concretas neutraliza.",
+  "defensas": [
+    {
+      "id": "contrasenas-seguras",
+      "exp": "DEF // 01",
+      "titulo": "Gestión de Contraseñas Seguras",
+      "descripcion": "Gestores de contraseñas, contraseñas únicas por servicio y por qué reutilizar contraseña es la puerta de entrada más común al fraude.",
+      "icono": "candado",
+      "enlace": "contrasenas-seguras.html",
+      "tags": ["contraseñas", "gestor de contraseñas", "credential stuffing", "2fa", "password manager"],
+      "neutraliza": ["phishing-tradicional", "phishing-aitm", "sim-swapping"],
+      "badge": "Defensa básica"
+    },
+    {
+      "id": "verificacion-dos-pasos",
+      "exp": "DEF // 02",
+      "titulo": "Verificación en Dos Pasos (2FA/MFA)",
+      "descripcion": "Por qué el SMS es el método de 2FA más débil, y cómo migrar a apps de autenticación o llaves físicas.",
+      "icono": "escudo",
+      "enlace": "verificacion-dos-pasos.html",
+      "tags": ["2fa", "mfa", "doble factor", "sim swapping", "totp", "llave de seguridad"],
+      "neutraliza": ["sim-swapping", "phishing-aitm", "phishing-tradicional"],
+      "badge": "Defensa avanzada"
+    },
+    {
+      "id": "copias-seguridad",
+      "exp": "DEF // 03",
+      "titulo": "Copias de Seguridad",
+      "descripcion": "La regla 3-2-1, backups automáticos y por qué es la única defensa real que funciona contra el ransomware.",
+      "icono": "backup",
+      "enlace": "copias-seguridad.html",
+      "tags": ["backup", "copia de seguridad", "ransomware", "3-2-1", "recuperación de datos"],
+      "neutraliza": ["ransomware-estafa"],
+      "badge": "Defensa básica"
+    },
+    {
+      "id": "privacidad-identidad-digital",
+      "exp": "DEF // 04",
+      "titulo": "Privacidad e Identidad Digital",
+      "descripcion": "Qué información tuya circula ya en internet, cómo minimizar tu huella digital y por qué eso te hace menos vulnerable a la ingeniería social.",
+      "icono": "usuarios",
+      "enlace": "privacidad-identidad-digital.html",
+      "tags": ["privacidad", "huella digital", "osint", "reputación online", "identidad digital"],
+      "neutraliza": ["ingenieria-social", "ia-estafas", "bulos-fake-news"],
+      "badge": "Defensa avanzada"
+    }
+  ]
+}

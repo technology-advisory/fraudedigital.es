@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0">
+<title>Phishing Tradicional · Guía para todos · FraudeDigital.es</title>
+<meta name="description" content="Qué es el phishing, cómo detectarlo (versión para todos) y cómo protegerse (versión para técnicos).">
+<meta name="keywords" content="phishing, correo, email, sesion, token, proxy, tradicional">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://fraudedigital.es/amenazas/phishing-tradicional.html">
+
+<!-- OPEN GRAPH -->
+<meta property="og:title" content="Phishing Tradicional: Guía para todos (y para técnicos)">
+<meta property="og:description" content="Aprende a detectar un correo falso. Y si eres profesional, profundiza en SPF, DKIM y DMARC.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fraudedigital.es/amenazas/phishing-tradicional.html">
+<meta property="og:image" content="https://fraudedigital.es/img/og-phishing-tradicional.png">
+
+<!-- TWITTER -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Phishing Tradicional: Guía para todos">
+<meta name="twitter:description" content="Detección y protección contra el phishing. Desde el usuario hasta el administrador de sistemas.">
+<meta name="twitter:image" content="https://fraudedigital.es/img/og-phishing-tradicional.png">
+
+<!-- FAVICONS -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!-- ESTILOS -->
+<link rel="stylesheet" href="../css/global.css">
+<link rel="stylesheet" href="../css/dossier-core.css">
+<link rel="stylesheet" href="../css/dossier-amenaza.css">
+
+<!-- SCHEMA JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Phishing Tradicional: Guía para todos (y para técnicos)",
+  "description": "Explicación clara del phishing para el público general y profundización técnica para profesionales.",
+  "author": {
+    "@type": "Person",
+    "name": "Miguel Ángel Carriazo",
+    "url": "https://www.linkedin.com/in/macarriazo/",
+    "sameAs": [
+      "https://www.linkedin.com/in/macarriazo/"
+    ]
+  },
+  "datePublished": "2026-06-18",
+  "publisher": {
+    "@type": "Organization",
+    "name": "FraudeDigital",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fraudedigital.es/apple-touch-icon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://fraudedigital.es/amenazas/phishing-tradicional.html"
+  },
+  "dateModified": "2026-06-18",
+  "inLanguage": "es-ES"
+}
+</script>
+
+<style>
+  /* Corrección dinámica para eliminar las líneas pequeñas del CSS base */
+  .amenaza-meta {
+    border-top: none !important;
+    border-bottom: none !important;
+    padding: 10px 0 0 0 !important;
+    margin: 5px 0 0 0 !important;
+  }
+</style>
+
+
+<meta name="author" content="Miguel Ángel Carriazo">
+<meta name="theme-color" content="#dc2626">
+<meta http-equiv="Content-Language" content="es">
+<meta property="og:site_name" content="FraudeDigital.es">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-06-18">
+<meta property="article:author" content="Miguel Ángel Carriazo">
+<link rel="manifest" href="/manifest.json">
+
+
+<!-- BREADCRUMB JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://fraudedigital.es/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Amenazas",
+      "item": "https://fraudedigital.es/amenazas/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Phishing Tradicional",
+      "item": "https://fraudedigital.es/amenazas/phishing-tradicional.html"
+    }
+  ]
+}
+</script>
+</head>
+<body style="margin:0; padding:0; background-color:#f8fafc;">
+
+<div class="card-wrapper ds-page">
+<div class="card">
+  
+  <!-- MENÚ INYECTADO -->
+  <div id="menu-container"></div>
+  <div class="accent-bar"></div>
+
+  <div class="ds-meta">
+    <span><span class="dot"></span>FraudeDigital // expediente: phishing-tradicional</span>
+    <span>clase: <strong>guía dual · público + técnico</strong></span>
+  </div>
+
+  <!-- CABECERA UNIFICADA CON LA LÍNEA GRANDE INFERIOR -->
+  <div style="padding: 32px 48px 24px; border-bottom: 1px solid #e2e8f0;">
+    
+    <div style="font-family:monospace; font-size:11px; text-transform:uppercase; color:#dc2626; letter-spacing:0.1em; font-weight:700; margin-bottom:6px;">Capa de Identidad · Autenticación Estática</div>
+    <h1 style="font-size: clamp(28px, 5vw, 42px); font-weight: 800; color: #0f172a; margin: 0 0 10px; line-height: 1.15;">Phishing: <span style="color:#dc2626;">el anzuelo digital</span></h1>
+    <p style="font-size: 17px; color: #475569; line-height: 1.6; margin: 0; max-width: 900px; padding-bottom: 16px;">
+      <strong>Para todos:</strong> aprende a identificar un correo falso in segundos.  
+      <strong>Para profesionales:</strong> profundiza en las defensas técnicas (SPF, DKIM, DMARC).
+    </p>
+
+    <!-- METADATOS INTEGRADOS EN LA CABECERA (SIN LÍNEAS PROPIAS) -->
+    <div class="amenaza-meta">
+      <span class="amenaza-meta-item">
+        <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="6" r="2.6"/><path d="M3.5 15c0-2.6 2.5-4.6 5.5-4.6s5.5 2 5.5 4.6"/></svg>
+        <strong>Miguel Ángel Carriazo</strong>
+      </span>
+      <span class="amenaza-meta-item">
+        <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="3" width="13" height="12.5" rx="1.3"/><path d="M2.5 6.5h13M6 2v2.4M12 2v2.4"/></svg>
+        18 junio 2026
+      </span>
+      <span class="amenaza-meta-item">
+        <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="6.8"/><path d="M9 5.3V9l2.8 1.7"/></svg>
+        3 min de lectura
+      </span>
+    </div>
+  </div>
+
+  <!-- BOTÓN DE VOLVER CON ESPACIADO PROPORCIONAL -->
+  <div style="padding: 24px 48px 24px;">
+    <a href="../index.html#amenazas" class="amenaza-btn-back">← Volver al Panel de Control</a>
+  </div>
+
+  <!-- CONTENEDOR GRID DOS COLUMNAS -->
+  <div class="amenaza-layout">
+    
+    <!-- COLUMNA IZQUIERDA: CONTENIDO PRINCIPAL -->
+    <div class="amenaza-main">
+
+      <!-- BLOQUE 1 -->
+      <div class="block" id="s1">
+        <div class="block-meta">
+          01 // Para todos
+          <span class="amenaza-badge-all">Público general</span>
+        </div>
+        <h2>¿Qué es el phishing? (y por qué te puede llegar)</h2>
+        <div class="body-text">
+          <p><strong>Phishing</strong> es una palabra que viene del inglés <em>"fishing"</em> (pescar). Los delincuentes <strong>"pescan"</strong> a sus víctimas lanzando miles de correos electrónicos falsos con la esperanza de que alguien pique el anzuelo.</p>
+          
+          <p>El objetivo siempre es el mismo: <strong>que introduzcas tus datos personales</strong> (contraseñas, números de tarjeta, DNI, etc.) en una página web que parece legítima pero que en realidad es una copia exacta controlada por ellos.</p>
+
+          <div class="amenaza-box-danger">
+            <strong>📌 Ejemplo real que te puede pasar mañana:</strong>
+            <p>Recibes un correo de "tu banco" diciendo que han detectado un movimiento sospechoso y que debes entrar urgentemente a verificar tu cuenta. El correo tiene el logo del banco, el tono es serio y te da un enlace. Si pinchas y pones tu usuario y contraseña... se los estás dando directamente al estafador.</p>
+          </div>
+
+          <p><strong>¿Cómo lo detectas sin ser un experto?</strong> Aquí tienes 4 señales de alarma que funcionan siempre:</p>
+
+          <ul class="amenaza-signal-list">
+            <li>
+              <span class="signal-num">①</span>
+              <span><strong>El remitente no coincide:</strong> Mira la dirección de correo completa (no solo el nombre). Si pone <em>"Banco Santander"</em> pero el correo es <code>seguridad@banco-santander-seguro.top</code> → es falso.</span>
+            </li>
+            <li>
+              <span class="signal-num">②</span>
+              <span><strong>Te piden hacer algo urgente:</strong> "En 24 horas tu cuenta será bloqueada". Los bancos reales <strong>nunca</strong> te piden contraseñas por correo ni te exigen actuar en minutos.</span>
+            </li>
+            <li>
+              <span class="signal-num">③</span>
+              <span><strong>El enlace no es el oficial:</strong> Pasa el ratón por encima del botón/enlace (sin pinchar) y mira abajo a la izquierda en tu navegador. Si la URL no es exactamente la de tu banco → no pinches.</span>
+            </li>
+            <li>
+              <span class="signal-num">④</span>
+              <span><strong>Faltas de ortografía o tono extraño:</strong> Los correos falsos suelen tener erratas, frases raras o un lenguaje demasiado formal/extraño. Una entidad profesional cuida su comunicación.</span>
+            </li>
+          </ul>
+
+          <div class="amenaza-box-success">
+            <strong>✅ Regla de oro:</strong> Si tienes la mínima duda, <strong>no pinches</strong>. Abre tu navegador, escribe la URL de tu banco manualmente y entra desde allí. Siempre.
+          </div>
+        </div>
+      </div>
+
+      <!-- BLOQUE 2 -->
+      <div class="block" id="s2">
+        <div class="block-meta">
+          02 // Para todos
+          <span class="amenaza-badge-all">Qué hacer si ya pinchaste</span>
+        </div>
+        <h2>Y si ya caí... ¿qué hago?</h2>
+        <div class="body-text">
+          <p>No pasa nada, no eres el primero ni el último. Lo importante es <strong>actuar rápido</strong>. Sigue estos pasos en orden:</p>
+
+          <ol>
+            <li><strong>Cambia tu contraseña</strong> en el servicio afectado (y en cualquier otro donde uses la misma clave).</li>
+            <li><strong>Activa el doble factor (2FA)</strong> si no lo tenías. Así, aunque tengan tu contraseña, no podrán entrar sin el código de tu móvil.</li>
+            <li><strong>Contacta con el servicio real</strong> (banco, plataforma, etc.) y avisa de lo ocurrido. Ellos tienen procedimientos para protegerte.</li>
+            <li><strong>Revisa tus movimientos bancarios</strong> en los próximos días por si hay cargos no reconocidos.</li>
+            <li><strong>Denuncia</strong> si ha habido pérdida económica. Guarda el correo falso como prueba.</li>
+          </ol>
+
+          <p>Y recuerda: <strong>las entidades legítimas nunca te van a pedir que les des tu contraseña por teléfono, correo o SMS.</strong> Esa es la línea roja.</p>
+        </div>
+      </div>
+
+      <!-- DIVISOR -->
+      <div class="amenaza-divider">
+        <span class="label"><span class="gear">⚙️</span> A PARTIR DE AQUÍ · PARA ADMINISTRADORES Y TÉCNICOS <span class="gear">⚙️</span></span>
+      </div>
+
+      <!-- BLOQUE 3 -->
+      <div class="block" id="s3">
+        <div class="block-meta">
+          03 // Para técnicos
+          <span class="amenaza-badge-tech">SPF · DKIM · DMARC</span>
+        </div>
+        <h2>Protección perimetral: cómo detener el phishing antes de que llegue</h2>
+        <div class="body-text">
+          <p>Para el usuario final, la detección es reactiva. Para el administrador de sistemas, la defensa <strong>debe ser proactiva</strong> y configurarse en la infraestructura de correo.</p>
+
+          <p>El phishing tradicional (el de los formularios estáticos) se puede frenar en un 90% con <strong>tres registros DNS bien configurados</strong>.</p>
+
+          <div class="amenaza-box-tech">
+            <div style="margin-bottom: 14px;">
+              <strong style="color: #0f172a; font-size: 15px;">🔹 SPF (Sender Policy Framework)</strong>
+              <p style="margin: 4px 0 0 0; color: #334155;">Define qué servidores <strong>están autorizados</strong> a enviar correos en nombre de tu dominio.</p>
+              <code>v=spf1 mx include:spf.proveedor.com ~all</code>
+              <span class="code-label">(el <code>~all</code> es blando; el <code>-all</code> es estricto)</span>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+              <strong style="color: #0f172a; font-size: 15px;">🔹 DKIM (DomainKeys Identified Mail)</strong>
+              <p style="margin: 4px 0 0 0; color: #334155;">Añade una <strong>firma criptográfica</strong> al correo.</p>
+              <code>default._domainkey IN TXT "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3..."</code>
+            </div>
+
+            <div>
+              <strong style="color: #0f172a; font-size: 15px;">🔹 DMARC (Domain-based Message Authentication)</strong>
+              <p style="margin: 4px 0 0 0; color: #334155;">Le dice al servidor receptor *qué hacer* cuando un correo falla SPF o DKIM.</p>
+              <code>_dmarc IN TXT "v=DMARC1; p=reject; pct=100; rua=mailto:dmarc@tudominio.es"</code>
+              <span class="code-label">Con <code>p=reject</code> y <code>pct=100</code>, <strong>bloqueas el 100% de los correos que suplanten tu dominio</strong>.</span>
+            </div>
+          </div>
+
+          <p><strong>Resumen:</strong> Un dominio sin DMARC en modo <code>reject</code> es un dominio <strong>vulnerable</strong> a la suplantación.</p>
+        </div>
+      </div>
+
+      <!-- BLOQUE 4 -->
+      <div class="block" id="s4">
+        <div class="block-meta">
+          04 // Para técnicos
+          <span class="amenaza-badge-tech">Análisis forense</span>
+        </div>
+        <h2>Indicadores de compromiso en cabeceras SMTP</h2>
+        <div class="body-text">
+          <p>Inspecciona las <strong>cabeceras completas</strong> del mensaje (en Gmail: "Mostrar original"; en Outlook: "Ver código fuente").</p>
+
+          <ul>
+            <li><strong>Return-Path vs From:</strong> El <code>Return-Path</code> suele apuntar a un dominio externo no relacionado.</li>
+            <li><strong>Received-SPF:</strong> Si pone <code>fail</code> o <code>softfail</code>, el servidor emisor no está autorizado.</li>
+            <li><strong>DKIM-Signature:</strong> Si falta o no pasa la verificación, el correo no está firmado.</li>
+            <li><strong>Received:</strong> La cadena de servidores. Si el primer salto viene de una IP sospechosa, es phishing.</li>
+          </ul>
+
+          <div class="amenaza-box-dark">
+Ejemplo de cabecera comprometida:
+Return-Path: &lt;cobros@paypal-seguro.top&gt;
+Received-SPF: softfail (google.com: domain of cobros@paypal-seguro.top does not designate IP as permitted sender)
+DKIM: fail
+          </div>
+          <p>Si ves esto, <strong>no es PayPal</strong>. Es un intento de phishing.</p>
+        </div>
+      </div>
+
+      <!-- PIE DE ARTÍCULO: AUTOR + COMPARTIR (DENTRO DE LA COLUMNA PRINCIPAL PARA EVITAR ESPACIOS BLANCOS) -->
+      <div class="amenaza-foot" style="padding: 32px 0 0; margin-top: 40px; border-top: 1px solid #e2e8f0; display: flex; gap: 48px; flex-wrap: wrap; align-items: flex-start;">
+        <div class="amenaza-author" style="flex: 1 1 0%; min-width: 0;">
+          <div class="amenaza-foot-label">Sobre el autor</div>
+          <div class="amenaza-author-name">Miguel Ángel Carriazo <span>· vCISO</span></div>
+          <p class="amenaza-author-bio">vCISO · Arquitecto de Soluciones de Infraestructura y Ciberseguridad | Gobierno, Riesgo y Cumplimiento (GRC) | Gobierno de IA · ISO 42001 | Fundador de FraudeDigital.es</p>
+        </div>
+        <div class="amenaza-share" style="flex: 0 0 auto; padding-left: 40px; border-left: 1px solid #e2e8f0;">
+          <div class="amenaza-foot-label">Compartir artículo</div>
+          <a href="#" id="shareLinkedin" target="_blank" class="amenaza-share-btn" aria-label="Compartir en LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- COLUMNA DERECHA: FICHA DE CONTROL + ÍNDICE -->
+    <aside class="amenaza-toc">
+      
+      <div class="amenaza-control">
+        <div class="title">Ficha de Control</div>
+        <table>
+            <tr><td class="label">Público objetivo</td><td class="value">Todos + Técnicos</td></tr>
+            <tr><td class="label">Defensa básica</td><td class="value">Sentido común + 2FA</td></tr>
+            <tr><td class="label">Defensa avanzada</td><td class="value highlight">SPF · DKIM · DMARC</td></tr>
+            <tr><td class="label">Estándar</td><td class="value">ENS / NIS2</td></tr>
+        </table>
+      </div>
+
+      <div>
+        <div class="amenaza-toc-label">Contenido</div>
+        <nav class="amenaza-toc-nav" id="artTocNav">
+          <a href="#s1" class="active">01. Para todos · ¿Qué es?</a>
+          <a href="#s2">02. Para todos · Si ya caí</a>
+          <a href="#s3">03. Técnico · SPF/DKIM/DMARC</a>
+          <a href="#s4">04. Técnico · Forense SMTP</a>
+        </nav>
+        <div style="margin-top: 14px; font-size: 12px; color: #94a3b8; border-top: 1px solid #e2e8f0; padding-top: 10px;">
+          <span style="display: block; background: #dc2626; color: #fff; padding: 4px 10px; border-radius: 4px; text-align: center; font-weight: 700; font-size: 11px;">🔒 Dual · Para todos + técnicos</span>
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <!-- ARTÍCULOS RELACIONADOS -->
+  <div class="amenaza-related">
+    <div class="amenaza-related-label">Sigue leyendo</div>
+    <div class="amenaza-related-title">Artículos relacionados</div>
+    <div class="amenaza-related-grid">
+      <a href="phishing-aitm.html" class="amenaza-related-card">
+        <span class="amenaza-related-pill">Phishing Avanzado</span>
+        <h3>Phishing AitM: el secuestro de sesión que salta el 2FA</h3>
+        <p>Proxies inversos y robo de cookies de sesión autenticada.</p>
+        <div class="amenaza-related-meta"><span>18 junio 2026</span><span>4 min</span></div>
+      </a>
+      <a href="vishing.html" class="amenaza-related-card">
+        <span class="amenaza-related-pill">Vishing</span>
+        <h3>Vishing: cuando el estafador llama a tu puerta</h3>
+        <p>Spoofing de voz y suplantación de entidades bancarias.</p>
+        <div class="amenaza-related-meta"><span>18 junio 2026</span><span>3 min</span></div>
+      </a>
+      <a href="smishing.html" class="amenaza-related-card">
+        <span class="amenaza-related-pill">Smishing</span>
+        <h3>Smishing: el SMS que vacía tu cuenta</h3>
+        <p>Abuso de Sender ID y pasarelas agregadoras.</p>
+        <div class="amenaza-related-meta"><span>18 junio 2026</span><span>3 min</span></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER INYECTADO -->
+  <div id="footer-container"></div>
+
+</div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="../js/menu.js"></script>
+<script src="../js/footer.js"></script>
+
+<script>
+  var shareBtn = document.getElementById('shareLinkedin');
+  if (shareBtn) {
+    shareBtn.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(window.location.href);
+  }
+</script>
+
+<script>
+  var tocLinks = Array.from(document.querySelectorAll('.amenaza-toc-nav a'));
+  var sections = tocLinks.map(a => document.querySelector(a.getAttribute('href')));
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          var id = '#' + entry.target.id;
+          tocLinks.forEach(a => {
+            if (a.getAttribute('href') === id) {
+              a.classList.add('active');
+            } else {
+              a.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, { rootMargin: '-20% 0px -60% 0px' });
+    sections.forEach(function(s){ if (s) observer.observe(s); });
+  }
+</script>
+
+</body>
+</html>

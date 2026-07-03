@@ -1,0 +1,19 @@
+# RFC 9116 - Security.txt
+# https://securitytxt.org/
+
+Contact: mailto:legal@fraudedigital.es
+Expires: 2027-07-02T23:59:59.000Z
+Preferred-Languages: es, en
+Canonical: https://fraudedigital.es/.well-known/security.txt
+
+# Política
+# Este portal es divulgativo. No procesa datos personales, no tiene formularios,
+# no almacena información de usuarios. Si detectas alguna vulnerabilidad:
+#   - Comunícala de forma responsable al contacto anterior
+#   - No divulgues públicamente antes de recibir respuesta
+#   - Respeta un plazo razonable de 90 días para la corrección
+
+# Reconocimiento
+# Los investigadores que reporten vulnerabilidades reales de forma responsable
+# serán reconocidos públicamente (con su consentimiento) en la sección
+# de agradecimientos del sitio.

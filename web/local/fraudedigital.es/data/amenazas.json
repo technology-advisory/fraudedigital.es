@@ -1,0 +1,169 @@
+{
+  "amenazas": [
+    {
+      "id": "phishing-tradicional",
+      "exp": "EXP // 01",
+      "titulo": "Phishing Tradicional",
+      "descripcion": "Secuestro de tokens de sesión activa mediante proxies inversos y suplantaciones de identidad dirigidas.",
+      "icono": "correo",
+      "enlace": "phishing-tradicional.html",
+      "tags": ["phishing", "correo", "email", "sesion", "token", "proxy", "tradicional"],
+      "publico": "publico-general",
+      "badge": "Público general"
+    },
+    {
+      "id": "phishing-aitm",
+      "exp": "EXP // 02",
+      "titulo": "Phishing AitM: el secuestro de sesión que salta el 2FA",
+      "descripcion": "Ataques Adversary-in-the-Middle (AitM) que saltan el doble factor mediante proxies inversos.",
+      "icono": "correo",
+      "enlace": "phishing-aitm.html",
+      "tags": ["phishing", "aitm", "sesion", "2fa", "proxy", "autenticacion", "mfa"],
+      "publico": "publico-general",
+      "badge": "Público general"
+    },
+    {
+      "id": "vishing",
+      "exp": "EXP // 03",
+      "titulo": "Vishing & Spoofing de Voz",
+      "descripcion": "Manipulación de cabeceras telefónicas SIP VoIP y suplantación de entidades bancarias.",
+      "icono": "telefono",
+      "enlace": "vishing.html",
+      "tags": ["vishing", "spoofing", "voz", "telefono", "voip", "sip", "llamada"],
+      "publico": "publico-general",
+      "badge": "Público general"
+    },
+    {
+      "id": "smishing",
+      "exp": "EXP // 04",
+      "titulo": "Smishing & Sender ID Fraude",
+      "descripcion": "Abuso de pasarelas agregadoras SMS para inyección de textos dentro de hilos legítimos.",
+      "icono": "sms",
+      "enlace": "smishing.html",
+      "tags": ["smishing", "sender id", "sms", "mensaje", "texto", "pasarela"],
+      "publico": "publico-general",
+      "badge": "Público general"
+    },
+    {
+      "id": "qrishing",
+      "exp": "EXP // 05",
+      "titulo": "QRishing & Tampering Físico",
+      "descripcion": "Alteración material de códigos QR expuestos en la vía pública para desvíos de pasarelas de pago.",
+      "icono": "qr",
+      "enlace": "qrishing.html",
+      "tags": ["qrishing", "qr", "tampering", "fisico", "pago", "codigo", "escanear"],
+      "publico": "publico-general",
+      "badge": "Público general"
+    },
+    {
+      "id": "ia-estafas",
+      "exp": "EXP // 06",
+      "titulo": "IA Avanzada & Deepfakes",
+      "descripcion": "Clonación de voz sintética mediante redes neuronales profundas aplicadas a estafas ejecutivas.",
+      "icono": "ia",
+      "enlace": "ia-estafas.html",
+      "tags": ["ia", "deepfakes", "inteligencia artificial", "voz", "clonacion", "redes neuronales", "sintetica"],
+      "publico": "publico-general",
+      "badge": "Público general"
+    },
+    {
+      "id": "ingenieria-social",
+      "exp": "EXP // 07",
+      "titulo": "Ingeniería Social & OSINT",
+      "descripcion": "Modelado del eslabón humano corporativo, ataques del fraude del CEO y manipulación de procesos maestro.",
+      "icono": "usuarios",
+      "enlace": "ingenieria-social.html",
+      "tags": ["ingenieria social", "osint", "ceo", "fraude", "manipulacion", "psicologica", "pretexting"],
+      "publico": "publico-general",
+      "badge": "Público general"
+    },
+    {
+      "id": "wifi-mitm",
+      "exp": "EXP // 08",
+      "titulo": "MITM en WiFi Públicas",
+      "descripcion": "Redes WiFi falsas en cafeterías, aeropuertos y hoteles que capturan todo tu tráfico y credenciales.",
+      "icono": "wifi",
+      "enlace": "wifi-mitm.html",
+      "tags": ["wifi", "mitm", "red", "publica", "cafeteria", "aeropuerto", "hotel", "captura"],
+      "publico": "publico-general",
+      "badge": "Público general"
+    },
+    {
+      "id": "sim-swapping",
+      "exp": "EXP // 09",
+      "titulo": "SIM Swapping & Portabilidad Fraudulenta",
+      "descripcion": "Suplantación de identidad ante la operadora para duplicar tu SIM y capturar SMS de 2FA.",
+      "icono": "sim",
+      "enlace": "sim-swapping.html",
+      "tags": ["sim", "swapping", "portabilidad", "2fa", "operadora", "telefono", "movil", "suplantacion"],
+      "publico": "publico-general",
+      "badge": "Público general"
+    },
+    {
+      "id": "invoice-fraud",
+      "exp": "EXP // 10",
+      "titulo": "Fraude de Factura Falsa (Invoice Fraud)",
+      "descripcion": "Suplantación de proveedores con modificación de IBAN. Afecta a departamentos financieros de PYMEs y grandes empresas.",
+      "icono": "factura",
+      "enlace": "invoice-fraud.html",
+      "tags": ["factura", "invoice", "proveedor", "iban", "finanzas", "pyme", "empresa", "transferencia"],
+      "publico": "profesionales",
+      "badge": "Profesionales / Empresas"
+    },
+    {
+      "id": "sextorsion",
+      "exp": "EXP // 11",
+      "titulo": "Sextorsión y Chantaje Digital",
+      "descripcion": "Correos que afirman tener vídeos comprometidos y exigen pago en criptomonedas. Pura ingeniería social.",
+      "icono": "chantaje",
+      "enlace": "sextorsion.html",
+      "tags": ["sextorsion", "chantaje", "criptomonedas", "correo", "extorsion", "bitcoin", "pago"],
+      "publico": "publico-general",
+      "badge": "Público general"
+    },
+    {
+      "id": "ransomware-estafa",
+      "exp": "EXP // 12",
+      "titulo": "Ransomware como Estafa",
+      "descripcion": "Enganches que llevan a descarga de malware que cifra datos y exige rescate. Prevención y respuesta.",
+      "icono": "ransomware",
+      "enlace": "ransomware-estafa.html",
+      "tags": ["ransomware", "malware", "rescate", "cifrado", "datos", "virus", "pago"],
+      "publico": "publico-general",
+      "badge": "Público general"
+    },
+    {
+      "id": "estafas-segunda-mano",
+      "exp": "EXP // 13",
+      "titulo": "Estafas en Plataformas de Segunda Mano",
+      "descripcion": "Suplantación de compradores/vendedores en Wallapop, Vinted, Milanuncios con enlaces de pago falsos.",
+      "icono": "compra",
+      "enlace": "estafas-segunda-mano.html",
+      "tags": ["wallapop", "vinted", "milanuncios", "segunda mano", "compra", "venta", "pago"],
+      "publico": "publico-general",
+      "badge": "Público general"
+    },
+    {
+      "id": "compras-online",
+      "exp": "EXP // 14",
+      "titulo": "Fraude en Compras Online",
+      "descripcion": "Tiendas fantasma, dropshipping fraudulento y anuncios falsos en redes sociales que nunca envían el producto.",
+      "icono": "compra",
+      "enlace": "compras-online.html",
+      "tags": ["tienda online", "ecommerce", "dropshipping", "anuncio falso", "compra", "instagram shop"],
+      "publico": "publico-general",
+      "badge": "Público general"
+    },
+    {
+      "id": "bulos-fake-news",
+      "exp": "EXP // 15",
+      "titulo": "Bulos y Fake News como Vector de Fraude",
+      "descripcion": "Noticias falsas, vídeos manipulados y falsas alarmas usadas para captar víctimas de estafas de inversión y pánico.",
+      "icono": "ia",
+      "enlace": "bulos-fake-news.html",
+      "tags": ["bulo", "fake news", "desinformación", "noticia falsa", "deepfake", "manipulación"],
+      "publico": "publico-general",
+      "badge": "Público general"
+    }
+  ]
+}
