@@ -1,0 +1,141 @@
+:root {
+    --primary: #0f172a;
+    --accent: #dc2626;
+    --accent-hover: #b91c1c;
+    --bg: #ffffff;
+    --card-bg: #f8fafc;
+    --border: #e2e8f0;
+    --text: #334155;
+    --text-dark: #0f172a;
+    --text-muted: #64748b;
+
+    /* Breakpoints (para consistencia — no se aplican como CSS vars) */
+    --bp-mobile: 480px;
+    --bp-tablet: 768px;
+    --bp-desktop: 1024px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Compensa el menú sticky (~60-70px) al saltar a cualquier ancla #id.
+   Sin esto, el título de la sección queda tapado detrás del menú. */
+[id] {
+    scroll-margin-top: 90px;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+img, svg {
+    max-width: 100%;
+    height: auto;
+}
+
+a { color: inherit; }
+
+/* ==============================
+   Header / Menú compartido
+   ============================== */
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-link {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+/* Botón hamburguesa (visible solo en móvil) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: #0f172a;
+}
+
+.menu-toggle svg {
+    width: 28px;
+    height: 28px;
+}
+
+/* ==============================
+   TABLET (≤ 1024px)
+   ============================== */
+@media (max-width: 1024px) {
+    .nav-container { padding: 0 1rem; }
+}
+
+/* ==============================
+   MÓVIL (≤ 768px)
+   ============================== */
+@media (max-width: 768px) {
+    body { font-size: 15px; }
+
+    /* Menú colapsable */
+    .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* La lista de nav pasa a ocupar todo el ancho y se colapsa */
+    .nav-list {
+        display: none !important;
+        width: 100%;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        gap: 0 !important;
+        padding: 12px 0 !important;
+        margin-top: 12px !important;
+        border-top: 1px solid var(--border);
+        order: 3;
+    }
+    .nav-list.is-open {
+        display: flex !important;
+    }
+    .nav-list li {
+        width: 100%;
+    }
+    .nav-list li a.menu-link {
+        padding: 12px 16px !important;
+        border-bottom: 1px solid #f1f5f9;
+        justify-content: flex-start !important;
+    }
+    .nav-list li:last-child a.menu-link {
+        border-bottom: none;
+        margin-top: 6px;
+    }
+}
+
+/* ==============================
+   MÓVIL PEQUEÑO (≤ 480px)
+   ============================== */
+@media (max-width: 480px) {
+    body { font-size: 14.5px; }
+    .logo-link { font-size: 1.15rem; }
+}

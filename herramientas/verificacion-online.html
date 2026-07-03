@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Herramientas de Verificación Online · FraudeDigital.es</title>
+<meta name="description" content="Directorio de herramientas gratuitas para verificar URLs, dominios, emails y ficheros sospechosos: VirusTotal, Scamadviser, Have I Been Pwned, Message Header Analyzer y más.">
+<meta name="keywords" content="verificar url sospechosa, comprobar dominio fraudulento, virustotal, scamadviser, have i been pwned, message header analyzer, urlscan, phishtank">
+<meta name="author" content="Miguel Ángel Carriazo">
+<meta name="theme-color" content="#dc2626">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Language" content="es">
+
+<link rel="canonical" href="https://fraudedigital.es/herramientas/verificacion-online.html">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+
+<meta property="og:site_name" content="FraudeDigital.es">
+<meta property="og:locale" content="es_ES">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Herramientas de Verificación Online · FraudeDigital.es">
+<meta property="og:description" content="Comprueba URLs, dominios, emails y ficheros sospechosos antes de pinchar. Directorio comentado de herramientas gratuitas.">
+<meta property="og:url" content="https://fraudedigital.es/herramientas/verificacion-online.html">
+<meta property="og:image" content="https://fraudedigital.es/img/og-verificacion.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Herramientas de Verificación Online · FraudeDigital.es">
+<meta name="twitter:description" content="Comprueba URLs, dominios, emails y ficheros sospechosos antes de pinchar.">
+<meta name="twitter:image" content="https://fraudedigital.es/img/og-verificacion.png">
+
+<link rel="stylesheet" href="../css/global.css">
+<link rel="stylesheet" href="../css/dossier-core.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Herramientas de Verificación Online",
+  "description": "Directorio comentado de herramientas gratuitas para verificar URLs, dominios, emails y ficheros sospechosos.",
+  "url": "https://fraudedigital.es/herramientas/verificacion-online.html",
+  "inLanguage": "es-ES"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://fraudedigital.es/"},
+    {"@type": "ListItem", "position": 2, "name": "Herramientas", "item": "https://fraudedigital.es/herramientas/"},
+    {"@type": "ListItem", "position": 3, "name": "Verificación online", "item": "https://fraudedigital.es/herramientas/verificacion-online.html"}
+  ]
+}
+</script>
+
+<style>
+  .vf-wrapper { padding: 30px 40px 40px; }
+
+  .vf-intro {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+    border-left: 4px solid #dc2626;
+    padding: 24px 28px;
+    margin-bottom: 28px;
+    border-radius: 0 6px 6px 0;
+  }
+  .vf-intro h1 {
+    font-size: clamp(24px, 3.5vw, 32px);
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 8px;
+    letter-spacing: -0.02em;
+  }
+  .vf-intro p {
+    font-size: 14.5px;
+    color: #475569;
+    margin: 0;
+    line-height: 1.55;
+    max-width: 800px;
+  }
+
+  .vf-category {
+    margin-bottom: 36px;
+  }
+
+  .vf-cat-title {
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #dc2626;
+    font-weight: 700;
+    margin: 0 0 6px;
+  }
+  .vf-cat-desc {
+    font-size: 14px;
+    color: #64748b;
+    margin: 0 0 14px;
+    line-height: 1.5;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .vf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 14px;
+  }
+
+  .vf-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 18px 20px;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  .vf-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+    border-color: #dc2626;
+  }
+
+  .vf-card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    gap: 10px;
+  }
+
+  .vf-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+    line-height: 1.25;
+  }
+
+  .vf-card-desc {
+    font-size: 13.5px;
+    color: #475569;
+    line-height: 1.55;
+    margin: 0 0 12px;
+    flex: 1;
+  }
+
+  .vf-card-desc strong { color: #0f172a; }
+
+  .vf-tag {
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 3px 7px;
+    border-radius: 3px;
+    font-weight: 700;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .tag-free  { background: #dcfce7; color: #15803d; }
+  .tag-freem { background: #fef3c7; color: #92400e; }
+  .tag-ofi   { background: #dbeafe; color: #1e40af; }
+
+  .vf-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #dc2626;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 14px;
+    background: #fef2f2;
+    border-radius: 4px;
+    align-self: flex-start;
+    transition: all 0.15s;
+  }
+  .vf-card-link:hover {
+    background: #dc2626;
+    color: #fff;
+  }
+  .vf-card-domain {
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    color: #64748b;
+    margin-top: 6px;
+    word-break: break-all;
+  }
+
+  /* Callout de advertencia */
+  .vf-warn {
+    background: #fef3c7;
+    border: 1px solid #fbbf24;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 28px 0;
+    font-size: 13.5px;
+    color: #78350f;
+    line-height: 1.55;
+  }
+  .vf-warn strong { color: #422006; }
+
+  @media (max-width: 768px) {
+    .vf-wrapper { padding: 20px 16px 30px; }
+    .vf-intro { padding: 18px 20px; }
+    .vf-grid { grid-template-columns: 1fr; gap: 12px; }
+    .vf-card { padding: 16px 18px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="card-wrapper ds-page">
+<div class="card">
+
+  <div id="menu-container"></div>
+  <div class="accent-bar"></div>
+
+  <div class="ds-meta">
+    <span><span class="dot"></span>FraudeDigital // sección: HERRAMIENTAS · VERIFICACIÓN ONLINE</span>
+    <span>estado: <strong>directorio comentado</strong></span>
+  </div>
+
+  <div class="vf-wrapper">
+
+    <div class="vf-intro">
+      <h1>Herramientas de Verificación Online</h1>
+      <p>Directorio comentado de utilidades gratuitas para <strong>comprobar antes de pinchar</strong>: URLs sospechosas, dominios, cabeceras de email, filtraciones de contraseñas y ficheros posiblemente maliciosos. Todas son de terceros; ninguna nos pertenece.</p>
+    </div>
+
+    <div class="vf-warn">
+      <strong>Nota importante:</strong> antes de pegar una URL sospechosa en cualquier verificador online, ten claro que el análisis quedará registrado y a veces será público. <strong>Nunca subas a estos servicios ficheros ni documentos con datos personales, corporativos o confidenciales</strong>. Para análisis de material sensible, usa un entorno aislado (sandbox local) o consulta con un profesional.
+    </div>
+
+
+    <!-- ============================================
+         URLs y DOMINIOS
+         ============================================ -->
+    <section class="vf-category">
+      <div class="vf-cat-title">01 · Verificación de URLs y dominios</div>
+      <p class="vf-cat-desc">¿Ese enlace del SMS/email es real? Pega la URL en uno de estos servicios antes de abrirla.</p>
+      <div class="vf-grid">
+
+        <div class="vf-card">
+          <div class="vf-card-head">
+            <h3>VirusTotal</h3>
+            <span class="vf-tag tag-free">Gratis</span>
+          </div>
+          <p class="vf-card-desc">El estándar de facto. Analiza URLs y ficheros contra <strong>70+ motores antivirus y motores de reputación</strong>. Muestra si el dominio está clasificado como phishing, malware o C2 por Google Safe Browsing, Kaspersky, ESET, Sophos y compañía. Ideal para primer triage.</p>
+          <a href="https://www.virustotal.com/gui/home/url" class="vf-card-link" target="_blank" rel="noopener noreferrer">Abrir →</a>
+          <div class="vf-card-domain">virustotal.com</div>
+        </div>
+
+        <div class="vf-card">
+          <div class="vf-card-head">
+            <h3>Scamadviser</h3>
+            <span class="vf-tag tag-free">Gratis</span>
+          </div>
+          <p class="vf-card-desc">Puntúa la reputación de tiendas online y webs basándose en <strong>edad del dominio, país de registro, SSL, reseñas y otros indicadores</strong>. Especialmente útil para comprobar tiendas de segunda mano y ofertas sospechosas antes de pagar.</p>
+          <a href="https://www.scamadviser.com/" class="vf-card-link" target="_blank" rel="noopener noreferrer">Abrir →</a>
+          <div class="vf-card-domain">scamadviser.com</div>
+        </div>
+
+        <div class="vf-card">
+          <div class="vf-card-head">
+            <h3>URLScan.io</h3>
+            <span class="vf-tag tag-free">Gratis</span>
+          </div>
+          <p class="vf-card-desc">Análisis <strong>dinámico</strong>: abre la URL en un navegador sandbox y muestra qué recursos carga, capturas de pantalla, redirecciones y peticiones a dominios sospechosos. Muy útil para desenmascarar redirects encadenados de phishing.</p>
+          <a href="https://urlscan.io/" class="vf-card-link" target="_blank" rel="noopener noreferrer">Abrir →</a>
+          <div class="vf-card-domain">urlscan.io</div>
+        </div>
+
+        <div class="vf-card">
+          <div class="vf-card-head">
+            <h3>URLVoid</h3>
+            <span class="vf-tag tag-free">Gratis</span>
+          </div>
+          <p class="vf-card-desc">Cruza el dominio contra decenas de <strong>blacklists de reputación</strong>. Menos motores que VirusTotal, pero interfaz muy directa: verde/rojo por servicio. Buen segundo veredicto.</p>
+          <a href="https://www.urlvoid.com/" class="vf-card-link" target="_blank" rel="noopener noreferrer">Abrir →</a>
+          <div class="vf-card-domain">urlvoid.com</div>
+        </div>
+
+        <div class="vf-card">
+          <div class="vf-card-head">
+            <h3>Google Safe Browsing</h3>
+            <span class="vf-tag tag-ofi">Oficial</span>
+          </div>
+          <p class="vf-card-desc">El <strong>informe de transparencia de Google</strong> te dice si Chrome, Firefox y Safari marcan ese dominio como peligroso. Si Google lo dice, el 95% de navegadores del mundo lo bloquean.</p>
+          <a href="https://transparencyreport.google.com/safe-browsing/search" class="vf-card-link" target="_blank" rel="noopener noreferrer">Abrir →</a>
+          <div class="vf-card-domain">transparencyreport.google.com</div>
+        </div>
+
+        <div class="vf-card">
+          <div class="vf-card-head">
+            <h3>PhishTank</h3>
+            <span class="vf-tag tag-free">Gratis</span>
+          </div>
+          <p class="vf-card-desc">Base de datos <strong>comunitaria</strong> de URLs de phishing verificadas por la comunidad. Especialmente potente para campañas masivas recientes (Correos, DGT, bancos). Si aparece aquí, es phishing confirmado.</p>
+          <a href="https://phishtank.org/" class="vf-card-link" target="_blank" rel="noopener noreferrer">Abrir →</a>
+          <div class="vf-card-domain">phishtank.org</div>
+        </div>
+
+        <div class="vf-card">
+          <div class="vf-card-head">
+            <h3>Sucuri SiteCheck</h3>
+            <span class="vf-tag tag-free">Gratis</span>
+          </div>
+          <p class="vf-card-desc">Escanea una web en busca de <strong>malware inyectado, defacements y blacklists</strong>. Útil si sospechas que una web legítima ha sido comprometida (típico en WordPress viejo).</p>
+          <a href="https://sitecheck.sucuri.net/" class="vf-card-link" target="_blank" rel="noopener noreferrer">Abrir →</a>
+          <div class="vf-card-domain">sitecheck.sucuri.net</div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         EMAIL: CABECERAS
+         ============================================ -->
+    <section class="vf-category">
+      <div class="vf-cat-title">02 · Análisis de emails sospechosos</div>
+      <p class="vf-cat-desc">Cuando el "De:" dice una cosa y las cabeceras dicen otra. Analiza el origen real de un email.</p>
+      <div class="vf-grid">
+
+        <div class="vf-card">
+          <div class="vf-card-head">
+            <h3>Message Header Analyzer (Microsoft)</h3>
+            <span class="vf-tag tag-ofi">Oficial</span>
+          </div>
+          <p class="vf-card-desc">La herramienta oficial de Microsoft: pega las <strong>cabeceras completas</strong> del email y te descompone la ruta que ha seguido, los SPF/DKIM/DMARC, la IP de origen y los saltos SMTP. Referencia para triage rápido.</p>
+          <a href="https://mha.azurewebsites.net/" class="vf-card-link" target="_blank" rel="noopener noreferrer">Abrir →</a>
+          <div class="vf-card-domain">mha.azurewebsites.net</div>
+        </div>
+
+        <div class="vf-card">
+          <div class="vf-card-head">
+            <h3>MXToolbox Email Header Analyzer</h3>
+            <span class="vf-tag tag-freem">Freemium</span>
+          </div>
+          <p class="vf-card-desc">Alternativa muy completa: además de descomponer la cabecera, cruza <strong>los IPs con blacklists RBL/DNSBL</strong> en tiempo real. Útil cuando quieres saber si el servidor emisor está reportado.</p>
+          <a href="https://mxtoolbox.com/EmailHeaders.aspx" class="vf-card-link" target="_blank" rel="noopener noreferrer">Abrir →</a>
+          <div class="vf-card-domain">mxtoolbox.com</div>
+        </div>
+
+        <div class="vf-card">
+          <div class="vf-card-head">
+            <h3>Google Admin · Header Analyzer</h3>
+            <span class="vf-tag tag-ofi">Oficial</span>
+          </div>
+          <p class="vf-card-desc">La opción de Google para admins Workspace. Muy visual: te dibuja la <strong>línea temporal de saltos SMTP</strong> con tiempos de proceso, ideal para detectar rutas anómalas.</p>
+          <a href="https://toolbox.googleapps.com/apps/messageheader/" class="vf-card-link" target="_blank" rel="noopener noreferrer">Abrir →</a>
+          <div class="vf-card-domain">toolbox.googleapps.com</div>
+        </div>
+
+        <div class="vf-card">
+          <div class="vf-card-head">
+            <h3>MXToolbox SuperTool</h3>
+            <span class="vf-tag tag-freem">Freemium</span>
+          </div>
+          <p class="vf-card-desc">La navaja suiza para <strong>SPF, DKIM, DMARC, MX, DNS y blacklist lookups</strong>. Escribe un dominio y compruebas su configuración anti-suplantación de un vistazo.</p>
+          <a href="https://mxtoolbox.com/SuperTool.aspx" class="vf-card-link" target="_blank" rel="noopener noreferrer">Abrir →</a>
+          <div class="vf-card-domain">mxtoolbox.com</div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         FILTRACIONES / CREDENCIALES
+         ============================================ -->
+    <section class="vf-category">
+      <div class="vf-cat-title">03 · Filtraciones de credenciales</div>
+      <p class="vf-cat-desc">¿Tu email o contraseña anda por internet? Comprueba antes de que lo aprovechen.</p>
+      <div class="vf-grid">
+
+        <div class="vf-card">
+          <div class="vf-card-head">
+            <h3>Have I Been Pwned</h3>
+            <span class="vf-tag tag-free">Gratis</span>
+          </div>
+          <p class="vf-card-desc">La referencia mundial. Introduce tu email y te dice en <strong>qué brechas de datos has aparecido</strong> (LinkedIn, Adobe, Dropbox, etc.). También tiene un servicio de notificación por si sales en una nueva.</p>
+          <a href="https://haveibeenpwned.com/" class="vf-card-link" target="_blank" rel="noopener noreferrer">Abrir →</a>
+          <div class="vf-card-domain">haveibeenpwned.com</div>
+        </div>
+
+        <div class="vf-card">
+          <div class="vf-card-head">
+            <h3>HIBP · Pwned Passwords</h3>
+            <span class="vf-tag tag-free">Gratis</span>
+          </div>
+          <p class="vf-card-desc">Comprueba si una <strong>contraseña</strong> concreta ha aparecido en alguna brecha. Usa <em>k-anonymity</em>: nunca envías la contraseña completa. Si sale &gt; 0, cambia esa contraseña YA.</p>
+          <a href="https://haveibeenpwned.com/Passwords" class="vf-card-link" target="_blank" rel="noopener noreferrer">Abrir →</a>
+          <div class="vf-card-domain">haveibeenpwned.com/Passwords</div>
+        </div>
+
+        <div class="vf-card">
+          <div class="vf-card-head">
+            <h3>Firefox Monitor</h3>
+            <span class="vf-tag tag-free">Gratis</span>
+          </div>
+          <p class="vf-card-desc">Mismo servicio que HIBP, empaquetado por Mozilla con <strong>alertas por email</strong> cuando salgas en una nueva brecha. Interfaz más amigable si no eres técnico.</p>
+          <a href="https://monitor.mozilla.org/" class="vf-card-link" target="_blank" rel="noopener noreferrer">Abrir →</a>
+          <div class="vf-card-domain">monitor.mozilla.org</div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         WHOIS / HISTÓRICO / REPUTACIÓN
+         ============================================ -->
+    <section class="vf-category">
+      <div class="vf-cat-title">04 · WHOIS, histórico y reputación de dominios</div>
+      <p class="vf-cat-desc">Dominios nuevos + registrados en el extranjero + sin identidad clara = señal de alarma.</p>
+      <div class="vf-grid">
+
+        <div class="vf-card">
+          <div class="vf-card-head">
+            <h3>Who.is</h3>
+            <span class="vf-tag tag-free">Gratis</span>
+          </div>
+          <p class="vf-card-desc">Consulta rápida del <strong>WHOIS</strong> de un dominio: quién lo registró, en qué país y cuándo. Un dominio registrado hace 4 días y desde Panamá para una web que suplanta a tu banco es una gran señal de alerta.</p>
+          <a href="https://who.is/" class="vf-card-link" target="_blank" rel="noopener noreferrer">Abrir →</a>
+          <div class="vf-card-domain">who.is</div>
+        </div>
+
+        <div class="vf-card">
+          <div class="vf-card-head">
+            <h3>Wayback Machine</h3>
+            <span class="vf-tag tag-free">Gratis</span>
+          </div>
+          <p class="vf-card-desc">El <strong>archivo histórico de internet</strong>. Si la web decía otra cosa hace 6 meses, aquí lo verás. Fundamental cuando sospechas que una tienda "de toda la vida" en realidad se creó anteayer.</p>
+          <a href="https://web.archive.org/" class="vf-card-link" target="_blank" rel="noopener noreferrer">Abrir →</a>
+          <div class="vf-card-domain">web.archive.org</div>
+        </div>
+
+        <div class="vf-card">
+          <div class="vf-card-head">
+            <h3>DomainTools</h3>
+            <span class="vf-tag tag-freem">Freemium</span>
+          </div>
+          <p class="vf-card-desc">WHOIS enriquecido: historia del dominio, IPs asociadas, otros dominios del mismo propietario. La parte gratuita da bastante; la de pago es potente para investigar campañas coordinadas.</p>
+          <a href="https://whois.domaintools.com/" class="vf-card-link" target="_blank" rel="noopener noreferrer">Abrir →</a>
+          <div class="vf-card-domain">whois.domaintools.com</div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         FICHEROS / MALWARE
+         ============================================ -->
+    <section class="vf-category">
+      <div class="vf-cat-title">05 · Análisis de ficheros y malware</div>
+      <p class="vf-cat-desc">Solo para ficheros <strong>no confidenciales</strong>: recuerda que lo que subas queda registrado y a veces indexado.</p>
+      <div class="vf-grid">
+
+        <div class="vf-card">
+          <div class="vf-card-head">
+            <h3>VirusTotal · Files</h3>
+            <span class="vf-tag tag-free">Gratis</span>
+          </div>
+          <p class="vf-card-desc">Sube el fichero sospechoso (hasta 650MB) y VT lo pasa por <strong>70+ AVs y sandbox</strong>. También muestra qué han visto otras personas en el mismo hash: es una base de conocimiento global de malware.</p>
+          <a href="https://www.virustotal.com/gui/home/upload" class="vf-card-link" target="_blank" rel="noopener noreferrer">Abrir →</a>
+          <div class="vf-card-domain">virustotal.com</div>
+        </div>
+
+        <div class="vf-card">
+          <div class="vf-card-head">
+            <h3>Any.Run</h3>
+            <span class="vf-tag tag-freem">Freemium</span>
+          </div>
+          <p class="vf-card-desc"><strong>Sandbox interactivo</strong>: ejecuta el malware en una VM y tú ves en tiempo real qué hace (procesos, red, ficheros modificados). La versión gratuita muestra el análisis públicamente.</p>
+          <a href="https://any.run/" class="vf-card-link" target="_blank" rel="noopener noreferrer">Abrir →</a>
+          <div class="vf-card-domain">any.run</div>
+        </div>
+
+        <div class="vf-card">
+          <div class="vf-card-head">
+            <h3>Hybrid Analysis</h3>
+            <span class="vf-tag tag-free">Gratis</span>
+          </div>
+          <p class="vf-card-desc">Sandbox automatizado de CrowdStrike/Falcon. Menos interactivo que Any.Run pero muy útil para <strong>informes forenses</strong> de comportamiento (persistencia, conexiones C2, técnicas MITRE ATT&CK).</p>
+          <a href="https://www.hybrid-analysis.com/" class="vf-card-link" target="_blank" rel="noopener noreferrer">Abrir →</a>
+          <div class="vf-card-domain">hybrid-analysis.com</div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         DENUNCIA / REPORTE OFICIAL
+         ============================================ -->
+    <section class="vf-category">
+      <div class="vf-cat-title">06 · Canales oficiales de denuncia y reporte</div>
+      <p class="vf-cat-desc">Cuando ya eres víctima: dónde reportarlo formalmente.</p>
+      <div class="vf-grid">
+
+        <div class="vf-card">
+          <div class="vf-card-head">
+            <h3>INCIBE · Línea 017</h3>
+            <span class="vf-tag tag-ofi">Oficial</span>
+          </div>
+          <p class="vf-card-desc">Línea gratuita de <strong>ayuda en ciberseguridad</strong> para ciudadanos y empresas. Orientación técnica y legal, confidencial. L-D 8:00-23:00. Marca 017 desde España.</p>
+          <a href="https://www.incibe.es/linea-de-ayuda-en-ciberseguridad" class="vf-card-link" target="_blank" rel="noopener noreferrer">Abrir →</a>
+          <div class="vf-card-domain">incibe.es · tel: 017</div>
+        </div>
+
+        <div class="vf-card">
+          <div class="vf-card-head">
+            <h3>Denuncias Policía Nacional</h3>
+            <span class="vf-tag tag-ofi">Oficial</span>
+          </div>
+          <p class="vf-card-desc">Portal para presentar <strong>denuncias telemáticas</strong> a la Policía Nacional. Requiere ratificación presencial posterior en la comisaría en un plazo determinado.</p>
+          <a href="https://denuncias.policia.es/OVD/" class="vf-card-link" target="_blank" rel="noopener noreferrer">Abrir →</a>
+          <div class="vf-card-domain">denuncias.policia.es</div>
+        </div>
+
+        <div class="vf-card">
+          <div class="vf-card-head">
+            <h3>GDT · Guardia Civil</h3>
+            <span class="vf-tag tag-ofi">Oficial</span>
+          </div>
+          <p class="vf-card-desc">El <strong>Equipo @ de Investigación Tecnológica</strong> de la Guardia Civil. Colabora en la investigación de fraude digital, sextorsión, ransomware y ciberdelitos económicos.</p>
+          <a href="https://web.guardiacivil.es/es/institucional/conocenos/especialidades/gdt/" class="vf-card-link" target="_blank" rel="noopener noreferrer">Abrir →</a>
+          <div class="vf-card-domain">web.guardiacivil.es/gdt</div>
+        </div>
+
+        <div class="vf-card">
+          <div class="vf-card-head">
+            <h3>OSI · Oficina de Seguridad del Internauta</h3>
+            <span class="vf-tag tag-ofi">Oficial</span>
+          </div>
+          <p class="vf-card-desc">El brazo <strong>divulgativo de INCIBE para ciudadanos</strong>. Alertas actuales, guías temáticas por perfil (menores, mayores, familias) y formulario para reportar incidentes.</p>
+          <a href="https://www.osi.es/" class="vf-card-link" target="_blank" rel="noopener noreferrer">Abrir →</a>
+          <div class="vf-card-domain">osi.es</div>
+        </div>
+
+        <div class="vf-card">
+          <div class="vf-card-head">
+            <h3>AEPD · Reclamaciones</h3>
+            <span class="vf-tag tag-ofi">Oficial</span>
+          </div>
+          <p class="vf-card-desc">Si el fraude ha implicado <strong>tratamiento ilegítimo de tus datos personales</strong> (o si una empresa no protegió los tuyos), reclama aquí ante la Agencia Española de Protección de Datos.</p>
+          <a href="https://sedeaepd.gob.es/sede-electronica-web/vistas/infoSede/tramitesCiudadano.jsf" class="vf-card-link" target="_blank" rel="noopener noreferrer">Abrir →</a>
+          <div class="vf-card-domain">sedeaepd.gob.es</div>
+        </div>
+
+      </div>
+    </section>
+
+
+  </div>
+
+  <div id="footer-container"></div>
+
+</div>
+</div>
+
+<script src="../js/menu.js"></script>
+<script src="../js/footer.js"></script>
+</body>
+</html>

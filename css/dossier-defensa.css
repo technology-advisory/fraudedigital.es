@@ -1,0 +1,665 @@
+/* ==========================================================================
+   DOSSIER-AMENAZA.CSS — Maquetación de Artículos y Barra Lateral Derecha
+   Versión dual: Público general + Técnicos
+   ========================================================================== */
+
+/* ── LAYOUT PRINCIPAL ── */
+.defensa-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 48px;
+  align-items: start;
+  padding: 0 48px 40px;
+}
+
+@media (max-width: 1024px) {
+  .defensa-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 0 24px 32px;
+  }
+}
+
+/* ── COLUMNA DERECHA (STICKY) ── */
+.defensa-toc {
+  position: sticky;
+  top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (max-width: 1024px) {
+  .defensa-toc {
+    position: static;
+    width: 100%;
+  }
+}
+
+/* ── FICHA DE CONTROL ── */
+.defensa-control {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.defensa-control .title {
+  font-family: monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #0f172a;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 6px;
+  margin-bottom: 16px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.defensa-control table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.defensa-control td {
+  padding: 10px 0;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: middle;
+}
+
+.defensa-control tr:last-child td {
+  border-bottom: none;
+}
+
+.defensa-control td.label {
+  color: #64748b;
+  font-weight: 700;
+  text-align: left;
+}
+
+.defensa-control td.value {
+  color: #0f172a;
+  font-weight: 600;
+  text-align: right;
+}
+
+.defensa-control td.value.highlight {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+/* ── ÍNDICE DE CONTENIDO ── */
+.defensa-toc-label {
+  font-family: monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #64748b;
+  letter-spacing: 0.1em;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+.defensa-toc-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-left: 2px solid #e2e8f0;
+  padding-left: 14px;
+}
+
+.defensa-toc-nav a {
+  text-decoration: none;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s;
+  border-left: 2px solid transparent;
+  margin-left: -16px;
+  padding-left: 14px;
+}
+
+.defensa-toc-nav a.active {
+  color: #16a34a !important;
+  border-left: 2px solid #16a34a !important;
+  font-weight: 700;
+}
+
+/* ── ETIQUETAS / BADGES ── */
+.defensa-badge-all {
+  display: inline-block;
+  background: #16a34a;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 10px;
+  border-radius: 12px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.defensa-badge-tech {
+  display: inline-block;
+  background: #1e293b;
+  color: #f8fafc;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 10px;
+  border-radius: 12px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+/* ── BOTÓN DE VOLVER ── */
+.defensa-btn-back {
+  display: inline-block;
+  background: #16a34a;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  border: none;
+}
+
+.defensa-btn-back:hover {
+  background: #b91c1c;
+  color: #ffffff !important;
+}
+
+/* ── METADATOS (FORZADOS EN UNA SOLA LÍNEA) ── */
+.defensa-meta {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 8px 24px !important;
+  padding: 14px 0 !important;
+  border-top: 1px solid #e2e8f0 !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  margin: 8px 0 0 0 !important;
+}
+
+.defensa-meta-item {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  font-size: 13px !important;
+  color: #5b6670 !important;
+  white-space: nowrap !important;
+}
+
+.defensa-meta-item svg {
+  width: 15px !important;
+  height: 15px !important;
+  color: #16a34a !important;
+  flex-shrink: 0 !important;
+  stroke: #16a34a !important;
+  stroke-width: 1.6 !important;
+  fill: none !important;
+}
+
+.defensa-meta-item strong {
+  color: #0f172a !important;
+  font-weight: 600 !important;
+}
+
+/* ── SEPARADOR ENTRE METADATOS Y BOTÓN ── */
+.defensa-meta-sep {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 0;
+}
+
+/* ── PIE DE ARTÍCULO: AUTOR + COMPARTIR ── */
+.defensa-foot {
+  display: flex;
+  gap: 48px;
+  max-width: 1320px;
+  padding: 32px 56px 0;
+  border-top: 1px solid #e2e8f0;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 24px;
+}
+
+.defensa-author {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.defensa-share {
+  flex: 0 0 auto;
+  padding-left: 40px;
+  border-left: 1px solid #e2e8f0;
+}
+
+.defensa-foot-label {
+  font-family: monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7c8790;
+  margin-bottom: 8px;
+}
+
+.defensa-author-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.defensa-author-name span {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.defensa-author-bio {
+  font-size: 13.5px;
+  color: #5b6670;
+  line-height: 1.6;
+  max-width: none;
+  white-space: normal;
+  margin: 0;
+}
+
+.defensa-share-btn {
+  width: 42px;
+  height: 42px;
+  border: 1.5px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+  border-radius: 50%;
+}
+
+.defensa-share-btn:hover {
+  background: #0a66c2;
+  border-color: #0a66c2;
+  color: #fff;
+}
+
+.defensa-share-btn svg {
+  width: 19px;
+  height: 19px;
+  fill: currentColor;
+}
+
+/* ── DIVISOR ── */
+.defensa-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 40px 0;
+  color: #94a3b8;
+}
+
+.defensa-divider::before,
+.defensa-divider::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #94a3b8, transparent);
+}
+
+.defensa-divider .label {
+  font-family: monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #475569;
+  background: #f8fafc;
+  padding: 0 16px;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.defensa-divider .label .gear {
+  color: #16a34a;
+}
+
+/* ── BLOQUES DE CONTENIDO ── */
+.defensa-main .block {
+  margin-bottom: 40px;
+}
+
+.defensa-main .block .block-meta {
+  font-family: monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.defensa-main .block h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.defensa-main .block .body-text {
+  font-size: 15.5px;
+  line-height: 1.8;
+  color: #334155;
+  text-align: justify;
+}
+
+.defensa-main .block .body-text p {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+/* ── CAJAS DE DESTAQUE ── */
+.defensa-box-danger {
+  background: #fef2f2;
+  border-left: 4px solid #dc2626;
+  padding: 16px 20px;
+  margin: 16px 0;
+  border-radius: 4px;
+}
+
+.defensa-box-danger strong {
+  color: #dc2626;
+}
+
+.defensa-box-warning {
+  background: #fffbeb;
+  border-left: 4px solid #d97706;
+  padding: 16px 20px;
+  margin: 16px 0;
+  border-radius: 4px;
+}
+
+.defensa-box-warning strong {
+  color: #b45309;
+}
+
+.defensa-box-warning p {
+  margin: 8px 0 0 0 !important;
+  font-size: 15px !important;
+}
+
+.defensa-box-danger p {
+  margin: 8px 0 0 0 !important;
+  font-size: 15px !important;
+}
+
+.defensa-box-success {
+  background: #f0fdf4;
+  border-left: 4px solid #16a34a;
+  padding: 14px 18px;
+  margin-top: 16px;
+  border-radius: 4px;
+}
+
+.defensa-box-success strong {
+  color: #16a34a;
+}
+
+.defensa-box-tech {
+  background: #f1f5f9;
+  padding: 16px 20px;
+  border-radius: 6px;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.defensa-box-tech code {
+  display: block;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  font-size: 12px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.defensa-box-tech .code-label {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.defensa-box-dark {
+  background: #1e293b;
+  color: #f1f5f9;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 13px;
+  margin-top: 12px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+/* ── LISTAS ── */
+.defensa-main .block ul,
+.defensa-main .block ol {
+  padding-left: 24px;
+  margin: 10px 0;
+}
+
+.defensa-main .block ul li,
+.defensa-main .block ol li {
+  margin-bottom: 6px;
+}
+
+.defensa-signal-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+}
+
+.defensa-signal-list li {
+  padding: 6px 0;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  gap: 10px;
+}
+
+.defensa-signal-list li:last-child {
+  border-bottom: none;
+}
+
+.defensa-signal-list .signal-num {
+  color: #16a34a;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ── ARTÍCULOS RELACIONADOS ── */
+.defensa-related {
+  max-width: 1320px;
+  padding: 32px 56px 20px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.defensa-related-label {
+  font-family: monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #16a34a;
+  margin-bottom: 8px;
+}
+
+.defensa-related-title {
+  font-size: 23px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+.defensa-related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.defensa-related-card {
+  background: #f1f5f9;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.2s;
+  border: 1px solid #e2e8f0;
+}
+
+.defensa-related-card:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+  border-color: #16a34a;
+}
+
+.defensa-related-pill {
+  align-self: flex-start;
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #16a34a;
+  border: 1px solid #16a34a;
+  padding: 2px 9px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+}
+
+.defensa-related-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.35;
+  margin: 0 0 8px;
+}
+
+.defensa-related-card p {
+  font-size: 13.5px;
+  color: #475569;
+  line-height: 1.55;
+  margin: 0 0 14px;
+  flex-grow: 1;
+}
+
+.defensa-related-meta {
+  display: flex;
+  gap: 14px;
+  font-size: 11.5px;
+  color: #94a3b8;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 12px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 980px) {
+  .defensa-foot {
+    padding: 24px 24px 0;
+    gap: 24px;
+  }
+  
+  .defensa-share {
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 20px;
+    flex-basis: 100%;
+  }
+
+  .defensa-related-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .defensa-related {
+    padding: 24px 24px 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .defensa-main .block h2 {
+    font-size: 19px;
+  }
+  
+  .defensa-main .block .body-text {
+    font-size: 14.5px;
+  }
+  
+  .defensa-control {
+    padding: 16px;
+  }
+  
+  .defensa-control table {
+    font-size: 12px;
+  }
+  
+  .defensa-badge-all,
+  .defensa-badge-tech {
+    font-size: 9px;
+    padding: 1px 8px;
+    margin-left: 4px;
+  }
+
+  .defensa-btn-back {
+    font-size: 12px;
+    padding: 6px 16px;
+  }
+
+  .defensa-meta {
+    gap: 6px 14px !important;
+    padding: 10px 0 !important;
+  }
+
+  .defensa-meta-item {
+    font-size: 12px !important;
+  }
+
+  .defensa-meta-item svg {
+    width: 13px !important;
+    height: 13px !important;
+  }
+
+  .defensa-foot {
+    flex-direction: column;
+    padding: 20px 16px 0;
+    gap: 16px;
+  }
+
+  .defensa-share {
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 16px;
+    width: 100%;
+  }
+
+  .defensa-author-bio {
+    font-size: 12.5px;
+  }
+
+  .defensa-related {
+    padding: 20px 16px 12px;
+  }
+  
+  .defensa-related-title {
+    font-size: 19px;
+  }
+
+  .defensa-related-grid {
+    grid-template-columns: 1fr;
+  }
+}

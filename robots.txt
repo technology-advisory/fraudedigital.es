@@ -1,0 +1,45 @@
+# ==============================================================
+#  robots.txt — FraudeDigital.es
+#  Portal técnico y práctico contra el fraude digital en España
+# ==============================================================
+
+User-agent: *
+Allow: /
+
+# Excluir páginas legales del índice (ya lleva noindex en meta)
+Disallow: /legal/
+
+# Bloquear rutas de datos brutos (JSON)
+Disallow: /data/
+
+# Bloquear entornos de administración si los hubiera
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /_dev/
+Disallow: /.git/
+Disallow: /.well-known/security.txt$
+
+# Rate limiting para bots agresivos
+Crawl-delay: 2
+
+# Bloquear bots de IA que no aportan valor SEO
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Sitemap
+Sitemap: https://fraudedigital.es/sitemap.xml

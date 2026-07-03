@@ -1,0 +1,48 @@
+{
+  "name": "FraudeDigital.es · Portal técnico contra el fraude digital",
+  "short_name": "FraudeDigital",
+  "description": "Portal técnico y práctico contra el fraude digital en España. Análisis real de amenazas para ciudadanos y empresas.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#dc2626",
+  "lang": "es-ES",
+  "dir": "ltr",
+  "scope": "/",
+  "categories": ["security", "education", "productivity", "reference"],
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Panel de amenazas",
+      "short_name": "Amenazas",
+      "description": "Catálogo técnico de amenazas de fraude digital",
+      "url": "/amenazas/",
+      "icons": [{ "src": "/favicon-32x32.png", "sizes": "32x32" }]
+    },
+    {
+      "name": "Primeros auxilios",
+      "short_name": "Emergencia",
+      "description": "Actúa rápido si eres víctima de fraude",
+      "url": "/primeros-auxilios/",
+      "icons": [{ "src": "/favicon-32x32.png", "sizes": "32x32" }]
+    }
+  ]
+}

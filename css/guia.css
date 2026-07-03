@@ -1,0 +1,209 @@
+/* ============================================================
+   GUIA.CSS — Estilos específicos para la guía de fraude digital
+   ============================================================ */
+
+/* ── INTRO CON SVG ── */
+.guia-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin: 24px 0 40px;
+}
+
+@media (max-width: 768px) {
+  .guia-intro {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.guia-intro-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #334155;
+  margin: 0 0 16px;
+}
+
+.guia-intro-svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guia-intro-svg svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ── TARJETAS DE TIPOS DE FRAUDE ── */
+.guia-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 32px 0 40px;
+}
+
+@media (max-width: 1024px) {
+  .guia-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .guia-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.guia-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 28px 24px;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.guia-card:hover {
+  border-color: #dc2626;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.guia-card .icon {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.guia-card h3 {
+  font-size: 17px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 8px;
+}
+
+.guia-card p {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── FAQ ── */
+.guia-faq {
+  margin: 40px 0 48px;
+}
+
+.guia-faq-item {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 20px 0;
+}
+
+.guia-faq-item:first-child {
+  border-top: 1px solid #e2e8f0;
+}
+
+.guia-faq-item summary {
+  font-weight: 700;
+  font-size: 16px;
+  color: #0f172a;
+  cursor: pointer;
+  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.guia-faq-item summary::-webkit-details-marker {
+  color: #dc2626;
+}
+
+.guia-faq-item .answer {
+  padding: 12px 0 4px 28px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #475569;
+}
+
+/* ── SEÑALES DE ALARMA ── */
+.guia-signals {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 16px 0 32px;
+}
+
+@media (max-width: 640px) {
+  .guia-signals {
+    grid-template-columns: 1fr;
+  }
+}
+
+.guia-signal-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 18px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border-left: 4px solid #dc2626;
+}
+
+.guia-signal-item .num {
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 800;
+  color: #dc2626;
+  flex-shrink: 0;
+  width: 28px;
+}
+
+.guia-signal-item .text {
+  font-size: 14px;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.guia-signal-item .text strong {
+  color: #0f172a;
+}
+
+/* ── CTA FINAL ── */
+.guia-cta {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 32px 40px;
+  text-align: center;
+  margin: 40px 0 24px;
+}
+
+.guia-cta h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 8px;
+}
+
+.guia-cta p {
+  font-size: 15px;
+  color: #475569;
+  margin: 0 0 16px;
+}
+
+.guia-cta .btn-cta {
+  display: inline-block;
+  background: #dc2626;
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.guia-cta .btn-cta:hover {
+  background: #b91c1c;
+}

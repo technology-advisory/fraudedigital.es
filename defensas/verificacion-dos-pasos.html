@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0">
+<title>Verificación en Dos Pasos (2FA/MFA) · FraudeDigital.es</title>
+<meta name="description" content="Por qué el SMS es el método de 2FA más débil, y cómo migrar a apps de autenticación o llaves físicas. Guía para todos y técnicos.">
+<meta name="keywords" content="2fa, mfa, doble factor, sim swapping, totp, llave de seguridad">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://fraudedigital.es/defensas/verificacion-dos-pasos.html">
+
+<meta property="og:title" content="Verificación en Dos Pasos: por qué el SMS ya no basta">
+<meta property="og:description" content="Por qué el SMS es el método de 2FA más débil, y cómo migrar a apps de autenticación o llaves físicas.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fraudedigital.es/defensas/verificacion-dos-pasos.html">
+<meta property="og:image" content="https://fraudedigital.es/img/og-verificacion-dos-pasos.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Verificación en Dos Pasos (2FA/MFA) · FraudeDigital.es">
+<meta name="twitter:description" content="Por qué el SMS es el método de 2FA más débil.">
+<meta name="twitter:image" content="https://fraudedigital.es/img/og-verificacion-dos-pasos.png">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<link rel="stylesheet" href="../css/global.css">
+<link rel="stylesheet" href="../css/dossier-core.css">
+<link rel="stylesheet" href="../css/dossier-defensa.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Verificación en Dos Pasos: por qué el SMS ya no basta",
+  "description": "Por qué el SMS es el método de 2FA más débil, y cómo migrar a apps de autenticación o llaves físicas.",
+  "author": {
+    "@type": "Person",
+    "name": "Miguel Ángel Carriazo",
+    "url": "https://www.linkedin.com/in/macarriazo/",
+    "sameAs": ["https://www.linkedin.com/in/macarriazo/"]
+  },
+  "datePublished": "2026-07-03",
+  "publisher": {
+    "@type": "Organization",
+    "name": "FraudeDigital",
+    "logo": {"@type": "ImageObject", "url": "https://fraudedigital.es/apple-touch-icon.png"}
+  },
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://fraudedigital.es/defensas/verificacion-dos-pasos.html"},
+  "dateModified": "2026-07-03",
+  "inLanguage": "es-ES"
+}
+</script>
+
+<style>
+  .defensa-meta {
+    border-top: none !important;
+    border-bottom: none !important;
+    padding: 10px 0 0 0 !important;
+    margin: 5px 0 0 0 !important;
+  }
+</style>
+
+<meta name="author" content="Miguel Ángel Carriazo">
+<meta name="theme-color" content="#16a34a">
+<meta http-equiv="Content-Language" content="es">
+<meta property="og:site_name" content="FraudeDigital.es">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-07-03">
+<meta property="article:author" content="Miguel Ángel Carriazo">
+<link rel="manifest" href="/manifest.json">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://fraudedigital.es/"},
+    {"@type": "ListItem", "position": 2, "name": "Defensas", "item": "https://fraudedigital.es/defensas/"},
+    {"@type": "ListItem", "position": 3, "name": "Verificación en Dos Pasos", "item": "https://fraudedigital.es/defensas/verificacion-dos-pasos.html"}
+  ]
+}
+</script>
+</head>
+<body style="margin:0; padding:0; background-color:#f8fafc;">
+
+<div class="card-wrapper ds-page">
+<div class="card">
+
+  <div id="menu-container"></div>
+  <div class="accent-bar" style="background: #16a34a;"></div>
+
+  <div class="ds-meta">
+    <span><span class="dot" style="background:#16a34a;"></span>FraudeDigital // defensa: verificacion-dos-pasos</span>
+    <span>clase: <strong>guía dual · público + técnico</strong></span>
+  </div>
+
+  <div style="padding: 32px 48px 24px; border-bottom: 1px solid #e2e8f0;">
+
+    <div style="font-family:monospace; font-size:11px; text-transform:uppercase; color:#16a34a; letter-spacing:0.1em; font-weight:700; margin-bottom:6px;">Defensa Avanzada · Autenticación Reforzada</div>
+    <h1 style="font-size: clamp(28px, 5vw, 42px); font-weight: 800; color: #0f172a; margin: 0 0 10px; line-height: 1.15;">Verificación en Dos Pasos: <span style="color:#16a34a;">por qué el SMS ya no basta</span></h1>
+    <p style="font-size: 17px; color: #475569; line-height: 1.6; margin: 0; max-width: 900px; padding-bottom: 16px;">
+      <strong>Para todos:</strong> qué tipo de doble factor usar y cuál evitar si puedes elegir.
+      <strong>Para profesionales:</strong> TOTP, FIDO2/WebAuthn y por qué el SMS es el eslabón débil de la cadena.
+    </p>
+
+    <div class="defensa-meta">
+      <span class="defensa-meta-item">
+        <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="6" r="2.6"/><path d="M3.5 15c0-2.6 2.5-4.6 5.5-4.6s5.5 2 5.5 4.6"/></svg>
+        <strong>Miguel Ángel Carriazo</strong>
+      </span>
+      <span class="defensa-meta-item">
+        <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="3" width="13" height="12.5" rx="1.3"/><path d="M2.5 6.5h13M6 2v2.4M12 2v2.4"/></svg>
+        3 julio 2026
+      </span>
+      <span class="defensa-meta-item">
+        <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="6.8"/><path d="M9 5.3V9l2.8 1.7"/></svg>
+        4 min de lectura
+      </span>
+    </div>
+  </div>
+
+  <div style="padding: 24px 48px 24px;">
+    <a href="../defensas/index.html" class="defensa-btn-back">← Volver a Defensas</a>
+  </div>
+
+  <div class="defensa-layout">
+
+    <div class="defensa-main">
+
+      <div class="block" id="s1">
+        <div class="block-meta">
+          01 // Para todos
+          <span class="defensa-badge-all">Público general</span>
+        </div>
+        <h2>¿Qué es el doble factor y por qué no todos los tipos son iguales?</h2>
+        <div class="body-text">
+          <p>El doble factor de autenticación (2FA) añade una segunda comprobación además de tu contraseña: algo que <strong>tienes</strong> (tu móvil, una llave física) además de algo que <strong>sabes</strong> (la contraseña). En teoría, aunque roben tu contraseña, no pueden entrar sin ese segundo elemento.</p>
+
+          <p>El problema es que <strong>no todos los métodos de 2FA ofrecen la misma protección</strong>. De más débil a más fuerte:</p>
+
+          <div class="defensa-box-warning">
+            <strong>⚠️ El más débil: código por SMS</strong>
+            <p>Es mejor que nada, pero es vulnerable al <strong>SIM swapping</strong> (duplicado fraudulento de tu SIM) — si el atacante controla tu número, recibe también tus códigos SMS. Lo explicamos en detalle en <a href="../amenazas/sim-swapping.html">nuestro expediente sobre SIM Swapping</a>.</p>
+          </div>
+
+          <p><strong>Más seguro: apps de autenticación (TOTP)</strong> — Google Authenticator, Microsoft Authenticator, Authy. Generan un código que cambia cada 30 segundos, vinculado al dispositivo, no a tu número de teléfono. Inmune al SIM swapping.</p>
+
+          <p><strong>El más seguro: llaves de seguridad físicas (FIDO2/WebAuthn)</strong> — dispositivos USB/NFC tipo YubiKey. Prácticamente inmunes a phishing porque verifican criptográficamente que estás en el dominio legítimo, no solo que introdujiste el código correcto.</p>
+
+          <div class="defensa-box-success">
+            <strong>✅ Regla de oro:</strong> activa 2FA en <strong>todo</strong> lo que lo permita — email, banca, redes sociales. Si tienes elección entre SMS y app de autenticación, elige siempre la app. Para cuentas muy críticas (email principal, gestor de contraseñas), considera una llave física.
+          </div>
+        </div>
+      </div>
+
+      <div class="block" id="s2">
+        <div class="block-meta">
+          02 // Para todos
+          <span class="defensa-badge-all">Cómo migrar del SMS a una app</span>
+        </div>
+        <h2>Cómo pasar de SMS a una app de autenticación</h2>
+        <div class="body-text">
+          <p>El proceso es similar en la mayoría de servicios:</p>
+
+          <ol>
+            <li><strong>Instala una app de autenticación</strong> en tu móvil: Google Authenticator, Microsoft Authenticator o Authy (esta última permite backup en la nube si cambias de móvil).</li>
+            <li><strong>Entra en la configuración de seguridad</strong> del servicio (email, banco, red social) y busca "Autenticación en dos pasos" o "2FA".</li>
+            <li><strong>Elige "app de autenticación"</strong> en vez de SMS. El servicio te mostrará un código QR.</li>
+            <li><strong>Escanea el QR con tu app</strong> — automáticamente empezará a generar códigos de 6 dígitos que cambian cada 30 segundos.</li>
+            <li><strong>Guarda los códigos de recuperación</strong> que te ofrezca el servicio (normalmente 8-10 códigos de un solo uso) en un lugar seguro — los necesitarás si pierdes el móvil.</li>
+            <li><strong>Desactiva el 2FA por SMS</strong> una vez confirmado que la app funciona, si el servicio te da esa opción.</li>
+          </ol>
+
+          <p>Empieza por tu <strong>correo electrónico principal</strong> — es la cuenta más crítica porque suele ser la vía de recuperación de todas las demás.</p>
+        </div>
+      </div>
+
+      <div class="defensa-divider">
+        <span class="label"><span class="gear">🛡️</span> A PARTIR DE AQUÍ · PARA ADMINISTRADORES Y TÉCNICOS <span class="gear">🛡️</span></span>
+      </div>
+
+      <div class="block" id="s3">
+        <div class="block-meta">
+          03 // Para técnicos
+          <span class="defensa-badge-tech">TOTP · FIDO2 · SS7</span>
+        </div>
+        <h2>Fundamentos técnicos de cada método de 2FA</h2>
+        <div class="body-text">
+          <p>Entender por qué unos métodos son más robustos que otros requiere mirar su mecanismo interno:</p>
+
+          <div class="defensa-box-tech">
+            <div style="margin-bottom: 14px;">
+              <strong style="color: #0f172a; font-size: 15px;">🔹 SMS: vulnerable en la capa de red</strong>
+              <p style="margin: 4px 0 0 0; color: #334155;">Además del SIM swapping por ingeniería social, el protocolo de señalización SS7 usado por las operadoras tiene vulnerabilidades conocidas que permiten interceptar SMS sin acceso físico a la SIM, en ataques más sofisticados dirigidos a objetivos de alto valor.</p>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+              <strong style="color: #0f172a; font-size: 15px;">🔹 TOTP: seguro pero no anti-phishing</strong>
+              <p style="margin: 4px 0 0 0; color: #334155;">El algoritmo Time-based One-Time Password (RFC 6238) genera códigos deterministas a partir de un secreto compartido y la hora actual. Es inmune a SIM swapping, pero <strong>no es inmune a phishing AitM</strong>: si el usuario introduce el código en un proxy inverso controlado por el atacante, este puede reenviarlo en tiempo real (ver nuestro expediente de <a href="../amenazas/phishing-aitm.html">Phishing AitM</a>).</p>
+            </div>
+
+            <div>
+              <strong style="color: #0f172a; font-size: 15px;">🔹 FIDO2/WebAuthn: resistente a phishing por diseño</strong>
+              <p style="margin: 4px 0 0 0; color: #334155;">Usa criptografía de clave pública vinculada al origen (dominio) exacto durante el registro. Si el usuario está en un dominio de phishing, la llave <strong>simplemente no responde</strong> — no hay código que interceptar o reenviar, porque la verificación ocurre a nivel de protocolo, no de dato compartido.</p>
+            </div>
+          </div>
+
+          <p><strong>Jerarquía real de seguridad:</strong> SMS &lt; TOTP &lt; FIDO2/Passkeys. Cada salto reduce significativamente la superficie de ataque disponible.</p>
+        </div>
+      </div>
+
+      <div class="block" id="s4">
+        <div class="block-meta">
+          04 // Para técnicos
+          <span class="defensa-badge-tech">Implementación organizativa</span>
+        </div>
+        <h2>Implementación de MFA a nivel organizativo</h2>
+        <div class="body-text">
+          <p>Para equipos y empresas, algunas consideraciones de despliegue:</p>
+
+          <div class="defensa-box-tech">
+            <div style="margin-bottom: 14px;">
+              <strong style="color: #0f172a; font-size: 15px;">🔹 Conditional Access / políticas adaptativas</strong>
+              <p style="margin: 4px 0 0 0; color: #334155;">En entornos Entra ID / Google Workspace, las políticas de acceso condicional permiten exigir MFA reforzado (FIDO2) solo en escenarios de riesgo (ubicación anómala, dispositivo no gestionado), reduciendo fricción en el uso diario sin sacrificar seguridad.</p>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+              <strong style="color: #0f172a; font-size: 15px;">🔹 Passkeys como evolución de FIDO2</strong>
+              <p style="margin: 4px 0 0 0; color: #334155;">Las passkeys (sincronizadas vía iCloud Keychain, Google Password Manager) llevan la resistencia a phishing de FIDO2 a un modelo sin fricción, eliminando contraseñas por completo en los servicios que las soportan.</p>
+            </div>
+
+            <div>
+              <strong style="color: #0f172a; font-size: 15px;">🔹 Plan de contingencia sin SMS</strong>
+              <p style="margin: 4px 0 0 0; color: #334155;">Cualquier política de MFA corporativa debe incluir un método de recuperación que no dependa del SMS como único fallback, dado su vulnerabilidad a SIM swapping dirigido contra empleados con acceso privilegiado.</p>
+            </div>
+          </div>
+
+          <p><strong>Resumen:</strong> migrar de SMS a TOTP es la mejora de coste-beneficio más alta disponible hoy. Migrar de TOTP a FIDO2/Passkeys es el siguiente salto, especialmente crítico para cuentas de alto valor o con acceso privilegiado.</p>
+        </div>
+      </div>
+
+      <div class="defensa-foot" style="padding: 32px 0 0; margin-top: 40px; border-top: 1px solid #e2e8f0; display: flex; gap: 48px; flex-wrap: wrap; align-items: flex-start;">
+        <div class="defensa-author" style="flex: 1 1 0%; min-width: 0;">
+          <div class="defensa-foot-label">Sobre el autor</div>
+          <div class="defensa-author-name">Miguel Ángel Carriazo <span>· vCISO</span></div>
+          <p class="defensa-author-bio">vCISO · Arquitecto de Soluciones de Infraestructura y Ciberseguridad | Gobierno, Riesgo y Cumplimiento (GRC) | Gobierno de IA · ISO 42001 | Fundador de FraudeDigital.es</p>
+        </div>
+        <div class="defensa-share" style="flex: 0 0 auto; padding-left: 40px; border-left: 1px solid #e2e8f0;">
+          <div class="defensa-foot-label">Compartir artículo</div>
+          <a href="#" id="shareLinkedin" target="_blank" class="defensa-share-btn" aria-label="Compartir en LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <aside class="defensa-toc">
+
+      <div class="defensa-control">
+        <div class="title">Ficha de Control</div>
+        <table>
+            <tr><td class="label">Público objetivo</td><td class="value">Todos + Técnicos</td></tr>
+            <tr><td class="label">Defensa básica</td><td class="value">App de autenticación en vez de SMS</td></tr>
+            <tr><td class="label">Defensa avanzada</td><td class="value highlight">FIDO2 / Passkeys · Conditional Access</td></tr>
+            <tr><td class="label">Estándar</td><td class="value">RFC 6238 (TOTP) · FIDO2/WebAuthn</td></tr>
+        </table>
+      </div>
+
+      <div>
+        <div class="defensa-toc-label">Contenido</div>
+        <nav class="defensa-toc-nav" id="artTocNav">
+          <a href="#s1" class="active">01. Para todos · Tipos de 2FA</a>
+          <a href="#s2">02. Para todos · Cómo migrar</a>
+          <a href="#s3">03. Técnico · Fundamentos</a>
+          <a href="#s4">04. Técnico · Organizaciones</a>
+        </nav>
+        <div style="margin-top: 14px; font-size: 12px; color: #94a3b8; border-top: 1px solid #e2e8f0; padding-top: 10px;">
+          <span style="display: block; background: #16a34a; color: #fff; padding: 4px 10px; border-radius: 4px; text-align: center; font-weight: 700; font-size: 11px;">🛡️ Dual · Para todos + técnicos</span>
+        </div>
+      </div>
+
+      <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid #e2e8f0;">
+        <div class="defensa-toc-label">Neutraliza estas amenazas</div>
+        <div style="display: flex; flex-direction: column; gap: 6px; margin-top: 8px;">
+          <a href="../amenazas/sim-swapping.html" style="font-size: 13px; color: #dc2626; text-decoration: none; font-weight: 600;">→ SIM Swapping</a>
+          <a href="../amenazas/phishing-aitm.html" style="font-size: 13px; color: #dc2626; text-decoration: none; font-weight: 600;">→ Phishing AitM</a>
+          <a href="../amenazas/phishing-tradicional.html" style="font-size: 13px; color: #dc2626; text-decoration: none; font-weight: 600;">→ Phishing Tradicional</a>
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <div class="defensa-related">
+    <div class="defensa-related-label">Sigue leyendo</div>
+    <div class="defensa-related-title">Defensas relacionadas</div>
+    <div class="defensa-related-grid">
+      <a href="contrasenas-seguras.html" class="defensa-related-card">
+        <span class="defensa-related-pill">Contraseñas</span>
+        <h3>Gestión de Contraseñas Seguras</h3>
+        <p>La puerta que dejas abierta sin saberlo.</p>
+        <div class="defensa-related-meta"><span>3 julio 2026</span><span>4 min</span></div>
+      </a>
+      <a href="../amenazas/sim-swapping.html" class="defensa-related-card">
+        <span class="defensa-related-pill">Amenaza</span>
+        <h3>SIM Swapping</h3>
+        <p>Cómo duplican tu SIM para robar tus SMS.</p>
+        <div class="defensa-related-meta"><span>18 junio 2026</span><span>3 min</span></div>
+      </a>
+      <a href="../amenazas/phishing-aitm.html" class="defensa-related-card">
+        <span class="defensa-related-pill">Amenaza</span>
+        <h3>Phishing AitM</h3>
+        <p>El ataque que salta el 2FA tradicional.</p>
+        <div class="defensa-related-meta"><span>18 junio 2026</span><span>4 min</span></div>
+      </a>
+    </div>
+  </div>
+
+  <div id="footer-container"></div>
+
+</div>
+</div>
+
+<script src="../js/menu.js"></script>
+<script src="../js/footer.js"></script>
+
+<script>
+  var shareBtn = document.getElementById('shareLinkedin');
+  if (shareBtn) {
+    shareBtn.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(window.location.href);
+  }
+</script>
+
+<script>
+  var tocLinks = Array.from(document.querySelectorAll('.defensa-toc-nav a'));
+  var sections = tocLinks.map(a => document.querySelector(a.getAttribute('href')));
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          var id = '#' + entry.target.id;
+          tocLinks.forEach(a => {
+            if (a.getAttribute('href') === id) {
+              a.classList.add('active');
+            } else {
+              a.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, { rootMargin: '-20% 0px -60% 0px' });
+    sections.forEach(function(s){ if (s) observer.observe(s); });
+  }
+</script>
+
+</body>
+</html>

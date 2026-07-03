@@ -1,0 +1,364 @@
+/* ============================================================
+   ejemplos.css — Estilo dossier para casos reales
+   ============================================================ */
+
+.caso-wrapper {
+  padding: 30px 48px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Cabecera */
+.caso-header {
+  border-bottom: 2px solid #0f172a;
+  padding-bottom: 24px;
+  margin-bottom: 28px;
+}
+
+.caso-exp {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 11px;
+  color: #dc2626;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.caso-exp::before {
+  content: '';
+  display: inline-block;
+  width: 6px; height: 6px;
+  background: #dc2626;
+  border-radius: 50%;
+}
+
+.caso-header h1 {
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 900;
+  color: #0f172a;
+  margin: 0 0 10px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+.caso-header .subtitle {
+  font-size: 18px;
+  color: #dc2626;
+  font-weight: 600;
+  margin: 0 0 20px;
+  line-height: 1.4;
+}
+
+.caso-meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: #64748b;
+  letter-spacing: 0.05em;
+}
+.caso-meta > div { display: flex; gap: 6px; }
+.caso-meta strong { color: #0f172a; text-transform: uppercase; }
+
+/* Bloque destacado tipo TL;DR */
+.caso-tldr {
+  background: #fff5f5;
+  border-left: 4px solid #dc2626;
+  padding: 20px 24px;
+  margin: 28px 0;
+  border-radius: 0 6px 6px 0;
+}
+.caso-tldr .label {
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #dc2626;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.caso-tldr p {
+  margin: 0;
+  font-size: 15.5px;
+  color: #1e293b;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Secciones h2/h3 */
+.caso-wrapper h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 36px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e2e8f0;
+  letter-spacing: -0.01em;
+}
+.caso-wrapper h2::before {
+  content: attr(data-num);
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  color: #dc2626;
+  font-weight: 700;
+  margin-right: 12px;
+  letter-spacing: 0.1em;
+}
+.caso-wrapper h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 24px 0 10px;
+}
+
+.caso-wrapper p {
+  font-size: 15px;
+  color: #334155;
+  line-height: 1.7;
+  margin: 0 0 14px;
+}
+.caso-wrapper p strong { color: #0f172a; }
+.caso-wrapper ul, .caso-wrapper ol {
+  font-size: 15px;
+  color: #334155;
+  line-height: 1.7;
+  margin: 0 0 14px;
+  padding-left: 24px;
+}
+.caso-wrapper li { margin-bottom: 6px; }
+
+/* Cita / diálogo */
+.caso-quote {
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+  padding: 16px 22px;
+  margin: 20px 0;
+  border-radius: 0 4px 4px 0;
+  font-style: italic;
+  color: #475569;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.caso-quote strong { color: #0f172a; font-style: normal; }
+
+/* Etapa numerada tipo timeline */
+.caso-step {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 18px;
+  padding: 18px 0;
+  border-bottom: 1px dashed #e2e8f0;
+}
+.caso-step:last-child { border-bottom: none; }
+.caso-step-num {
+  font-family: 'Courier New', monospace;
+  font-size: 32px;
+  font-weight: 800;
+  color: #dc2626;
+  line-height: 1;
+}
+.caso-step-body h3 { margin-top: 0; margin-bottom: 6px; }
+.caso-step-body p { margin-bottom: 0; }
+
+/* Tabla de IoC */
+.caso-ioc {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 13px;
+  font-family: 'Courier New', monospace;
+}
+.caso-ioc th, .caso-ioc td {
+  padding: 10px 14px;
+  border: 1px solid #e2e8f0;
+  text-align: left;
+}
+.caso-ioc th {
+  background: #0f172a;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+.caso-ioc tbody tr:nth-child(even) { background: #f8fafc; }
+.caso-ioc td:first-child { color: #dc2626; font-weight: 700; }
+
+/* Lección clave */
+.caso-lesson {
+  background: #ecfdf5;
+  border: 1px solid #86efac;
+  border-radius: 6px;
+  padding: 18px 22px;
+  margin: 24px 0;
+}
+.caso-lesson .label {
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #15803d;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.caso-lesson p { color: #14532d; margin: 0; font-size: 14.5px; line-height: 1.6; }
+.caso-lesson strong { color: #052e16; }
+
+/* Advertencia */
+.caso-warn {
+  background: #fef3c7;
+  border: 1px solid #fbbf24;
+  border-radius: 6px;
+  padding: 14px 20px;
+  margin: 20px 0;
+  font-size: 13.5px;
+  color: #78350f;
+  line-height: 1.55;
+}
+.caso-warn strong { color: #422006; }
+
+/* Footer navegación */
+.caso-nav {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.caso-nav a {
+  color: #dc2626;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+.caso-nav a:hover { text-decoration: underline; }
+
+/* ============================================================
+   LAYOUT DE DOS COLUMNAS · main + TOC lateral "Contenido"
+   ============================================================ */
+.caso-layout {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+  align-items: start;
+}
+
+.caso-main {
+  min-width: 0;
+}
+.caso-main .caso-wrapper {
+  padding: 30px 0 40px;
+  max-width: none;
+}
+
+.caso-toc {
+  position: sticky;
+  top: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 30px;
+}
+
+.caso-toc-label {
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+.caso-toc-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.caso-toc-nav a {
+  font-size: 13px;
+  color: #64748b;
+  text-decoration: none;
+  padding: 7px 10px;
+  border-left: 2px solid transparent;
+  line-height: 1.4;
+  transition: all 0.15s;
+}
+.caso-toc-nav a:hover {
+  color: #0f172a;
+  background: #f8fafc;
+}
+.caso-toc-nav a.active {
+  color: #dc2626 !important;
+  border-left: 2px solid #dc2626 !important;
+  font-weight: 700;
+  background: #fef2f2;
+}
+
+.caso-toc-ficha {
+  background: #0f172a;
+  border-radius: 8px;
+  padding: 18px 20px;
+}
+.caso-toc-ficha .label {
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+.caso-toc-ficha dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 10px;
+  margin: 0;
+  font-size: 12.5px;
+}
+.caso-toc-ficha dt { color: #94a3b8; font-weight: 600; white-space: nowrap; }
+.caso-toc-ficha dd { margin: 0; color: #fff; }
+
+@media (max-width: 1024px) {
+  .caso-layout { grid-template-columns: 1fr; padding: 0 24px; }
+  .caso-toc { position: static; order: -1; padding-top: 20px; flex-direction: row; flex-wrap: wrap; gap: 24px; }
+  .caso-toc-nav { flex-direction: row; flex-wrap: wrap; gap: 4px; }
+  .caso-toc-nav a { border-left: none; border-bottom: 2px solid transparent; padding: 6px 10px; }
+  .caso-toc-nav a.active { border-left: none !important; border-bottom: 2px solid #dc2626 !important; }
+  .caso-toc-ficha { flex: 1 1 100%; }
+}
+
+/* Ficha lateral / meta box */
+.caso-ficha {
+  background: #0f172a;
+  color: #fff;
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+.caso-ficha .label {
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-bottom: 12px;
+}
+.caso-ficha dl { display: grid; grid-template-columns: 140px 1fr; gap: 8px 16px; margin: 0; font-size: 13.5px; }
+.caso-ficha dt { color: #94a3b8; font-weight: 600; }
+.caso-ficha dd { margin: 0; color: #fff; }
+
+@media (max-width: 768px) {
+  .caso-wrapper { padding: 20px 20px 30px; }
+  .caso-step { grid-template-columns: 44px 1fr; gap: 14px; padding: 14px 0; }
+  .caso-step-num { font-size: 26px; }
+  .caso-ficha dl { grid-template-columns: 1fr; }
+  .caso-ficha dt { color: #94a3b8; margin-top: 6px; }
+  .caso-ioc { font-size: 12px; }
+  .caso-ioc th, .caso-ioc td { padding: 8px 10px; }
+}

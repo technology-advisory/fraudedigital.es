@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generador de Denuncias · FraudeDigital.es</title>
+<meta name="description" content="Genera modelos de denuncia por fraude digital listos para presentar en Policía Nacional, Guardia Civil, AEPD, banco u operadora. Gratis, sin registro.">
+<meta name="keywords" content="denuncia estafa online, modelo denuncia phishing, denuncia policía fraude digital, denuncia AEPD, reclamación banco fraude">
+<meta name="author" content="Miguel Ángel Carriazo">
+<meta name="theme-color" content="#dc2626">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Language" content="es">
+
+<link rel="canonical" href="https://fraudedigital.es/herramientas/generador-denuncias.html">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+
+<meta property="og:site_name" content="FraudeDigital.es">
+<meta property="og:locale" content="es_ES">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Generador de Denuncias · FraudeDigital.es">
+<meta property="og:description" content="Genera modelos de denuncia por fraude digital en 5 minutos. Gratis, sin registro, ejecutado en tu navegador.">
+<meta property="og:url" content="https://fraudedigital.es/herramientas/generador-denuncias.html">
+<meta property="og:image" content="https://fraudedigital.es/img/og-generador-denuncias.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Generador de Denuncias · FraudeDigital.es">
+<meta name="twitter:description" content="Modelos de denuncia por fraude digital listos para presentar.">
+<meta name="twitter:image" content="https://fraudedigital.es/img/og-generador-denuncias.png">
+
+<link rel="stylesheet" href="../css/global.css">
+<link rel="stylesheet" href="../css/dossier-core.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Generador de Denuncias por Fraude Digital",
+  "applicationCategory": "SecurityApplication",
+  "operatingSystem": "Any (browser)",
+  "offers": {"@type": "Offer", "price": "0"},
+  "url": "https://fraudedigital.es/herramientas/generador-denuncias.html",
+  "inLanguage": "es-ES",
+  "author": {"@type": "Person", "name": "Miguel Ángel Carriazo", "url": "https://www.linkedin.com/in/macarriazo/"},
+  "description": "Formulario que genera modelos de denuncia por fraude digital para diferentes organismos españoles."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://fraudedigital.es/"},
+    {"@type": "ListItem", "position": 2, "name": "Herramientas", "item": "https://fraudedigital.es/herramientas/"},
+    {"@type": "ListItem", "position": 3, "name": "Generador de Denuncias", "item": "https://fraudedigital.es/herramientas/generador-denuncias.html"}
+  ]
+}
+</script>
+
+<style>
+  .gd-wrapper { padding: 30px 40px 40px; }
+
+  .gd-intro {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+    border-left: 4px solid #dc2626;
+    padding: 24px 28px;
+    margin-bottom: 28px;
+    border-radius: 0 6px 6px 0;
+  }
+  .gd-intro h1 {
+    font-size: clamp(24px, 3.5vw, 30px);
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 8px;
+    letter-spacing: -0.02em;
+  }
+  .gd-intro p {
+    font-size: 14.5px;
+    color: #475569;
+    margin: 0;
+    line-height: 1.55;
+    max-width: 800px;
+  }
+
+  .gd-warning {
+    background: #fef3c7;
+    border: 1px solid #fbbf24;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 28px;
+    font-size: 13.5px;
+    color: #78350f;
+    line-height: 1.55;
+  }
+  .gd-warning strong { color: #422006; }
+
+  .gd-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  /* FORMULARIO */
+  .gd-form {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+  }
+
+  .gd-form-title {
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #64748b;
+    margin: 0 0 4px;
+  }
+  .gd-form-subtitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 20px;
+  }
+
+  .gd-fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 0 24px;
+  }
+  .gd-legend {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0f172a;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .gd-field {
+    margin-bottom: 14px;
+  }
+  .gd-field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 5px;
+  }
+  .gd-field .hint {
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 4px;
+    font-weight: normal;
+    line-height: 1.4;
+  }
+  .gd-field input,
+  .gd-field select,
+  .gd-field textarea {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: inherit;
+    background: #fff;
+    color: #0f172a;
+    transition: border-color 0.15s;
+  }
+  .gd-field input:focus,
+  .gd-field select:focus,
+  .gd-field textarea:focus {
+    outline: none;
+    border-color: #dc2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+  }
+  .gd-field textarea {
+    min-height: 90px;
+    resize: vertical;
+  }
+  .gd-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  /* Chips modalidad */
+  .gd-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .gd-chip {
+    padding: 6px 12px;
+    background: #fff;
+    border: 1px solid #cbd5e1;
+    border-radius: 20px;
+    font-size: 12.5px;
+    color: #475569;
+    cursor: pointer;
+    transition: all 0.15s;
+    user-select: none;
+  }
+  .gd-chip:hover { border-color: #94a3b8; }
+  .gd-chip.active {
+    background: #dc2626;
+    border-color: #dc2626;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  /* SALIDA */
+  .gd-output {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+  .gd-output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .gd-output-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 16px;
+  }
+  .gd-tab {
+    padding: 8px 14px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s;
+  }
+  .gd-tab:hover { color: #0f172a; }
+  .gd-tab.active {
+    color: #dc2626;
+    border-bottom-color: #dc2626;
+  }
+  .gd-tab .badge-official {
+    font-family: 'Courier New', monospace;
+    font-size: 9px;
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-left: 4px;
+    letter-spacing: 0.05em;
+  }
+
+  .gd-doc {
+    background: #fafafa;
+    border: 1px dashed #e2e8f0;
+    border-radius: 6px;
+    padding: 20px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 13.5px;
+    line-height: 1.75;
+    color: #1e293b;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    flex: 1;
+    min-height: 360px;
+    max-height: 600px;
+    overflow-y: auto;
+  }
+
+  .gd-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+  .gd-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s;
+  }
+  .gd-btn-primary { background: #dc2626; color: #fff; }
+  .gd-btn-primary:hover { background: #b91c1c; }
+  .gd-btn-outline { background: #fff; color: #0f172a; border-color: #cbd5e1; }
+  .gd-btn-outline:hover { border-color: #dc2626; color: #dc2626; }
+  .gd-copy-ok { color: #16a34a; font-size: 12px; font-weight: 600; align-self: center; }
+
+  @media (max-width: 900px) {
+    .gd-layout { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 768px) {
+    .gd-wrapper { padding: 20px 16px 30px; }
+    .gd-intro { padding: 18px 20px; }
+    .gd-form, .gd-output { padding: 18px; }
+    .gd-row { grid-template-columns: 1fr; }
+  }
+
+  @media print {
+    #menu-container, #footer-container, .accent-bar, .ds-meta,
+    .gd-intro, .gd-warning, .gd-form, .gd-output-tabs, .gd-output-header, .gd-actions {
+      display: none !important;
+    }
+    .gd-doc {
+      background: #fff !important;
+      border: none !important;
+      max-height: none !important;
+      padding: 0 !important;
+    }
+    .card { box-shadow: none; border: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="card-wrapper ds-page">
+<div class="card">
+
+  <div id="menu-container"></div>
+  <div class="accent-bar"></div>
+
+  <div class="ds-meta">
+    <span><span class="dot"></span>FraudeDigital // herramienta: GEN-DENUNCIAS-001</span>
+    <span>estado: <strong>ejecutado en tu navegador · sin envío externo</strong></span>
+  </div>
+
+  <div class="gd-wrapper">
+
+    <div class="gd-intro">
+      <h1>Generador de Denuncias por Fraude Digital</h1>
+      <p>Rellena el formulario. Se generan <strong>5 modelos</strong> listos para copiar según a quién los presentes (Policía Nacional, Guardia Civil, AEPD, banco u operadora). <strong>Nada sale de tu navegador</strong>: los datos no se envían a ningún servidor.</p>
+    </div>
+
+    <div class="gd-warning">
+      <strong>⚠️ Nota legal:</strong> Este generador produce un modelo orientativo redactado por un profesional de ciberseguridad, no un abogado. Revisa el texto antes de presentarlo y adapta lo que necesites. No sustituye asesoramiento jurídico.
+    </div>
+
+    <div class="gd-layout">
+
+      <!-- FORMULARIO -->
+      <div class="gd-form">
+        <div class="gd-form-title">Datos del hecho</div>
+        <div class="gd-form-subtitle">Formulario</div>
+
+        <!-- Tipo -->
+        <fieldset class="gd-fieldset">
+          <legend class="gd-legend">1 · Tipo de fraude</legend>
+          <div class="gd-field">
+            <label for="tipo">Tipología</label>
+            <select id="tipo">
+              <option value="phishing">Phishing (email fraudulento)</option>
+              <option value="smishing">Smishing (SMS fraudulento)</option>
+              <option value="vishing">Vishing (llamada fraudulenta)</option>
+              <option value="qrishing">QRishing (QR fraudulento)</option>
+              <option value="sim-swap">SIM Swapping</option>
+              <option value="cuenta-hackeada">Cuenta pirateada / accesos no autorizados</option>
+              <option value="cargo-tarjeta">Cargos no autorizados en tarjeta / cuenta</option>
+              <option value="segunda-mano">Estafa en plataforma de segunda mano</option>
+              <option value="fraude-ceo">Fraude del CEO / factura falsa</option>
+              <option value="sextorsion">Sextorsión / chantaje digital</option>
+              <option value="ransomware">Ransomware / secuestro de dispositivo</option>
+              <option value="deepfake">Suplantación por IA / deepfake</option>
+              <option value="otro">Otro (describe abajo)</option>
+            </select>
+          </div>
+          <div class="gd-field">
+            <label>Canal por el que ocurrió</label>
+            <div class="gd-chips" id="canales">
+              <div class="gd-chip" data-val="Email">Email</div>
+              <div class="gd-chip" data-val="SMS">SMS</div>
+              <div class="gd-chip" data-val="Llamada">Llamada</div>
+              <div class="gd-chip" data-val="WhatsApp">WhatsApp</div>
+              <div class="gd-chip" data-val="Telegram">Telegram</div>
+              <div class="gd-chip" data-val="Web fraudulenta">Web fraudulenta</div>
+              <div class="gd-chip" data-val="RRSS">RRSS</div>
+              <div class="gd-chip" data-val="App móvil">App móvil</div>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Fecha / lugar -->
+        <fieldset class="gd-fieldset">
+          <legend class="gd-legend">2 · Cuándo y dónde</legend>
+          <div class="gd-row">
+            <div class="gd-field">
+              <label for="fecha-hecho">Fecha del hecho</label>
+              <input type="date" id="fecha-hecho">
+            </div>
+            <div class="gd-field">
+              <label for="hora-hecho">Hora aproximada</label>
+              <input type="time" id="hora-hecho">
+            </div>
+          </div>
+          <div class="gd-field">
+            <label for="localidad">Localidad donde te encontrabas</label>
+            <input type="text" id="localidad" placeholder="Ej: Madrid">
+          </div>
+        </fieldset>
+
+        <!-- Descripción -->
+        <fieldset class="gd-fieldset">
+          <legend class="gd-legend">3 · Relato de los hechos</legend>
+          <div class="gd-field">
+            <label for="descripcion">Descripción detallada de lo ocurrido</label>
+            <textarea id="descripcion" placeholder="Ej: Recibí un SMS suplantando a mi banco (BBVA) en el que se me indicaba que había un cargo sospechoso y me pedían pulsar un enlace para bloquearlo. Al pulsar el enlace fui redirigido a una web idéntica a la del banco donde introduje mis credenciales..."></textarea>
+            <div class="hint">Sé preciso: qué te dijeron, qué hiciste, qué datos diste, en qué momento sospechaste. Sin adornos.</div>
+          </div>
+        </fieldset>
+
+        <!-- Datos técnicos -->
+        <fieldset class="gd-fieldset">
+          <legend class="gd-legend">4 · Datos técnicos de la evidencia</legend>
+          <div class="gd-field">
+            <label for="remitente">Remitente / número / cuenta del atacante</label>
+            <input type="text" id="remitente" placeholder="Ej: soporte@bbva-seguridad.com  |  +34 XXX...">
+          </div>
+          <div class="gd-field">
+            <label for="url">URL fraudulenta (si la hubo)</label>
+            <input type="text" id="url" placeholder="Ej: https://bbva-verificacion-cliente.com/login">
+          </div>
+          <div class="gd-field">
+            <label for="iban-destino">IBAN destino del dinero (si aplica)</label>
+            <input type="text" id="iban-destino" placeholder="Ej: ES91 2100 0418 4502 0005 1332">
+          </div>
+        </fieldset>
+
+        <!-- Perjuicio -->
+        <fieldset class="gd-fieldset">
+          <legend class="gd-legend">5 · Perjuicio económico</legend>
+          <div class="gd-row">
+            <div class="gd-field">
+              <label for="importe">Importe defraudado (€)</label>
+              <input type="number" id="importe" placeholder="Ej: 450" min="0" step="0.01">
+            </div>
+            <div class="gd-field">
+              <label for="entidad">Tu entidad bancaria</label>
+              <input type="text" id="entidad" placeholder="Ej: BBVA, CaixaBank...">
+            </div>
+          </div>
+          <div class="gd-field">
+            <label for="datos-robados">Datos personales expuestos / robados</label>
+            <input type="text" id="datos-robados" placeholder="Ej: DNI, credenciales de banca online, tarjeta, dirección">
+            <div class="hint">Necesario para la denuncia ante la AEPD.</div>
+          </div>
+        </fieldset>
+
+        <!-- Denunciante -->
+        <fieldset class="gd-fieldset">
+          <legend class="gd-legend">6 · Tus datos</legend>
+          <div class="gd-row">
+            <div class="gd-field">
+              <label for="nombre">Nombre y apellidos</label>
+              <input type="text" id="nombre" placeholder="Nombre completo">
+            </div>
+            <div class="gd-field">
+              <label for="dni">DNI / NIE</label>
+              <input type="text" id="dni" placeholder="00000000A">
+            </div>
+          </div>
+          <div class="gd-row">
+            <div class="gd-field">
+              <label for="telefono">Teléfono de contacto</label>
+              <input type="tel" id="telefono" placeholder="+34 ...">
+            </div>
+            <div class="gd-field">
+              <label for="email-denunciante">Email de contacto</label>
+              <input type="email" id="email-denunciante" placeholder="tu@email.es">
+            </div>
+          </div>
+          <div class="gd-field">
+            <label for="domicilio">Domicilio a efectos de notificación</label>
+            <input type="text" id="domicilio" placeholder="Calle, número, piso, código postal, localidad">
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- SALIDA -->
+      <div class="gd-output">
+        <div class="gd-output-header">
+          <div>
+            <div class="gd-form-title">Documento generado</div>
+            <div class="gd-form-subtitle">Modelos según destinatario</div>
+          </div>
+        </div>
+
+        <div class="gd-output-tabs" id="tabs">
+          <button class="gd-tab active" data-doc="policia">Policía Nacional</button>
+          <button class="gd-tab" data-doc="guardia">Guardia Civil</button>
+          <button class="gd-tab" data-doc="aepd">AEPD</button>
+          <button class="gd-tab" data-doc="banco">Banco</button>
+          <button class="gd-tab" data-doc="operadora">Operadora</button>
+        </div>
+
+        <div class="gd-doc" id="doc-output"></div>
+
+        <div class="gd-actions">
+          <button class="gd-btn gd-btn-primary" id="btn-copy">📋 Copiar texto</button>
+          <button class="gd-btn gd-btn-outline" onclick="window.print()">🖨️ Imprimir</button>
+          <button class="gd-btn gd-btn-outline" id="btn-download">💾 Descargar TXT</button>
+          <span class="gd-copy-ok" id="copy-ok" style="display:none;">✓ Copiado</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="footer-container"></div>
+
+</div>
+</div>
+
+<script src="../js/menu.js"></script>
+<script src="../js/footer.js"></script>
+
+<script>
+/* ============================================================
+   GENERADOR DE DENUNCIAS · lógica cliente puro
+   Los datos NO salen del navegador.
+   ============================================================ */
+
+const $ = id => document.getElementById(id);
+
+// Mapa nombre-humano de tipologías (para el texto)
+const TIPO_LABELS = {
+  'phishing':         'phishing (email fraudulento suplantando a una entidad)',
+  'smishing':         'smishing (SMS fraudulento suplantando a una entidad)',
+  'vishing':          'vishing (llamada telefónica fraudulenta con suplantación de identidad)',
+  'qrishing':         'qrishing (código QR fraudulento)',
+  'sim-swap':         'SIM Swapping (duplicación fraudulenta de tarjeta SIM)',
+  'cuenta-hackeada':  'acceso no autorizado a cuentas personales',
+  'cargo-tarjeta':    'cargos no autorizados en cuenta o tarjeta bancaria',
+  'segunda-mano':     'estafa en plataforma de compraventa entre particulares',
+  'fraude-ceo':       'fraude del CEO / factura falsa (Business Email Compromise)',
+  'sextorsion':       'sextorsión / chantaje digital',
+  'ransomware':       'infección por ransomware / secuestro de dispositivo',
+  'deepfake':         'suplantación de identidad mediante inteligencia artificial (deepfake)',
+  'otro':             'fraude digital (descrito en el relato de los hechos)'
+};
+
+// Estado
+const state = {
+  canales: new Set(),
+  activeDoc: 'policia'
+};
+
+// Chips de canales
+document.querySelectorAll('#canales .gd-chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    const v = chip.dataset.val;
+    if (state.canales.has(v)) { state.canales.delete(v); chip.classList.remove('active'); }
+    else { state.canales.add(v); chip.classList.add('active'); }
+    regenerate();
+  });
+});
+
+// Tabs
+document.querySelectorAll('#tabs .gd-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('#tabs .gd-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    state.activeDoc = tab.dataset.doc;
+    regenerate();
+  });
+});
+
+// Regenerar al cambiar cualquier input
+document.querySelectorAll('input, select, textarea').forEach(el => {
+  el.addEventListener('input', regenerate);
+});
+
+// Helpers
+function d(id, def = '[POR CUMPLIMENTAR]') {
+  const v = ($(id).value || '').trim();
+  return v || def;
+}
+function today() {
+  return new Date().toLocaleDateString('es-ES', { day: '2-digit', month: 'long', year: 'numeric' });
+}
+function fechaHecho() {
+  const raw = $('fecha-hecho').value;
+  if (!raw) return '[FECHA DEL HECHO]';
+  const [y, m, d] = raw.split('-');
+  return `${d}/${m}/${y}`;
+}
+function horaHecho() {
+  return $('hora-hecho').value || '[HORA APROXIMADA]';
+}
+function canales() {
+  if (state.canales.size === 0) return '[CANALES POR INDICAR]';
+  return Array.from(state.canales).join(', ');
+}
+function tipoTexto() {
+  const t = $('tipo').value;
+  return TIPO_LABELS[t] || 'fraude digital';
+}
+
+// ============================================================
+// MODELOS
+// ============================================================
+
+function docPolicia() {
+  return `A LA COMISARÍA DE POLICÍA NACIONAL
+
+D./Dña. ${d('nombre','[NOMBRE Y APELLIDOS]')}, mayor de edad, con DNI/NIE ${d('dni','[DNI]')}, con domicilio a efectos de notificaciones en ${d('domicilio','[DOMICILIO]')}, teléfono ${d('telefono','[TELÉFONO]')} y correo electrónico ${d('email-denunciante','[EMAIL]')}, comparece y como mejor proceda en Derecho
+
+
+D I C E:
+
+
+PRIMERO.- Que por medio del presente escrito interpone DENUNCIA por unos hechos que podrían ser constitutivos de delito de ESTAFA INFORMÁTICA (art. 248.2 del Código Penal) y/o DEFRAUDACIÓN INFORMÁTICA, ocurridos con las circunstancias que a continuación se detallan.
+
+
+SEGUNDO. - RELATO DE LOS HECHOS.
+
+Que el día ${fechaHecho()}, siendo aproximadamente las ${horaHecho()}, encontrándome en ${d('localidad','[LOCALIDAD]')}, fui víctima de un fraude digital consistente en ${tipoTexto()}, a través del/los siguiente/s canal/es: ${canales()}.
+
+Los hechos, en detalle, son los siguientes:
+
+${d('descripcion','[DESCRIBIR LO OCURRIDO CON DETALLE]')}
+
+
+TERCERO.- DATOS TÉCNICOS DE LA EVIDENCIA.
+
+- Remitente / número / identificador del atacante: ${d('remitente','[POR IDENTIFICAR]')}
+- URL fraudulenta empleada: ${d('url','[NO CONSTA / NO APLICA]')}
+- IBAN destino del dinero: ${d('iban-destino','[NO CONSTA / NO APLICA]')}
+- Datos personales expuestos: ${d('datos-robados','[POR DETERMINAR]')}
+
+Se aporta como prueba documental capturas de pantalla, correos electrónicos, mensajes SMS y demás documentación digital que evidencia los hechos denunciados, la cual se pone a disposición de esta Comisaría para su cotejo.
+
+
+CUARTO.- PERJUICIO ECONÓMICO.
+
+El perjuicio económico sufrido asciende a ${d('importe','[IMPORTE]')} euros, cargado desde cuenta abierta en la entidad ${d('entidad','[ENTIDAD]')}. Se ha comunicado a la entidad bancaria para el bloqueo cautelar y la reclamación correspondiente conforme a los arts. 44 y 45 del RDL 19/2018, de servicios de pago.
+
+
+Por lo expuesto,
+
+
+S O L I C I T A  a esta Comisaría:
+
+1. Que tenga por presentada la presente DENUNCIA y por formuladas las manifestaciones que anteceden, incoando las diligencias oportunas.
+2. Se practiquen cuantas actuaciones sean necesarias para la investigación de los hechos y la identificación del/los autor/es.
+3. Se me informe del número de atestado a efectos de comunicárselo a la entidad bancaria.
+4. Se remita, si procede, copia al Ministerio Fiscal.
+
+
+En ${d('localidad','[LOCALIDAD]')}, a ${today()}.
+
+
+
+Fdo.: ${d('nombre','[NOMBRE Y APELLIDOS]')}
+DNI: ${d('dni','[DNI]')}`;
+}
+
+function docGuardia() {
+  return `AL EQUIPO @ DE INVESTIGACIÓN TECNOLÓGICA (GDT) DE LA GUARDIA CIVIL
+
+D./Dña. ${d('nombre','[NOMBRE Y APELLIDOS]')}, con DNI/NIE ${d('dni','[DNI]')}, domicilio en ${d('domicilio','[DOMICILIO]')}, teléfono ${d('telefono','[TELÉFONO]')} y correo ${d('email-denunciante','[EMAIL]')}, ante este Equipo comparece y
+
+
+E X P O N E:
+
+Que interpone DENUNCIA por hechos presuntamente constitutivos de delito de ESTAFA INFORMÁTICA tipificado en el art. 248.2 del Código Penal, con las siguientes circunstancias:
+
+
+HECHOS:
+
+El día ${fechaHecho()} a las ${horaHecho()}, en ${d('localidad','[LOCALIDAD]')}, sufrí un ataque de ${tipoTexto()} a través de: ${canales()}.
+
+Descripción:
+
+${d('descripcion','[DESCRIBIR LO OCURRIDO CON DETALLE]')}
+
+
+INDICADORES TÉCNICOS (IoC):
+
+* Remitente / origen: ${d('remitente','[POR IDENTIFICAR]')}
+* URL / dominio fraudulento: ${d('url','[NO CONSTA / NO APLICA]')}
+* IBAN destinatario: ${d('iban-destino','[NO CONSTA / NO APLICA]')}
+* Datos personales comprometidos: ${d('datos-robados','[POR DETERMINAR]')}
+* Perjuicio económico: ${d('importe','[IMPORTE]')} €
+* Entidad bancaria de origen: ${d('entidad','[ENTIDAD]')}
+
+
+PRUEBAS QUE SE APORTAN:
+
+- Capturas de pantalla de la comunicación fraudulenta.
+- Copia digital íntegra del correo/SMS/mensaje (incluidas cabeceras cuando proceda).
+- Extractos bancarios que evidencian el movimiento.
+- Cualquier otro elemento probatorio que se solicite.
+
+
+SOLICITA:
+
+Que se tenga por presentada la presente denuncia y se inicien las diligencias de investigación oportunas, notificando el número de atestado al que suscribe para su comunicación a la entidad bancaria.
+
+
+En ${d('localidad','[LOCALIDAD]')}, a ${today()}.
+
+
+Fdo.: ${d('nombre','[NOMBRE Y APELLIDOS]')}
+DNI: ${d('dni','[DNI]')}
+
+
+Nota: la denuncia puede presentarse online en https://web.guardiacivil.es/es/institucional/conocenos/especialidades/gdt/ o presencialmente en cualquier puesto de la Guardia Civil.`;
+}
+
+function docAEPD() {
+  return `A LA AGENCIA ESPAÑOLA DE PROTECCIÓN DE DATOS (AEPD)
+
+RECLAMACIÓN POR VULNERACIÓN DE LA NORMATIVA DE PROTECCIÓN DE DATOS PERSONALES (RGPD y LOPDGDD)
+
+
+DATOS DE LA PERSONA RECLAMANTE:
+- Nombre y apellidos: ${d('nombre','[NOMBRE Y APELLIDOS]')}
+- DNI/NIE: ${d('dni','[DNI]')}
+- Domicilio: ${d('domicilio','[DOMICILIO]')}
+- Teléfono: ${d('telefono','[TELÉFONO]')}
+- Correo: ${d('email-denunciante','[EMAIL]')}
+
+
+HECHOS QUE MOTIVAN LA RECLAMACIÓN:
+
+El día ${fechaHecho()} fui víctima de un incidente de ${tipoTexto()} en el que se produjo un tratamiento ilegítimo de mis datos personales.
+
+Canal/es utilizado/s por el atacante: ${canales()}
+
+Descripción:
+
+${d('descripcion','[DESCRIBIR LO OCURRIDO]')}
+
+
+DATOS PERSONALES AFECTADOS:
+
+Como consecuencia del incidente se han visto expuestos o comprometidos los siguientes datos personales:
+
+${d('datos-robados','[LISTAR DATOS EXPUESTOS: DNI, credenciales, dirección, etc.]')}
+
+
+ACTUACIONES REALIZADAS:
+
+- Se han cambiado credenciales de acceso a los servicios comprometidos.
+- Se ha bloqueado la cuenta / tarjeta bancaria afectada.
+- Se ha interpuesto denuncia policial (adjuntar número de atestado si consta).
+- Se ha requerido a las entidades presuntamente suplantadas información sobre posibles brechas.
+
+
+NORMATIVA QUE SE CONSIDERA INFRINGIDA:
+
+- Reglamento (UE) 2016/679 (RGPD), especialmente arts. 5, 6, 32 y 33.
+- Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales.
+
+
+SE SOLICITA:
+
+Que se tenga por presentada la presente RECLAMACIÓN y, previa la tramitación oportuna, se inicien las actuaciones inspectoras y sancionadoras que procedan contra el responsable del tratamiento ilícito o, en su caso, contra la entidad que no haya adoptado medidas adecuadas de seguridad conforme al art. 32 RGPD.
+
+
+En ${d('localidad','[LOCALIDAD]')}, a ${today()}.
+
+
+Fdo.: ${d('nombre','[NOMBRE Y APELLIDOS]')}
+
+
+Nota: la reclamación puede presentarse telemáticamente en la sede electrónica de la AEPD (https://sedeaepd.gob.es/sede-electronica-web/vistas/infoSede/tramitesCiudadano.jsf).`;
+}
+
+function docBanco() {
+  return `Asunto: RECLAMACIÓN POR OPERACIONES NO AUTORIZADAS · Solicitud de devolución conforme al RDL 19/2018
+
+A la atención del Servicio de Atención al Cliente
+${d('entidad','[ENTIDAD BANCARIA]')}
+
+
+D./Dña. ${d('nombre','[NOMBRE Y APELLIDOS]')}, con DNI/NIE ${d('dni','[DNI]')}, cliente de esa entidad, mediante el presente escrito
+
+
+C O M U N I C A:
+
+
+PRIMERO.- Que el día ${fechaHecho()} a las ${horaHecho()} se han detectado operaciones no autorizadas por importe de ${d('importe','[IMPORTE]')} € cargadas en mi cuenta / tarjeta, presumiblemente derivadas de un fraude digital de tipo ${tipoTexto()}.
+
+SEGUNDO.- Estas operaciones se han llevado a cabo sin mi consentimiento y como consecuencia de un ataque de ingeniería social / suplantación de identidad realizado por terceros ajenos a mi voluntad. Los canales empleados por el atacante fueron: ${canales()}.
+
+Detalles del incidente:
+
+${d('descripcion','[DESCRIBIR CÓMO SE PRODUJO EL FRAUDE]')}
+
+Datos técnicos:
+- Origen del ataque: ${d('remitente','[POR IDENTIFICAR]')}
+- URL fraudulenta: ${d('url','[NO CONSTA / NO APLICA]')}
+- IBAN destino (si consta): ${d('iban-destino','[NO CONSTA]')}
+
+
+TERCERO.- Conforme a los arts. 44 y 45 del Real Decreto-ley 19/2018, de 23 de noviembre, de servicios de pago y otras medidas urgentes en materia financiera, en el caso de operaciones de pago no autorizadas, el proveedor de servicios de pago está obligado a DEVOLVER de inmediato el importe de la operación no autorizada al ordenante, quedando la cuenta en la situación en que se habría encontrado de no haberse efectuado la operación.
+
+La carga de la prueba de que la operación fue autorizada corresponde al proveedor de servicios de pago (art. 43 RDL 19/2018).
+
+
+CUARTO.- Que se ha interpuesto la correspondiente denuncia ante las Fuerzas y Cuerpos de Seguridad del Estado, cuya copia se adjunta / se aportará en cuanto se disponga del número de atestado.
+
+
+Por todo lo anterior,
+
+
+S O L I C I T A:
+
+1. Que se proceda al bloqueo inmediato de las tarjetas y accesos comprometidos.
+2. Que se DEVUELVAN los ${d('importe','[IMPORTE]')} € correspondientes a las operaciones no autorizadas.
+3. Que se me informe, en el plazo máximo de 15 días hábiles, de la resolución adoptada.
+4. Que, en caso de negativa, se me indique expresamente el motivo y se me informe de la posibilidad de acudir al Servicio de Reclamaciones del Banco de España.
+
+
+En ${d('localidad','[LOCALIDAD]')}, a ${today()}.
+
+
+Fdo.: ${d('nombre','[NOMBRE Y APELLIDOS]')}
+DNI: ${d('dni','[DNI]')}
+Contacto: ${d('telefono','[TELÉFONO]')} / ${d('email-denunciante','[EMAIL]')}`;
+}
+
+function docOperadora() {
+  return `Asunto: RECLAMACIÓN URGENTE · Duplicado fraudulento de SIM y/o cargos no autorizados
+
+A la atención del Servicio de Atención al Cliente
+[NOMBRE DE LA OPERADORA]
+
+
+D./Dña. ${d('nombre','[NOMBRE Y APELLIDOS]')}, con DNI/NIE ${d('dni','[DNI]')}, titular de la línea telefónica ${d('telefono','[TELÉFONO]')}, cliente de esa operadora, comunica:
+
+
+HECHOS:
+
+El día ${fechaHecho()} a las ${horaHecho()} tuve conocimiento de un incidente relacionado con mi línea telefónica, presumiblemente derivado de un fraude de tipo ${tipoTexto()}.
+
+Detalles:
+
+${d('descripcion','[DESCRIBIR LOS HECHOS]')}
+
+
+DATOS TÉCNICOS:
+
+- Origen del ataque: ${d('remitente','[POR IDENTIFICAR]')}
+- Datos personales expuestos: ${d('datos-robados','[POR DETERMINAR]')}
+- Perjuicio económico asociado (si aplica): ${d('importe','[IMPORTE]')} €
+
+
+CONSECUENCIAS:
+
+Como consecuencia del incidente, terceros han obtenido acceso no autorizado a mis servicios digitales asociados a esta línea (banca online, cuentas de correo, servicios con doble factor por SMS).
+
+
+SE SOLICITA:
+
+1. BLOQUEO INMEDIATO de la línea y anulación de cualquier duplicado de SIM no autorizado emitido en las últimas 72 horas.
+2. Aportación del HISTORIAL DE OPERACIONES realizadas sobre la línea en los últimos 30 días (portabilidades, duplicados de SIM, cambios de titularidad, cargos, etc.), a efectos probatorios.
+3. Emisión de una nueva SIM y restablecimiento del servicio con las máximas medidas de verificación de identidad.
+4. Investigación interna sobre cómo se pudo realizar el duplicado fraudulento y adopción de medidas correctoras.
+5. Que se me informe formalmente por escrito de las actuaciones realizadas.
+
+
+Se advierte que este incidente ha sido denunciado ante las Fuerzas y Cuerpos de Seguridad del Estado y notificado a la Agencia Española de Protección de Datos.
+
+
+En ${d('localidad','[LOCALIDAD]')}, a ${today()}.
+
+
+Fdo.: ${d('nombre','[NOMBRE Y APELLIDOS]')}
+DNI: ${d('dni','[DNI]')}
+Contacto: ${d('telefono','[TELÉFONO]')} / ${d('email-denunciante','[EMAIL]')}`;
+}
+
+const DOCS = {
+  policia: docPolicia,
+  guardia: docGuardia,
+  aepd:    docAEPD,
+  banco:   docBanco,
+  operadora: docOperadora
+};
+
+function regenerate() {
+  const fn = DOCS[state.activeDoc] || DOCS.policia;
+  $('doc-output').textContent = fn();
+}
+
+// Botones
+$('btn-copy').addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText($('doc-output').textContent);
+    const ok = $('copy-ok');
+    ok.style.display = 'inline';
+    setTimeout(() => ok.style.display = 'none', 2000);
+  } catch (e) {
+    alert('No se pudo copiar. Selecciona el texto manualmente y copia con Ctrl+C.');
+  }
+});
+
+$('btn-download').addEventListener('click', () => {
+  const text = $('doc-output').textContent;
+  const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement('a');
+  a.href = url;
+  a.download = `denuncia-${state.activeDoc}-${new Date().toISOString().split('T')[0]}.txt`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+});
+
+// Inicial
+regenerate();
+</script>
+</body>
+</html>

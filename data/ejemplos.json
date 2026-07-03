@@ -1,0 +1,57 @@
+{
+  "_doc": "Casos reales analizados. Añade nuevos casos aquí y créales su HTML dentro de /ejemplos/.",
+  "casos": [
+    {
+      "id": "acceso-remoto-anydesk",
+      "enlace": "acceso-remoto-anydesk.html",
+      "titulo": "El caso del falso soporte técnico con AnyDesk",
+      "subtitulo": "Cómo una llamada de 40 minutos vació una cuenta corriente",
+      "categoria": "Acceso remoto",
+      "publico": "publico-general",
+      "fecha": "2026-07-02",
+      "resumen": "Análisis de un caso real de vishing con instalación de AnyDesk, ingeniería social sobre confianza y transferencia bancaria en directo.",
+      "tags": ["vishing", "anydesk", "teamviewer", "acceso remoto", "banca online"],
+      "icono": "telefono",
+      "destacado": true
+    },
+    {
+      "id": "ofertas-trabajo-camboya",
+      "enlace": "ofertas-trabajo-camboya.html",
+      "titulo": "Ofertas de trabajo demasiado buenas: la trampa camboyana",
+      "subtitulo": "Del anuncio de LinkedIn al secuestro en compounds del sudeste asiático",
+      "categoria": "Ingeniería social",
+      "publico": "publico-general",
+      "fecha": "2026-07-02",
+      "resumen": "Anatomía del pig butchering y las mafias de compounds: cómo captan víctimas para forzarlas a estafar a otras. Caso público analizado.",
+      "tags": ["ingeniería social", "pig butchering", "linkedin", "trata"],
+      "icono": "usuarios",
+      "destacado": true
+    },
+    {
+      "id": "app-trading-falsa",
+      "enlace": "app-trading-falsa.html",
+      "titulo": "La app de trading que devolvía dinero de mentira",
+      "subtitulo": "Cómo funcionan las plataformas fantasma con dashboard bonito",
+      "categoria": "Fraude financiero",
+      "publico": "publico-general",
+      "fecha": "2026-07-02",
+      "resumen": "Autopsia técnica de una app de inversión fraudulenta: dashboard falso, ingeniería de confianza y bloqueo al intentar retirar.",
+      "tags": ["fraude financiero", "trading", "app móvil", "criptomonedas"],
+      "icono": "compra",
+      "destacado": true
+    },
+    {
+      "id": "deepfake-voz-familiar",
+      "enlace": "deepfake-voz-familiar.html",
+      "titulo": "La voz de tu hijo pidiendo dinero: deepfake de voz",
+      "subtitulo": "Cuando 3 segundos de audio de Instagram bastan para reconstruir la voz",
+      "categoria": "IA & Deepfakes",
+      "publico": "publico-general",
+      "fecha": "2026-07-02",
+      "resumen": "Cómo se está usando la clonación de voz por IA en estafas familiares. Umbrales técnicos, defensas prácticas y palabra clave familiar.",
+      "tags": ["deepfake", "IA", "vishing", "clonación voz", "ingeniería social"],
+      "icono": "ia",
+      "destacado": true
+    }
+  ]
+}
