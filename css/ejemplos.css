@@ -166,6 +166,7 @@
 /* Tabla de IoC */
 .caso-ioc {
   width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
   margin: 20px 0;
   font-size: 13px;
@@ -175,6 +176,7 @@
   padding: 10px 14px;
   border: 1px solid #e2e8f0;
   text-align: left;
+  overflow-wrap: break-word;
 }
 .caso-ioc th {
   background: #0f172a;
@@ -265,6 +267,7 @@
   flex-direction: column;
   gap: 20px;
   padding-top: 30px;
+  min-width: 0; /* evita que la tabla IoC fuerce el ancho de la columna en móvil */
 }
 
 .caso-toc-label {

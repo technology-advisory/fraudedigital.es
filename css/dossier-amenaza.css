@@ -20,6 +20,21 @@
   }
 }
 
+/* ── COLUMNA IZQUIERDA (CONTENIDO) ── */
+.amenaza-main {
+  min-width: 0; /* CRÍTICO: por defecto los hijos de un grid no pueden encoger
+  por debajo del ancho de su contenido más ancho (una tabla, un <code> largo...).
+  Sin esto, cualquier elemento no partible en CUALQUIER punto de la página
+  fuerza el ancho de toda la columna, y el texto se corta en móvil aunque
+  ese párrafo en concreto no tenga nada raro. */
+}
+
+.amenaza-main .block .body-text code,
+.amenaza-main .block .body-text pre {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 /* ── COLUMNA DERECHA (STICKY) ── */
 .amenaza-toc {
   position: sticky;
@@ -27,6 +42,7 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+  min-width: 0; /* evita que una tabla ancha (Ficha de Control) fuerce el ancho de toda la columna grid en móvil */
 }
 
 @media (max-width: 1024px) {
@@ -58,6 +74,7 @@
 
 .amenaza-control table {
   width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
   font-size: 13px;
 }
@@ -66,6 +83,7 @@
   padding: 10px 0;
   border-bottom: 1px solid #e2e8f0;
   vertical-align: middle;
+  overflow-wrap: break-word;
 }
 
 .amenaza-control tr:last-child td {
