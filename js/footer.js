@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     footerContainer.innerHTML = `
         <footer style="background-color: #0f172a; color: #94a3b8; padding: 4rem 2rem 2rem; font-size: 0.9rem; border-top: 1px solid #1e293b; font-family: 'Segoe UI', system-ui, sans-serif;">
-            <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr)); gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid #1e293b;">
+            <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid #1e293b;">
                 
                 <!-- Columna 1: Marca y Propósito -->
                 <div>
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <!-- Barra Inferior Legal -->
             <div style="max-width: 1200px; margin: 2rem auto 0; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; font-size: 0.85rem; color: #64748b;">
                 <p>© 2026 FraudeDigital.es — Enfoque Técnico y Práctico contra el Cibercrimen.</p>
-                <div style="display: flex; flex-wrap: wrap; gap: 1rem 1.5rem;">
+                <div style="display: flex; gap: 1.5rem;">
                     <a href="/legal/aviso-legal.html" style="color: #64748b; text-decoration: none;">Aviso Legal</a>
                     <a href="/legal/privacidad.html" style="color: #64748b; text-decoration: none;">Política de Privacidad</a>
                     <a href="/legal/cookies.html" style="color: #64748b; text-decoration: none;">Cookies</a>

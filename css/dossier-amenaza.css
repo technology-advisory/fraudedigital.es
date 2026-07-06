@@ -14,25 +14,11 @@
 
 @media (max-width: 1024px) {
   .amenaza-layout {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 32px;
     padding: 0 24px 32px;
   }
-}
-
-/* ── COLUMNA IZQUIERDA (CONTENIDO) ── */
-.amenaza-main {
-  min-width: 0; /* CRÍTICO: por defecto los hijos de un grid no pueden encoger
-  por debajo del ancho de su contenido más ancho (una tabla, un <code> largo...).
-  Sin esto, cualquier elemento no partible en CUALQUIER punto de la página
-  fuerza el ancho de toda la columna, y el texto se corta en móvil aunque
-  ese párrafo en concreto no tenga nada raro. */
-}
-
-.amenaza-main .block .body-text code,
-.amenaza-main .block .body-text pre {
-  overflow-wrap: anywhere;
-  word-break: break-word;
 }
 
 /* ── COLUMNA DERECHA (STICKY) ── */
@@ -42,13 +28,21 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  min-width: 0; /* evita que una tabla ancha (Ficha de Control) fuerce el ancho de toda la columna grid en móvil */
 }
 
 @media (max-width: 1024px) {
   .amenaza-toc {
     position: static;
     width: 100%;
+    order: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .amenaza-main {
+    order: 2;
+    width: 100%;
+    min-width: 0;
   }
 }
 
@@ -74,7 +68,6 @@
 
 .amenaza-control table {
   width: 100%;
-  table-layout: fixed;
   border-collapse: collapse;
   font-size: 13px;
 }
@@ -83,7 +76,6 @@
   padding: 10px 0;
   border-bottom: 1px solid #e2e8f0;
   vertical-align: middle;
-  overflow-wrap: break-word;
 }
 
 .amenaza-control tr:last-child td {
@@ -346,6 +338,15 @@
   color: #dc2626;
 }
 
+@media (max-width: 1024px) {
+  .amenaza-divider .label {
+    white-space: normal;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+  }
+}
+
 /* ── BLOQUES DE CONTENIDO ── */
 .amenaza-main .block {
   margin-bottom: 40px;
@@ -592,12 +593,19 @@
 }
 
 @media (max-width: 640px) {
+  .amenaza-layout {
+    padding: 0 16px 20px;
+    overflow-x: hidden;
+  }
+
   .amenaza-main .block h2 {
     font-size: 19px;
   }
   
   .amenaza-main .block .body-text {
     font-size: 14.5px;
+    overflow-x: hidden;
+    word-wrap: break-word;
   }
   
   .amenaza-control {
