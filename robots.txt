@@ -6,8 +6,9 @@
 User-agent: *
 Allow: /
 
-# Excluir páginas legales del índice (ya lleva noindex en meta)
+# Excluir páginas legales y sobre-mí del índice (ya llevan noindex en meta)
 Disallow: /legal/
+Disallow: /sobre-mi.html
 
 # Bloquear rutas de datos brutos (JSON)
 Disallow: /data/
