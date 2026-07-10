@@ -1,0 +1,496 @@
+{
+  "actualizado": "2026-07-10T20:00:00+02:00",
+  "version": 2,
+  "descripcion": "Capa editorial independiente de FraudeDigital.es. El workflow automático no debe sobrescribir este archivo.",
+  "analisis": {
+    "suplantan-la-policia-nacional-la-guardia-civil-y-incibe-traves-de-notificaciones": {
+      "estado": "publicado",
+      "fecha_publicacion": "2026-07-10",
+      "autor": "FraudeDigital.es",
+      "nivel_riesgo": "alto",
+      "tipo": "Phishing y extorsión mediante suplantación de organismos públicos",
+      "objetivo": "Provocar una respuesta, obtener datos personales y exigir pagos mediante falsas sanciones",
+      "canales": [
+        "Correo electrónico",
+        "Documento PDF"
+      ],
+      "resumen_ejecutivo": "La campaña suplanta a la Policía Nacional, la Guardia Civil y al propio INCIBE mediante correos con documentos de apariencia oficial. La víctima es acusada falsamente de delitos relacionados con el consumo de contenido pornográfico y recibe amenazas de detención si no responde en un plazo muy breve. El objetivo real es generar miedo, confirmar que la cuenta está activa y abrir una conversación que pueda terminar en extorsión, robo de datos o pagos fraudulentos.",
+      "como_identificarlo": [
+        "El remitente no pertenece a un dominio oficial de la Policía, Guardia Civil, Ministerio del Interior o INCIBE.",
+        "El mensaje amenaza con una detención inmediata o exige responder en 48 o 72 horas.",
+        "El documento acumula logotipos, sellos y organismos que no emitirían una notificación conjunta.",
+        "Aparecen errores de traducción, palabras inexistentes, frases cortadas o nombres oficiales incorrectos.",
+        "La comunicación no está personalizada con nombre, apellidos, DNI ni referencia verificable en una sede electrónica.",
+        "Se solicita responder al mismo correo o continuar la conversación por canales no oficiales."
+      ],
+      "riesgos": [
+        "Confirmar que la dirección de correo está activa.",
+        "Sufrir una extorsión económica mediante falsas multas.",
+        "Entregar documentación o información personal reutilizable en otros fraudes.",
+        "Realizar pagos irreversibles bajo presión psicológica.",
+        "Convertirse en objetivo de campañas dirigidas posteriores."
+      ],
+      "que_hacer": [
+        "No respondas al correo y no sigas las instrucciones del documento.",
+        "No realices pagos ni facilites datos personales, bancarios o credenciales.",
+        "Conserva el mensaje, las cabeceras, el adjunto y capturas como evidencias.",
+        "Bloquea al remitente y reporta el mensaje como phishing.",
+        "Contacta con el 017 de INCIBE si necesitas asesoramiento.",
+        "Si has respondido, entregado datos o pagado, avisa al banco y presenta denuncia.",
+        "Cambia las contraseñas afectadas y activa un segundo factor de autenticación."
+      ],
+      "analisis_tecnico": "El ataque utiliza tres palancas clásicas de ingeniería social: autoridad, miedo y urgencia. La acumulación de organismos y símbolos oficiales busca anular el análisis racional de la víctima. El primer objetivo no suele ser ejecutar malware, sino iniciar una interacción y validar que el destinatario responde bajo presión. Desde ese momento, el atacante puede escalar hacia falsas sanciones, solicitud de documentación, robo de identidad o pagos.",
+      "indicadores_clave": [
+        "Dominios no oficiales",
+        "Amenaza de arresto",
+        "Plazo 48/72 horas",
+        "PDF con múltiples logotipos",
+        "Errores lingüísticos",
+        "Solicitud de respuesta"
+      ],
+      "relacionadas": [
+        "desconfia-de-supuestas-notificaciones-de-la-guardia-civil-y-europol-sobre-la",
+        "chantajes-de-sextorsion-traves-de-correos-electronicos"
+      ]
+    },
+    "la-agencia-tributaria-no-ha-emitido-ninguna-comunicacion-dirigida-usted": {
+      "estado": "publicado",
+      "fecha_publicacion": "2026-07-10",
+      "autor": "FraudeDigital.es",
+      "nivel_riesgo": "alto",
+      "tipo": "Smishing con suplantación de la Agencia Tributaria",
+      "objetivo": "Robar datos personales y bancarios mediante una falsa comunicación tributaria",
+      "canales": [
+        "SMS",
+        "Sitio web fraudulento"
+      ],
+      "resumen_ejecutivo": "La víctima recibe un SMS que aparenta proceder de la Agencia Tributaria y le informa de una supuesta comunicación pendiente o devolución. El enlace dirige a una web que imita la sede oficial y solicita datos personales, bancarios o de tarjeta. La campaña aprovecha la confianza en la Administración y la expectativa de recibir dinero para provocar una acción inmediata.",
+      "como_identificarlo": [
+        "El SMS contiene un enlace acortado o un dominio distinto de agenciatributaria.gob.es.",
+        "La dirección puede terminar en extensiones poco habituales como .top o .click.",
+        "El texto es genérico y no incluye nombre, NIF ni referencia verificable.",
+        "Aparecen espacios extraños, errores gramaticales o redacción artificial.",
+        "Se solicita introducir datos bancarios o de tarjeta para recibir una devolución.",
+        "El remitente puede aparecer como AEAT por técnicas de SMS spoofing."
+      ],
+      "riesgos": [
+        "Robo de datos personales y bancarios.",
+        "Cargos no autorizados o fraude con tarjeta.",
+        "Suplantación de identidad.",
+        "Uso de la información para nuevas campañas dirigidas.",
+        "Acceso posterior a otros servicios si se reutilizan credenciales."
+      ],
+      "que_hacer": [
+        "No pulses el enlace ni respondas al SMS.",
+        "Elimina el mensaje después de conservar una captura y bloquear al remitente.",
+        "Comprueba cualquier notificación entrando manualmente en la sede oficial.",
+        "Si facilitaste datos bancarios, contacta de inmediato con tu entidad.",
+        "Bloquea o sustituye la tarjeta si el banco lo considera necesario.",
+        "Guarda evidencias y presenta denuncia si has sufrido perjuicio.",
+        "Vigila movimientos bancarios y posibles usos indebidos de tus datos."
+      ],
+      "analisis_tecnico": "El smishing combina spoofing del identificador del remitente con una landing page que replica visualmente la sede de la AEAT. La apariencia del nombre AEAT en el hilo de mensajes no demuestra autenticidad: el atacante puede alterar el identificador visible. La verificación debe hacerse siempre por el dominio y accediendo manualmente a la sede electrónica, nunca desde el enlace recibido.",
+      "indicadores_clave": [
+        "SMS spoofing",
+        "Dominio .top/.click",
+        "Falsa devolución",
+        "Formulario bancario",
+        "Mensaje genérico",
+        "Urgencia"
+      ],
+      "relacionadas": [
+        "notificaciones-falsas-que-suplantan-la-agencia-tributaria-aeat-y-la-direccion",
+        "mi-carpeta-ciudadana-no-esta-enviando-notificaciones-los-ciudadanos-para-recibir"
+      ]
+    },
+    "suplantan-al-lidl-traves-de-tiendas-online-fraudulentas": {
+      "estado": "publicado",
+      "fecha_publicacion": "2026-07-10",
+      "autor": "FraudeDigital.es",
+      "nivel_riesgo": "alto",
+      "tipo": "Tiendas online fraudulentas y suplantación de marca",
+      "objetivo": "Obtener pagos y recopilar datos personales y bancarios mediante compras inexistentes",
+      "canales": [
+        "Anuncios patrocinados",
+        "WhatsApp",
+        "Sitio web fraudulento"
+      ],
+      "resumen_ejecutivo": "Los atacantes crean tiendas que imitan la imagen de LIDL y las promocionan mediante anuncios en buscadores o enlaces compartidos por mensajería. Ofrecen productos con descuentos desproporcionados y utilizan mensajes de escasez para acelerar la compra. La víctima paga por un producto que no recibirá y entrega además datos personales y bancarios.",
+      "como_identificarlo": [
+        "La URL no corresponde al dominio oficial de la marca.",
+        "El nombre del anunciante o de la tienda no coincide exactamente con LIDL.",
+        "Los precios son muy inferiores a los habituales sin una explicación creíble.",
+        "La web muestra contadores, poco stock o compras recientes para generar urgencia.",
+        "Faltan datos legales, contacto verificable o condiciones comerciales coherentes.",
+        "El enlace llega por WhatsApp o aparece como producto patrocinado, lo que no garantiza legitimidad."
+      ],
+      "riesgos": [
+        "Pérdida del importe pagado.",
+        "Robo de los datos de la tarjeta.",
+        "Suplantación de identidad con los datos de envío.",
+        "Cargos posteriores no autorizados.",
+        "Reutilización de contraseñas si se creó una cuenta en la tienda falsa."
+      ],
+      "que_hacer": [
+        "Comprueba siempre el dominio antes de comprar.",
+        "No te fíes de un anuncio solo porque aparezca en un buscador.",
+        "Evita compras impulsivas motivadas por descuentos extremos o contadores.",
+        "Si pagaste, contacta inmediatamente con el banco y solicita revisión de la operación.",
+        "Bloquea la tarjeta si pudo quedar comprometida.",
+        "Guarda anuncios, URL, recibos y capturas y presenta denuncia.",
+        "Cambia cualquier contraseña reutilizada en otros servicios."
+      ],
+      "analisis_tecnico": "La campaña explota la confianza que generan una marca conocida y la publicidad patrocinada. El atacante no necesita comprometer la infraestructura real de LIDL: replica el diseño, registra dominios desechables y compra visibilidad. Los elementos de urgencia y prueba social —stock limitado, compradores recientes o temporizadores— están diseñados para reducir el tiempo de comprobación.",
+      "indicadores_clave": [
+        "Dominio ajeno",
+        "Descuentos extremos",
+        "Anuncio patrocinado",
+        "Difusión por WhatsApp",
+        "Stock artificial",
+        "Pago sin garantías"
+      ],
+      "relacionadas": []
+    },
+    "desconfia-de-supuestas-notificaciones-de-la-guardia-civil-y-europol-sobre-la": {
+      "estado": "publicado",
+      "fecha_publicacion": "2026-07-10",
+      "autor": "FraudeDigital.es",
+      "nivel_riesgo": "alto",
+      "tipo": "Phishing y extorsión con falsa notificación policial",
+      "objetivo": "Asustar a la víctima para obtener datos, pagos o colaboración con un supuesto procedimiento",
+      "canales": [
+        "Correo electrónico",
+        "Documento PDF"
+      ],
+      "resumen_ejecutivo": "La campaña utiliza una falsa convocatoria de la Guardia Civil y Europol vinculada a la operación policial Endgame. El documento acusa al destinatario de formar parte de una botnet y presenta tecnicismos, sellos y datos falsos para aparentar una investigación real. Su finalidad es iniciar una conversación bajo presión y escalar después hacia extorsión, solicitud de datos o pagos.",
+      "como_identificarlo": [
+        "El correo procede de una dirección que no pertenece a las fuerzas de seguridad.",
+        "El asunto es genérico, como CONVOCATORIA, y el destinatario puede estar oculto.",
+        "Se utilizan departamentos, cargos o nombres que no existen.",
+        "El PDF mezcla hechos reales con afirmaciones técnicas imposibles o exageradas.",
+        "Se amenaza con consecuencias inmediatas y se impide consultar con terceros.",
+        "Se pide responder a una dirección gratuita o no gubernamental."
+      ],
+      "riesgos": [
+        "Extorsión económica.",
+        "Entrega de datos personales o documentación.",
+        "Confirmación de que el correo está activo.",
+        "Instalación posterior de software bajo la excusa de una auditoría.",
+        "Suplantación de identidad o fraude dirigido."
+      ],
+      "que_hacer": [
+        "No respondas ni sigas las instrucciones del PDF.",
+        "No instales programas ni permitas accesos remotos.",
+        "Comprueba cualquier comunicación por canales oficiales independientes.",
+        "Conserva correo, cabeceras y adjunto.",
+        "Reporta el mensaje y bloquea al remitente.",
+        "Contacta con el 017 si tienes dudas.",
+        "Denuncia si facilitaste datos, pagaste o instalaste software."
+      ],
+      "analisis_tecnico": "El fraude adopta el nombre de una operación policial real para ganar credibilidad, pero construye una narrativa técnicamente inconsistente. Referencias a IMEI, UUID o herramientas forenses se usan como lenguaje intimidatorio, no como prueba. La petición de colaboración y aislamiento de la víctima es una señal típica de extorsión y soporte técnico fraudulento.",
+      "indicadores_clave": [
+        "Asunto CONVOCATORIA",
+        "PDF complejo",
+        "Operación real usada como gancho",
+        "Datos técnicos falsos",
+        "Cuenta no oficial",
+        "Prohibición de pedir ayuda"
+      ],
+      "relacionadas": [
+        "suplantan-la-policia-nacional-la-guardia-civil-y-incibe-traves-de-notificaciones",
+        "chantajes-de-sextorsion-traves-de-correos-electronicos"
+      ]
+    },
+    "chantajes-de-sextorsion-traves-de-correos-electronicos": {
+      "estado": "publicado",
+      "fecha_publicacion": "2026-07-10",
+      "autor": "FraudeDigital.es",
+      "nivel_riesgo": "alto",
+      "tipo": "Sextorsión por correo electrónico",
+      "objetivo": "Obtener un pago en criptomonedas mediante amenazas falsas de difusión de contenido íntimo",
+      "canales": [
+        "Correo electrónico",
+        "Criptomonedas"
+      ],
+      "resumen_ejecutivo": "La víctima recibe un correo que afirma que su dispositivo ha sido infectado y que existe un vídeo íntimo grabado sin su conocimiento. El atacante exige entre 750 y 950 dólares en Bitcoin y establece un plazo de 48 o 50 horas. Normalmente no dispone de ningún vídeo: utiliza un guion masivo, datos procedentes de filtraciones antiguas y presión psicológica.",
+      "como_identificarlo": [
+        "No se aporta ninguna prueba real del supuesto vídeo.",
+        "Se afirma disponer de acceso total, pero solo se exige un pago relativamente pequeño.",
+        "El mensaje utiliza plazos breves y amenazas de envío a todos los contactos.",
+        "El pago se solicita en Bitcoin u otra criptomoneda.",
+        "La redacción es genérica y podría enviarse a cualquier persona.",
+        "Puede incluir una contraseña antigua filtrada para aumentar la credibilidad."
+      ],
+      "riesgos": [
+        "Pérdida económica irreversible.",
+        "Confirmación de que la cuenta está activa.",
+        "Nuevos intentos de extorsión tras realizar el primer pago.",
+        "Ansiedad y daño psicológico.",
+        "Exposición de contraseñas antiguas si proceden de filtraciones."
+      ],
+      "que_hacer": [
+        "No respondas y no realices el pago.",
+        "Conserva el mensaje y la dirección de la cartera como evidencia.",
+        "Comprueba si la contraseña mencionada sigue en uso y cámbiala inmediatamente.",
+        "Activa autenticación multifactor en tus cuentas.",
+        "Reporta el correo como phishing o extorsión.",
+        "Contacta con el 017 si necesitas apoyo.",
+        "Si pagaste, reúne las evidencias y presenta denuncia."
+      ],
+      "analisis_tecnico": "La sextorsión masiva se basa en automatización y filtraciones históricas. Una contraseña antigua puede hacer que el mensaje parezca personalizado, pero no demuestra acceso actual al dispositivo. El atacante apuesta por el silencio y la vergüenza de la víctima. La falta de una prueba visual verificable y el uso de una cartera de criptomonedas son indicadores decisivos.",
+      "indicadores_clave": [
+        "Amenaza de vídeo íntimo",
+        "Bitcoin",
+        "Plazo 48/50 horas",
+        "Sin prueba real",
+        "Contraseña antigua",
+        "Mensaje masivo"
+      ],
+      "relacionadas": [
+        "suplantan-la-policia-nacional-la-guardia-civil-y-incibe-traves-de-notificaciones",
+        "desconfia-de-supuestas-notificaciones-de-la-guardia-civil-y-europol-sobre-la"
+      ]
+    },
+    "mi-carpeta-ciudadana-no-esta-enviando-notificaciones-los-ciudadanos-para-recibir": {
+      "estado": "publicado",
+      "fecha_publicacion": "2026-07-10",
+      "autor": "FraudeDigital.es",
+      "nivel_riesgo": "alto",
+      "tipo": "Phishing con suplantación de Mi Carpeta Ciudadana",
+      "objetivo": "Robar datos personales, bancarios y credenciales mediante un falso ingreso",
+      "canales": [
+        "Correo electrónico",
+        "Sitio web fraudulento"
+      ],
+      "resumen_ejecutivo": "Un correo que imita a Mi Carpeta Ciudadana comunica un supuesto ingreso de 552,97 euros. El enlace conduce a una web falsa que solicita datos personales, DNI, teléfono, cuenta bancaria y credenciales de acceso. La cantidad concreta, las referencias legales y la apariencia institucional se utilizan para generar confianza y curiosidad.",
+      "como_identificarlo": [
+        "El remitente utiliza un dominio comercial o genérico en lugar de uno gubernamental.",
+        "Se promete un ingreso inesperado que la víctima no había solicitado.",
+        "El mensaje invita a responder al correo para resolver dudas.",
+        "Se citan leyes y expedientes para aparentar formalidad.",
+        "La web solicita numerosos datos antes de permitir una supuesta gestión.",
+        "No se utiliza un acceso real mediante Cl@ve, certificado digital o DNI electrónico."
+      ],
+      "riesgos": [
+        "Robo completo de identidad.",
+        "Acceso o fraude sobre cuentas bancarias.",
+        "Uso del DNI y datos de contacto en nuevas estafas.",
+        "Toma de control de servicios si se facilitan credenciales.",
+        "Falsas llamadas bancarias posteriores con información real."
+      ],
+      "que_hacer": [
+        "No pulses el enlace del correo.",
+        "Accede a Mi Carpeta Ciudadana escribiendo manualmente su dirección oficial.",
+        "No facilites DNI, datos bancarios ni contraseñas en formularios recibidos por correo.",
+        "Si entregaste datos, contacta con el banco y vigila tus cuentas.",
+        "Cambia las credenciales afectadas y activa MFA.",
+        "Guarda todas las evidencias.",
+        "Presenta denuncia y realiza seguimiento de posibles usos de tu identidad."
+      ],
+      "analisis_tecnico": "El fraude combina una recompensa concreta con apariencia administrativa. La cifra exacta reduce la sensación de mensaje genérico y las referencias legales aportan una falsa capa de legitimidad. El recorrido de la web está diseñado para recolectar progresivamente un perfil de identidad completo, útil tanto para fraude bancario como para suplantaciones posteriores.",
+      "indicadores_clave": [
+        "Ingreso de 552,97 €",
+        "Dominio no gubernamental",
+        "Falso expediente",
+        "Formulario de identidad",
+        "Solicitud de IBAN",
+        "Falsa pasarela bancaria"
+      ],
+      "relacionadas": [
+        "la-agencia-tributaria-no-ha-emitido-ninguna-comunicacion-dirigida-usted",
+        "notificaciones-falsas-que-suplantan-la-agencia-tributaria-aeat-y-la-direccion"
+      ]
+    },
+    "netflix-no-esta-enviando-correos-electronicos-solicitan-ingresar-un-nuevo-metodo": {
+      "estado": "publicado",
+      "fecha_publicacion": "2026-07-10",
+      "autor": "FraudeDigital.es",
+      "nivel_riesgo": "alto",
+      "tipo": "Phishing con suplantación de Netflix",
+      "objetivo": "Robar credenciales de Netflix, datos personales y datos de tarjeta",
+      "canales": [
+        "Correo electrónico",
+        "Sitio web fraudulento"
+      ],
+      "resumen_ejecutivo": "La campaña informa de un supuesto problema con el método de pago de Netflix y amenaza con limitar el servicio. El enlace dirige a una copia de la pantalla de acceso y, después, a formularios de facturación y tarjeta. Los ciberdelincuentes obtienen así tanto la cuenta de Netflix como información útil para fraude financiero.",
+      "como_identificarlo": [
+        "El remitente no utiliza un dominio oficial de Netflix.",
+        "El asunto genera urgencia sobre la suspensión o reactivación de la cuenta.",
+        "El enlace no conduce al dominio netflix.com.",
+        "La web solicita primero credenciales y después datos completos de facturación.",
+        "Puede mostrar una operación matemática o falso control de seguridad.",
+        "La página reproduce el diseño, pero contiene pequeñas diferencias o enlaces inoperativos."
+      ],
+      "riesgos": [
+        "Robo de la cuenta de Netflix.",
+        "Compromiso de otras cuentas si se reutiliza la contraseña.",
+        "Cargos fraudulentos con la tarjeta.",
+        "Venta de credenciales en mercados ilícitos.",
+        "Uso de datos personales en nuevos ataques."
+      ],
+      "que_hacer": [
+        "No uses el enlace del correo; entra directamente en la app o web oficial.",
+        "Comprueba el estado de facturación desde tu cuenta.",
+        "Si introdujiste la contraseña, cámbiala en Netflix y en cualquier servicio donde se repita.",
+        "Cierra sesiones abiertas y revisa dispositivos vinculados.",
+        "Contacta con el banco si facilitaste datos de tarjeta.",
+        "Conserva evidencias y denuncia si existen cargos.",
+        "Activa medidas adicionales de seguridad en el correo asociado."
+      ],
+      "analisis_tecnico": "La secuencia de captura está diseñada para maximizar el valor de la víctima: primero obtiene credenciales reutilizables y después datos financieros. Los falsos CAPTCHA u operaciones matemáticas no aportan seguridad; se utilizan para dar apariencia legítima y dificultar ciertos análisis automáticos.",
+      "indicadores_clave": [
+        "Problema de pago",
+        "Dominio ajeno",
+        "Falso login",
+        "Falso CAPTCHA",
+        "Formulario de tarjeta",
+        "Amenaza de suspensión"
+      ],
+      "relacionadas": []
+    },
+    "notificaciones-falsas-que-suplantan-la-agencia-tributaria-aeat-y-la-direccion": {
+      "estado": "publicado",
+      "fecha_publicacion": "2026-07-10",
+      "autor": "FraudeDigital.es",
+      "nivel_riesgo": "alto",
+      "tipo": "Phishing con suplantación de AEAT y DEHú",
+      "objetivo": "Robar credenciales de acceso a servicios de notificación electrónica",
+      "canales": [
+        "Correo electrónico",
+        "Sitio web fraudulento"
+      ],
+      "resumen_ejecutivo": "Los atacantes envían un aviso de nueva notificación electrónica que aparenta proceder de la AEAT o de DEHú. El enlace dirige a una web clonada donde se solicita identificador y contraseña. Después, la víctima puede ser redirigida a la página legítima para ocultar el robo y hacerle pensar que se produjo un error normal.",
+      "como_identificarlo": [
+        "El remitente no pertenece a agenciatributaria.gob.es ni a un dominio oficial.",
+        "El asunto incluye una referencia genérica o aleatoria.",
+        "El enlace visible y el destino real no coinciden.",
+        "La web solicita usuario y contraseña en lugar de los métodos oficiales de identificación.",
+        "Tras introducir los datos se produce una redirección inesperada a la web legítima.",
+        "La comunicación transmite urgencia sobre una reclamación o notificación pendiente."
+      ],
+      "riesgos": [
+        "Robo de credenciales.",
+        "Acceso a notificaciones y datos administrativos.",
+        "Suplantación ante organismos públicos.",
+        "Compromiso de otras cuentas por reutilización de contraseña.",
+        "Ataques dirigidos con información fiscal."
+      ],
+      "que_hacer": [
+        "No accedas desde el enlace del correo.",
+        "Comprueba las notificaciones entrando manualmente en DEHú o la sede de la AEAT.",
+        "Utiliza Cl@ve, certificado o DNIe por los canales oficiales.",
+        "Si facilitaste credenciales, cámbialas inmediatamente.",
+        "Revisa accesos y actividad en los servicios afectados.",
+        "Guarda el correo y la URL fraudulenta.",
+        "Denuncia cualquier uso no autorizado."
+      ],
+      "analisis_tecnico": "La redirección final al sitio legítimo es una técnica de encubrimiento: después de capturar los datos, el atacante envía a la víctima a la página real para reducir sospechas. La presencia de una web visualmente idéntica no valida su autenticidad; el dominio y el mecanismo de identificación son los controles esenciales.",
+      "indicadores_clave": [
+        "Falsa notificación",
+        "Dominio no oficial",
+        "Clon de DEHú",
+        "Clon de AEAT",
+        "Captura de credenciales",
+        "Redirección final"
+      ],
+      "relacionadas": [
+        "la-agencia-tributaria-no-ha-emitido-ninguna-comunicacion-dirigida-usted",
+        "mi-carpeta-ciudadana-no-esta-enviando-notificaciones-los-ciudadanos-para-recibir"
+      ]
+    },
+    "endesa-notifica-sus-clientes-una-filtracion-de-datos-personales": {
+      "estado": "publicado",
+      "fecha_publicacion": "2026-07-10",
+      "autor": "FraudeDigital.es",
+      "nivel_riesgo": "medio",
+      "tipo": "Brecha de datos personales comunicada por Endesa",
+      "objetivo": "El incidente original expone información que puede facilitar fraudes y suplantaciones posteriores",
+      "canales": [
+        "Notificación a clientes",
+        "Posibles campañas derivadas"
+      ],
+      "resumen_ejecutivo": "Endesa informó a determinados clientes de un acceso no autorizado a datos personales. A diferencia de las campañas de phishing anteriores, aquí existe un incidente de seguridad real. El riesgo principal no es únicamente la filtración inicial, sino que los datos expuestos puedan utilizarse para correos, SMS o llamadas muy creíbles que aparenten proceder de Endesa, bancos u otros proveedores.",
+      "como_identificarlo": [
+        "Puedes recibir una comunicación legítima de Endesa informando del incidente.",
+        "Los fraudes posteriores pueden incluir datos reales como nombre, contrato o información de contacto.",
+        "Una llamada que conoce tus datos no demuestra que proceda de Endesa.",
+        "Desconfía de solicitudes urgentes de pago, códigos SMS o credenciales.",
+        "Verifica cualquier comunicación usando el teléfono o área de cliente oficial.",
+        "No accedas a enlaces recibidos para supuestas compensaciones o verificaciones."
+      ],
+      "riesgos": [
+        "Phishing y vishing altamente personalizados.",
+        "Suplantación de identidad.",
+        "Fraude contractual o cambio de datos.",
+        "Intentos de acceso a otras cuentas.",
+        "Mayor credibilidad de campañas posteriores por disponer de datos reales."
+      ],
+      "que_hacer": [
+        "Lee la comunicación oficial y comprueba qué categorías de datos pueden estar afectadas.",
+        "Cambia la contraseña del área de cliente si existe cualquier duda.",
+        "No reutilices esa contraseña en otros servicios.",
+        "Activa MFA donde esté disponible.",
+        "Extrema la precaución ante llamadas o mensajes que utilicen información real.",
+        "Revisa facturas, contratos y movimientos relacionados.",
+        "Conserva la notificación y ejerce tus derechos ante la empresa o la AEPD cuando corresponda."
+      ],
+      "analisis_tecnico": "Una brecha de datos modifica el contexto de riesgo: los atacantes pueden disponer de información suficiente para superar las señales habituales de un phishing genérico. Nombre, teléfono, dirección o relación contractual permiten construir pretextos convincentes. Por ello, la verificación debe basarse en un canal independiente y no en cuánto sabe el interlocutor sobre la víctima.",
+      "indicadores_clave": [
+        "Datos reales de cliente",
+        "Phishing dirigido",
+        "Vishing",
+        "Falsa compensación",
+        "Cambio de contrato",
+        "Verificación por canal independiente"
+      ],
+      "relacionadas": []
+    },
+    "campana-de-smishing-que-suplanta-empresas-de-paqueteria-con-la-excusa-de-que": {
+      "estado": "publicado",
+      "fecha_publicacion": "2026-07-10",
+      "autor": "FraudeDigital.es",
+      "nivel_riesgo": "alto",
+      "tipo": "Smishing con suplantación de empresas de paquetería",
+      "objetivo": "Robar datos personales y de tarjeta mediante una falsa incidencia de entrega",
+      "canales": [
+        "SMS",
+        "Sitio web fraudulento"
+      ],
+      "resumen_ejecutivo": "El SMS informa de que no se puede entregar un paquete porque falta el número de la vivienda. El enlace conduce a una web que imita a una empresa de transporte y solicita completar la dirección y abonar una pequeña cantidad. El importe reducido disminuye la desconfianza, pero el objetivo real es capturar los datos de la tarjeta y un conjunto amplio de información personal.",
+      "como_identificarlo": [
+        "El mensaje llega sin identificar claramente un pedido real.",
+        "El enlace utiliza un dominio extraño, acortado o ajeno a la empresa de paquetería.",
+        "Se solicita corregir la dirección y pagar una cantidad pequeña.",
+        "El SMS genera urgencia para evitar la devolución del paquete.",
+        "La web pide más datos de los necesarios para una entrega.",
+        "El remitente puede cambiar entre distintas marcas de transporte."
+      ],
+      "riesgos": [
+        "Robo de datos de tarjeta.",
+        "Cargos no autorizados.",
+        "Recopilación de nombre, dirección y teléfono.",
+        "Suplantación en campañas posteriores.",
+        "Suscripciones o pagos recurrentes ocultos."
+      ],
+      "que_hacer": [
+        "No pulses el enlace del SMS.",
+        "Comprueba el envío desde la web o aplicación oficial usando el número de seguimiento real.",
+        "Bloquea al remitente y reporta el mensaje.",
+        "Si facilitaste la tarjeta, contacta inmediatamente con el banco.",
+        "Revisa y bloquea movimientos sospechosos.",
+        "Guarda capturas, URL y justificantes.",
+        "Denuncia si se produjo un cargo o uso de tus datos."
+      ],
+      "analisis_tecnico": "La excusa de una dirección incompleta es efectiva porque resulta plausible y requiere una acción sencilla. La microcantidad solicitada actúa como señuelo: la víctima se concentra en el importe y no en la entrega de todos los datos de la tarjeta. Las marcas utilizadas pueden variar, por lo que el patrón —incidencia, urgencia, enlace y pequeño pago— es más importante que el logotipo.",
+      "indicadores_clave": [
+        "Falta número de casa",
+        "Pequeño pago",
+        "Dominio extraño",
+        "Urgencia de entrega",
+        "Formulario de tarjeta",
+        "Marca variable"
+      ],
+      "relacionadas": []
+    }
+  }
+}

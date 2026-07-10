@@ -125,23 +125,6 @@
     border-radius: 3px;
   }
 
-  .ai-nuevo {
-    font-family: 'Courier New', monospace;
-    font-size: 10.5px;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    color: #ffffff;
-    background: #dc2626;
-    padding: 4px 9px;
-    border-radius: 3px;
-    text-transform: uppercase;
-  }
-
-  .ai-card:target {
-    border-color: #dc2626;
-    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12);
-  }
-
   .ai-card h2 {
     font-size: 20px;
     font-weight: 800;
@@ -236,128 +219,220 @@
     .ai-card { padding: 20px 18px; }
   }
 </style>
+
+<style>
+  .ai-wrapper{padding:30px 40px 40px}
+  .ai-intro{background:#f8fafc;border-left:4px solid #dc2626;padding:24px 28px;margin-bottom:20px;border-radius:0 6px 6px 0}
+  .ai-intro h1{font-size:clamp(24px,3.5vw,32px);font-weight:800;color:#0f172a;margin:0 0 8px;letter-spacing:-.02em}
+  .ai-intro p{font-size:14.5px;color:#475569;margin:0;line-height:1.6;max-width:900px}
+  .ai-updated{font-family:'Courier New',monospace;font-size:12px;color:#94a3b8;margin-bottom:28px}
+  .ai-list{display:flex;flex-direction:column;gap:24px}
+  .ai-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:28px;scroll-margin-top:90px}
+  .ai-card:target{border-color:#dc2626;box-shadow:0 0 0 3px rgba(220,38,38,.1)}
+  .ai-card-header{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+  .ai-fecha{font-family:'Courier New',monospace;font-size:12px;color:#94a3b8}
+  .ai-badge{display:inline-flex;align-items:center;font-family:'Courier New',monospace;font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:4px}
+  .ai-badge-new{color:#fff;background:#dc2626}
+  .ai-badge-published{color:#166534;background:#f0fdf4;border:1px solid #bbf7d0}
+  .ai-badge-study{color:#92400e;background:#fffbeb;border:1px solid #fde68a}
+  .ai-badge-risk{color:#991b1b;background:#fef2f2;border:1px solid #fecaca}
+  .ai-card h2{font-size:22px;font-weight:800;color:#0f172a;margin:0 0 18px;line-height:1.28}
+  .ai-ficha{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0 0 20px}
+  .ai-ficha-item{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:13px}
+  .ai-ficha-label{font-family:'Courier New',monospace;font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;color:#94a3b8;margin-bottom:5px}
+  .ai-ficha-value{font-size:12.5px;font-weight:700;color:#334155;line-height:1.4}
+  .ai-analysis{margin:18px 0;padding:21px 23px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:9px}
+  .ai-analysis h3,.ai-panel h3,.ai-tech h3{margin:0 0 11px;color:#0f172a;font-size:16px}
+  .ai-analysis p,.ai-tech p{margin:0;color:#334155;font-size:14px;line-height:1.7}
+  .ai-grid-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:16px 0}
+  .ai-panel{border:1px solid #e2e8f0;border-radius:9px;padding:19px 20px;background:#fff}
+  .ai-panel ul,.ai-analysis ul{margin:0;padding-left:20px}
+  .ai-panel li,.ai-analysis li{font-size:14px;color:#334155;line-height:1.6;margin-bottom:7px}
+  .ai-tech{border-left:4px solid #0f172a;background:#f8fafc;padding:21px 23px;margin:18px 0;border-radius:0 8px 8px 0}
+  .ai-tags{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 20px}
+  .ai-tag{font-family:'Courier New',monospace;font-size:10.5px;background:#f1f5f9;color:#475569;padding:4px 10px;border-radius:20px}
+  .ai-related{margin:18px 0;padding:18px 20px;background:#fff;border:1px dashed #cbd5e1;border-radius:8px}
+  .ai-related h3{font-size:14px;margin:0 0 10px;color:#0f172a}
+  .ai-related a{display:block;color:#dc2626;text-decoration:none;font-size:13px;font-weight:700;margin:7px 0}
+  .ai-related a:hover{text-decoration:underline}
+  .ai-source-summary{margin:20px 0;padding-top:18px;border-top:1px dashed #cbd5e1}
+  .ai-source-summary summary{cursor:pointer;font-weight:700;color:#475569;font-size:13px}
+  .ai-section{margin:15px 0}
+  .ai-section-label{font-family:'Courier New',monospace;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#dc2626;margin-bottom:6px}
+  .ai-section p{font-size:14px;color:#334155;line-height:1.65;margin:0}
+  .ai-cta{display:inline-flex;align-items:center;background:#dc2626;color:#fff!important;font-weight:700;font-size:14px;text-decoration:none;padding:12px 22px;border-radius:8px}
+  .ai-cta:hover{background:#b91c1c}
+  .ai-empty{text-align:center;padding:60px 20px;color:#94a3b8;font-size:15px}
+  .ai-footnote{margin-top:32px;padding:16px 20px;background:#f8fafc;border-radius:6px;font-size:12.5px;color:#64748b;line-height:1.6}
+  @media(max-width:900px){.ai-ficha{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:768px){.ai-wrapper{padding:20px 16px 30px}.ai-intro{padding:18px 20px}.ai-card{padding:20px 18px}.ai-grid-two{grid-template-columns:1fr}.ai-ficha{grid-template-columns:1fr}}
+</style>
+
 </head>
 <body>
-
-<div class="card-wrapper ds-page">
-<div class="card">
-
+<div class="card-wrapper ds-page"><div class="card">
   <div id="menu-container"></div>
   <div class="accent-bar"></div>
-
   <div class="ds-meta">
-    <span><span class="dot"></span>FraudeDigital // fuente: INCIBE Ciudadanía</span>
-    <span>estado: <strong>actualización automática</strong></span>
+    <span><span class="dot"></span>FraudeDigital // inteligencia de fraude</span>
+    <span>fuente automática: <strong>INCIBE</strong> · análisis: <strong>FraudeDigital.es</strong></span>
   </div>
 
   <div class="ai-wrapper">
-
     <div class="ai-intro">
-      <h1>Alertas INCIBE</h1>
-      <p>Últimas alertas de fraude publicadas por INCIBE: phishing, smishing, suplantaciones de empresas y organismos, filtraciones de datos. Para cada aviso: a quién afecta, qué está pasando y qué hacer si ya te ha ocurrido. Se actualiza automáticamente desde la fuente oficial.</p>
+      <h1>Alertas INCIBE analizadas</h1>
+      <p>Las alertas se incorporan automáticamente desde INCIBE y FraudeDigital.es añade una capa editorial independiente: resumen ejecutivo, señales para identificar el fraude, riesgos, medidas de respuesta y análisis técnico. Cuando una alerta todavía no ha sido revisada, aparecerá claramente como <strong>EN ESTUDIO</strong>.</p>
     </div>
-
     <div class="ai-updated" id="ai-updated"></div>
-
-    <div class="ai-list" id="ai-list">
-      <!-- Se rellena vía JS desde data/fraudes-incibe.json -->
-    </div>
-
+    <div class="ai-list" id="ai-list"><div class="ai-empty">Cargando alertas y análisis…</div></div>
     <div class="ai-footnote">
-      Fuente: <a href="https://www.incibe.es/ciudadania/avisos" target="_blank" rel="noopener" style="color:#dc2626;">INCIBE — Instituto Nacional de Ciberseguridad</a>. Los textos de esta página son extractos y resúmenes orientativos de cada aviso; consulta siempre el aviso oficial enlazado para el detalle completo y actualizado.
+      Fuente oficial: <a href="https://www.incibe.es/ciudadania/avisos" target="_blank" rel="noopener" style="color:#dc2626;">INCIBE — Instituto Nacional de Ciberseguridad</a>. Los análisis de FraudeDigital.es son independientes y complementarios. Ante un incidente real, contrasta siempre la información con las fuentes oficiales.
     </div>
-
   </div>
-
   <div id="footer-container"></div>
-
-</div>
-</div>
+</div></div>
 
 <script src="../js/menu.js"></script>
 <script src="../js/footer.js"></script>
-<script src="../js/alertas-incibe.js?v=20260710"></script>
-
+<script src="../js/alertas-incibe.js?v=20260710-centro-inteligencia"></script>
 <script>
-  const jsonUrl = `../data/fraudes-incibe.json?v=${Date.now()}`;
+(() => {
+  'use strict';
 
-  fetch(jsonUrl, { cache: 'no-store' })
-    .then(r => {
-      if (!r.ok) {
-        throw new Error(`Error HTTP ${r.status}`);
-      }
-      return r.json();
-    })
-    .then(data => {
-      const list = document.getElementById('ai-list');
-      const updatedEl = document.getElementById('ai-updated');
+  const esc = value => String(value ?? '')
+    .replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')
+    .replaceAll('"','&quot;').replaceAll("'",'&#039;');
 
-      if (data.actualizado) {
-        const d = new Date(data.actualizado);
-        updatedEl.textContent = `Última actualización: ${d.toLocaleDateString('es-ES', { day: '2-digit', month: 'long', year: 'numeric' })} · ${d.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' })}`;
-      }
+  const safeUrl = value => {
+    try {
+      const u = new URL(value, location.origin);
+      return ['http:','https:'].includes(u.protocol) ? u.href : '#';
+    } catch { return '#'; }
+  };
 
-      const alertas = window.FDIncibe.parseAlertas(data.alertas);
+  const slugFromUrl = value => {
+    try {
+      const u = new URL(value, location.origin);
+      return u.pathname.replace(/\/$/,'').split('/').pop().toLowerCase();
+    } catch { return ''; }
+  };
 
-      if (alertas.length === 0) {
-        list.innerHTML = '<div class="ai-empty">No hay alertas disponibles en este momento.</div>';
-        return;
-      }
+  const renderList = items => Array.isArray(items) && items.length
+    ? `<ul>${items.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : '';
 
-      const fmtFecha = window.FDIncibe.formatFecha;
-      const truncar = window.FDIncibe.truncar;
+  const fetchJson = async (url, fallback) => {
+    try {
+      const r = await fetch(`${url}?v=${Date.now()}`, {cache:'no-store'});
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return await r.json();
+    } catch (e) {
+      console.error(`Error cargando ${url}:`, e);
+      return fallback;
+    }
+  };
 
-      list.innerHTML = alertas.map((a, index) => `
-        <article class="ai-card" id="alerta-${a.id}">
+  Promise.all([
+    fetchJson('../data/fraudes-incibe.json', {alertas:[]}),
+    fetchJson('../data/analisis-incibe.json', {analisis:{}})
+  ]).then(([incibeData, editorialData]) => {
+    if (!window.FDIncibe) throw new Error('No se ha cargado alertas-incibe.js');
+
+    const list = document.getElementById('ai-list');
+    const updated = document.getElementById('ai-updated');
+    const alertas = window.FDIncibe.parseAlertas(incibeData.alertas || []);
+    const analyses = editorialData.analisis || {};
+    const fmtFecha = window.FDIncibe.formatFecha;
+
+    if (incibeData.actualizado) {
+      const d = new Date(incibeData.actualizado);
+      updated.textContent = `Fuente INCIBE actualizada: ${d.toLocaleDateString('es-ES',{day:'2-digit',month:'long',year:'numeric'})} · ${d.toLocaleTimeString('es-ES',{hour:'2-digit',minute:'2-digit'})} · ${alertas.length} alertas`;
+    }
+
+    if (!alertas.length) {
+      list.innerHTML = '<div class="ai-empty">No hay alertas disponibles.</div>';
+      return;
+    }
+
+    const titleBySlug = Object.fromEntries(alertas.map(a => [slugFromUrl(a.url), a.titulo]));
+
+    list.innerHTML = alertas.map((a, index) => {
+      const slug = slugFromUrl(a.url);
+      const ed = analyses[slug] || null;
+      const published = ed?.estado === 'publicado';
+
+      const related = published && Array.isArray(ed.relacionadas)
+        ? ed.relacionadas.filter(x => titleBySlug[x]).map(x =>
+            `<a href="#alerta-${esc(alertas.find(z => slugFromUrl(z.url) === x)?.id || '')}">→ ${esc(titleBySlug[x])}</a>`
+          ).join('')
+        : '';
+
+      const editorialBlock = published ? `
+        <div class="ai-ficha">
+          <div class="ai-ficha-item"><div class="ai-ficha-label">Nivel de riesgo</div><div class="ai-ficha-value">${esc(ed.nivel_riesgo || 'No indicado')}</div></div>
+          <div class="ai-ficha-item"><div class="ai-ficha-label">Tipo</div><div class="ai-ficha-value">${esc(ed.tipo || '')}</div></div>
+          <div class="ai-ficha-item"><div class="ai-ficha-label">Objetivo</div><div class="ai-ficha-value">${esc(ed.objetivo || '')}</div></div>
+          <div class="ai-ficha-item"><div class="ai-ficha-label">Canales</div><div class="ai-ficha-value">${esc((ed.canales || []).join(' · '))}</div></div>
+        </div>
+
+        <section class="ai-analysis">
+          <h3>📌 Resumen ejecutivo</h3>
+          <p>${esc(ed.resumen_ejecutivo)}</p>
+        </section>
+
+        <div class="ai-grid-two">
+          <section class="ai-panel"><h3>🔎 Cómo identificarlo</h3>${renderList(ed.como_identificarlo)}</section>
+          <section class="ai-panel"><h3>⚠️ Riesgos principales</h3>${renderList(ed.riesgos)}</section>
+        </div>
+
+        <section class="ai-analysis"><h3>✅ Qué hacer</h3>${renderList(ed.que_hacer)}</section>
+
+        <section class="ai-tech">
+          <h3>🧠 Análisis técnico de FraudeDigital</h3>
+          <p>${esc(ed.analisis_tecnico)}</p>
+        </section>
+
+        ${(ed.indicadores_clave || []).length ? `<div class="ai-tags">${ed.indicadores_clave.map(x => `<span class="ai-tag">#${esc(x)}</span>`).join('')}</div>` : ''}
+        ${related ? `<div class="ai-related"><h3>📚 Campañas relacionadas</h3>${related}</div>` : ''}
+      ` : `
+        <section class="ai-analysis" style="background:#fffbeb;border-color:#fde68a">
+          <h3 style="color:#92400e">⌛ Análisis en estudio</h3>
+          <p>La alerta se ha incorporado automáticamente desde INCIBE. El análisis editorial de FraudeDigital.es está en preparación. Mientras tanto, no interactúes con enlaces o adjuntos, no facilites datos y consulta el aviso oficial.</p>
+        </section>
+      `;
+
+      return `
+        <article class="ai-card" id="alerta-${esc(a.id)}">
           <div class="ai-card-header">
-            <span class="ai-fecha">${fmtFecha(a.fecha)}</span>
-            ${index === 0 ? '<span class="ai-nuevo">NUEVO</span>' : ''}
-            ${a.importancia ? `<span class="ai-importancia">Importancia ${a.importancia}</span>` : ''}
+            <span class="ai-fecha">${esc(fmtFecha(a.fecha))}</span>
+            ${index === 0 ? '<span class="ai-badge ai-badge-new">Nuevo</span>' : ''}
+            ${published ? '<span class="ai-badge ai-badge-published">✓ Análisis publicado</span>' : '<span class="ai-badge ai-badge-study">⌛ En estudio</span>'}
+            ${published && ed.nivel_riesgo ? `<span class="ai-badge ai-badge-risk">Riesgo ${esc(ed.nivel_riesgo)}</span>` : ''}
           </div>
-          <h2>${a.titulo}</h2>
+          <h2>${esc(a.titulo)}</h2>
+          ${editorialBlock}
 
-          ${a.afectados ? `
-          <div class="ai-section">
-            <div class="ai-section-label">🎯 A quién afecta</div>
-            <p>${truncar(a.afectados, 220)}</p>
-          </div>` : ''}
+          <details class="ai-source-summary">
+            <summary>Ver información extraída del aviso oficial de INCIBE</summary>
+            ${a.afectados ? `<div class="ai-section"><div class="ai-section-label">A quién afecta</div><p>${esc(a.afectados)}</p></div>` : ''}
+            ${a.descripcion ? `<div class="ai-section"><div class="ai-section-label">Qué está pasando</div><p>${esc(a.descripcion)}</p></div>` : ''}
+            ${a.solucion?.length ? `<div class="ai-section"><div class="ai-section-label">Recomendaciones oficiales</div>${renderList(a.solucion)}</div>` : ''}
+            ${a.detalle ? `<div class="ai-section"><div class="ai-section-label">Detalle de la campaña</div><p>${esc(a.detalle)}</p></div>` : ''}
+          </details>
 
-          ${a.descripcion ? `
-          <div class="ai-section">
-            <div class="ai-section-label">📋 Qué está pasando</div>
-            <p>${truncar(a.descripcion, 320)}</p>
-          </div>` : ''}
-
-          ${a.solucion && a.solucion.length ? `
-          <div class="ai-section">
-            <div class="ai-section-label">✅ Qué hacer</div>
-            <ul>${a.solucion.slice(0, 6).map(s => `<li>${s}</li>`).join('')}</ul>
-          </div>` : ''}
-
-          ${a.detalle ? `
-          <div class="ai-section">
-            <div class="ai-section-label">🔍 Cómo funciona el fraude</div>
-            <p>${truncar(a.detalle, 350)}</p>
-          </div>` : ''}
-
-          ${a.etiquetas && a.etiquetas.length ? `
-          <div class="ai-tags">${a.etiquetas.map(t => `<span class="ai-tag">#${t}</span>`).join('')}</div>` : ''}
-
-          <a href="${a.url}" target="_blank" rel="noopener" class="ai-cta">Ver aviso oficial en INCIBE →</a>
+          <a href="${safeUrl(a.url)}" target="_blank" rel="noopener noreferrer" class="ai-cta">Ver aviso oficial en INCIBE →</a>
         </article>
-      `).join('');
+      `;
+    }).join('');
 
-      // Si la URL trae un ancla (#alerta-xxx desde el home), hacer scroll suave
-      if (window.location.hash) {
-        const target = document.querySelector(window.location.hash);
-        if (target) setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 100);
-      }
-    })
-    .catch(err => {
-      console.error('Error cargando alertas INCIBE:', err);
-      document.getElementById('ai-list').innerHTML = '<div class="ai-empty">Error al cargar las alertas. Intenta recargar la página.</div>';
-    });
+    if (location.hash) {
+      const target = document.querySelector(location.hash);
+      if (target) setTimeout(() => target.scrollIntoView({behavior:'smooth',block:'start'}),120);
+    }
+  }).catch(err => {
+    console.error(err);
+    document.getElementById('ai-list').innerHTML = '<div class="ai-empty">No se han podido cargar las alertas.</div>';
+  });
+})();
 </script>
-
 </body>
 </html>

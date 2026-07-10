@@ -37,27 +37,13 @@ document.addEventListener("DOMContentLoaded", function() {
     let amenazasCatalogo = [];   // catálogo completo (para buscador)
     let amenazasHome = [];       // subset destacadas para tarjetas
 
-
-    // Evita que el navegador o la CDN reutilicen una versión anterior de los JSON.
-    function fetchJsonActualizado(ruta) {
-        const separador = ruta.includes('?') ? '&' : '?';
-        const url = `${ruta}${separador}v=${Date.now()}`;
-
-        return fetch(url, { cache: 'no-store' }).then(respuesta => {
-            if (!respuesta.ok) {
-                throw new Error(`Error HTTP ${respuesta.status} al cargar ${ruta}`);
-            }
-            return respuesta.json();
-        });
-    }
-
     // ==============================
     // Carga de datos: catálogo + panel de control
     // ==============================
     Promise.all([
-        fetchJsonActualizado(basePath + 'data/amenazas.json'),
-        fetchJsonActualizado(basePath + 'data/fraudes.json').catch(() => ({ destacadas: [] })),
-        fetchJsonActualizado(basePath + 'data/fraudes-incibe.json').catch(() => ({ alertas: [] }))
+        fetch(basePath + 'data/amenazas.json', { cache: 'no-store' }).then(r => { if (!r.ok) throw new Error(`amenazas.json: HTTP ${r.status}`); return r.json(); }),
+        fetch(basePath + 'data/fraudes.json', { cache: 'no-store' }).then(r => { if (!r.ok) throw new Error(`fraudes.json: HTTP ${r.status}`); return r.json(); }).catch(() => ({ destacadas: [] })),
+        fetch(basePath + 'data/fraudes-incibe.json?v=' + Date.now(), { cache: 'no-store' }).then(r => { if (!r.ok) throw new Error(`fraudes-incibe.json: HTTP ${r.status}`); return r.json(); }).catch(() => ({ alertas: [] }))
     ]).then(([amenazasJson, fraudesJson, incibeJson]) => {
         amenazasCatalogo = amenazasJson.amenazas || [];
         const destacadas = fraudesJson.destacadas || [];
@@ -92,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
         container.innerHTML = alertasParseadas.slice(0, MAX_HOME).map((a, index) => `
             <a href="${basePath}alertas-incibe/#alerta-${a.id}" class="alert-card">
                 <span style="display:inline-block; font-family:'Courier New',monospace; font-size:10px; font-weight:700; letter-spacing:0.05em; color:#dc2626; text-transform:uppercase; margin-right:8px;">INCIBE · ${fmtFecha(a.fecha)}</span>
-                ${index === 0 ? `<span style="display:inline-block; font-family:'Courier New',monospace; font-size:10px; font-weight:800; letter-spacing:0.08em; color:#ffffff; background:#dc2626; border-radius:3px; padding:3px 7px; text-transform:uppercase; vertical-align:middle;">NUEVO</span>` : ''}
+                ${index === 0 ? '<span style="display:inline-block; font-family:\'Courier New\',monospace; font-size:10px; font-weight:800; letter-spacing:0.06em; color:#ffffff; background:#dc2626; padding:3px 7px; border-radius:3px; text-transform:uppercase;">NUEVO</span>' : ''}
                 <br>
                 <strong>${a.titulo}</strong>
                 <span style="display:block; font-size:0.85rem; color:#64748b; font-weight:400; margin-top:4px;">${truncar(a.descripcion, 110)}</span>
