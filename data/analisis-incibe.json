@@ -1,7 +1,7 @@
 {
-  "actualizado": "2026-07-10T20:00:00+02:00",
-  "version": 2,
-  "descripcion": "Capa editorial independiente de FraudeDigital.es. El workflow automático no debe sobrescribir este archivo.",
+  "actualizado": "2026-07-11T15:00:00+02:00",
+  "version": 4,
+  "descripcion": "Capa editorial independiente de FraudeDigital.es con análisis técnico ampliado a partir de las evidencias visuales de cada campaña.",
   "analisis": {
     "suplantan-la-policia-nacional-la-guardia-civil-y-incibe-traves-de-notificaciones": {
       "estado": "publicado",
@@ -14,7 +14,7 @@
         "Correo electrónico",
         "Documento PDF"
       ],
-      "resumen_ejecutivo": "La campaña suplanta a la Policía Nacional, la Guardia Civil y al propio INCIBE mediante correos con documentos de apariencia oficial. La víctima es acusada falsamente de delitos relacionados con el consumo de contenido pornográfico y recibe amenazas de detención si no responde en un plazo muy breve. El objetivo real es generar miedo, confirmar que la cuenta está activa y abrir una conversación que pueda terminar en extorsión, robo de datos o pagos fraudulentos.",
+      "resumen_ejecutivo": "Se ha detectado una campaña de phishing y extorsión conversacional que suplanta a la Policía Nacional, la Guardia Civil e INCIBE mediante correos y documentos PDF con apariencia institucional. Las evidencias analizadas muestran distintas variantes de una misma narrativa: acusaciones relacionadas con contenido pornográfico, amenazas de arresto, plazos de 48 o 72 horas y la obligación de responder a un supuesto inspector. El primer objetivo no parece ser instalar malware, sino provocar una reacción emocional, confirmar que la cuenta está activa y trasladar a la víctima a una conversación controlada por el atacante.",
       "como_identificarlo": [
         "El remitente no pertenece a un dominio oficial de la Policía, Guardia Civil, Ministerio del Interior o INCIBE.",
         "El mensaje amenaza con una detención inmediata o exige responder en 48 o 72 horas.",
@@ -39,7 +39,7 @@
         "Si has respondido, entregado datos o pagado, avisa al banco y presenta denuncia.",
         "Cambia las contraseñas afectadas y activa un segundo factor de autenticación."
       ],
-      "analisis_tecnico": "El ataque utiliza tres palancas clásicas de ingeniería social: autoridad, miedo y urgencia. La acumulación de organismos y símbolos oficiales busca anular el análisis racional de la víctima. El primer objetivo no suele ser ejecutar malware, sino iniciar una interacción y validar que el destinatario responde bajo presión. Desde ese momento, el atacante puede escalar hacia falsas sanciones, solicitud de documentación, robo de identidad o pagos.",
+      "analisis_tecnico": "Las cuatro evidencias permiten clasificar esta campaña como algo más específico que un simple phishing masivo: estamos ante una fase inicial de extorsión conversacional basada en autoridad, miedo, vergüenza y urgencia. El atacante utiliza una acusación especialmente sensible y socialmente estigmatizante para reducir la capacidad de análisis de la víctima. En una de las muestras, el remitente visible aparenta ser la Policía Nacional, pero el dominio real pertenece a actc.center. En otra variante se utiliza una dirección asociada a logirail.com, lo que demuestra que el nombre mostrado o incluso el uso de un dominio legítimo ajeno al organismo suplantado no acredita autenticidad.\n\nLos documentos tampoco siguen una plantilla institucional coherente. Cambian los plazos de respuesta entre 48 y 72 horas, mezclan Policía Nacional, Guardia Civil, Europol, Interpol e INCIBE y utilizan sellos, firmas y marcas de confidencialidad sin una estructura administrativa consistente. Aparecen además errores lingüísticos, expresiones traducidas de forma literal, términos jurídicos artificiales y nombres incorrectos. Esta variabilidad apunta a plantillas adaptadas para una campaña criminal, no a comunicaciones emitidas por una organización pública.\n\nHay otro elemento especialmente relevante: se pide a la víctima que responda, dé una explicación o contacte con un supuesto inspector. El fraude no pretende cerrarse en el primer mensaje. El correo funciona como filtro de selección. Quien responde confirma tres datos al atacante: que la cuenta existe, que el mensaje ha sido leído y que el pretexto ha provocado suficiente impacto emocional como para iniciar una conversación. A partir de ahí puede comenzar una segunda fase con falsas multas, solicitud de documentación, pagos, amenazas adicionales o robo de identidad.\n\nLa amenaza de comunicar el caso a medios de comunicación o registrar públicamente a la víctima busca además aislarla. El atacante intenta que la vergüenza impida pedir ayuda a familiares, abogados o fuerzas de seguridad reales. Desde el punto de vista defensivo, la ausencia de un procedimiento verificable, los dominios no oficiales, la mezcla incoherente de organismos, las diferencias entre documentos y la solicitud de respuesta por correo son indicadores suficientes para considerar fraudulenta la comunicación.",
       "indicadores_clave": [
         "Dominios no oficiales",
         "Amenaza de arresto",
@@ -51,6 +51,32 @@
       "relacionadas": [
         "desconfia-de-supuestas-notificaciones-de-la-guardia-civil-y-europol-sobre-la",
         "chantajes-de-sextorsion-traves-de-correos-electronicos"
+      ],
+      "evidencias": [
+        {
+          "imagen": "img/incibe/suplantan-la-policia-nacional-la-guardia-civil-y-incibe-traves-de-notificaciones/evidencia-01.png",
+          "titulo": "Correo con adjunto y falsa apariencia policial",
+          "senal": "El mensaje introduce una supuesta acusación grave y remite a un PDF para aumentar la sensación de procedimiento oficial.",
+          "analisis": "La comunicación busca que el miedo sustituya a la verificación. Un correo de este tipo no acredita la existencia de una investigación ni de una citación real."
+        },
+        {
+          "imagen": "img/incibe/suplantan-la-policia-nacional-la-guardia-civil-y-incibe-traves-de-notificaciones/evidencia-02.png",
+          "titulo": "Urgencia, acusación y canal de respuesta controlado por el atacante",
+          "senal": "Se acusa directamente al destinatario y se le insta a contactar cuanto antes con un supuesto inspector.",
+          "analisis": "La llamada a responder de inmediato crea un canal privado con la víctima. El atacante necesita conversación para escalar hacia datos personales, presión o pagos."
+        },
+        {
+          "imagen": "img/incibe/suplantan-la-policia-nacional-la-guardia-civil-y-incibe-traves-de-notificaciones/evidencia-03.png",
+          "titulo": "Documento recargado de referencias oficiales",
+          "senal": "El escrito reúne logotipos, referencias institucionales, lenguaje jurídico y una falsa citación judicial.",
+          "analisis": "La acumulación visual de autoridad no es una prueba de autenticidad. Es una técnica de sobrecarga destinada a impedir que la víctima contraste cada elemento por separado."
+        },
+        {
+          "imagen": "img/incibe/suplantan-la-policia-nacional-la-guardia-civil-y-incibe-traves-de-notificaciones/evidencia-04.png",
+          "titulo": "Mezcla incoherente de organismos, sellos y amenazas",
+          "senal": "Policía, Guardia Civil, Europol y otros símbolos aparecen juntos en una comunicación de aspecto inconsistente.",
+          "analisis": "El atacante intenta fabricar credibilidad sumando emblemas. Precisamente esa mezcla, unida a plazos extremos y amenazas, es una señal de alerta."
+        }
       ]
     },
     "la-agencia-tributaria-no-ha-emitido-ninguna-comunicacion-dirigida-usted": {
@@ -64,7 +90,7 @@
         "SMS",
         "Sitio web fraudulento"
       ],
-      "resumen_ejecutivo": "La víctima recibe un SMS que aparenta proceder de la Agencia Tributaria y le informa de una supuesta comunicación pendiente o devolución. El enlace dirige a una web que imita la sede oficial y solicita datos personales, bancarios o de tarjeta. La campaña aprovecha la confianza en la Administración y la expectativa de recibir dinero para provocar una acción inmediata.",
+      "resumen_ejecutivo": "La campaña utiliza SMS que aparentan proceder de la Agencia Tributaria y enlazan a páginas que reproducen su identidad visual. Las imágenes muestran un mensaje presentado bajo el nombre AEAT y una web que comunica una supuesta devolución ya acordada. La combinación de una institución reconocida, una recompensa económica y una interfaz similar a la oficial busca que la víctima continúe el proceso sin revisar el dominio ni el canal utilizado.",
       "como_identificarlo": [
         "El SMS contiene un enlace acortado o un dominio distinto de agenciatributaria.gob.es.",
         "La dirección puede terminar en extensiones poco habituales como .top o .click.",
@@ -89,7 +115,7 @@
         "Guarda evidencias y presenta denuncia si has sufrido perjuicio.",
         "Vigila movimientos bancarios y posibles usos indebidos de tus datos."
       ],
-      "analisis_tecnico": "El smishing combina spoofing del identificador del remitente con una landing page que replica visualmente la sede de la AEAT. La apariencia del nombre AEAT en el hilo de mensajes no demuestra autenticidad: el atacante puede alterar el identificador visible. La verificación debe hacerse siempre por el dominio y accediendo manualmente a la sede electrónica, nunca desde el enlace recibido.",
+      "analisis_tecnico": "Las evidencias muestran dos fases claramente diferenciadas. La primera es el SMS, donde el atacante se beneficia del nombre visible AEAT. Ese identificador no debe interpretarse como prueba de autenticidad: mediante técnicas de SMS spoofing es posible alterar el nombre mostrado e incluso provocar que el mensaje aparezca en un hilo donde existan comunicaciones legítimas anteriores. El control fundamental sigue siendo la URL incluida y la comprobación independiente desde la sede oficial.\n\nLa segunda fase es una landing page que reproduce colores, logotipos y estilo visual asociados a la Agencia Tributaria. La web presenta una devolución como un hecho ya decidido y utiliza una cantidad concreta para reducir la sensación de mensaje genérico. Esta precisión aparente es una técnica de persuasión: la víctima interpreta que existe un expediente individual y presta menos atención a la dirección web.\n\nEl objetivo técnico no es sofisticado, pero sí eficaz. El atacante aprovecha la confianza institucional y el sesgo de recompensa. Una devolución de dinero crea curiosidad y urgencia positiva, dos emociones que disminuyen la verificación. La recomendación defensiva más importante es separar siempre el mensaje del proceso real: nunca continuar desde el enlace recibido y acceder manualmente a la sede electrónica.",
       "indicadores_clave": [
         "SMS spoofing",
         "Dominio .top/.click",
@@ -101,6 +127,20 @@
       "relacionadas": [
         "notificaciones-falsas-que-suplantan-la-agencia-tributaria-aeat-y-la-direccion",
         "mi-carpeta-ciudadana-no-esta-enviando-notificaciones-los-ciudadanos-para-recibir"
+      ],
+      "evidencias": [
+        {
+          "imagen": "img/incibe/la-agencia-tributaria-no-ha-emitido-ninguna-comunicacion-dirigida-usted/evidencia-01.png",
+          "titulo": "SMS que aparenta proceder de la AEAT",
+          "senal": "El nombre visible del remitente puede parecer legítimo, pero el enlace utiliza un dominio ajeno a la Agencia Tributaria.",
+          "analisis": "El SMS spoofing puede hacer que un mensaje fraudulento aparezca bajo un nombre reconocible. La comprobación debe hacerse sobre la URL y el canal oficial."
+        },
+        {
+          "imagen": "img/incibe/la-agencia-tributaria-no-ha-emitido-ninguna-comunicacion-dirigida-usted/evidencia-02.png",
+          "titulo": "Falsa devolución con una cantidad concreta",
+          "senal": "La web replica colores y elementos de la AEAT y muestra una devolución supuestamente acordada.",
+          "analisis": "La cifra concreta refuerza la sensación de expediente real. El objetivo es que la víctima continúe el proceso y entregue datos personales o bancarios."
+        }
       ]
     },
     "suplantan-al-lidl-traves-de-tiendas-online-fraudulentas": {
@@ -115,7 +155,7 @@
         "WhatsApp",
         "Sitio web fraudulento"
       ],
-      "resumen_ejecutivo": "Los atacantes crean tiendas que imitan la imagen de LIDL y las promocionan mediante anuncios en buscadores o enlaces compartidos por mensajería. Ofrecen productos con descuentos desproporcionados y utilizan mensajes de escasez para acelerar la compra. La víctima paga por un producto que no recibirá y entrega además datos personales y bancarios.",
+      "resumen_ejecutivo": "Las evidencias muestran tiendas falsas promocionadas mediante productos patrocinados y páginas que reproducen la marca LIDL. Los atacantes utilizan precios extremadamente bajos, mensajes de stock limitado y cifras de personas interesadas o compras recientes. El fraude está diseñado para que la víctima interprete la oferta como una oportunidad de corta duración y compre antes de comprobar el dominio o la identidad real del vendedor.",
       "como_identificarlo": [
         "La URL no corresponde al dominio oficial de la marca.",
         "El nombre del anunciante o de la tienda no coincide exactamente con LIDL.",
@@ -140,7 +180,7 @@
         "Guarda anuncios, URL, recibos y capturas y presenta denuncia.",
         "Cambia cualquier contraseña reutilizada en otros servicios."
       ],
-      "analisis_tecnico": "La campaña explota la confianza que generan una marca conocida y la publicidad patrocinada. El atacante no necesita comprometer la infraestructura real de LIDL: replica el diseño, registra dominios desechables y compra visibilidad. Los elementos de urgencia y prueba social —stock limitado, compradores recientes o temporizadores— están diseñados para reducir el tiempo de comprobación.",
+      "analisis_tecnico": "El análisis visual confirma una cadena de persuasión muy bien estructurada. El primer contacto puede producirse en un buscador mediante un producto patrocinado. El hecho de aparecer en una posición destacada genera una falsa sensación de legitimidad, pero la publicidad pagada únicamente acredita que alguien ha comprado visibilidad, no que el vendedor haya sido validado como comercio oficial.\n\nUna vez dentro de la web, la identidad visual de LIDL reduce todavía más la percepción de riesgo. El atacante aprovecha logotipos, colores y fotografías de producto que pueden copiarse fácilmente. Sin embargo, la evidencia crítica está en el dominio: la página se presenta como LIDL sin utilizar una dirección controlada por la marca.\n\nLas fichas de producto añaden técnicas de escasez y prueba social: poco stock, usuarios viendo el artículo y compras recientes. Estos elementos no son decorativos. Están diseñados para limitar el tiempo de reflexión y empujar a la víctima hacia el pago. La campaña combina por tanto suplantación de marca, abuso de publicidad digital y patrones clásicos de conversión comercial aplicados a fraude.",
       "indicadores_clave": [
         "Dominio ajeno",
         "Descuentos extremos",
@@ -149,7 +189,27 @@
         "Stock artificial",
         "Pago sin garantías"
       ],
-      "relacionadas": []
+      "relacionadas": [],
+      "evidencias": [
+        {
+          "imagen": "img/incibe/suplantan-al-lidl-traves-de-tiendas-online-fraudulentas/evidencia-01.png",
+          "titulo": "Producto patrocinado con una oferta anormalmente atractiva",
+          "senal": "El producto aparece destacado en el buscador a un precio que favorece la compra impulsiva.",
+          "analisis": "Un resultado patrocinado no valida al vendedor. Los atacantes pueden comprar visibilidad y dirigir al usuario a una tienda falsa."
+        },
+        {
+          "imagen": "img/incibe/suplantan-al-lidl-traves-de-tiendas-online-fraudulentas/evidencia-02.png",
+          "titulo": "Copia visual de la marca dentro de un dominio ajeno",
+          "senal": "La página utiliza el logotipo y la identidad visual de LIDL, pero el dominio visible no pertenece a la marca.",
+          "analisis": "La apariencia gráfica es fácil de copiar. En comercio electrónico, el dominio y la identidad del vendedor pesan más que el diseño."
+        },
+        {
+          "imagen": "img/incibe/suplantan-al-lidl-traves-de-tiendas-online-fraudulentas/evidencia-03.png",
+          "titulo": "Escasez y prueba social fabricadas",
+          "senal": "La ficha muestra poco stock, personas viendo el producto y compras recientes.",
+          "analisis": "Estos elementos buscan reducir el tiempo de decisión. La urgencia y la prueba social son mecanismos clásicos para impedir que el usuario compruebe la tienda."
+        }
+      ]
     },
     "desconfia-de-supuestas-notificaciones-de-la-guardia-civil-y-europol-sobre-la": {
       "estado": "publicado",
@@ -162,7 +222,7 @@
         "Correo electrónico",
         "Documento PDF"
       ],
-      "resumen_ejecutivo": "La campaña utiliza una falsa convocatoria de la Guardia Civil y Europol vinculada a la operación policial Endgame. El documento acusa al destinatario de formar parte de una botnet y presenta tecnicismos, sellos y datos falsos para aparentar una investigación real. Su finalidad es iniciar una conversación bajo presión y escalar después hacia extorsión, solicitud de datos o pagos.",
+      "resumen_ejecutivo": "La campaña utiliza el nombre real de la Operación Endgame para construir una falsa investigación policial. Las imágenes muestran correos con amenazas de comparecencia y documentos PDF marcados como confidenciales que enumeran supuestas evidencias forenses, identificadores técnicos y herramientas de análisis. El atacante mezcla hechos reales con afirmaciones inventadas para intimidar a la víctima y conseguir que colabore con una auditoría inexistente.",
       "como_identificarlo": [
         "El correo procede de una dirección que no pertenece a las fuerzas de seguridad.",
         "El asunto es genérico, como CONVOCATORIA, y el destinatario puede estar oculto.",
@@ -187,7 +247,7 @@
         "Contacta con el 017 si tienes dudas.",
         "Denuncia si facilitaste datos, pagaste o instalaste software."
       ],
-      "analisis_tecnico": "El fraude adopta el nombre de una operación policial real para ganar credibilidad, pero construye una narrativa técnicamente inconsistente. Referencias a IMEI, UUID o herramientas forenses se usan como lenguaje intimidatorio, no como prueba. La petición de colaboración y aislamiento de la víctima es una señal típica de extorsión y soporte técnico fraudulento.",
+      "analisis_tecnico": "Las cinco evidencias revelan una campaña basada en autoridad técnica y policial. La primera capa es el correo: asunto genérico, amenaza de comparecencia y necesidad de responder con rapidez. El objetivo es conducir a la víctima al PDF, donde comienza la verdadera operación de persuasión.\n\nEl documento utiliza el nombre de Endgame, una operación policial conocida, como ancla de credibilidad. A partir de ahí construye una narrativa sobre dispositivos convertidos en zombies, huellas digitales absolutas, IMEI, UUID de procesadores y herramientas forenses. El uso de términos reales no valida las conclusiones. De hecho, el documento combina conceptos de forma intimidatoria y presenta capacidades técnicas como si fueran pruebas concluyentes de identidad.\n\nTambién aparece un patrón de aislamiento. La víctima recibe una supuesta oportunidad de colaborar y evitar consecuencias si sigue determinadas instrucciones. Este enfoque es habitual en fraudes donde el atacante necesita controlar el canal de comunicación. Pedir que no se contacte con terceros o presentar la búsqueda de ayuda como una posible obstrucción reduce la probabilidad de que la historia sea contrastada.\n\nLa última fase del documento añade firmas, marcas de confidencialidad y cargos para cerrar visualmente la narrativa. Sin embargo, la verificación debe realizarse siempre fuera del propio mensaje. Nunca debe utilizarse el teléfono, correo o enlace proporcionado por quien formula la acusación. La operación real, los nombres de herramientas y los símbolos institucionales funcionan aquí como piezas legítimas reutilizadas para sostener una historia falsa.",
       "indicadores_clave": [
         "Asunto CONVOCATORIA",
         "PDF complejo",
@@ -199,6 +259,38 @@
       "relacionadas": [
         "suplantan-la-policia-nacional-la-guardia-civil-y-incibe-traves-de-notificaciones",
         "chantajes-de-sextorsion-traves-de-correos-electronicos"
+      ],
+      "evidencias": [
+        {
+          "imagen": "img/incibe/desconfia-de-supuestas-notificaciones-de-la-guardia-civil-y-europol-sobre-la/evidencia-01.png",
+          "titulo": "Correo de convocatoria con amenaza de comparecencia",
+          "senal": "El mensaje exige una respuesta inmediata y amenaza con una orden de comparecencia.",
+          "analisis": "La presión temporal pretende evitar que la víctima verifique el remitente, el dominio y la existencia real del procedimiento."
+        },
+        {
+          "imagen": "img/incibe/desconfia-de-supuestas-notificaciones-de-la-guardia-civil-y-europol-sobre-la/evidencia-02.png",
+          "titulo": "Primera página del falso expediente Endgame",
+          "senal": "El documento utiliza el nombre de una operación policial real, marcas de confidencialidad y lenguaje técnico.",
+          "analisis": "Mezclar hechos reales con una historia falsa aumenta la credibilidad. El nombre de una operación legítima no convierte en auténtico el documento recibido."
+        },
+        {
+          "imagen": "img/incibe/desconfia-de-supuestas-notificaciones-de-la-guardia-civil-y-europol-sobre-la/evidencia-03.png",
+          "titulo": "Tecnicismos y supuestas evidencias forenses",
+          "senal": "Se enumeran identificadores, herramientas y datos técnicos para intimidar al destinatario.",
+          "analisis": "El exceso de jerga puede ser una técnica de autoridad. Una afirmación técnica debe poder verificarse por un canal oficial independiente."
+        },
+        {
+          "imagen": "img/incibe/desconfia-de-supuestas-notificaciones-de-la-guardia-civil-y-europol-sobre-la/evidencia-04.png",
+          "titulo": "Gancho de colaboración y aislamiento",
+          "senal": "El documento ofrece una supuesta salida si la víctima colabora y condiciona su comportamiento.",
+          "analisis": "El atacante intenta controlar la respuesta de la víctima y evitar que pida ayuda. Aislar al objetivo facilita la extorsión."
+        },
+        {
+          "imagen": "img/incibe/desconfia-de-supuestas-notificaciones-de-la-guardia-civil-y-europol-sobre-la/evidencia-05.png",
+          "titulo": "Firma y referencias con apariencia oficial",
+          "senal": "La última página añade nombres, cargos y una gran marca de confidencialidad.",
+          "analisis": "Firmas, sellos y nombres pueden copiarse o inventarse. Deben contrastarse con el organismo real, nunca mediante los datos de contacto incluidos en el propio mensaje."
+        }
       ]
     },
     "chantajes-de-sextorsion-traves-de-correos-electronicos": {
@@ -212,7 +304,7 @@
         "Correo electrónico",
         "Criptomonedas"
       ],
-      "resumen_ejecutivo": "La víctima recibe un correo que afirma que su dispositivo ha sido infectado y que existe un vídeo íntimo grabado sin su conocimiento. El atacante exige entre 750 y 950 dólares en Bitcoin y establece un plazo de 48 o 50 horas. Normalmente no dispone de ningún vídeo: utiliza un guion masivo, datos procedentes de filtraciones antiguas y presión psicológica.",
+      "resumen_ejecutivo": "Las muestras corresponden a campañas de sextorsión masiva en las que el atacante afirma haber comprometido dispositivos, cámaras y cuentas de la víctima. Los mensajes describen una supuesta vigilancia prolongada y exigen pagos en Bitcoin antes de una cuenta atrás. Las evidencias no muestran pruebas reales del material íntimo; muestran una narrativa extensa diseñada para que el destinatario pague por miedo antes de cuestionar la amenaza.",
       "como_identificarlo": [
         "No se aporta ninguna prueba real del supuesto vídeo.",
         "Se afirma disponer de acceso total, pero solo se exige un pago relativamente pequeño.",
@@ -237,7 +329,7 @@
         "Contacta con el 017 si necesitas apoyo.",
         "Si pagaste, reúne las evidencias y presenta denuncia."
       ],
-      "analisis_tecnico": "La sextorsión masiva se basa en automatización y filtraciones históricas. Una contraseña antigua puede hacer que el mensaje parezca personalizado, pero no demuestra acceso actual al dispositivo. El atacante apuesta por el silencio y la vergüenza de la víctima. La falta de una prueba visual verificable y el uso de una cartera de criptomonedas son indicadores decisivos.",
+      "analisis_tecnico": "Las imágenes permiten observar cómo se construye la credibilidad de la sextorsión. El atacante dedica gran parte del mensaje a explicar una supuesta intrusión técnica: malware indetectable, acceso a cámara, micrófono, contactos e historial. Esta narrativa cumple una función psicológica: justificar por qué la víctima no ha detectado nada y cerrar de antemano cualquier duda sobre la ausencia de alertas en el dispositivo.\n\nEl punto débil de la historia es precisamente la falta de evidencia. Quien afirma disponer de un vídeo comprometedor no muestra una captura, un fotograma ni un elemento que demuestre acceso actual. En campañas masivas, el atacante no necesita tener ese material; necesita que un pequeño porcentaje de destinatarios considere plausible la amenaza.\n\nLa cuenta atrás y el pago en Bitcoin completan el mecanismo. El límite temporal evita que la víctima consulte con terceros y las criptomonedas dificultan la reversión del pago. Además, responder o pagar valida el objetivo y puede provocar nuevas exigencias. Desde el punto de vista técnico, la longitud del mensaje y la abundancia de detalles no constituyen una prueba de compromiso.",
       "indicadores_clave": [
         "Amenaza de vídeo íntimo",
         "Bitcoin",
@@ -249,6 +341,26 @@
       "relacionadas": [
         "suplantan-la-policia-nacional-la-guardia-civil-y-incibe-traves-de-notificaciones",
         "desconfia-de-supuestas-notificaciones-de-la-guardia-civil-y-europol-sobre-la"
+      ],
+      "evidencias": [
+        {
+          "imagen": "img/incibe/chantajes-de-sextorsion-traves-de-correos-electronicos/evidencia-01.png",
+          "titulo": "Correo de sextorsión con exigencia de pago",
+          "senal": "El atacante afirma haber comprometido el dispositivo y exige dinero para no difundir un supuesto vídeo.",
+          "analisis": "El mensaje no aporta una prueba verificable. Se apoya en el miedo y en la posibilidad de que la víctima pague antes de analizar la amenaza."
+        },
+        {
+          "imagen": "img/incibe/chantajes-de-sextorsion-traves-de-correos-electronicos/evidencia-02.png",
+          "titulo": "Narrativa técnica extensa para simular control total",
+          "senal": "El correo describe una intrusión compleja y una vigilancia continuada del dispositivo.",
+          "analisis": "Las explicaciones técnicas genéricas intentan justificar por qué el supuesto malware no fue detectado. Longitud no equivale a evidencia."
+        },
+        {
+          "imagen": "img/incibe/chantajes-de-sextorsion-traves-de-correos-electronicos/evidencia-03.png",
+          "titulo": "Amenaza de difusión y cuenta atrás",
+          "senal": "Se amenaza con enviar material a los contactos y se establece un plazo limitado para pagar.",
+          "analisis": "La cuenta atrás fuerza una decisión emocional. No responder ni pagar corta el mecanismo de presión y evita confirmar que la cuenta está activa."
+        }
       ]
     },
     "mi-carpeta-ciudadana-no-esta-enviando-notificaciones-los-ciudadanos-para-recibir": {
@@ -262,7 +374,7 @@
         "Correo electrónico",
         "Sitio web fraudulento"
       ],
-      "resumen_ejecutivo": "Un correo que imita a Mi Carpeta Ciudadana comunica un supuesto ingreso de 552,97 euros. El enlace conduce a una web falsa que solicita datos personales, DNI, teléfono, cuenta bancaria y credenciales de acceso. La cantidad concreta, las referencias legales y la apariencia institucional se utilizan para generar confianza y curiosidad.",
+      "resumen_ejecutivo": "Las evidencias muestran una campaña que utiliza un supuesto ingreso de 552,97 euros como gancho y reproduce la identidad de Mi Carpeta Ciudadana. El fraude guía a la víctima por varias pantallas de reidentificación y recopila progresivamente nombre, apellidos, fecha de nacimiento, teléfono, correo y otros datos. No se trata de un formulario aislado: es un proceso diseñado para construir un perfil de identidad completo.",
       "como_identificarlo": [
         "El remitente utiliza un dominio comercial o genérico en lugar de uno gubernamental.",
         "Se promete un ingreso inesperado que la víctima no había solicitado.",
@@ -287,7 +399,7 @@
         "Guarda todas las evidencias.",
         "Presenta denuncia y realiza seguimiento de posibles usos de tu identidad."
       ],
-      "analisis_tecnico": "El fraude combina una recompensa concreta con apariencia administrativa. La cifra exacta reduce la sensación de mensaje genérico y las referencias legales aportan una falsa capa de legitimidad. El recorrido de la web está diseñado para recolectar progresivamente un perfil de identidad completo, útil tanto para fraude bancario como para suplantaciones posteriores.",
+      "analisis_tecnico": "La campaña destaca por su capacidad para convertir una promesa económica en un proceso de enrolamiento falso. El correo utiliza una cifra exacta, referencias administrativas y un lenguaje formal para que el ingreso parezca asociado a un expediente individual. La cantidad concreta actúa como ancla cognitiva y aumenta la curiosidad del destinatario.\n\nLas capturas de la web muestran una estrategia de recopilación progresiva. La víctima no recibe desde el principio una petición masiva de datos. Primero se le presenta una pantalla que imita un servicio público y se introduce la idea de reidentificación. Después se solicitan nombre, apellidos y fecha de nacimiento. Más tarde se amplía el perfil con teléfono y correo. Esta secuencia normaliza cada nueva petición.\n\nEl valor para el atacante no se limita al posible fraude bancario. Un conjunto de datos tan completo permite llamadas dirigidas, suplantaciones, recuperación fraudulenta de cuentas y campañas posteriores mucho más creíbles. La evidencia legítima incluida en el propio aviso de Carpeta Ciudadana refuerza una práctica esencial: ante cualquier duda, iniciar la comprobación desde la aplicación o web oficial, nunca desde el enlace recibido.",
       "indicadores_clave": [
         "Ingreso de 552,97 €",
         "Dominio no gubernamental",
@@ -299,6 +411,38 @@
       "relacionadas": [
         "la-agencia-tributaria-no-ha-emitido-ninguna-comunicacion-dirigida-usted",
         "notificaciones-falsas-que-suplantan-la-agencia-tributaria-aeat-y-la-direccion"
+      ],
+      "evidencias": [
+        {
+          "imagen": "img/incibe/mi-carpeta-ciudadana-no-esta-enviando-notificaciones-los-ciudadanos-para-recibir/evidencia-01.png",
+          "titulo": "Aviso legítimo que alerta de la campaña",
+          "senal": "La propia aplicación de Mi Carpeta Ciudadana advierte de correos fraudulentos y recuerda sus canales oficiales.",
+          "analisis": "Ante una duda, la comprobación debe realizarse entrando directamente en el servicio oficial. Esta evidencia muestra la importancia de contrastar por un canal independiente."
+        },
+        {
+          "imagen": "img/incibe/mi-carpeta-ciudadana-no-esta-enviando-notificaciones-los-ciudadanos-para-recibir/evidencia-02.png",
+          "titulo": "Correo con un falso ingreso de 552,97 euros",
+          "senal": "La comunicación utiliza una cantidad exacta, referencias administrativas y lenguaje formal.",
+          "analisis": "La precisión aparente está diseñada para que el mensaje parezca individualizado. El premio inesperado es el gancho emocional."
+        },
+        {
+          "imagen": "img/incibe/mi-carpeta-ciudadana-no-esta-enviando-notificaciones-los-ciudadanos-para-recibir/evidencia-03.png",
+          "titulo": "Falso proceso de verificación de identidad",
+          "senal": "La web replica la identidad de Carpeta Ciudadana y solicita iniciar un supuesto procedimiento de reidentificación.",
+          "analisis": "La víctima es introducida en un flujo progresivo. Cada pantalla normaliza la siguiente petición de datos."
+        },
+        {
+          "imagen": "img/incibe/mi-carpeta-ciudadana-no-esta-enviando-notificaciones-los-ciudadanos-para-recibir/evidencia-04.png",
+          "titulo": "Captura de nombre, apellidos y fecha de nacimiento",
+          "senal": "El formulario comienza a construir un perfil de identidad completo.",
+          "analisis": "Estos datos pueden utilizarse en suplantaciones, llamadas dirigidas y procesos de fraude posteriores."
+        },
+        {
+          "imagen": "img/incibe/mi-carpeta-ciudadana-no-esta-enviando-notificaciones-los-ciudadanos-para-recibir/evidencia-05.png",
+          "titulo": "Recopilación de teléfono y correo electrónico",
+          "senal": "La página amplía el conjunto de datos de contacto de la víctima.",
+          "analisis": "Con identidad y canales de contacto, el atacante puede realizar vishing, smishing o phishing mucho más personalizados."
+        }
       ]
     },
     "netflix-no-esta-enviando-correos-electronicos-solicitan-ingresar-un-nuevo-metodo": {
@@ -312,7 +456,7 @@
         "Correo electrónico",
         "Sitio web fraudulento"
       ],
-      "resumen_ejecutivo": "La campaña informa de un supuesto problema con el método de pago de Netflix y amenaza con limitar el servicio. El enlace dirige a una copia de la pantalla de acceso y, después, a formularios de facturación y tarjeta. Los ciberdelincuentes obtienen así tanto la cuenta de Netflix como información útil para fraude financiero.",
+      "resumen_ejecutivo": "La campaña comienza con un supuesto problema de facturación de Netflix y continúa con un falso control de seguridad y una copia del inicio de sesión. Las imágenes muestran una secuencia diseñada para normalizar el proceso: aviso de pago, prueba matemática que aparenta ser un mecanismo de protección y, finalmente, captura de credenciales. El objetivo es obtener primero la cuenta y después información financiera.",
       "como_identificarlo": [
         "El remitente no utiliza un dominio oficial de Netflix.",
         "El asunto genera urgencia sobre la suspensión o reactivación de la cuenta.",
@@ -337,7 +481,7 @@
         "Conserva evidencias y denuncia si existen cargos.",
         "Activa medidas adicionales de seguridad en el correo asociado."
       ],
-      "analisis_tecnico": "La secuencia de captura está diseñada para maximizar el valor de la víctima: primero obtiene credenciales reutilizables y después datos financieros. Los falsos CAPTCHA u operaciones matemáticas no aportan seguridad; se utilizan para dar apariencia legítima y dificultar ciertos análisis automáticos.",
+      "analisis_tecnico": "Las tres evidencias muestran un flujo de phishing preparado para reducir progresivamente la desconfianza. El correo utiliza una incidencia de pago, un pretexto frecuente en servicios de suscripción, y plantea una acción sencilla: actualizar el método de pago para recuperar el acceso.\n\nLa segunda pantalla introduce una operación matemática y referencias visuales a mecanismos de seguridad. Este paso no aporta autenticidad. Puede utilizarse para tranquilizar a la víctima y, en algunos casos, para dificultar análisis automáticos de la página. Es una capa teatral de seguridad.\n\nLa tercera evidencia reproduce el login de Netflix. El atacante captura correo y contraseña antes de solicitar datos de facturación o tarjeta. Esta secuencia maximiza el valor de cada víctima: incluso si abandona el proceso antes del pago, las credenciales ya pueden haber sido robadas. El impacto aumenta notablemente cuando la contraseña se reutiliza en correo electrónico u otros servicios.",
       "indicadores_clave": [
         "Problema de pago",
         "Dominio ajeno",
@@ -346,7 +490,27 @@
         "Formulario de tarjeta",
         "Amenaza de suspensión"
       ],
-      "relacionadas": []
+      "relacionadas": [],
+      "evidencias": [
+        {
+          "imagen": "img/incibe/netflix-no-esta-enviando-correos-electronicos-solicitan-ingresar-un-nuevo-metodo/evidencia-01.png",
+          "titulo": "Correo de actualización de pago",
+          "senal": "El mensaje informa de un supuesto problema de facturación y ofrece un botón para reactivar el servicio.",
+          "analisis": "La amenaza de perder acceso a un servicio conocido crea urgencia. La comprobación debe hacerse dentro de la app o la web oficial."
+        },
+        {
+          "imagen": "img/incibe/netflix-no-esta-enviando-correos-electronicos-solicitan-ingresar-un-nuevo-metodo/evidencia-02.jpg",
+          "titulo": "Falso control matemático de seguridad",
+          "senal": "La página muestra una operación sencilla y referencias a reCAPTCHA para aparentar legitimidad.",
+          "analisis": "Una prueba visual no convierte la página en segura. También puede utilizarse para dificultar análisis automáticos y tranquilizar a la víctima."
+        },
+        {
+          "imagen": "img/incibe/netflix-no-esta-enviando-correos-electronicos-solicitan-ingresar-un-nuevo-metodo/evidencia-03.jpg",
+          "titulo": "Clon del inicio de sesión de Netflix",
+          "senal": "La web reproduce la pantalla de login y solicita correo y contraseña.",
+          "analisis": "El objetivo inicial es capturar credenciales. Si la contraseña se reutiliza, el impacto puede extenderse mucho más allá de Netflix."
+        }
+      ]
     },
     "notificaciones-falsas-que-suplantan-la-agencia-tributaria-aeat-y-la-direccion": {
       "estado": "publicado",
@@ -359,7 +523,7 @@
         "Correo electrónico",
         "Sitio web fraudulento"
       ],
-      "resumen_ejecutivo": "Los atacantes envían un aviso de nueva notificación electrónica que aparenta proceder de la AEAT o de DEHú. El enlace dirige a una web clonada donde se solicita identificador y contraseña. Después, la víctima puede ser redirigida a la página legítima para ocultar el robo y hacerle pensar que se produjo un error normal.",
+      "resumen_ejecutivo": "Las imágenes muestran una falsa notificación electrónica que utiliza referencias administrativas y conduce a copias de DEHú y de la Agencia Tributaria. El usuario es dirigido a pantallas que imitan mecanismos oficiales de identificación y solicitan credenciales. La campaña puede terminar redirigiendo a la web legítima, una técnica que reduce las sospechas después de que los datos ya hayan sido capturados.",
       "como_identificarlo": [
         "El remitente no pertenece a agenciatributaria.gob.es ni a un dominio oficial.",
         "El asunto incluye una referencia genérica o aleatoria.",
@@ -384,7 +548,7 @@
         "Guarda el correo y la URL fraudulenta.",
         "Denuncia cualquier uso no autorizado."
       ],
-      "analisis_tecnico": "La redirección final al sitio legítimo es una técnica de encubrimiento: después de capturar los datos, el atacante envía a la víctima a la página real para reducir sospechas. La presencia de una web visualmente idéntica no valida su autenticidad; el dominio y el mecanismo de identificación son los controles esenciales.",
+      "analisis_tecnico": "La campaña aprovecha un contexto especialmente efectivo: una notificación administrativa pendiente. El correo incluye referencias y vocabulario formal que pueden hacer que el usuario actúe por temor a ignorar un trámite. Sin embargo, los identificadores y el aspecto administrativo son elementos fáciles de fabricar.\n\nLas evidencias muestran dos identidades visuales distintas: DEHú y AEAT. Esto indica que la campaña no depende de una única landing page y puede adaptar el recorrido a diferentes organismos. En ambos casos, la finalidad es la misma: presentar un entorno familiar y solicitar datos de acceso.\n\nLa redirección posterior a una página legítima es especialmente relevante. Después de capturar las credenciales, el atacante puede enviar a la víctima al sitio real. El usuario interpreta entonces que la sesión ha fallado o que debe repetir el proceso, y la intrusión queda oculta. Por ello, la presencia final de un dominio legítimo no demuestra que todo el recorrido anterior también lo fuera.",
       "indicadores_clave": [
         "Falsa notificación",
         "Dominio no oficial",
@@ -396,6 +560,26 @@
       "relacionadas": [
         "la-agencia-tributaria-no-ha-emitido-ninguna-comunicacion-dirigida-usted",
         "mi-carpeta-ciudadana-no-esta-enviando-notificaciones-los-ciudadanos-para-recibir"
+      ],
+      "evidencias": [
+        {
+          "imagen": "img/incibe/notificaciones-falsas-que-suplantan-la-agencia-tributaria-aeat-y-la-direccion/evidencia-01.png",
+          "titulo": "Falsa notificación electrónica con referencias administrativas",
+          "senal": "El correo imita una puesta a disposición de DEHú e incluye referencias, organismos y enlaces.",
+          "analisis": "Los datos de expediente y el lenguaje administrativo son elementos de persuasión. El dominio del remitente y del enlace deben verificarse de forma independiente."
+        },
+        {
+          "imagen": "img/incibe/notificaciones-falsas-que-suplantan-la-agencia-tributaria-aeat-y-la-direccion/evidencia-02.png",
+          "titulo": "Clon de acceso asociado a DEHú y Cl@ve",
+          "senal": "La página utiliza símbolos oficiales y solicita un correo electrónico para continuar.",
+          "analisis": "La identidad gráfica puede copiarse. Los mecanismos reales de identificación deben iniciarse desde la sede oficial escrita manualmente."
+        },
+        {
+          "imagen": "img/incibe/notificaciones-falsas-que-suplantan-la-agencia-tributaria-aeat-y-la-direccion/evidencia-03.png",
+          "titulo": "Falsa pantalla de identificación de la AEAT",
+          "senal": "La web reproduce la cabecera y el pie de la Agencia Tributaria y solicita una contraseña.",
+          "analisis": "La réplica busca capturar credenciales y después puede redirigir a la web legítima para ocultar el robo."
+        }
       ]
     },
     "endesa-notifica-sus-clientes-una-filtracion-de-datos-personales": {
