@@ -1,44 +1,40 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>La app de trading que devolvía dinero de mentira · FraudeDigital.es</title>
-<meta name="description" content="Autopsia técnica de una app de inversión fraudulenta: dashboard falso, ingeniería de confianza y bloqueo al intentar retirar.">
-<meta name="keywords" content="app trading falsa, plataforma inversión estafa, retirada bloqueada cripto, fraude financiero app">
-<meta name="author" content="Miguel Ángel Carriazo">
-<meta name="theme-color" content="#dc2626">
-<meta name="robots" content="index, follow">
-<meta http-equiv="Content-Language" content="es">
-
-<link rel="canonical" href="https://fraudedigital.es/ejemplos/app-trading-falsa.html">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="manifest" href="/manifest.json">
-
-<meta property="og:site_name" content="FraudeDigital.es">
-<meta property="og:locale" content="es_ES">
-<meta property="og:type" content="article">
-<meta property="og:title" content="La app de trading que devolvía dinero de mentira">
-<meta property="og:description" content="Autopsia técnica de una app de inversión fraudulenta.">
-<meta property="og:url" content="https://fraudedigital.es/ejemplos/app-trading-falsa.html">
-<meta property="og:image" content="https://fraudedigital.es/img/og-ejemplos.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="article:published_time" content="2026-07-02">
-<meta property="article:author" content="Miguel Ángel Carriazo">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="La app de trading que devolvía dinero de mentira">
-<meta name="twitter:description" content="Autopsia técnica de una app de inversión fraudulenta.">
-<meta name="twitter:image" content="https://fraudedigital.es/img/og-ejemplos.png">
-
-<link rel="stylesheet" href="../css/global.css">
-<link rel="stylesheet" href="../css/dossier-core.css">
-<link rel="stylesheet" href="../css/ejemplos.css">
-
+<meta content="Autopsia técnica de una app de inversión fraudulenta: dashboard falso, ingeniería de confianza y bloqueo al intentar retirar." name="description"/>
+<meta content="app trading falsa, plataforma inversión estafa, retirada bloqueada cripto, fraude financiero app" name="keywords"/>
+<meta content="Miguel Ángel Carriazo" name="author"/>
+<meta content="#dc2626" name="theme-color"/>
+<meta content="index, follow" name="robots"/>
+<meta content="es" http-equiv="Content-Language"/>
+<link href="https://fraudedigital.es/ejemplos/app-trading-falsa.html" rel="canonical"/>
+<link href="/favicon.ico" rel="icon" sizes="any"/>
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="/manifest.json" rel="manifest"/>
+<meta content="FraudeDigital.es" property="og:site_name"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="article" property="og:type"/>
+<meta content="La app de trading que devolvía dinero de mentira" property="og:title"/>
+<meta content="Autopsia técnica de una app de inversión fraudulenta." property="og:description"/>
+<meta content="https://fraudedigital.es/ejemplos/app-trading-falsa.html" property="og:url"/>
+<meta content="https://fraudedigital.es/img/og-ejemplos.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="2026-07-02" property="article:published_time"/>
+<meta content="Miguel Ángel Carriazo" property="article:author"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="La app de trading que devolvía dinero de mentira" name="twitter:title"/>
+<meta content="Autopsia técnica de una app de inversión fraudulenta." name="twitter:description"/>
+<meta content="https://fraudedigital.es/img/og-ejemplos.png" name="twitter:image"/>
+<link href="../css/global.css" rel="stylesheet"/>
+<link href="../css/dossier-core.css" rel="stylesheet"/>
+<link href="../css/ejemplos.css" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -54,7 +50,6 @@
   "inLanguage": "es-ES"
 }
 </script>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -66,210 +61,179 @@
   ]
 }
 </script>
-</head>
+<link href="../css/casos-v2.css?v=20260711" rel="stylesheet"/><link href="../css/operativa-v3.css?v=20260711" rel="stylesheet"/></head>
 <body>
-
 <div class="card-wrapper ds-page">
 <div class="card">
-
-  <div id="menu-container"></div>
-  <div class="accent-bar"></div>
-
-  <div class="ds-meta">
-    <span><span class="dot"></span>FraudeDigital // caso: EJ-003</span>
-    <span>estado: <strong>autopsia técnica</strong></span>
-  </div>
-
-  <div class="caso-layout">
-  <div class="caso-main">
-  <div class="caso-wrapper">
-
-    <div class="caso-header">
-      <div class="caso-exp">CASO EJ-003 · FRAUDE FINANCIERO</div>
-      <h1>La app de trading que devolvía dinero de mentira</h1>
-      <p class="subtitle">Cómo funcionan las plataformas fantasma con dashboard bonito</p>
-      <div class="caso-meta">
-        <div><strong>Categoría:</strong> Fraude de inversión</div>
-        <div><strong>Perfil víctima:</strong> Adulto sin experiencia bursátil</div>
-        <div><strong>Impacto:</strong> Miles a decenas de miles €</div>
-      </div>
-    </div>
-
-    <div class="caso-tldr">
-      <div class="label">Resumen ejecutivo</div>
-      <p>La víctima entra en contacto (a través de Instagram, Telegram o WhatsApp) con un "asesor" que le habla de una plataforma de inversión con rentabilidades del 3-8% <strong>semanales</strong>. Le hacen registrar en una app que <strong>simula perfectamente una plataforma de trading real</strong>: gráficos, saldo, historial, órdenes. Los primeros ingresos funcionan y se ven crecer en pantalla. Cuando la víctima intenta retirar, aparecen "impuestos", "comisiones de liberación" o "verificaciones" que exigen ingresar más dinero. El dashboard es puro <strong>frontend maquillado</strong>: no hay trading real, no hay saldo real, no hay retirada posible.</p>
-    </div>
-
-
-    <h2 id="s1" data-num="01">El contacto inicial</h2>
-
-    <p>El primer contacto suele ser una de estas variantes:</p>
-
-    <ul>
-      <li><strong>Anuncio en RRSS</strong> con testimonio de "Manuel de Málaga, jubilado, gana 8.000 € al mes desde casa"</li>
-      <li><strong>Mensaje directo</strong> "Hola, soy Elena, del equipo de asesores financieros de XYZ Capital, hemos revisado tu perfil…"</li>
-      <li><strong>Grupo de Telegram/WhatsApp</strong> "Comunidad de trading crypto" con moderadores que muestran ganancias reales todos los días</li>
-      <li><strong>Romance scam</strong>: relación construida durante semanas, luego "confidencia" sobre una oportunidad</li>
-    </ul>
-
-    <p>El primer contacto <strong>no vende nada</strong>. Vende relación, credibilidad y algún indicio de éxito ajeno.</p>
-
-
-    <h2 id="s2" data-num="02">La demo controlada</h2>
-
-    <div class="caso-step">
-      <div class="caso-step-num">01</div>
-      <div class="caso-step-body">
-        <h3>Depósito inicial pequeño</h3>
-        <p>La víctima transfiere 200-500 € (a veces en cripto). El asesor le acompaña con capturas de qué está comprando. Aparece en el dashboard.</p>
-      </div>
-    </div>
-
-    <div class="caso-step">
-      <div class="caso-step-num">02</div>
-      <div class="caso-step-body">
-        <h3>Ganancia visible en 48h</h3>
-        <p>El asesor le dice qué órdenes "meter". El dashboard muestra que el saldo sube un 15-30% en cuestión de días. La víctima ve el número crecer en tiempo real.</p>
-      </div>
-    </div>
-
-    <div class="caso-step">
-      <div class="caso-step-num">03</div>
-      <div class="caso-step-body">
-        <h3>Prueba de retirada pequeña</h3>
-        <p>El asesor propone: "prueba a sacar 100 € para que veas que funciona". La víctima retira 100 € y <strong>los recibe en su cuenta</strong>. Ese pago es real y viene, en gran parte, de nuevos depositantes.</p>
-      </div>
-    </div>
-
-    <div class="caso-step">
-      <div class="caso-step-num">04</div>
-      <div class="caso-step-body">
-        <h3>La confianza empuja al depósito grande</h3>
-        <p>Con la prueba de que "sí se puede sacar", la víctima ingresa un importe serio (5.000, 20.000, 100.000 €). A partir de aquí, todo cambia.</p>
-      </div>
-    </div>
-
-    <div class="caso-step">
-      <div class="caso-step-num">05</div>
-      <div class="caso-step-body">
-        <h3>La retirada se bloquea</h3>
-        <p>Cuando intenta retirar, aparecen mensajes tipo "impuesto de retirada 15%", "verificación KYC pendiente", "comisión de liberación de fondos". Todos exigen ingresar más dinero para "desbloquear". El pozo sin fondo empieza.</p>
-      </div>
-    </div>
-
-
-    <h2 id="s3" data-num="03">La arquitectura técnica del engaño</h2>
-
-    <p>Estas apps son técnicamente sofisticadas pero conceptualmente sencillas. La estructura típica:</p>
-
-    <ul>
-      <li><strong>Frontend impecable:</strong> React/Vue, gráficos con librerías como TradingView, animaciones fluidas. Copian el look de plataformas reales (Binance, eToro, IG).</li>
-      <li><strong>Backend simulado:</strong> los precios "en tiempo real" a veces se toman de una API real, pero el saldo, el histórico y las órdenes son ficticios. No hay ejecución real en ningún mercado.</li>
-      <li><strong>Un botón de administración oculto</strong>: los operadores pueden inflar el saldo mostrado, generar historial de operaciones ficticias, e inyectar movimientos "ganadores" antes de una llamada de venta.</li>
-      <li><strong>Un pool de pagos limitado:</strong> se paga a las primeras víctimas que "prueban" retirar (cifras bajas) con el dinero que aportan las siguientes.</li>
-      <li><strong>App fuera de tiendas oficiales:</strong> se instala vía APK descargado desde web (Android) o perfil MDM (iOS), sin pasar por revisión de Google/Apple.</li>
-    </ul>
-
-    <div class="caso-warn">
-      <strong>Detalle crítico:</strong> como el saldo mostrado es un número inventado en una base de datos que ellos controlan, cuando la víctima ve "48.700 €" en pantalla, ese dinero <em>no existe</em>. Existe solo la cifra que decidieron mostrar.
-    </div>
-
-
-    <h2 id="s4" data-num="04">Señales para reconocerlo antes</h2>
-
-    <table class="caso-ioc">
-      <thead>
-        <tr>
-          <th>Señal</th>
-          <th>Qué significa</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Rentabilidades semanales &gt; 2%</td>
-          <td>El mercado real, en su mejor año, no da eso sostenido. Si te lo prometen, es fraude.</td>
-        </tr>
-        <tr>
-          <td>App fuera de Play Store / App Store</td>
-          <td>Descargar un APK o instalar un "certificado empresarial" por indicación de tu asesor = luz roja máxima.</td>
-        </tr>
-        <tr>
-          <td>Asesor que "te acompaña" al depósito</td>
-          <td>Ningún broker regulado necesita hablar contigo para que ingreses dinero.</td>
-        </tr>
-        <tr>
-          <td>No aparece en el registro CNMV</td>
-          <td>La CNMV publica el listado de entidades autorizadas y también las advertencias sobre "chiringuitos financieros".</td>
-        </tr>
-        <tr>
-          <td>Cuenta de destino en cripto o extranjero</td>
-          <td>Un broker legítimo español recibe en cuenta segregada en España. Si te piden Binance, USDT o cuenta en Malta/Estonia/Caribe, huye.</td>
-        </tr>
-        <tr>
-          <td>Presión para reinvertir la ganancia</td>
-          <td>"Retirar ahora sería un error, con esta operación duplicas". El objetivo es que nunca retires.</td>
-        </tr>
-      </tbody>
-    </table>
-
-
-    <div class="caso-lesson">
-      <div class="label">Lección clave</div>
-      <p><strong>Antes de meter un euro en una plataforma de inversión, comprueba en el <a href="https://www.cnmv.es/portal/Consultas/Entidades/EntidadesConSancion.aspx" target="_blank" rel="noopener">buscador de la CNMV</a></strong> si la entidad está autorizada y si figura en las advertencias sobre entidades no autorizadas ("chiringuitos financieros"). Si no aparece en el registro de autorizadas, no es un broker: es una app diseñada para no devolverte nada. El hecho de que la primera retirada funcione es la prueba principal de que es fraude, no lo contrario.</p>
-    </div>
-
-
-    <h2 id="s5" data-num="05">Si ya has caído</h2>
-
-    <ol>
-      <li><strong>Deja de ingresar dinero YA.</strong> Ninguna "liberación de fondos" existe. Cada euro que metas para desbloquear es otro euro perdido.</li>
-      <li><strong>Documenta todo</strong>: capturas del dashboard, conversaciones con el asesor, justificantes de transferencias, IBAN destino, dirección cripto.</li>
-      <li><strong>Reclama a tu banco</strong> por operaciones no autorizadas si aplica. Si fueron transferencias autorizadas, la reclamación al banco tiene menos recorrido pero prueba que has actuado.</li>
-      <li><strong>Denuncia en Policía / Guardia Civil</strong> — <a href="../herramientas/generador-denuncias.html">usa el generador de denuncias</a>.</li>
-      <li><strong>Reporta a la CNMV</strong> para que engrose la advertencia pública y proteja a otros.</li>
-      <li><strong>Sospecha de "abogados recuperadores"</strong>: aparecen mágicamente ofreciendo "recuperar tus fondos por una comisión". Es la <strong>segunda estafa</strong>, dirigida a las mismas víctimas.</li>
-    </ol>
-
-
-    <div class="caso-nav">
-      <a href="index.html">← Volver a Casos reales</a>
-      <a href="../herramientas/verificacion-online.html">Verificar plataforma →</a>
-    </div>
-
-  </div>
-  </div>
-
-  <aside class="caso-toc">
-    <div class="caso-toc-ficha">
-      <div class="label">Ficha del caso</div>
-      <dl>
-        <dt>Categoría</dt><dd>Fraude de inversión</dd>
-        <dt>Impacto</dt><dd>Miles a decenas de miles €</dd>
-        <dt>Vector</dt><dd>App de trading falsa</dd>
-      </dl>
-    </div>
-    <div>
-      <div class="caso-toc-label">Contenido</div>
-      <nav class="caso-toc-nav" id="casoTocNav">
-        <a href="#s1" class="active">01. El contacto inicial</a>
-        <a href="#s2">02. La demo controlada</a>
-        <a href="#s3">03. Arquitectura técnica</a>
-        <a href="#s4">04. Señales de alarma</a>
-        <a href="#s5">05. Si ya has caído</a>
-      </nav>
-    </div>
-  </aside>
-
-  </div>
-
-  <div id="footer-container"></div>
-
+<div id="menu-container"></div>
+<div class="accent-bar"></div>
+<div class="ds-meta">
+<span><span class="dot"></span>FraudeDigital // caso: EJ-003</span>
+<span>estado: <strong>autopsia técnica</strong></span>
+</div><div class="fd-top-back-wrap"><a class="fd-top-back" href="index.html"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M19 12H5"></path><path d="M12 19l-7-7 7-7"></path></svg><span>Volver a Casos Reales</span></a></div><section class="case2-hero">
+<div>
+<div class="case2-kicker">Inversión fraudulenta · Caso real analizado</div>
+<h1>La app de trading que devolvía dinero de mentira</h1>
+<p class="case2-lead">Cómo funcionan las plataformas fantasma con dashboard bonito</p>
+</div>
+<div class="case2-visual">
+<div class="case2-visual-label">Secuencia observada</div>
+<svg aria-label="Flujo típico del ataque" role="img" viewbox="0 0 500 112"><rect fill="#1e293b" height="42" rx="8" stroke="#475569" width="130" x="15" y="36"></rect><text fill="#f8fafc" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" x="80" y="61">Captación</text><line stroke="#2563eb" stroke-width="2" x1="149" x2="176" y1="57" y2="57"></line><path d="M176 57 l-8 -5 v10 z" fill="#2563eb"></path><rect fill="#1e293b" height="42" rx="8" stroke="#475569" width="130" x="185" y="36"></rect><text fill="#f8fafc" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" x="250" y="61">App falsa</text><line stroke="#2563eb" stroke-width="2" x1="319" x2="346" y1="57" y2="57"></line><path d="M346 57 l-8 -5 v10 z" fill="#2563eb"></path><rect fill="#1e293b" height="42" rx="8" stroke="#475569" width="130" x="355" y="36"></rect><text fill="#f8fafc" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" x="420" y="61">Depósitos sucesivos</text></svg>
+</div>
+</section><section class="case2-map"><div class="case2-map-grid"><div class="case2-map-card"><div class="case2-map-label">Vector</div><div class="case2-map-value">Confianza + interfaz financiera falsa</div></div><div class="case2-map-card"><div class="case2-map-label">Punto de ruptura</div><div class="case2-map-value">Verificar entidad y retirada</div></div><div class="case2-map-card"><div class="case2-map-label">Lección</div><div class="case2-map-value">Un saldo visible no demuestra que exista el dinero</div></div></div></section><div class="caso-layout">
+<div class="caso-main">
+<div class="caso-wrapper">
+<div class="caso-header">
+<div class="caso-exp">CASO EJ-003 · FRAUDE FINANCIERO</div>
+<h1>La app de trading que devolvía dinero de mentira</h1>
+<p class="subtitle">Cómo funcionan las plataformas fantasma con dashboard bonito</p>
+<div class="caso-meta">
+<div><strong>Categoría:</strong> Fraude de inversión</div>
+<div><strong>Perfil víctima:</strong> Adulto sin experiencia bursátil</div>
+<div><strong>Impacto:</strong> Miles a decenas de miles €</div>
 </div>
 </div>
-
+<div class="caso-tldr">
+<div class="label">Resumen ejecutivo</div>
+<p>La víctima entra en contacto (a través de Instagram, Telegram o WhatsApp) con un "asesor" que le habla de una plataforma de inversión con rentabilidades del 3-8% <strong>semanales</strong>. Le hacen registrar en una app que <strong>simula perfectamente una plataforma de trading real</strong>: gráficos, saldo, historial, órdenes. Los primeros ingresos funcionan y se ven crecer en pantalla. Cuando la víctima intenta retirar, aparecen "impuestos", "comisiones de liberación" o "verificaciones" que exigen ingresar más dinero. El dashboard es puro <strong>frontend maquillado</strong>: no hay trading real, no hay saldo real, no hay retirada posible.</p>
+</div>
+<h2 data-num="01" id="s1">El contacto inicial</h2>
+<p>El primer contacto suele ser una de estas variantes:</p>
+<ul>
+<li><strong>Anuncio en RRSS</strong> con testimonio de "Manuel de Málaga, jubilado, gana 8.000 € al mes desde casa"</li>
+<li><strong>Mensaje directo</strong> "Hola, soy Elena, del equipo de asesores financieros de XYZ Capital, hemos revisado tu perfil…"</li>
+<li><strong>Grupo de Telegram/WhatsApp</strong> "Comunidad de trading crypto" con moderadores que muestran ganancias reales todos los días</li>
+<li><strong>Romance scam</strong>: relación construida durante semanas, luego "confidencia" sobre una oportunidad</li>
+</ul>
+<p>El primer contacto <strong>no vende nada</strong>. Vende relación, credibilidad y algún indicio de éxito ajeno.</p>
+<h2 data-num="02" id="s2">La demo controlada</h2>
+<div class="caso-step">
+<div class="caso-step-num">01</div>
+<div class="caso-step-body">
+<h3>Depósito inicial pequeño</h3>
+<p>La víctima transfiere 200-500 € (a veces en cripto). El asesor le acompaña con capturas de qué está comprando. Aparece en el dashboard.</p>
+</div>
+</div>
+<div class="caso-step">
+<div class="caso-step-num">02</div>
+<div class="caso-step-body">
+<h3>Ganancia visible en 48h</h3>
+<p>El asesor le dice qué órdenes "meter". El dashboard muestra que el saldo sube un 15-30% en cuestión de días. La víctima ve el número crecer en tiempo real.</p>
+</div>
+</div>
+<div class="caso-step">
+<div class="caso-step-num">03</div>
+<div class="caso-step-body">
+<h3>Prueba de retirada pequeña</h3>
+<p>El asesor propone: "prueba a sacar 100 € para que veas que funciona". La víctima retira 100 € y <strong>los recibe en su cuenta</strong>. Ese pago es real y viene, en gran parte, de nuevos depositantes.</p>
+</div>
+</div>
+<div class="caso-step">
+<div class="caso-step-num">04</div>
+<div class="caso-step-body">
+<h3>La confianza empuja al depósito grande</h3>
+<p>Con la prueba de que "sí se puede sacar", la víctima ingresa un importe serio (5.000, 20.000, 100.000 €). A partir de aquí, todo cambia.</p>
+</div>
+</div>
+<div class="caso-step">
+<div class="caso-step-num">05</div>
+<div class="caso-step-body">
+<h3>La retirada se bloquea</h3>
+<p>Cuando intenta retirar, aparecen mensajes tipo "impuesto de retirada 15%", "verificación KYC pendiente", "comisión de liberación de fondos". Todos exigen ingresar más dinero para "desbloquear". El pozo sin fondo empieza.</p>
+</div>
+</div>
+<h2 data-num="03" id="s3">La arquitectura técnica del engaño</h2>
+<p>Estas apps son técnicamente sofisticadas pero conceptualmente sencillas. La estructura típica:</p>
+<ul>
+<li><strong>Frontend impecable:</strong> React/Vue, gráficos con librerías como TradingView, animaciones fluidas. Copian el look de plataformas reales (Binance, eToro, IG).</li>
+<li><strong>Backend simulado:</strong> los precios "en tiempo real" a veces se toman de una API real, pero el saldo, el histórico y las órdenes son ficticios. No hay ejecución real en ningún mercado.</li>
+<li><strong>Un botón de administración oculto</strong>: los operadores pueden inflar el saldo mostrado, generar historial de operaciones ficticias, e inyectar movimientos "ganadores" antes de una llamada de venta.</li>
+<li><strong>Un pool de pagos limitado:</strong> se paga a las primeras víctimas que "prueban" retirar (cifras bajas) con el dinero que aportan las siguientes.</li>
+<li><strong>App fuera de tiendas oficiales:</strong> se instala vía APK descargado desde web (Android) o perfil MDM (iOS), sin pasar por revisión de Google/Apple.</li>
+</ul>
+<div class="caso-warn">
+<strong>Detalle crítico:</strong> como el saldo mostrado es un número inventado en una base de datos que ellos controlan, cuando la víctima ve "48.700 €" en pantalla, ese dinero <em>no existe</em>. Existe solo la cifra que decidieron mostrar.
+    </div>
+<h2 data-num="04" id="s4">Señales para reconocerlo antes</h2>
+<table class="caso-ioc">
+<thead>
+<tr>
+<th>Señal</th>
+<th>Qué significa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rentabilidades semanales &gt; 2%</td>
+<td>El mercado real, en su mejor año, no da eso sostenido. Si te lo prometen, es fraude.</td>
+</tr>
+<tr>
+<td>App fuera de Play Store / App Store</td>
+<td>Descargar un APK o instalar un "certificado empresarial" por indicación de tu asesor = luz roja máxima.</td>
+</tr>
+<tr>
+<td>Asesor que "te acompaña" al depósito</td>
+<td>Ningún broker regulado necesita hablar contigo para que ingreses dinero.</td>
+</tr>
+<tr>
+<td>No aparece en el registro CNMV</td>
+<td>La CNMV publica el listado de entidades autorizadas y también las advertencias sobre "chiringuitos financieros".</td>
+</tr>
+<tr>
+<td>Cuenta de destino en cripto o extranjero</td>
+<td>Un broker legítimo español recibe en cuenta segregada en España. Si te piden Binance, USDT o cuenta en Malta/Estonia/Caribe, huye.</td>
+</tr>
+<tr>
+<td>Presión para reinvertir la ganancia</td>
+<td>"Retirar ahora sería un error, con esta operación duplicas". El objetivo es que nunca retires.</td>
+</tr>
+</tbody>
+</table>
+<div class="caso-lesson">
+<div class="label">Lección clave</div>
+<p><strong>Antes de meter un euro en una plataforma de inversión, comprueba en el <a href="https://www.cnmv.es/portal/Consultas/Entidades/EntidadesConSancion.aspx" rel="noopener" target="_blank">buscador de la CNMV</a></strong> si la entidad está autorizada y si figura en las advertencias sobre entidades no autorizadas ("chiringuitos financieros"). Si no aparece en el registro de autorizadas, no es un broker: es una app diseñada para no devolverte nada. El hecho de que la primera retirada funcione es la prueba principal de que es fraude, no lo contrario.</p>
+</div>
+<h2 data-num="05" id="s5">Si ya has caído</h2>
+<ol>
+<li><strong>Deja de ingresar dinero YA.</strong> Ninguna "liberación de fondos" existe. Cada euro que metas para desbloquear es otro euro perdido.</li>
+<li><strong>Documenta todo</strong>: capturas del dashboard, conversaciones con el asesor, justificantes de transferencias, IBAN destino, dirección cripto.</li>
+<li><strong>Reclama a tu banco</strong> por operaciones no autorizadas si aplica. Si fueron transferencias autorizadas, la reclamación al banco tiene menos recorrido pero prueba que has actuado.</li>
+<li><strong>Denuncia en Policía / Guardia Civil</strong> — <a href="../herramientas/generador-denuncias.html">usa el generador de denuncias</a>.</li>
+<li><strong>Reporta a la CNMV</strong> para que engrose la advertencia pública y proteja a otros.</li>
+<li><strong>Sospecha de "abogados recuperadores"</strong>: aparecen mágicamente ofreciendo "recuperar tus fondos por una comisión". Es la <strong>segunda estafa</strong>, dirigida a las mismas víctimas.</li>
+</ol>
+<div class="caso-nav">
+<a href="index.html">← Volver a Casos reales</a>
+<a href="../herramientas/verificacion-online.html">Verificar plataforma →</a>
+</div>
+</div>
+</div>
+<aside class="caso-toc">
+<div class="caso-toc-ficha">
+<div class="label">Ficha del caso</div>
+<dl>
+<dt>Categoría</dt><dd>Fraude de inversión</dd>
+<dt>Impacto</dt><dd>Miles a decenas de miles €</dd>
+<dt>Vector</dt><dd>App de trading falsa</dd>
+</dl>
+</div>
+<div>
+<div class="caso-toc-label">Contenido</div>
+<nav class="caso-toc-nav" id="casoTocNav">
+<a class="active" href="#s1">01. El contacto inicial</a>
+<a href="#s2">02. La demo controlada</a>
+<a href="#s3">03. Arquitectura técnica</a>
+<a href="#s4">04. Señales de alarma</a>
+<a href="#s5">05. Si ya has caído</a>
+</nav>
+</div>
+</aside>
+</div>
+<div id="footer-container"></div>
+</div>
+</div>
 <script src="../js/menu.js"></script>
 <script src="../js/footer.js"></script>
-
 <script>
   var tocLinks = Array.from(document.querySelectorAll('.caso-toc-nav a'));
   var sections = tocLinks.map(a => document.querySelector(a.getAttribute('href')));
@@ -291,6 +255,5 @@
     sections.forEach(function(s){ if (s) observer.observe(s); });
   }
 </script>
-
 </body>
 </html>

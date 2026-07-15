@@ -1,370 +1,99 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0">
-<title>FraudeDigital.es · Panel de Control de Amenazas</title>
-<meta name="description" content="Portal de ingeniería técnica y respuesta operativa contra fraudes digitales, estafas en red e ingeniería social en España.">
-<meta name="keywords" content="amenazas fraude digital, catálogo ciberseguridad, phishing, smishing, vishing, ingeniería social, expedientes técnicos">
-<meta name="robots" content="index, follow">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="stylesheet" href="../css/global.css">
-<link rel="stylesheet" href="../css/dossier-core.css">
-<link rel="stylesheet" href="../css/index.css">
-
-<style>
-  .amz-wrapper { padding: 30px 40px 40px; }
-
-  .amz-intro {
-    background: #f8fafc;
-    border-left: 4px solid #dc2626;
-    padding: 24px 28px;
-    margin-bottom: 32px;
-    border-radius: 0 6px 6px 0;
-  }
-  .amz-intro h1 {
-    font-size: clamp(24px, 3.5vw, 32px);
-    font-weight: 800;
-    color: #0f172a;
-    margin: 0 0 8px;
-    letter-spacing: -0.02em;
-  }
-  .amz-intro p {
-    font-size: 14.5px;
-    color: #475569;
-    margin: 0;
-    line-height: 1.55;
-    max-width: 800px;
-  }
-
-  .amz-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 20px;
-  }
-
-  .amz-card {
-    background: #fff;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    padding: 0;
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.2s ease;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
-  .amz-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
-    border-color: #dc2626;
-  }
-
-  .amz-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 20px;
-    background: #f8fafc;
-    border-bottom: 1px solid #e2e8f0;
-    font-family: 'Courier New', monospace;
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #64748b;
-  }
-  .amz-card-header .exp { color: #dc2626; font-weight: 700; }
-  .amz-card-header .badge { color: #94a3b8; }
-
-  .amz-card-body { padding: 20px 22px 22px; flex: 1; display: flex; flex-direction: column; }
-  .amz-card h2 {
-    font-size: 18px;
-    font-weight: 800;
-    color: #0f172a;
-    line-height: 1.3;
-    margin: 0 0 12px;
-    letter-spacing: -0.01em;
-  }
-  .amz-card .resumen {
-    font-size: 14px;
-    color: #475569;
-    line-height: 1.55;
-    margin: 0 0 16px;
-  }
-
-  .amz-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    margin-bottom: 14px;
-  }
-  .amz-tag {
-    font-family: 'Courier New', monospace;
-    font-size: 10px;
-    background: #f1f5f9;
-    color: #475569;
-    padding: 3px 8px;
-    border-radius: 3px;
-    letter-spacing: 0.03em;
-  }
-
-  .amz-card .cta {
-    font-size: 13px;
-    font-weight: 700;
-    color: #dc2626;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    margin-top: auto;
-  }
-
-  .amz-callout {
-    background: #fef2f2;
-    border: 1px solid #fecaca;
-    border-radius: 6px;
-    padding: 16px 20px;
-    margin-bottom: 24px;
-    font-size: 13.5px;
-    color: #7f1d1d;
-    line-height: 1.55;
-  }
-  .amz-callout strong { color: #450a0a; }
-  .amz-callout a { color: #dc2626; font-weight: 600; }
-
-  @media (max-width: 768px) {
-    .amz-wrapper { padding: 20px 16px 30px; }
-    .amz-intro { padding: 18px 20px; }
-    .amz-grid { grid-template-columns: 1fr; gap: 14px; }
-  }
-</style>
-
-
-<meta name="author" content="Miguel Ángel Carriazo">
-<meta name="theme-color" content="#dc2626">
-<meta http-equiv="Content-Language" content="es">
-<link rel="canonical" href="https://fraudedigital.es/amenazas/">
-
-<!-- OPEN GRAPH -->
-<meta property="og:site_name" content="FraudeDigital.es">
-<meta property="og:locale" content="es_ES">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Panel de Control de Amenazas · FraudeDigital.es">
-<meta property="og:description" content="Catálogo técnico de fraudes digitales, estafas online e ingeniería social. Expedientes con guía dual para público general y profesionales de la ciberseguridad.">
-<meta property="og:url" content="https://fraudedigital.es/amenazas/">
-<meta property="og:image" content="https://fraudedigital.es/img/og-amenazas.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-
-<!-- TWITTER CARD -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Panel de Control de Amenazas · FraudeDigital.es">
-<meta name="twitter:description" content="Catálogo técnico de fraudes digitales, estafas online e ingeniería social. Expedientes con guía dual para público general y profesionales de la ciberseguridad.">
-<meta name="twitter:image" content="https://fraudedigital.es/img/og-amenazas.png">
-
-<!-- FAVICONS -->
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="manifest" href="/manifest.json">
-
-
-<!-- BREADCRUMB JSON-LD -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=3.0" name="viewport"/>
+<title>FraudeDigital.es · Mapa de Amenazas de Fraude Digital</title>
+<meta content="Mapa técnico y práctico de amenazas de fraude digital: phishing, smishing, vishing, AitM, deepfakes, SIM swapping, fraude de factura y más. Identifica el canal, el objetivo, las señales y la respuesta inmediata." name="description"/>
+<meta content="amenazas fraude digital, phishing, smishing, vishing, AitM, SIM swapping, deepfake, fraude factura, ransomware, ingeniería social" name="keywords"/>
+<meta content="index, follow" name="robots"/>
+<meta content="Miguel Ángel Carriazo" name="author"/>
+<meta content="#dc2626" name="theme-color"/>
+<meta content="es" http-equiv="Content-Language"/>
+<link href="https://fraudedigital.es/amenazas/" rel="canonical"/>
+<meta content="FraudeDigital.es" property="og:site_name"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="website" property="og:type"/>
+<meta content="Mapa de Amenazas · FraudeDigital.es" property="og:title"/>
+<meta content="Identifica cómo entra cada fraude, qué busca y cuál es la respuesta inmediata. Catálogo técnico y práctico de amenazas digitales." property="og:description"/>
+<meta content="https://fraudedigital.es/amenazas/" property="og:url"/>
+<meta content="https://fraudedigital.es/img/og-amenazas.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Mapa de Amenazas · FraudeDigital.es" name="twitter:title"/>
+<meta content="Canal, objetivo, señales, flujo del ataque y defensa principal para cada amenaza." name="twitter:description"/>
+<meta content="https://fraudedigital.es/img/og-amenazas.png" name="twitter:image"/>
+<link href="/favicon.ico" rel="icon" sizes="any"/>
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="/manifest.json" rel="manifest"/>
+<link href="../css/global.css" rel="stylesheet"/>
+<link href="../css/dossier-core.css" rel="stylesheet"/>
+<link href="../css/amenazas-panel.css?v=20260711" rel="stylesheet"/>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Inicio",
-      "item": "https://fraudedigital.es/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Amenazas",
-      "item": "https://fraudedigital.es/amenazas/"
-    }
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Inicio","item":"https://fraudedigital.es/"},
+    {"@type":"ListItem","position":2,"name":"Amenazas","item":"https://fraudedigital.es/amenazas/"}
   ]
 }
 </script>
-
-<!-- COLLECTIONPAGE + ITEMLIST JSON-LD -->
 <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Panel de Control de Amenazas",
-    "description": "Catálogo técnico de amenazas de fraude digital.",
-    "url": "https://fraudedigital.es/amenazas/",
-    "inLanguage": "es-ES",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "FraudeDigital.es",
-      "url": "https://fraudedigital.es/"
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Catálogo de expedientes técnicos",
-    "numberOfItems": 13,
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "url": "https://fraudedigital.es/amenazas/phishing-tradicional.html",
-        "name": "Phishing Tradicional"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "url": "https://fraudedigital.es/amenazas/phishing-aitm.html",
-        "name": "Phishing AitM: el secuestro de sesión que salta el 2FA"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "url": "https://fraudedigital.es/amenazas/vishing.html",
-        "name": "Vishing & Spoofing de Voz"
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "url": "https://fraudedigital.es/amenazas/smishing.html",
-        "name": "Smishing & Sender ID Fraude"
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "url": "https://fraudedigital.es/amenazas/qrishing.html",
-        "name": "QRishing & Tampering Físico"
-      },
-      {
-        "@type": "ListItem",
-        "position": 6,
-        "url": "https://fraudedigital.es/amenazas/ia-estafas.html",
-        "name": "IA Avanzada & Deepfakes"
-      },
-      {
-        "@type": "ListItem",
-        "position": 7,
-        "url": "https://fraudedigital.es/amenazas/ingenieria-social.html",
-        "name": "Ingeniería Social & OSINT"
-      },
-      {
-        "@type": "ListItem",
-        "position": 8,
-        "url": "https://fraudedigital.es/amenazas/wifi-mitm.html",
-        "name": "MITM en WiFi Públicas"
-      },
-      {
-        "@type": "ListItem",
-        "position": 9,
-        "url": "https://fraudedigital.es/amenazas/sim-swapping.html",
-        "name": "SIM Swapping & Portabilidad Fraudulenta"
-      },
-      {
-        "@type": "ListItem",
-        "position": 10,
-        "url": "https://fraudedigital.es/amenazas/invoice-fraud.html",
-        "name": "Fraude de Factura Falsa (Invoice Fraud)"
-      },
-      {
-        "@type": "ListItem",
-        "position": 11,
-        "url": "https://fraudedigital.es/amenazas/sextorsion.html",
-        "name": "Sextorsión y Chantaje Digital"
-      },
-      {
-        "@type": "ListItem",
-        "position": 12,
-        "url": "https://fraudedigital.es/amenazas/ransomware-estafa.html",
-        "name": "Ransomware como Estafa"
-      },
-      {
-        "@type": "ListItem",
-        "position": 13,
-        "url": "https://fraudedigital.es/amenazas/estafas-segunda-mano.html",
-        "name": "Estafas en Plataformas de Segunda Mano"
-      }
-    ]
-  }
-]
+{
+  "@context":"https://schema.org",
+  "@type":"CollectionPage",
+  "name":"Mapa de Amenazas de Fraude Digital",
+  "description":"Catálogo estructurado de amenazas de fraude digital con canal, objetivo, señales, flujo y respuesta inmediata.",
+  "url":"https://fraudedigital.es/amenazas/",
+  "inLanguage":"es-ES",
+  "isPartOf":{"@type":"WebSite","name":"FraudeDigital.es","url":"https://fraudedigital.es/"}
+}
 </script>
-
-
-</head>
+<link href="../css/operativa-v3.css?v=20260711" rel="stylesheet"/></head>
 <body>
-
 <div class="card-wrapper ds-page">
 <div class="card">
-
-    <div id="menu-container"></div>
-    <div class="accent-bar"></div>
-
-    <div class="ds-meta">
-        <span><span class="dot"></span>FraudeDigital // panel de amenazas</span>
-        <span>estado: <strong>infraestructura de monitorización activa</strong></span>
-    </div>
-
-    <div class="amz-wrapper">
-
-        <div class="amz-intro">
-            <h1>Panel de Amenazas</h1>
-            <p>Catálogo técnico de fraudes digitales, estafas online e ingeniería social. Cada expediente incluye guía dual: <strong>qué hacer si eres víctima</strong> y <strong>cómo funciona técnicamente</strong> para quien necesite el detalle.</p>
-        </div>
-
-        <div class="amz-callout">
-            <strong>🛡️ ¿Sabes cómo defenderte?</strong> Cada amenaza tiene una defensa concreta que la neutraliza. Consulta el <a href="../defensas/index.html">Panel de Defensas</a> para la ciberhigiene práctica que corta estos ataques de raíz.
-        </div>
-
-        <div class="amz-grid" id="grid-amenazas">
-            <!-- Las tarjetas se generan aquí vía JavaScript -->
-        </div>
-
-    </div>
-
-    <div id="footer-container"></div>
-
+<div id="menu-container"></div>
+<div class="accent-bar"></div>
+<div class="ds-meta">
+<span><span class="dot"></span>FraudeDigital // mapa de amenazas</span>
+<span>modelo: <strong>canal → objetivo → respuesta</strong></span>
+</div><div class="fd-top-back-wrap"><a class="fd-top-back" href="../index.html"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M19 12H5"></path><path d="M12 19l-7-7 7-7"></path></svg><span>Volver a Inicio</span></a></div>
+<main class="amz-wrapper">
+<div class="amz-intro">
+<h1>Mapa de Amenazas</h1>
+<p>No basta con saber el nombre de una estafa. Aquí puedes ver <strong>por dónde entra</strong>, <strong>qué persigue</strong>, las señales que suelen delatarla y la acción inmediata que reduce el impacto. Cada ficha enlaza con su expediente técnico completo.</p>
+</div>
+<div class="amz-overview">
+<div class="amz-stats">
+<div class="amz-stat"><span class="amz-stat-value" id="stat-total">—</span><span class="amz-stat-label">Amenazas analizadas</span></div>
+<div class="amz-stat"><span class="amz-stat-value" id="stat-criticas">—</span><span class="amz-stat-label">Riesgo crítico</span></div>
+<div class="amz-stat"><span class="amz-stat-value" id="stat-categorias">—</span><span class="amz-stat-label">Familias de ataque</span></div>
+</div>
+<div class="amz-callout">
+<strong>🛡️ Amenaza y defensa deben estar conectadas.</strong><br/>
+        Cada ficha identifica una defensa prioritaria. Consulta también el <a href="../defensas/">Panel de Defensas</a> para aplicar controles concretos.
+      </div>
+</div>
+<section aria-label="Filtros de amenazas" class="amz-controls">
+<div class="amz-search-wrap">
+<input aria-label="Buscar amenazas" autocomplete="off" class="amz-search" id="amz-search" placeholder="Describe lo que te ha pasado: SMS, banco, factura, voz, QR, WiFi..." type="search"/>
+<div class="amz-count" id="amz-count">0 / 0</div>
+</div>
+<div class="amz-filters" id="amz-filters"></div>
+</section>
+<section aria-live="polite" class="amz-grid" id="grid-amenazas">
+<div class="amz-empty">Cargando catálogo de amenazas…</div>
+</section>
+</main>
+<div id="footer-container"></div>
 </div>
 </div>
-
 <script src="../js/menu.js"></script>
 <script src="../js/footer.js"></script>
-
-<script>
-  // Cargar catálogo de amenazas
-  fetch('../data/amenazas.json')
-    .then(r => r.json())
-    .then(data => {
-      const amenazas = data.amenazas || [];
-      const container = document.getElementById('grid-amenazas');
-      container.innerHTML = amenazas.map(a => `
-        <a href="${a.enlace}" class="amz-card">
-          <div class="amz-card-header">
-            <span class="exp">${a.exp}</span>
-            <span class="badge">${a.badge}</span>
-          </div>
-          <div class="amz-card-body">
-            <h2>${a.titulo}</h2>
-            <p class="resumen">${a.descripcion}</p>
-            <div class="amz-tags">
-              ${(a.tags || []).slice(0, 5).map(t => `<span class="amz-tag">#${t}</span>`).join('')}
-            </div>
-            <span class="cta">Ver expediente →</span>
-          </div>
-        </a>
-      `).join('');
-    })
-    .catch(err => {
-      console.error('Error cargando amenazas:', err);
-    });
-</script>
-
+<script src="../js/amenazas.js?v=20260711"></script>
 </body>
 </html>

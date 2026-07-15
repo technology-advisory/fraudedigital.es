@@ -1,0 +1,60 @@
+
+/* FraudeDigital · Checklist Emergencia v8 */
+.em8-priority{margin:22px 0 26px}
+.em8-priority .em3-title{margin-top:0}
+.em8-priority-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.em8-priority-card{
+  display:grid;grid-template-columns:42px minmax(0,1fr);column-gap:11px;align-items:center;
+  border:1px solid #e2e8f0;background:#fff;border-radius:9px;padding:14px;
+  text-decoration:none;color:inherit;transition:.18s
+}
+.em8-priority-card:hover{border-color:#dc2626;background:#fef2f2;transform:translateY(-1px)}
+.em8-priority-icon{
+  grid-row:1/3;width:40px;height:40px;border:1px solid #e2e8f0;border-radius:9px;
+  display:flex;align-items:center;justify-content:center;background:#f8fafc;font-size:19px
+}
+.em8-priority-card strong{display:block;color:#0f172a;font-size:12.5px;line-height:1.35}
+.em8-priority-card>span:last-child{font-size:11px;color:#64748b;line-height:1.4}
+.em3-step{scroll-margin-top:18px}
+.em3-step:target{background:#fef2f2;margin-left:-14px;margin-right:-14px;padding-left:14px;padding-right:14px}
+.em8-dont{
+  margin:25px 0;border:1px solid #fecaca;border-radius:11px;background:#fff;
+  padding:20px
+}
+.em8-dont-label{
+  display:block;font:800 9px/1.2 'Courier New',monospace;letter-spacing:.09em;
+  text-transform:uppercase;color:#dc2626;margin-bottom:5px
+}
+.em8-dont h2{font-size:19px;color:#0f172a;margin:0 0 15px}
+.em8-dont-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.em8-dont-grid>div{border:1px solid #e2e8f0;background:#f8fafc;border-radius:8px;padding:13px}
+.em8-dont-grid strong{display:block;color:#0f172a;font-size:12.5px;margin-bottom:5px}
+.em8-dont-grid p{font-size:12px;line-height:1.5;color:#64748b;margin:0}
+.em8-progress{
+  display:grid;grid-template-columns:minmax(190px,.35fr) minmax(220px,1fr) auto;gap:15px;
+  align-items:center;border:1px solid #e2e8f0;background:#f8fafc;border-radius:10px;
+  padding:15px 17px;margin:22px 0
+}
+.em8-progress-label{
+  display:block;font:800 9px/1.2 'Courier New',monospace;letter-spacing:.08em;
+  text-transform:uppercase;color:#64748b;margin-bottom:4px
+}
+.em8-progress strong{font-size:13px;color:#0f172a}
+.em8-progress-bar{height:9px;background:#e2e8f0;border-radius:10px;overflow:hidden}
+.em8-progress-bar span{display:block;height:100%;width:0;background:#dc2626;transition:width .2s ease}
+.em8-progress button{
+  border:1px solid #cbd5e1;background:#fff;color:#475569;border-radius:7px;
+  padding:8px 11px;font-size:11px;font-weight:700;cursor:pointer
+}
+.em8-progress button:hover{border-color:#dc2626;color:#b91c1c}
+@media(max-width:900px){
+  .em8-priority-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .em8-progress{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .em8-priority-grid,.em8-dont-grid{grid-template-columns:1fr}
+}
+@media print{
+  .em8-priority,.em8-progress button{display:none!important}
+  .em8-progress{display:none!important}
+}

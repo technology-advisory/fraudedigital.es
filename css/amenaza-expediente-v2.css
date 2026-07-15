@@ -1,0 +1,22 @@
+
+.amz-v2-hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(310px,.75fr);gap:26px;padding:34px 48px 30px;border-bottom:1px solid #e2e8f0;background:linear-gradient(145deg,#fff 0%,#fef2f2 100%)}
+.amz-v2-kicker{font-family:'Courier New',monospace;font-size:10.5px;text-transform:uppercase;color:#dc2626;letter-spacing:.1em;font-weight:800;margin-bottom:8px}
+.amz-v2-hero h1{font-size:clamp(29px,5vw,43px);font-weight:850;color:#0f172a;margin:0 0 12px;line-height:1.12;letter-spacing:-.025em}
+.amz-v2-lead{font-size:16px;color:#475569;line-height:1.65;margin:0 0 16px;max-width:850px}
+.amz-v2-visual{background:#0f172a;border-radius:13px;padding:18px;display:flex;flex-direction:column;justify-content:center;min-height:220px;box-shadow:0 16px 35px rgba(15,23,42,.16)}
+.amz-v2-visual-label{font-family:'Courier New',monospace;font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;color:#fca5a5;margin-bottom:12px}
+.amz-v2-visual svg{width:100%;height:auto;display:block}
+.amz-v2-map{margin:0 48px 26px;border:1px solid #fecaca;background:#fff;border-radius:11px;padding:20px 22px}
+.amz-v2-map h2{font-size:17px;color:#0f172a;margin:0 0 4px}
+.amz-v2-map p{font-size:13px;color:#64748b;line-height:1.55;margin:0 0 15px}
+.amz-v2-map-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+.amz-v2-map-card{border:1px solid #e2e8f0;background:#f8fafc;border-radius:8px;padding:14px}
+.amz-v2-map-card svg{width:25px;height:25px;margin-bottom:8px}
+.amz-v2-map-label{font-family:'Courier New',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#dc2626;font-weight:800;margin-bottom:4px}
+.amz-v2-map-value{font-size:13px;line-height:1.5;color:#334155;font-weight:700}
+.amz-v2-pattern{margin:30px 0 6px;padding:22px 24px;border:1px solid #fed7aa;border-radius:10px;background:#fff7ed}
+.amz-v2-pattern .eyebrow{font-family:'Courier New',monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:#c2410c;font-weight:800}
+.amz-v2-pattern h2{font-size:20px!important;margin:5px 0 6px!important;color:#0f172a!important}
+.amz-v2-pattern p{font-size:13.5px;color:#7c2d12;line-height:1.6;margin:0}
+@media(max-width:900px){.amz-v2-hero{grid-template-columns:1fr}.amz-v2-map-grid{grid-template-columns:1fr}}
+@media(max-width:768px){.amz-v2-hero{padding:26px 16px 22px}.amz-v2-map{margin:0 16px 22px;padding:17px}.amz-v2-pattern{padding:18px 16px}}

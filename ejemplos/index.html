@@ -1,263 +1,34 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Casos Reales · FraudeDigital.es</title>
-<meta name="description" content="Casos reales de fraude digital analizados técnicamente: acceso remoto vía AnyDesk, ofertas de trabajo fraudulentas, deepfakes de voz, apps de trading falsas y más.">
-<meta name="keywords" content="casos reales fraude, ejemplos estafa online, análisis forense fraude, casos ciberseguridad reales, AnyDesk fraude, deepfake caso real">
-<meta name="author" content="Miguel Ángel Carriazo">
-<meta name="theme-color" content="#dc2626">
-<meta name="robots" content="index, follow">
-<meta http-equiv="Content-Language" content="es">
-
-<link rel="canonical" href="https://fraudedigital.es/ejemplos/">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="manifest" href="/manifest.json">
-
-<meta property="og:site_name" content="FraudeDigital.es">
-<meta property="og:locale" content="es_ES">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Casos Reales · FraudeDigital.es">
-<meta property="og:description" content="Casos reales de fraude digital analizados técnicamente. Aprende de los errores ajenos sin exponer a las víctimas.">
-<meta property="og:url" content="https://fraudedigital.es/ejemplos/">
-<meta property="og:image" content="https://fraudedigital.es/img/og-ejemplos.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Casos Reales · FraudeDigital.es">
-<meta name="twitter:description" content="Casos reales de fraude digital analizados técnicamente.">
-<meta name="twitter:image" content="https://fraudedigital.es/img/og-ejemplos.png">
-
-<link rel="stylesheet" href="../css/global.css">
-<link rel="stylesheet" href="../css/dossier-core.css">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Casos Reales de Fraude Digital",
-  "description": "Análisis técnicos de casos reales de fraude digital.",
-  "url": "https://fraudedigital.es/ejemplos/",
-  "inLanguage": "es-ES"
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://fraudedigital.es/"},
-    {"@type": "ListItem", "position": 2, "name": "Casos reales", "item": "https://fraudedigital.es/ejemplos/"}
-  ]
-}
-</script>
-
-<style>
-  .ej-wrapper { padding: 30px 40px 40px; }
-
-  .ej-intro {
-    background: #f8fafc;
-    border-left: 4px solid #dc2626;
-    padding: 24px 28px;
-    margin-bottom: 32px;
-    border-radius: 0 6px 6px 0;
-  }
-  .ej-intro h1 {
-    font-size: clamp(24px, 3.5vw, 32px);
-    font-weight: 800;
-    color: #0f172a;
-    margin: 0 0 8px;
-    letter-spacing: -0.02em;
-  }
-  .ej-intro p {
-    font-size: 14.5px;
-    color: #475569;
-    margin: 0;
-    line-height: 1.55;
-    max-width: 800px;
-  }
-
-  .ej-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 20px;
-  }
-
-  .ej-card {
-    background: #fff;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    padding: 0;
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.2s ease;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
-  .ej-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
-    border-color: #dc2626;
-  }
-
-  .ej-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 20px;
-    background: #f8fafc;
-    border-bottom: 1px solid #e2e8f0;
-    font-family: 'Courier New', monospace;
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #64748b;
-  }
-  .ej-card-header .cat { color: #dc2626; font-weight: 700; }
-  .ej-card-header .date { color: #94a3b8; }
-
-  .ej-card-body { padding: 20px 22px 22px; flex: 1; }
-  .ej-card h2 {
-    font-size: 18px;
-    font-weight: 800;
-    color: #0f172a;
-    line-height: 1.3;
-    margin: 0 0 6px;
-    letter-spacing: -0.01em;
-  }
-  .ej-card .subtitle {
-    font-size: 13.5px;
-    color: #dc2626;
-    font-weight: 600;
-    line-height: 1.4;
-    margin: 0 0 12px;
-  }
-  .ej-card .resumen {
-    font-size: 14px;
-    color: #475569;
-    line-height: 1.55;
-    margin: 0 0 16px;
-  }
-
-  .ej-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    margin-bottom: 14px;
-  }
-  .ej-tag {
-    font-family: 'Courier New', monospace;
-    font-size: 10px;
-    background: #f1f5f9;
-    color: #475569;
-    padding: 3px 8px;
-    border-radius: 3px;
-    letter-spacing: 0.03em;
-  }
-
-  .ej-card .cta {
-    font-size: 13px;
-    font-weight: 700;
-    color: #dc2626;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    margin-top: auto;
-  }
-
-  .ej-callout {
-    background: #eff6ff;
-    border: 1px solid #bfdbfe;
-    border-radius: 6px;
-    padding: 16px 20px;
-    margin-bottom: 24px;
-    font-size: 13.5px;
-    color: #1e40af;
-    line-height: 1.55;
-  }
-  .ej-callout strong { color: #1e3a8a; }
-
-  @media (max-width: 768px) {
-    .ej-wrapper { padding: 20px 16px 30px; }
-    .ej-intro { padding: 18px 20px; }
-    .ej-grid { grid-template-columns: 1fr; gap: 14px; }
-  }
-</style>
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=3.0" name="viewport"/>
+<title>Casos Reales Analizados · FraudeDigital.es</title>
+<meta content="Casos reales de fraude digital analizados desde el vector, la secuencia del ataque, los indicadores y las lecciones defensivas." name="description"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://fraudedigital.es/ejemplos/" rel="canonical"/>
+<link href="../css/global.css" rel="stylesheet"/>
+<link href="../css/dossier-core.css" rel="stylesheet"/>
+<link href="../css/casos-v2.css?v=20260711" rel="stylesheet"/>
+<link href="../css/operativa-v3.css?v=20260711" rel="stylesheet"/></head>
 <body>
-
-<div class="card-wrapper ds-page">
-<div class="card">
-
-  <div id="menu-container"></div>
-  <div class="accent-bar"></div>
-
-  <div class="ds-meta">
-    <span><span class="dot"></span>FraudeDigital // sección: EJEMPLOS · CASOS REALES</span>
-    <span>estado: <strong>análisis técnicos publicados</strong></span>
-  </div>
-
-  <div class="ej-wrapper">
-
-    <div class="ej-intro">
-      <h1>Casos Reales</h1>
-      <p>Análisis técnicos de casos de fraude digital <strong>que han ocurrido de verdad</strong>. La idea no es señalar a nadie sino aprender del error: cómo empezó, qué se pasó por alto, qué habría cortado la cadena. <strong>Ningún caso identifica a víctimas ni a atacantes concretos</strong>: se anonimiza y se centra en la técnica.</p>
-    </div>
-
-    <div class="ej-callout">
-      <strong>Por qué esta sección existe:</strong> la mayor parte de las víctimas de fraude no lo cuentan por vergüenza. Y sin casos contados, el resto seguimos cayendo en las mismas trampas. Aquí desmontamos técnicas concretas para que la próxima vez las reconozcas antes.
-    </div>
-
-    <div class="ej-grid" id="ej-container">
-      <!-- Se rellena vía JS desde data/ejemplos.json -->
-    </div>
-
-  </div>
-
-  <div id="footer-container"></div>
-
+<div class="card-wrapper ds-page"><div class="card">
+<div id="menu-container"></div><div class="accent-bar" style="background:#2563eb"></div>
+<div class="ds-meta"><span><span class="dot" style="background:#2563eb"></span>FraudeDigital // casos reales</span><span>modelo: <strong>hechos → secuencia → lección</strong></span></div><div class="fd-top-back-wrap"><a class="fd-top-back" href="../index.html"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M19 12H5"></path><path d="M12 19l-7-7 7-7"></path></svg><span>Volver a Inicio</span></a></div>
+<main class="ej2-wrapper">
+<div class="ej2-intro"><h1>Casos Reales Analizados</h1><p>No son ejemplos inventados. Son patrones y casos de fraude que permiten estudiar <strong>cómo empezó</strong>, <strong>cómo escaló</strong> y <strong>qué decisión habría roto la cadena</strong>. Los datos personales se anonimizan cuando corresponde.</p></div>
+<div class="ej2-stats">
+<div class="ej2-stat"><span class="ej2-stat-value" id="ej2-total">—</span><span class="ej2-stat-label">Casos analizados</span></div>
+<div class="ej2-stat"><span class="ej2-stat-value" id="ej2-destacados">—</span><span class="ej2-stat-label">Casos destacados</span></div>
+<div class="ej2-stat"><span class="ej2-stat-value" id="ej2-categorias">—</span><span class="ej2-stat-label">Familias de fraude</span></div>
 </div>
-</div>
-
-<script src="../js/menu.js"></script>
-<script src="../js/footer.js"></script>
-
-<script>
-  // Cargar catálogo
-  fetch('../data/ejemplos.json')
-    .then(r => r.json())
-    .then(data => {
-      const casos = data.casos || [];
-      const container = document.getElementById('ej-container');
-      container.innerHTML = casos.map(c => `
-        <a href="${c.enlace}" class="ej-card">
-          <div class="ej-card-header">
-            <span class="cat">${c.categoria}</span>
-            <span class="date">${c.fecha}</span>
-          </div>
-          <div class="ej-card-body">
-            <h2>${c.titulo}</h2>
-            <p class="subtitle">${c.subtitulo}</p>
-            <p class="resumen">${c.resumen}</p>
-            <div class="ej-tags">
-              ${(c.tags || []).slice(0, 5).map(t => `<span class="ej-tag">#${t}</span>`).join('')}
-            </div>
-            <span class="cta">Leer análisis →</span>
-          </div>
-        </a>
-      `).join('');
-    })
-    .catch(err => {
-      console.error('Error cargando ejemplos:', err);
-    });
-</script>
-
+<section class="ej2-controls"><input class="ej2-search" id="ej2-search" placeholder="Busca por voz, acceso remoto, inversión, trabajo..." type="search"/></section>
+<div style="font-family:'Courier New',monospace;font-size:11px;color:#64748b;margin-bottom:12px;"><span id="ej2-count">0</span> casos visibles</div>
+<section class="ej2-grid" id="ej2-grid"><div class="ej2-empty">Cargando casos…</div></section>
+</main>
+<div id="footer-container"></div>
+</div></div>
+<script src="../js/menu.js"></script><script src="../js/footer.js"></script><script src="../js/casos.js?v=20260711"></script>
 </body>
 </html>

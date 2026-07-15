@@ -1,0 +1,133 @@
+{
+  "actualizado": "2026-07-12",
+  "historias": [
+    {
+      "id": "prisa",
+      "num": "01",
+      "title": "¿Por qué tienen tanta prisa?",
+      "subtitle": "Cuando alguien necesita que decidas ya, a mí se me enciende una luz.",
+      "label": "La prisa como herramienta",
+      "enlace": "prisa.html"
+    },
+    {
+      "id": "numero-banco",
+      "num": "02",
+      "title": "Pero si el número era el del banco...",
+      "subtitle": "Entiendo perfectamente que hayas confiado. Ese es precisamente el problema.",
+      "label": "La confianza visual",
+      "enlace": "numero-banco.html"
+    },
+    {
+      "id": "he-pulsado",
+      "num": "03",
+      "title": "He pulsado un enlace. ¿La he liado?",
+      "subtitle": "Lo primero: tranquilízate. Ahora necesito saber qué pasó después.",
+      "label": "Entender el impacto",
+      "enlace": "he-pulsado.html"
+    },
+    {
+      "id": "protege-correo",
+      "num": "04",
+      "title": "¿Por qué te digo que protejas primero tu correo?",
+      "subtitle": "Porque, para muchas personas, el correo es la llave de su vida digital.",
+      "label": "La llave de recuperación",
+      "enlace": "protege-correo.html"
+    },
+    {
+      "id": "codigo",
+      "num": "05",
+      "title": "Ese código que te llega no es para el que te llama",
+      "subtitle": "Si alguien te pide un código que acaba de llegar a tu móvil, para.",
+      "label": "OTP y aprobaciones",
+      "enlace": "codigo.html"
+    },
+    {
+      "id": "verguenza",
+      "num": "06",
+      "title": "No te dé vergüenza decirlo",
+      "subtitle": "Prefiero una falsa alarma cinco minutos después que enterarme tres días tarde.",
+      "label": "Avisar a tiempo",
+      "enlace": "verguenza.html"
+    },
+    {
+      "id": "dni",
+      "num": "07",
+      "title": "¿Qué puede pasar por mandar una foto de mi DNI?",
+      "subtitle": "No siempre ocurre algo al día siguiente. Y precisamente por eso es fácil olvidarlo.",
+      "label": "Identidad y exposición",
+      "enlace": "dni.html"
+    },
+    {
+      "id": "otro-canal",
+      "num": "08",
+      "title": "Cuando algo no cuadra, verifica por otro canal",
+      "subtitle": "Esta es probablemente la regla más sencilla de todas.",
+      "label": "Romper el canal",
+      "enlace": "otro-canal.html"
+    },
+    {
+      "id": "jefe-whatsapp",
+      "num": "09",
+      "title": "Mi jefe me pide una transferencia por WhatsApp",
+      "subtitle": "Que la petición sea posible no significa que esa conversación sea auténtica.",
+      "label": "Autoridad y urgencia",
+      "enlace": "jefe-whatsapp.html"
+    },
+    {
+      "id": "voz-familiar",
+      "num": "10",
+      "title": "Mi madre jamás diría eso... ¿o sí?",
+      "subtitle": "Una voz familiar puede hacer que dejes de analizar la historia.",
+      "label": "Voz, emoción e IA",
+      "enlace": "voz-familiar.html"
+    },
+    {
+      "id": "sabe-mi-nombre",
+      "num": "11",
+      "title": "No conozco a esa persona, pero sabe mi nombre",
+      "subtitle": "Que sepan cosas sobre ti no demuestra que sean quienes dicen ser.",
+      "label": "Datos y credibilidad",
+      "enlace": "sabe-mi-nombre.html"
+    },
+    {
+      "id": "qr",
+      "num": "12",
+      "title": "Ese QR no parece peligroso",
+      "subtitle": "El problema es que el enlace está escondido hasta que lo escaneas.",
+      "label": "QR y confianza física",
+      "enlace": "qr.html"
+    },
+    {
+      "id": "actualizaciones",
+      "num": "13",
+      "title": "Actualizar no es porque tu móvil se esté haciendo viejo",
+      "subtitle": "Muchas actualizaciones corrigen puertas que alguien ya ha aprendido a abrir.",
+      "label": "Higiene y actualizaciones",
+      "enlace": "actualizaciones.html"
+    },
+    {
+      "id": "misma-contrasena",
+      "num": "14",
+      "title": "La misma contraseña en todas partes: cómodo hasta que deja de serlo",
+      "subtitle": "El problema no es solo que descubran una contraseña. Es cuántas puertas abre.",
+      "label": "Contraseñas y reutilización",
+      "enlace": "misma-contrasena.html"
+    },
+    {
+      "id": "copias",
+      "num": "15",
+      "title": "¿Para qué voy a hacer una copia si nunca me ha pasado nada?",
+      "subtitle": "La copia de seguridad suele parecer innecesaria hasta el día que la necesitas.",
+      "label": "Copias y recuperación",
+      "enlace": "copias.html"
+    },
+    {
+      "id": "wifi-hotel",
+      "num": "16",
+      "title": "En el Wi‑Fi del hotel solo voy a mirar el correo",
+      "subtitle": "La seguridad no depende únicamente de si vas a hacer una transferencia.",
+      "label": "Redes y dispositivos",
+      "enlace": "wifi-hotel.html"
+    }
+  ]
+}

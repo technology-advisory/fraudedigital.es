@@ -1,45 +1,41 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>El caso del falso soporte técnico con AnyDesk · FraudeDigital.es</title>
-<meta name="description" content="Análisis técnico de un caso real: cómo una llamada de 40 minutos y la instalación de AnyDesk vaciaron una cuenta corriente. Anatomía y defensa.">
-<meta name="keywords" content="anydesk fraude, teamviewer estafa, falso soporte técnico, vishing bancario, acceso remoto estafa">
-<meta name="author" content="Miguel Ángel Carriazo">
-<meta name="theme-color" content="#dc2626">
-<meta name="robots" content="index, follow">
-<meta http-equiv="Content-Language" content="es">
-
-<link rel="canonical" href="https://fraudedigital.es/ejemplos/acceso-remoto-anydesk.html">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="manifest" href="/manifest.json">
-
-<meta property="og:site_name" content="FraudeDigital.es">
-<meta property="og:locale" content="es_ES">
-<meta property="og:type" content="article">
-<meta property="og:title" content="El caso del falso soporte técnico con AnyDesk">
-<meta property="og:description" content="Cómo una llamada de 40 minutos y la instalación de AnyDesk vaciaron una cuenta corriente. Anatomía técnica y defensa.">
-<meta property="og:url" content="https://fraudedigital.es/ejemplos/acceso-remoto-anydesk.html">
-<meta property="og:image" content="https://fraudedigital.es/img/og-ejemplos.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="article:published_time" content="2026-07-02">
-<meta property="article:author" content="Miguel Ángel Carriazo">
-<meta property="article:section" content="Casos reales">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="El caso del falso soporte técnico con AnyDesk">
-<meta name="twitter:description" content="Cómo una llamada de 40 minutos vació una cuenta corriente.">
-<meta name="twitter:image" content="https://fraudedigital.es/img/og-ejemplos.png">
-
-<link rel="stylesheet" href="../css/global.css">
-<link rel="stylesheet" href="../css/dossier-core.css">
-<link rel="stylesheet" href="../css/ejemplos.css">
-
+<meta content="Análisis técnico de un caso real: cómo una llamada de 40 minutos y la instalación de AnyDesk vaciaron una cuenta corriente. Anatomía y defensa." name="description"/>
+<meta content="anydesk fraude, teamviewer estafa, falso soporte técnico, vishing bancario, acceso remoto estafa" name="keywords"/>
+<meta content="Miguel Ángel Carriazo" name="author"/>
+<meta content="#dc2626" name="theme-color"/>
+<meta content="index, follow" name="robots"/>
+<meta content="es" http-equiv="Content-Language"/>
+<link href="https://fraudedigital.es/ejemplos/acceso-remoto-anydesk.html" rel="canonical"/>
+<link href="/favicon.ico" rel="icon" sizes="any"/>
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="/manifest.json" rel="manifest"/>
+<meta content="FraudeDigital.es" property="og:site_name"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="article" property="og:type"/>
+<meta content="El caso del falso soporte técnico con AnyDesk" property="og:title"/>
+<meta content="Cómo una llamada de 40 minutos y la instalación de AnyDesk vaciaron una cuenta corriente. Anatomía técnica y defensa." property="og:description"/>
+<meta content="https://fraudedigital.es/ejemplos/acceso-remoto-anydesk.html" property="og:url"/>
+<meta content="https://fraudedigital.es/img/og-ejemplos.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="2026-07-02" property="article:published_time"/>
+<meta content="Miguel Ángel Carriazo" property="article:author"/>
+<meta content="Casos reales" property="article:section"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="El caso del falso soporte técnico con AnyDesk" name="twitter:title"/>
+<meta content="Cómo una llamada de 40 minutos vació una cuenta corriente." name="twitter:description"/>
+<meta content="https://fraudedigital.es/img/og-ejemplos.png" name="twitter:image"/>
+<link href="../css/global.css" rel="stylesheet"/>
+<link href="../css/dossier-core.css" rel="stylesheet"/>
+<link href="../css/ejemplos.css" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -55,7 +51,6 @@
   "inLanguage": "es-ES"
 }
 </script>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -67,229 +62,191 @@
   ]
 }
 </script>
-</head>
+<link href="../css/casos-v2.css?v=20260711" rel="stylesheet"/><link href="../css/operativa-v3.css?v=20260711" rel="stylesheet"/></head>
 <body>
-
 <div class="card-wrapper ds-page">
 <div class="card">
-
-  <div id="menu-container"></div>
-  <div class="accent-bar"></div>
-
-  <div class="ds-meta">
-    <span><span class="dot"></span>FraudeDigital // caso: EJ-001</span>
-    <span>estado: <strong>caso analizado · anonimizado</strong></span>
-  </div>
-
-  <div class="caso-layout">
-  <div class="caso-main">
-  <div class="caso-wrapper">
-
-    <div class="caso-header">
-      <div class="caso-exp">CASO EJ-001 · ACCESO REMOTO</div>
-      <h1>El caso del falso soporte técnico con AnyDesk</h1>
-      <p class="subtitle">Cómo una llamada de 40 minutos vació una cuenta corriente</p>
-      <div class="caso-meta">
-        <div><strong>Categoría:</strong> Vishing + Acceso remoto</div>
-        <div><strong>Perfil víctima:</strong> Usuario doméstico &gt;55 años</div>
-        <div><strong>Impacto:</strong> ~7.400 € en transferencias</div>
-      </div>
-    </div>
-
-    <div class="caso-tldr">
-      <div class="label">Resumen ejecutivo</div>
-      <p>Un ciudadano recibe una llamada de un supuesto "técnico de Microsoft" avisándole de un problema de seguridad grave. Le guía para instalar <strong>AnyDesk</strong> con la excusa de "revisar el ordenador". Una vez dentro, el atacante espera a que la víctima entre en su banca online y ejecuta transferencias en directo mientras mantiene la conversación distraída. La banca online no distingue entre la víctima y el atacante porque técnicamente <strong>la sesión la abre la víctima</strong>.</p>
-    </div>
-
-
-    <h2 id="s1" data-num="01">Cómo empieza</h2>
-
-    <p>La víctima recibe una llamada en fijo. Voz masculina, acento neutro, aparente calma profesional. Se identifica como <strong>"Departamento de Seguridad Microsoft"</strong> (variante: "operador de tu operadora de internet", "técnico de tu banco"). El motivo alegado:</p>
-
-    <div class="caso-quote">
+<div id="menu-container"></div>
+<div class="accent-bar"></div>
+<div class="ds-meta">
+<span><span class="dot"></span>FraudeDigital // caso: EJ-001</span>
+<span>estado: <strong>caso analizado · anonimizado</strong></span>
+</div><div class="fd-top-back-wrap"><a class="fd-top-back" href="index.html"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M19 12H5"></path><path d="M12 19l-7-7 7-7"></path></svg><span>Volver a Casos Reales</span></a></div><section class="case2-hero">
+<div>
+<div class="case2-kicker">Acceso remoto · Caso real analizado</div>
+<h1>El caso del falso soporte técnico con AnyDesk</h1>
+<p class="case2-lead">Cómo una llamada de 40 minutos vació una cuenta corriente</p>
+</div>
+<div class="case2-visual">
+<div class="case2-visual-label">Secuencia observada</div>
+<svg aria-label="Flujo típico del ataque" role="img" viewbox="0 0 500 112"><rect fill="#1e293b" height="42" rx="8" stroke="#475569" width="130" x="15" y="36"></rect><text fill="#f8fafc" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" x="80" y="61">Pretexto técnico</text><line stroke="#2563eb" stroke-width="2" x1="149" x2="176" y1="57" y2="57"></line><path d="M176 57 l-8 -5 v10 z" fill="#2563eb"></path><rect fill="#1e293b" height="42" rx="8" stroke="#475569" width="130" x="185" y="36"></rect><text fill="#f8fafc" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" x="250" y="61">AnyDesk</text><line stroke="#2563eb" stroke-width="2" x1="319" x2="346" y1="57" y2="57"></line><path d="M346 57 l-8 -5 v10 z" fill="#2563eb"></path><rect fill="#1e293b" height="42" rx="8" stroke="#475569" width="130" x="355" y="36"></rect><text fill="#f8fafc" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" x="420" y="61">Control del equipo</text></svg>
+</div>
+</section><section class="case2-map"><div class="case2-map-grid"><div class="case2-map-card"><div class="case2-map-label">Vector</div><div class="case2-map-value">Ingeniería social + remote access</div></div><div class="case2-map-card"><div class="case2-map-label">Punto de ruptura</div><div class="case2-map-value">No instalar ni compartir códigos</div></div><div class="case2-map-card"><div class="case2-map-label">Lección</div><div class="case2-map-value">El soporte legítimo no necesita improvisar el control</div></div></div></section><div class="caso-layout">
+<div class="caso-main">
+<div class="caso-wrapper">
+<div class="caso-header">
+<div class="caso-exp">CASO EJ-001 · ACCESO REMOTO</div>
+<h1>El caso del falso soporte técnico con AnyDesk</h1>
+<p class="subtitle">Cómo una llamada de 40 minutos vació una cuenta corriente</p>
+<div class="caso-meta">
+<div><strong>Categoría:</strong> Vishing + Acceso remoto</div>
+<div><strong>Perfil víctima:</strong> Usuario doméstico &gt;55 años</div>
+<div><strong>Impacto:</strong> ~7.400 € en transferencias</div>
+</div>
+</div>
+<div class="caso-tldr">
+<div class="label">Resumen ejecutivo</div>
+<p>Un ciudadano recibe una llamada de un supuesto "técnico de Microsoft" avisándole de un problema de seguridad grave. Le guía para instalar <strong>AnyDesk</strong> con la excusa de "revisar el ordenador". Una vez dentro, el atacante espera a que la víctima entre en su banca online y ejecuta transferencias en directo mientras mantiene la conversación distraída. La banca online no distingue entre la víctima y el atacante porque técnicamente <strong>la sesión la abre la víctima</strong>.</p>
+</div>
+<h2 data-num="01" id="s1">Cómo empieza</h2>
+<p>La víctima recibe una llamada en fijo. Voz masculina, acento neutro, aparente calma profesional. Se identifica como <strong>"Departamento de Seguridad Microsoft"</strong> (variante: "operador de tu operadora de internet", "técnico de tu banco"). El motivo alegado:</p>
+<div class="caso-quote">
       "Hemos detectado un <strong>ataque en curso</strong> a su equipo desde una dirección IP de Rusia. Necesitamos revisar su sistema inmediatamente para bloquear el intruso antes de que acceda a sus cuentas bancarias."
     </div>
-
-    <p>El gancho técnico funciona por dos razones:</p>
-
-    <ol>
-      <li><strong>Autoridad + urgencia</strong>: se presenta como un tercero con conocimiento privilegiado ("hemos detectado") y añade una amenaza inmediata sobre el banco.</li>
-      <li><strong>Ambigüedad técnica</strong>: la mayoría de usuarios no sabe distinguir Microsoft de su ISP de su banco. Todos son "el ordenador".</li>
-    </ol>
-
-
-    <h2 id="s2" data-num="02">La cadena de instalación</h2>
-
-    <p>Una vez ganada la atención, el atacante conduce a la víctima paso a paso:</p>
-
-    <div class="caso-step">
-      <div class="caso-step-num">01</div>
-      <div class="caso-step-body">
-        <h3>Abrir el navegador</h3>
-        <p>Le pide que abra el navegador (cualquiera). Le dicta la dirección <code>anydesk.com</code> o similar. Aquí no hay engaño: <strong>AnyDesk es un software legítimo</strong>. Ese es precisamente el problema — el fraude usa una herramienta lícita.</p>
-      </div>
-    </div>
-
-    <div class="caso-step">
-      <div class="caso-step-num">02</div>
-      <div class="caso-step-body">
-        <h3>Descarga e instalación</h3>
-        <p>Guía a la víctima para descargar e instalar AnyDesk. La víctima ve una web legítima, un instalador firmado y un antivirus que no protesta. Todo "parece normal", lo que refuerza la confianza.</p>
-      </div>
-    </div>
-
-    <div class="caso-step">
-      <div class="caso-step-num">03</div>
-      <div class="caso-step-body">
-        <h3>Dictar el ID de 9 dígitos</h3>
-        <p>Al abrirse AnyDesk, muestra un ID numérico único de esa máquina. El atacante lo <strong>pide por teléfono</strong>. Con ese ID (y la confirmación de la víctima al pulsar "aceptar"), obtiene <strong>control total del escritorio</strong>.</p>
-      </div>
-    </div>
-
-    <div class="caso-step">
-      <div class="caso-step-num">04</div>
-      <div class="caso-step-body">
-        <h3>Distracción: la "revisión falsa"</h3>
-        <p>El atacante mueve el ratón, abre el visor de eventos, ejecuta comandos <code>netstat</code> u <code>ipconfig</code>: nada real, puro teatro para justificar el tiempo. Mientras, va guiando: <em>"Ahora necesito que entre en su banca para verificar que no le han robado nada"</em>.</p>
-      </div>
-    </div>
-
-    <div class="caso-step">
-      <div class="caso-step-num">05</div>
-      <div class="caso-step-body">
-        <h3>La transferencia en directo</h3>
-        <p>La víctima abre su banca online. El atacante, <strong>viéndolo todo</strong>, dice "voy a pantallar en negro para que no interfiera nada". AnyDesk permite oscurecer la pantalla remota. Con la víctima "cegada" pero con la sesión bancaria abierta, el atacante <strong>ejecuta transferencias reales</strong>. Cuando llega el SMS del banco pidiendo el código de confirmación, el atacante lo pide "para verificar la seguridad". La víctima lo dicta.</p>
-      </div>
-    </div>
-
-
-    <h2 id="s3" data-num="03">Por qué funcionó</h2>
-
-    <p>Este ataque no explota una vulnerabilidad técnica; explota <strong>vulnerabilidades humanas</strong>:</p>
-
-    <ul>
-      <li><strong>Presión temporal</strong>: 40 minutos sin dejar respirar. No hay margen para colgar y pensar.</li>
-      <li><strong>Autoridad falsa</strong>: "soy Microsoft" es equivalente a "soy Dios" para una parte del público.</li>
-      <li><strong>Confianza en el software legítimo</strong>: AnyDesk no es malware. El antivirus no salta.</li>
-      <li><strong>Codigo SMS entregado voluntariamente</strong>: la víctima nunca escribió sus claves — pero <em>dictó</em> el código de doble factor.</li>
-      <li><strong>Pantalla en negro</strong>: la víctima no ve el ataque en tiempo real. Cree que el técnico está "arreglando algo".</li>
-    </ul>
-
-    <div class="caso-warn">
-      <strong>Punto crítico:</strong> desde la perspectiva del banco, esta es una <em>operación autorizada por el titular</em>: se realiza desde el ordenador habitual, con las credenciales correctas y con el segundo factor confirmado. Discutir después que "no fue tú" es una batalla técnica muy dura.
-    </div>
-
-
-    <h2 id="s4" data-num="04">Indicadores para reconocerlo</h2>
-
-    <table class="caso-ioc">
-      <thead>
-        <tr>
-          <th>Señal</th>
-          <th>Qué significa</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Llamada no solicitada</td>
-          <td>Microsoft, tu ISP y tu banco <strong>nunca</strong> te llaman avisándote de "un ataque en curso".</td>
-        </tr>
-        <tr>
-          <td>Piden instalar software</td>
-          <td>AnyDesk, TeamViewer, LogMeIn, Quick Assist, ISL Online, Zoho Assist… si alguien por teléfono te pide instalar cualquier programa de acceso remoto, cuelga.</td>
-        </tr>
-        <tr>
-          <td>Piden dictar un ID de 9 dígitos</td>
-          <td>Ese ID + tu confirmación = entrega de la máquina.</td>
-        </tr>
-        <tr>
-          <td>Insisten en no colgar</td>
-          <td>La estafa depende de mantenerte al teléfono. Si insisten "no cuelgue bajo ningún concepto", cuelga.</td>
-        </tr>
-        <tr>
-          <td>Piden abrir la banca online</td>
-          <td>Nunca hay razón legítima para que un "técnico" necesite ver tu banco.</td>
-        </tr>
-        <tr>
-          <td>Piden códigos SMS</td>
-          <td>Ninguna entidad legítima te pedirá <strong>nunca</strong> un código enviado por SMS o app. Ninguna.</td>
-        </tr>
-      </tbody>
-    </table>
-
-
-    <h2 id="s5" data-num="05">Cómo cortarlo (si aún estás a tiempo)</h2>
-
-    <ol>
-      <li><strong>Cuelga inmediatamente.</strong> No importa lo que digan. No hay contexto en el que colgar sea peligroso.</li>
-      <li><strong>Cierra el ordenador de red</strong> (desenchufa el cable, apaga el Wi-Fi).</li>
-      <li><strong>Desinstala AnyDesk / TeamViewer / etc.</strong> Reinicia.</li>
-      <li><strong>Llama a tu banco al número del reverso de la tarjeta</strong> (no al que te dijeron por teléfono) y bloquea cuentas y tarjetas.</li>
-      <li><strong>Cambia contraseñas críticas</strong> desde otro dispositivo limpio (móvil, si el ordenador estaba comprometido).</li>
-      <li><strong>Denuncia</strong> — <a href="../herramientas/generador-denuncias.html">usa el generador de denuncias</a> para preparar el escrito con los datos técnicos.</li>
-    </ol>
-
-
-    <div class="caso-lesson">
-      <div class="label">Lección clave</div>
-      <p><strong>Ningún soporte técnico legítimo del planeta necesita acceso remoto a tu ordenador para "verificar tu banco".</strong> Si esa frase aparece en una llamada, no es un profesional distraído: es un atacante. La ausencia de malware no significa ausencia de fraude: la mayoría de estos ataques usan software 100% legítimo.</p>
-    </div>
-
-
-    <h2 id="s6" data-num="06">Contexto y prevención estructural</h2>
-
-    <p>Este vector — <strong>acceso remoto vía herramienta lícita</strong> — se conoce en el sector como <em>Remote Access Trojan by consent</em>: el atacante no necesita comprometer nada porque la víctima le abre la puerta. Cuando llega al banco, técnicamente es un fraude autorizado.</p>
-
-    <p>Para reducir la superficie de ataque a nivel doméstico:</p>
-
-    <ul>
-      <li><strong>Denegar por defecto la instalación de software remoto</strong> en cuentas de personas mayores. Cuenta de usuario sin permisos de administrador.</li>
-      <li><strong>Enseñar la regla:</strong> "si me llaman diciendo que hay un problema con el ordenador o el banco, cuelgo y llamo yo".</li>
-      <li><strong>Notificaciones push del banco</strong> activadas, con confirmación explícita de operación por app.</li>
-      <li><strong>Límites diarios bajos</strong> en transferencias por defecto (activables temporalmente cuando se necesite un importe mayor).</li>
-    </ul>
-
-
-    <div class="caso-nav">
-      <a href="index.html">← Volver a Casos reales</a>
-      <a href="../herramientas/generador-denuncias.html">Generar denuncia →</a>
-    </div>
-
-  </div>
-  </div>
-
-  <aside class="caso-toc">
-    <div class="caso-toc-ficha">
-      <div class="label">Ficha del caso</div>
-      <dl>
-        <dt>Categoría</dt><dd>Vishing + Acceso remoto</dd>
-        <dt>Impacto</dt><dd>~7.400 €</dd>
-        <dt>Vector</dt><dd>AnyDesk (legítimo)</dd>
-      </dl>
-    </div>
-    <div>
-      <div class="caso-toc-label">Contenido</div>
-      <nav class="caso-toc-nav" id="casoTocNav">
-        <a href="#s1" class="active">01. Cómo empieza</a>
-        <a href="#s2">02. La cadena de instalación</a>
-        <a href="#s3">03. Por qué funcionó</a>
-        <a href="#s4">04. Indicadores</a>
-        <a href="#s5">05. Cómo cortarlo</a>
-        <a href="#s6">06. Prevención estructural</a>
-      </nav>
-    </div>
-  </aside>
-
-  </div>
-
-  <div id="footer-container"></div>
-
+<p>El gancho técnico funciona por dos razones:</p>
+<ol>
+<li><strong>Autoridad + urgencia</strong>: se presenta como un tercero con conocimiento privilegiado ("hemos detectado") y añade una amenaza inmediata sobre el banco.</li>
+<li><strong>Ambigüedad técnica</strong>: la mayoría de usuarios no sabe distinguir Microsoft de su ISP de su banco. Todos son "el ordenador".</li>
+</ol>
+<h2 data-num="02" id="s2">La cadena de instalación</h2>
+<p>Una vez ganada la atención, el atacante conduce a la víctima paso a paso:</p>
+<div class="caso-step">
+<div class="caso-step-num">01</div>
+<div class="caso-step-body">
+<h3>Abrir el navegador</h3>
+<p>Le pide que abra el navegador (cualquiera). Le dicta la dirección <code>anydesk.com</code> o similar. Aquí no hay engaño: <strong>AnyDesk es un software legítimo</strong>. Ese es precisamente el problema — el fraude usa una herramienta lícita.</p>
 </div>
 </div>
-
+<div class="caso-step">
+<div class="caso-step-num">02</div>
+<div class="caso-step-body">
+<h3>Descarga e instalación</h3>
+<p>Guía a la víctima para descargar e instalar AnyDesk. La víctima ve una web legítima, un instalador firmado y un antivirus que no protesta. Todo "parece normal", lo que refuerza la confianza.</p>
+</div>
+</div>
+<div class="caso-step">
+<div class="caso-step-num">03</div>
+<div class="caso-step-body">
+<h3>Dictar el ID de 9 dígitos</h3>
+<p>Al abrirse AnyDesk, muestra un ID numérico único de esa máquina. El atacante lo <strong>pide por teléfono</strong>. Con ese ID (y la confirmación de la víctima al pulsar "aceptar"), obtiene <strong>control total del escritorio</strong>.</p>
+</div>
+</div>
+<div class="caso-step">
+<div class="caso-step-num">04</div>
+<div class="caso-step-body">
+<h3>Distracción: la "revisión falsa"</h3>
+<p>El atacante mueve el ratón, abre el visor de eventos, ejecuta comandos <code>netstat</code> u <code>ipconfig</code>: nada real, puro teatro para justificar el tiempo. Mientras, va guiando: <em>"Ahora necesito que entre en su banca para verificar que no le han robado nada"</em>.</p>
+</div>
+</div>
+<div class="caso-step">
+<div class="caso-step-num">05</div>
+<div class="caso-step-body">
+<h3>La transferencia en directo</h3>
+<p>La víctima abre su banca online. El atacante, <strong>viéndolo todo</strong>, dice "voy a pantallar en negro para que no interfiera nada". AnyDesk permite oscurecer la pantalla remota. Con la víctima "cegada" pero con la sesión bancaria abierta, el atacante <strong>ejecuta transferencias reales</strong>. Cuando llega el SMS del banco pidiendo el código de confirmación, el atacante lo pide "para verificar la seguridad". La víctima lo dicta.</p>
+</div>
+</div>
+<h2 data-num="03" id="s3">Por qué funcionó</h2>
+<p>Este ataque no explota una vulnerabilidad técnica; explota <strong>vulnerabilidades humanas</strong>:</p>
+<ul>
+<li><strong>Presión temporal</strong>: 40 minutos sin dejar respirar. No hay margen para colgar y pensar.</li>
+<li><strong>Autoridad falsa</strong>: "soy Microsoft" es equivalente a "soy Dios" para una parte del público.</li>
+<li><strong>Confianza en el software legítimo</strong>: AnyDesk no es malware. El antivirus no salta.</li>
+<li><strong>Codigo SMS entregado voluntariamente</strong>: la víctima nunca escribió sus claves — pero <em>dictó</em> el código de doble factor.</li>
+<li><strong>Pantalla en negro</strong>: la víctima no ve el ataque en tiempo real. Cree que el técnico está "arreglando algo".</li>
+</ul>
+<div class="caso-warn">
+<strong>Punto crítico:</strong> desde la perspectiva del banco, esta es una <em>operación autorizada por el titular</em>: se realiza desde el ordenador habitual, con las credenciales correctas y con el segundo factor confirmado. Discutir después que "no fue tú" es una batalla técnica muy dura.
+    </div>
+<h2 data-num="04" id="s4">Indicadores para reconocerlo</h2>
+<table class="caso-ioc">
+<thead>
+<tr>
+<th>Señal</th>
+<th>Qué significa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Llamada no solicitada</td>
+<td>Microsoft, tu ISP y tu banco <strong>nunca</strong> te llaman avisándote de "un ataque en curso".</td>
+</tr>
+<tr>
+<td>Piden instalar software</td>
+<td>AnyDesk, TeamViewer, LogMeIn, Quick Assist, ISL Online, Zoho Assist… si alguien por teléfono te pide instalar cualquier programa de acceso remoto, cuelga.</td>
+</tr>
+<tr>
+<td>Piden dictar un ID de 9 dígitos</td>
+<td>Ese ID + tu confirmación = entrega de la máquina.</td>
+</tr>
+<tr>
+<td>Insisten en no colgar</td>
+<td>La estafa depende de mantenerte al teléfono. Si insisten "no cuelgue bajo ningún concepto", cuelga.</td>
+</tr>
+<tr>
+<td>Piden abrir la banca online</td>
+<td>Nunca hay razón legítima para que un "técnico" necesite ver tu banco.</td>
+</tr>
+<tr>
+<td>Piden códigos SMS</td>
+<td>Ninguna entidad legítima te pedirá <strong>nunca</strong> un código enviado por SMS o app. Ninguna.</td>
+</tr>
+</tbody>
+</table>
+<h2 data-num="05" id="s5">Cómo cortarlo (si aún estás a tiempo)</h2>
+<ol>
+<li><strong>Cuelga inmediatamente.</strong> No importa lo que digan. No hay contexto en el que colgar sea peligroso.</li>
+<li><strong>Cierra el ordenador de red</strong> (desenchufa el cable, apaga el Wi-Fi).</li>
+<li><strong>Desinstala AnyDesk / TeamViewer / etc.</strong> Reinicia.</li>
+<li><strong>Llama a tu banco al número del reverso de la tarjeta</strong> (no al que te dijeron por teléfono) y bloquea cuentas y tarjetas.</li>
+<li><strong>Cambia contraseñas críticas</strong> desde otro dispositivo limpio (móvil, si el ordenador estaba comprometido).</li>
+<li><strong>Denuncia</strong> — <a href="../herramientas/generador-denuncias.html">usa el generador de denuncias</a> para preparar el escrito con los datos técnicos.</li>
+</ol>
+<div class="caso-lesson">
+<div class="label">Lección clave</div>
+<p><strong>Ningún soporte técnico legítimo del planeta necesita acceso remoto a tu ordenador para "verificar tu banco".</strong> Si esa frase aparece en una llamada, no es un profesional distraído: es un atacante. La ausencia de malware no significa ausencia de fraude: la mayoría de estos ataques usan software 100% legítimo.</p>
+</div>
+<h2 data-num="06" id="s6">Contexto y prevención estructural</h2>
+<p>Este vector — <strong>acceso remoto vía herramienta lícita</strong> — se conoce en el sector como <em>Remote Access Trojan by consent</em>: el atacante no necesita comprometer nada porque la víctima le abre la puerta. Cuando llega al banco, técnicamente es un fraude autorizado.</p>
+<p>Para reducir la superficie de ataque a nivel doméstico:</p>
+<ul>
+<li><strong>Denegar por defecto la instalación de software remoto</strong> en cuentas de personas mayores. Cuenta de usuario sin permisos de administrador.</li>
+<li><strong>Enseñar la regla:</strong> "si me llaman diciendo que hay un problema con el ordenador o el banco, cuelgo y llamo yo".</li>
+<li><strong>Notificaciones push del banco</strong> activadas, con confirmación explícita de operación por app.</li>
+<li><strong>Límites diarios bajos</strong> en transferencias por defecto (activables temporalmente cuando se necesite un importe mayor).</li>
+</ul>
+<div class="caso-nav">
+<a href="index.html">← Volver a Casos reales</a>
+<a href="../herramientas/generador-denuncias.html">Generar denuncia →</a>
+</div>
+</div>
+</div>
+<aside class="caso-toc">
+<div class="caso-toc-ficha">
+<div class="label">Ficha del caso</div>
+<dl>
+<dt>Categoría</dt><dd>Vishing + Acceso remoto</dd>
+<dt>Impacto</dt><dd>~7.400 €</dd>
+<dt>Vector</dt><dd>AnyDesk (legítimo)</dd>
+</dl>
+</div>
+<div>
+<div class="caso-toc-label">Contenido</div>
+<nav class="caso-toc-nav" id="casoTocNav">
+<a class="active" href="#s1">01. Cómo empieza</a>
+<a href="#s2">02. La cadena de instalación</a>
+<a href="#s3">03. Por qué funcionó</a>
+<a href="#s4">04. Indicadores</a>
+<a href="#s5">05. Cómo cortarlo</a>
+<a href="#s6">06. Prevención estructural</a>
+</nav>
+</div>
+</aside>
+</div>
+<div id="footer-container"></div>
+</div>
+</div>
 <script src="../js/menu.js"></script>
 <script src="../js/footer.js"></script>
-
 <script>
   var tocLinks = Array.from(document.querySelectorAll('.caso-toc-nav a'));
   var sections = tocLinks.map(a => document.querySelector(a.getAttribute('href')));
@@ -311,6 +268,5 @@
     sections.forEach(function(s){ if (s) observer.observe(s); });
   }
 </script>
-
 </body>
 </html>

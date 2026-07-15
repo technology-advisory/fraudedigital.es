@@ -1,209 +1,324 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FraudeDigital.es · Portal técnico contra el fraude digital en España</title>
-    <meta name="description" content="Portal técnico y práctico contra el fraude digital en España. Análisis real de amenazas, guías duales público+técnico y respuesta operativa para ciudadanos y empresas.">
-    <meta name="keywords" content="fraude digital, phishing, smishing, vishing, estafas online, ciberseguridad España, ingeniería social, deepfake, SIM swapping, ransomware, protección digital">
-    <!-- CSS Desacoplado -->
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/dossier-core.css">
-    <link rel="stylesheet" href="css/index.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>FraudeDigital.es · Detecta, comprende y actúa frente al fraude digital</title>
+<meta name="description" content="Portal práctico y técnico contra el fraude digital en España. Actúa ante una estafa, identifica amenazas, aplica defensas y analiza casos reales.">
+<meta name="keywords" content="fraude digital, phishing, smishing, vishing, estafas online, ciberseguridad España, ingeniería social, deepfake, SIM swapping, ransomware, protección digital">
 <meta name="author" content="Miguel Ángel Carriazo">
 <meta name="theme-color" content="#dc2626">
 <meta name="robots" content="index, follow">
 <meta http-equiv="Content-Language" content="es">
+
 <link rel="canonical" href="https://fraudedigital.es/">
 
-<!-- OPEN GRAPH -->
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/dossier-core.css">
+<link rel="stylesheet" href="css/index.css?v=20260711-home-v7">
+
 <meta property="og:site_name" content="FraudeDigital.es">
 <meta property="og:locale" content="es_ES">
 <meta property="og:type" content="website">
-<meta property="og:title" content="FraudeDigital.es · Portal técnico contra el fraude digital en España">
-<meta property="og:description" content="Portal técnico y práctico contra el fraude digital en España. Análisis real de amenazas, guías duales público+técnico y respuesta operativa para ciudadanos y empresas.">
+<meta property="og:title" content="FraudeDigital.es · Detecta, comprende y actúa frente al fraude digital">
+<meta property="og:description" content="Actúa ante una estafa, identifica amenazas, aplica defensas y analiza casos reales de fraude digital.">
 <meta property="og:url" content="https://fraudedigital.es/">
 <meta property="og:image" content="https://fraudedigital.es/img/og-home.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 
-<!-- TWITTER CARD -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="FraudeDigital.es · Portal técnico contra el fraude digital en España">
-<meta name="twitter:description" content="Portal técnico y práctico contra el fraude digital en España. Análisis real de amenazas, guías duales público+técnico y respuesta operativa para ciudadanos y empresas.">
+<meta name="twitter:title" content="FraudeDigital.es · Detecta, comprende y actúa">
+<meta name="twitter:description" content="Respuesta operativa, amenazas, defensas y casos reales de fraude digital.">
 <meta name="twitter:image" content="https://fraudedigital.es/img/og-home.png">
 
-<!-- FAVICONS -->
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.json">
 
-
-<!-- BREADCRUMB JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Inicio",
-      "item": "https://fraudedigital.es/"
-    }
-  ]
-}
-</script>
-
-<!-- WEBSITE + ORGANIZATION JSON-LD -->
 <script type="application/ld+json">
 [
   {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "FraudeDigital.es",
-    "url": "https://fraudedigital.es/",
-    "inLanguage": "es-ES",
-    "publisher": {
-      "@type": "Organization",
-      "name": "FraudeDigital.es",
-      "url": "https://fraudedigital.es/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://fraudedigital.es/apple-touch-icon.png"
-      }
-    },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://fraudedigital.es/amenazas/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"FraudeDigital.es",
+    "url":"https://fraudedigital.es/",
+    "inLanguage":"es-ES",
+    "publisher":{
+      "@type":"Organization",
+      "name":"FraudeDigital.es",
+      "url":"https://fraudedigital.es/",
+      "logo":{"@type":"ImageObject","url":"https://fraudedigital.es/apple-touch-icon.png"}
     }
   },
   {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "FraudeDigital.es",
-    "url": "https://fraudedigital.es/",
-    "logo": "https://fraudedigital.es/apple-touch-icon.png",
-    "founder": {
-      "@type": "Person",
-      "name": "Miguel Ángel Carriazo",
-      "sameAs": [
-        "https://www.linkedin.com/in/macarriazo/"
-      ]
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"FraudeDigital.es",
+    "url":"https://fraudedigital.es/",
+    "logo":"https://fraudedigital.es/apple-touch-icon.png",
+    "founder":{
+      "@type":"Person",
+      "name":"Miguel Ángel Carriazo",
+      "sameAs":["https://www.linkedin.com/in/macarriazo/"]
     },
-    "sameAs": [
-      "https://www.linkedin.com/in/macarriazo/"
-    ],
-    "areaServed": "ES",
-    "description": "Portal técnico y práctico contra el fraude digital en España."
+    "sameAs":["https://www.linkedin.com/in/macarriazo/"],
+    "areaServed":"ES",
+    "description":"Portal práctico y técnico contra el fraude digital en España."
   }
 ]
 </script>
 </head>
-<body>
 
+<body>
 <div class="card-wrapper ds-page">
 <div class="card">
 
-    <!-- Los componentes dinámicos se inyectan aquí mediante JS -->
-    <div id="menu-container"></div>
+<div id="menu-container"></div>
 
-    <!-- Hero / Buscador -->
-    <header class="hero">
-        <h1>PROTÉGETE. DETECTA. ACTÚA.</h1>
-        <p>Tu portal técnico y práctico contra el fraude digital en España. Análisis real de amenazas para ciudadanos y empresas.</p>
-        
-        <div class="search-container">
-            <input type="text" id="search-input" placeholder="¿Qué te ha pasado? Busca aquí (ej: SMS de Correos, fraude del CEO, Bizum...)">
-            <button id="search-btn">BUSCAR</button>
-        </div>
-        <div id="search-results" class="search-results-box" style="display: none;"></div>
+<header class="home-hero">
+  <div class="home-hero-kicker">FraudeDigital.es · Conocimiento y respuesta</div>
+  <h1>PROTÉGETE. DETECTA. ACTÚA.</h1>
+  <p>No necesitas conocer el nombre técnico del fraude. Empieza por la situación en la que estás y avanza desde la contención hasta el análisis y la prevención.</p>
 
-        <a href="emergencia.html" class="btn-emergency">⚠️ GUÍA RÁPIDA DE EMERGENCIA</a>
-    </header>
+  <div class="home-entry-grid">
+    <a href="emergencia.html" class="home-entry home-entry-emergency">
+      <div class="home-entry-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 9v4"></path><path d="M12 17h.01"></path><path d="M10.3 2.9 1.8 17a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 2.9a2 2 0 0 0-3.4 0z"></path>
+        </svg>
+      </div>
+      <div>
+        <span class="home-entry-label">Me está pasando ahora</span>
+        <strong>Guía rápida de emergencia</strong>
+        <p>Actúa en los primeros 5 minutos.</p>
+      </div>
+      <span class="home-entry-arrow">→</span>
+    </a>
 
-    <!-- Alertas Rojas -->
-    <section class="alerts-section">
-        <div class="alerts-title">
-            <span class="pulse-dot"></span>
-            ALERTAS ROJAS (Últimas amenazas detectadas)
-        </div>
-        <div class="alerts-grid" id="alerts-container">
-            <!-- Se alimenta dinámicamente desde el JSON -->
-        </div>
-    </section>
+    <a href="primeros-auxilios/" class="home-entry">
+      <div class="home-entry-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2v20M2 12h20"></path><circle cx="12" cy="12" r="9"></circle>
+        </svg>
+      </div>
+      <div>
+        <span class="home-entry-label">Ya he hecho algo</span>
+        <strong>Primeros Auxilios Digitales</strong>
+        <p>He pagado, dado una clave o instalado una app.</p>
+      </div>
+      <span class="home-entry-arrow">→</span>
+    </a>
 
-    <!-- Catálogo de Amenazas -->
-    <main class="main-content">
-        <h2 class="section-heading">Catálogo de Amenazas ( y muchos más )</h2>
-        <div class="grid-amenazas" id="amenazas-container">
-            <!-- Se alimenta dinámicamente desde el JSON -->
-        </div>
-    </main>
+    <a href="amenazas/" class="home-entry">
+      <div class="home-entry-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path><path d="M11 8v3l2 2"></path>
+        </svg>
+      </div>
+      <div>
+        <span class="home-entry-label">Quiero identificar el fraude</span>
+        <strong>Mapa de Amenazas</strong>
+        <p>Reconoce el patrón, el canal y las señales.</p>
+      </div>
+      <span class="home-entry-arrow">→</span>
+    </a>
 
-    <!-- Herramientas Clave -->
-    <section class="tools-section" id="herramientas">
-        <div class="tools-container">
-            <h2 class="section-heading" style="border-bottom:none; margin-bottom:1.5rem;">Herramientas de Respuesta Operativa</h2>
-            <div class="grid-tools">
-                <a href="emergencia.html" class="card-tool">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                    <h4>Checklist de Emergencia</h4>
-                </a>
-                <a href="herramientas/generador-denuncias.html" class="card-tool">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                    <h4>Generador de Denuncias</h4>
-                </a>
-            </div>
-        </div>
-    </section>
+    <a href="defensas/" class="home-entry">
+      <div class="home-entry-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path>
+        </svg>
+      </div>
+      <div>
+        <span class="home-entry-label">Quiero protegerme</span>
+        <strong>Mapa de Defensas</strong>
+        <p>Aplica controles frente a amenazas concretas.</p>
+      </div>
+      <span class="home-entry-arrow">→</span>
+    </a>
+  </div>
+</header>
 
-    <!-- Casos Reales destacados -->
-    <section class="tools-section" style="background:#f8fafc;">
-        <div class="tools-container">
-            <h2 class="section-heading" style="border-bottom:none; margin-bottom:0.5rem;">Casos Reales Analizados</h2>
-            <p style="color:#64748b; font-size:0.95rem; margin-bottom:1.5rem; max-width:700px;">Análisis técnicos de fraudes ocurridos de verdad. Anonimizados, centrados en la técnica, sin exponer a nadie.</p>
-            <div class="grid-tools" id="ejemplos-home-container">
-                <!-- Se rellena vía JS -->
-            </div>
-            <div style="margin-top:1.5rem;">
-                <a href="ejemplos/index.html" style="color:#dc2626; font-weight:700; text-decoration:none; font-size:0.95rem;">Ver todos los casos →</a>
-            </div>
-        </div>
-    </section>
+<section class="home-alerts">
+  <div class="home-section-head">
+    <div>
+      <span class="home-eyebrow home-eyebrow-red"><span class="pulse-dot"></span> Inteligencia de fraude · actualización automática</span>
+      <h2>Últimas amenazas detectadas</h2>
+      <p>Alertas de INCIBE enriquecidas con análisis editorial independiente de FraudeDigital.es.</p>
+    </div>
+    <a href="alertas-incibe/" class="home-section-link">Ver todas las alertas →</a>
+  </div>
+  <div class="alerts-grid" id="alerts-container"></div>
+</section>
 
-    <!-- Footer dinámico -->
-    <div id="footer-container"></div>
+<main class="home-threats">
+  <div class="home-section-head">
+    <div>
+      <span class="home-eyebrow">Mapa de amenazas</span>
+      <h2>Entiende cómo funciona el fraude</h2>
+      <p>Seis patrones frecuentes para empezar. El catálogo completo conecta canal, objetivo, flujo del ataque y defensa prioritaria.</p>
+    </div>
+    <a href="amenazas/" class="home-section-link">Explorar las 15 amenazas →</a>
+  </div>
+  <div class="grid-amenazas" id="amenazas-container"></div>
+</main>
+
+<section class="home-operations">
+  <div class="home-operations-inner">
+    <div class="home-section-head">
+      <div>
+        <span class="home-eyebrow home-eyebrow-copper">Respuesta operativa</span>
+        <h2>La herramienta adecuada para cada momento</h2>
+        <p>Primero contiene. Después contrasta y documenta. No todas las situaciones requieren empezar por el mismo sitio.</p>
+      </div>
+      <a href="herramientas/" class="home-section-link home-section-link-copper">Ver centro operativo →</a>
+    </div>
+
+    <div class="home-operation-grid">
+      <a href="emergencia.html" class="home-operation-card">
+        <span class="home-operation-id">01 · ACTUAR AHORA</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4"></path><path d="M12 17h.01"></path><path d="M10.3 2.9 1.8 17a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 2.9a2 2 0 0 0-3.4 0z"></path></svg>
+        <h3>Emergencia</h3>
+        <p>Checklist de contención para los primeros minutos.</p>
+        <span>Detener → Proteger → Documentar</span>
+      </a>
+
+      <a href="primeros-auxilios/" class="home-operation-card">
+        <span class="home-operation-id">02 · TRIAR EL IMPACTO</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v10M7 12h10"></path></svg>
+        <h3>Primeros Auxilios</h3>
+        <p>Plan según lo que ya has hecho o entregado.</p>
+        <span>10 min → 1 hora → 24 horas</span>
+      </a>
+
+      <a href="herramientas/verificacion-online.html" class="home-operation-card">
+        <span class="home-operation-id">03 · CONTRASTAR</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path><path d="m8 11 2 2 4-4"></path></svg>
+        <h3>Verificación</h3>
+        <p>Contrasta URLs, dominios, emails y otros indicadores.</p>
+        <span>Indicador → Contexto → Decisión</span>
+      </a>
+
+      <a href="herramientas/generador-denuncias.html" class="home-operation-card">
+        <span class="home-operation-id">04 · DOCUMENTAR</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M8 13h8M8 17h8"></path></svg>
+        <h3>Documentación</h3>
+        <p>Ordena hechos, evidencias, importes y cronología.</p>
+        <span>Hechos → Evidencias → Relato</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="home-cases">
+  <div class="home-cases-inner">
+    <div class="home-section-head">
+      <div>
+        <span class="home-eyebrow home-eyebrow-dark">Casos reales</span>
+        <h2>Aprende viendo cómo escala un fraude</h2>
+        <p>Casos anonimizados y patrones reales analizados desde la secuencia del ataque y el punto donde podría haberse roto.</p>
+      </div>
+      <a href="ejemplos/" class="home-section-link">Ver todos los casos →</a>
+    </div>
+    <div class="home-case-grid" id="ejemplos-home-container"></div>
+  </div>
+</section>
+
+<section class="home-mission">
+  <div class="home-mission-mark">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+    </svg>
+  </div>
+  <div>
+    <span class="home-eyebrow">Qué es FraudeDigital.es</span>
+    <h2>Analizar patrones. Explicar técnicas. Ayudar a tomar mejores decisiones.</h2>
+    <p>FraudeDigital.es no recopila denuncias ni sustituye a las autoridades, entidades financieras o profesionales especializados. El objetivo es ofrecer conocimiento práctico y técnico para identificar, contener y comprender el fraude digital.</p>
+  </div>
+</section>
+
+<div id="footer-container"></div>
 
 </div>
 </div>
 
-<!-- Scripts Core y Módulos -->
 <script src="js/menu.js"></script>
 <script src="js/footer.js"></script>
 <script src="js/alertas-incibe.js"></script>
-<script src="js/main.js?v=20260710-analisis-incibe"></script>
+<script src="js/main.js?v=20260711-home-v7"></script>
 <script>
-    // Cargar 3 casos destacados en el home
-    fetch('data/ejemplos.json')
-        .then(r => r.json())
-        .then(data => {
-            const casos = (data.casos || []).filter(c => c.destacado).slice(0, 3);
-            const container = document.getElementById('ejemplos-home-container');
-            if (!container) return;
-            container.innerHTML = casos.map(c => `
-                <a href="ejemplos/${c.enlace}" class="card-tool" style="text-align:left; align-items:flex-start;">
-                    <span style="display:block;font-size:10px;color:#dc2626;font-family:'Courier New',monospace;font-weight:700;letter-spacing:0.05em;margin-bottom:8px;">${c.categoria.toUpperCase()}</span>
-                    <h4 style="margin-bottom:6px;">${c.titulo}</h4>
-                    <p style="font-size:0.85rem; color:#64748b; font-weight:400; margin:0;">${c.subtitulo}</p>
-                </a>
-            `).join('');
-        })
-        .catch(err => console.error('Error cargando casos:', err));
+(() => {
+  const esc = value => String(value ?? '')
+    .replaceAll('&','&amp;')
+    .replaceAll('<','&lt;')
+    .replaceAll('>','&gt;')
+    .replaceAll('"','&quot;')
+    .replaceAll("'",'&#039;');
+
+  const getFlow = caso => {
+    const text = `${caso.titulo} ${caso.subtitulo} ${caso.categoria}`.toLowerCase();
+
+    if (text.includes('deepfake') || text.includes('voz')) {
+      return ['Voz sintética', 'Confianza familiar', 'Transferencia'];
+    }
+    if (text.includes('anydesk') || text.includes('remoto')) {
+      return ['Pretexto técnico', 'Acceso remoto', 'Control del equipo'];
+    }
+    if (text.includes('trading') || text.includes('invers')) {
+      return ['Captación', 'App falsa', 'Más depósitos'];
+    }
+    return ['Oferta laboral', 'Desplazamiento', 'Coacción'];
+  };
+
+  const flowSvg = steps => {
+    const x = [72, 220, 368];
+    const nodes = steps.map((step, i) => `
+      <rect x="${x[i]-55}" y="15" width="110" height="30" rx="7" fill="#1e293b" stroke="#475569"></rect>
+      <text x="${x[i]}" y="34" text-anchor="middle" fill="#f8fafc" font-family="Arial, sans-serif" font-size="10">${esc(step)}</text>
+    `).join('');
+
+    const arrows = steps.slice(0, -1).map((_, i) => `
+      <line x1="${x[i]+58}" y1="30" x2="${x[i+1]-64}" y2="30" stroke="#dc2626" stroke-width="2"></line>
+      <path d="M${x[i+1]-64} 30 l-7 -4 v8 z" fill="#dc2626"></path>
+    `).join('');
+
+    return `<svg viewBox="0 0 440 58" role="img" aria-label="Secuencia del fraude">${arrows}${nodes}</svg>`;
+  };
+
+  fetch('data/ejemplos.json', {cache:'no-store'})
+    .then(response => {
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return response.json();
+    })
+    .then(data => {
+      const casos = (data.casos || []).filter(caso => caso.destacado).slice(0, 3);
+      const container = document.getElementById('ejemplos-home-container');
+      if (!container) return;
+
+      container.innerHTML = casos.map(caso => {
+        const flow = getFlow(caso);
+        return `
+          <a href="ejemplos/${esc(caso.enlace)}" class="home-case-card">
+            <div class="home-case-head">
+              <span>${esc(caso.categoria)}</span>
+              <span>Caso real</span>
+            </div>
+            <div class="home-case-body">
+              <h3>${esc(caso.titulo)}</h3>
+              <p>${esc(caso.subtitulo)}</p>
+              <div class="home-case-flow">${flowSvg(flow)}</div>
+              <span class="home-case-link">Ver análisis →</span>
+            </div>
+          </a>
+        `;
+      }).join('');
+    })
+    .catch(error => console.error('Error cargando casos:', error));
+})();
 </script>
 </body>
 </html>

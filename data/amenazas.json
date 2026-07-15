@@ -1,169 +1,712 @@
 {
+  "actualizado": "2026-07-11",
+  "total_amenazas": 15,
   "amenazas": [
     {
       "id": "phishing-tradicional",
       "exp": "EXP // 01",
       "titulo": "Phishing Tradicional",
-      "descripcion": "Secuestro de tokens de sesión activa mediante proxies inversos y suplantaciones de identidad dirigidas.",
+      "descripcion": "Suplantación por correo para llevar a la víctima a una web falsa y capturar credenciales, datos personales o información bancaria.",
       "icono": "correo",
       "enlace": "phishing-tradicional.html",
-      "tags": ["phishing", "correo", "email", "sesion", "token", "proxy", "tradicional"],
+      "tags": [
+        "phishing",
+        "correo",
+        "email",
+        "credenciales",
+        "suplantación"
+      ],
       "publico": "publico-general",
-      "badge": "Público general"
+      "badge": "Público general",
+      "categoria": "Correo y mensajería",
+      "categoria_id": "mensajeria",
+      "riesgo": "Alto",
+      "canal": [
+        "Correo electrónico"
+      ],
+      "objetivo": [
+        "Credenciales",
+        "Datos personales",
+        "Dinero"
+      ],
+      "senales": [
+        "Urgencia o amenaza",
+        "Dominio extraño",
+        "Enlace externo",
+        "Solicitud de acceso"
+      ],
+      "respuesta_rapida": "No pulses el enlace. Entra al servicio escribiendo manualmente su dirección oficial.",
+      "flujo": [
+        "Correo falso",
+        "Web clonada",
+        "Robo de datos"
+      ],
+      "vector": "Ingeniería social → credential harvesting",
+      "defensa_principal": {
+        "titulo": "Contraseñas únicas y MFA",
+        "enlace": "../defensas/contrasenas-seguras.html"
+      }
     },
     {
       "id": "phishing-aitm",
       "exp": "EXP // 02",
-      "titulo": "Phishing AitM: el secuestro de sesión que salta el 2FA",
-      "descripcion": "Ataques Adversary-in-the-Middle (AitM) que saltan el doble factor mediante proxies inversos.",
+      "titulo": "Phishing AitM: secuestro de sesión",
+      "descripcion": "Un proxy malicioso se interpone entre la víctima y el servicio real, captura credenciales y roba la cookie de sesión incluso después del MFA.",
       "icono": "correo",
       "enlace": "phishing-aitm.html",
-      "tags": ["phishing", "aitm", "sesion", "2fa", "proxy", "autenticacion", "mfa"],
+      "tags": [
+        "phishing",
+        "aitm",
+        "sesión",
+        "mfa",
+        "2fa",
+        "proxy"
+      ],
       "publico": "publico-general",
-      "badge": "Público general"
+      "badge": "Público general",
+      "categoria": "Identidad y acceso",
+      "categoria_id": "identidad",
+      "riesgo": "Crítico",
+      "canal": [
+        "Correo",
+        "Web intermedia"
+      ],
+      "objetivo": [
+        "Sesión activa",
+        "Cuenta corporativa",
+        "Token"
+      ],
+      "senales": [
+        "Login inesperado",
+        "Dominio casi idéntico",
+        "MFA válido pero sesión robada",
+        "Acceso posterior anómalo"
+      ],
+      "respuesta_rapida": "Cierra sesiones activas, revoca tokens y cambia la contraseña desde un dispositivo de confianza.",
+      "flujo": [
+        "Login falso",
+        "Proxy AitM",
+        "Cookie robada"
+      ],
+      "vector": "Reverse proxy → session hijacking",
+      "defensa_principal": {
+        "titulo": "MFA resistente a phishing",
+        "enlace": "../defensas/verificacion-dos-pasos.html"
+      }
     },
     {
       "id": "vishing",
       "exp": "EXP // 03",
       "titulo": "Vishing & Spoofing de Voz",
-      "descripcion": "Manipulación de cabeceras telefónicas SIP VoIP y suplantación de entidades bancarias.",
+      "descripcion": "Llamadas que simulan proceder de bancos, soporte técnico u organismos y utilizan autoridad y urgencia para obtener códigos, datos o transferencias.",
       "icono": "telefono",
       "enlace": "vishing.html",
-      "tags": ["vishing", "spoofing", "voz", "telefono", "voip", "sip", "llamada"],
+      "tags": [
+        "vishing",
+        "spoofing",
+        "voz",
+        "teléfono",
+        "llamada",
+        "banco"
+      ],
       "publico": "publico-general",
-      "badge": "Público general"
+      "badge": "Público general",
+      "categoria": "Voz y telefonía",
+      "categoria_id": "telefonia",
+      "riesgo": "Alto",
+      "canal": [
+        "Llamada telefónica",
+        "VoIP"
+      ],
+      "objetivo": [
+        "OTP",
+        "Datos bancarios",
+        "Transferencias"
+      ],
+      "senales": [
+        "Llamada inesperada",
+        "Presión para actuar",
+        "Petición de códigos",
+        "Número aparentemente legítimo"
+      ],
+      "respuesta_rapida": "Cuelga y llama tú al número oficial de la entidad. Nunca dictes un OTP.",
+      "flujo": [
+        "Llamada falsa",
+        "Autoridad",
+        "Código o pago"
+      ],
+      "vector": "Caller ID spoofing → social engineering",
+      "defensa_principal": {
+        "titulo": "Verificación por canal alternativo",
+        "enlace": "../defensas/index.html"
+      }
     },
     {
       "id": "smishing",
       "exp": "EXP // 04",
-      "titulo": "Smishing & Sender ID Fraude",
-      "descripcion": "Abuso de pasarelas agregadoras SMS para inyección de textos dentro de hilos legítimos.",
+      "titulo": "Smishing & Sender ID Fraud",
+      "descripcion": "SMS que suplantan a bancos, empresas de transporte o administraciones y conducen a páginas falsas para robar datos o tarjetas.",
       "icono": "sms",
       "enlace": "smishing.html",
-      "tags": ["smishing", "sender id", "sms", "mensaje", "texto", "pasarela"],
+      "tags": [
+        "smishing",
+        "sender id",
+        "sms",
+        "mensaje",
+        "enlace",
+        "spoofing"
+      ],
       "publico": "publico-general",
-      "badge": "Público general"
+      "badge": "Público general",
+      "categoria": "Correo y mensajería",
+      "categoria_id": "mensajeria",
+      "riesgo": "Alto",
+      "canal": [
+        "SMS"
+      ],
+      "objetivo": [
+        "Datos bancarios",
+        "Tarjeta",
+        "Credenciales"
+      ],
+      "senales": [
+        "Enlace en SMS",
+        "Incidencia urgente",
+        "Remitente reconocible",
+        "Dominio no oficial"
+      ],
+      "respuesta_rapida": "No abras el enlace. Comprueba la incidencia desde la app o web oficial.",
+      "flujo": [
+        "SMS",
+        "Urgencia",
+        "Landing falsa"
+      ],
+      "vector": "Sender ID spoofing → phishing mobile",
+      "defensa_principal": {
+        "titulo": "Verificación por canal oficial",
+        "enlace": "../defensas/index.html"
+      }
     },
     {
       "id": "qrishing",
       "exp": "EXP // 05",
       "titulo": "QRishing & Tampering Físico",
-      "descripcion": "Alteración material de códigos QR expuestos en la vía pública para desvíos de pasarelas de pago.",
+      "descripcion": "Códigos QR manipulados o sustituidos físicamente que redirigen a portales falsos de pago, acceso o descarga.",
       "icono": "qr",
       "enlace": "qrishing.html",
-      "tags": ["qrishing", "qr", "tampering", "fisico", "pago", "codigo", "escanear"],
+      "tags": [
+        "qrishing",
+        "qr",
+        "tampering",
+        "físico",
+        "pago",
+        "código"
+      ],
       "publico": "publico-general",
-      "badge": "Público general"
+      "badge": "Público general",
+      "categoria": "Canales físicos y QR",
+      "categoria_id": "fisico",
+      "riesgo": "Medio",
+      "canal": [
+        "Código QR",
+        "Espacio físico"
+      ],
+      "objetivo": [
+        "Pago",
+        "Credenciales",
+        "Instalación"
+      ],
+      "senales": [
+        "Pegatina superpuesta",
+        "URL no visible",
+        "Pago inmediato",
+        "QR en lugar sensible"
+      ],
+      "respuesta_rapida": "Comprueba la URL antes de continuar y evita pagar desde un QR que parezca manipulado.",
+      "flujo": [
+        "QR alterado",
+        "Redirección",
+        "Pago o login"
+      ],
+      "vector": "Physical tampering → malicious redirect",
+      "defensa_principal": {
+        "titulo": "Verificación de URL y origen",
+        "enlace": "../defensas/index.html"
+      }
     },
     {
       "id": "ia-estafas",
       "exp": "EXP // 06",
       "titulo": "IA Avanzada & Deepfakes",
-      "descripcion": "Clonación de voz sintética mediante redes neuronales profundas aplicadas a estafas ejecutivas.",
+      "descripcion": "Clonación de voz, vídeo sintético y contenido generado por IA utilizado para suplantar familiares, directivos o figuras públicas.",
       "icono": "ia",
       "enlace": "ia-estafas.html",
-      "tags": ["ia", "deepfakes", "inteligencia artificial", "voz", "clonacion", "redes neuronales", "sintetica"],
+      "tags": [
+        "ia",
+        "deepfake",
+        "voz",
+        "clonación",
+        "vídeo",
+        "sintética"
+      ],
       "publico": "publico-general",
-      "badge": "Público general"
+      "badge": "Público general",
+      "categoria": "IA y manipulación",
+      "categoria_id": "ia",
+      "riesgo": "Alto",
+      "canal": [
+        "Voz",
+        "Vídeo",
+        "Mensajería"
+      ],
+      "objetivo": [
+        "Dinero",
+        "Confianza",
+        "Órdenes fraudulentas"
+      ],
+      "senales": [
+        "Petición extraordinaria",
+        "Urgencia",
+        "Voz familiar",
+        "Canal no habitual"
+      ],
+      "respuesta_rapida": "Verifica la identidad con una pregunta acordada o un canal alternativo antes de actuar.",
+      "flujo": [
+        "Clon sintético",
+        "Confianza",
+        "Orden falsa"
+      ],
+      "vector": "Synthetic media → impersonation",
+      "defensa_principal": {
+        "titulo": "Privacidad e identidad digital",
+        "enlace": "../defensas/privacidad-identidad-digital.html"
+      }
     },
     {
       "id": "ingenieria-social",
       "exp": "EXP // 07",
       "titulo": "Ingeniería Social & OSINT",
-      "descripcion": "Modelado del eslabón humano corporativo, ataques del fraude del CEO y manipulación de procesos maestro.",
+      "descripcion": "Uso de información pública, contexto corporativo y manipulación psicológica para conseguir que una persona rompa un proceso legítimo.",
       "icono": "usuarios",
       "enlace": "ingenieria-social.html",
-      "tags": ["ingenieria social", "osint", "ceo", "fraude", "manipulacion", "psicologica", "pretexting"],
+      "tags": [
+        "ingeniería social",
+        "osint",
+        "ceo",
+        "pretexting",
+        "manipulación",
+        "fraude"
+      ],
       "publico": "publico-general",
-      "badge": "Público general"
+      "badge": "Público general",
+      "categoria": "Identidad y acceso",
+      "categoria_id": "identidad",
+      "riesgo": "Alto",
+      "canal": [
+        "Correo",
+        "Teléfono",
+        "Mensajería",
+        "Redes sociales"
+      ],
+      "objetivo": [
+        "Confianza",
+        "Proceso interno",
+        "Datos"
+      ],
+      "senales": [
+        "Conoce información real",
+        "Petición excepcional",
+        "Autoridad",
+        "Secreto o urgencia"
+      ],
+      "respuesta_rapida": "Detén el proceso y verifica la petición con otra persona o por un canal conocido.",
+      "flujo": [
+        "OSINT",
+        "Pretexto",
+        "Ruptura de proceso"
+      ],
+      "vector": "Reconnaissance → pretexting → human compromise",
+      "defensa_principal": {
+        "titulo": "Privacidad e identidad digital",
+        "enlace": "../defensas/privacidad-identidad-digital.html"
+      }
     },
     {
       "id": "wifi-mitm",
       "exp": "EXP // 08",
       "titulo": "MITM en WiFi Públicas",
-      "descripcion": "Redes WiFi falsas en cafeterías, aeropuertos y hoteles que capturan todo tu tráfico y credenciales.",
+      "descripcion": "Redes falsas o manipuladas que imitan la WiFi de hoteles, aeropuertos o cafeterías para interceptar sesiones y dirigir al usuario a portales maliciosos.",
       "icono": "wifi",
       "enlace": "wifi-mitm.html",
-      "tags": ["wifi", "mitm", "red", "publica", "cafeteria", "aeropuerto", "hotel", "captura"],
+      "tags": [
+        "wifi",
+        "mitm",
+        "red pública",
+        "evil twin",
+        "captura",
+        "portal"
+      ],
       "publico": "publico-general",
-      "badge": "Público general"
+      "badge": "Público general",
+      "categoria": "Infraestructura y red",
+      "categoria_id": "infraestructura",
+      "riesgo": "Medio",
+      "canal": [
+        "WiFi pública"
+      ],
+      "objetivo": [
+        "Tráfico",
+        "Sesiones",
+        "Credenciales"
+      ],
+      "senales": [
+        "SSID duplicado",
+        "Portal extraño",
+        "Certificado anómalo",
+        "Solicitud excesiva de datos"
+      ],
+      "respuesta_rapida": "Desconecta la red, usa datos móviles o una red conocida y evita introducir credenciales.",
+      "flujo": [
+        "WiFi falsa",
+        "Interposición",
+        "Captura"
+      ],
+      "vector": "Evil twin → man-in-the-middle",
+      "defensa_principal": {
+        "titulo": "Uso de redes de confianza",
+        "enlace": "../defensas/index.html"
+      }
     },
     {
       "id": "sim-swapping",
       "exp": "EXP // 09",
       "titulo": "SIM Swapping & Portabilidad Fraudulenta",
-      "descripcion": "Suplantación de identidad ante la operadora para duplicar tu SIM y capturar SMS de 2FA.",
+      "descripcion": "Suplantación ante la operadora para transferir la línea a otra SIM y recibir llamadas o SMS de autenticación de la víctima.",
       "icono": "sim",
       "enlace": "sim-swapping.html",
-      "tags": ["sim", "swapping", "portabilidad", "2fa", "operadora", "telefono", "movil", "suplantacion"],
+      "tags": [
+        "sim",
+        "swapping",
+        "portabilidad",
+        "2fa",
+        "operadora",
+        "móvil"
+      ],
       "publico": "publico-general",
-      "badge": "Público general"
+      "badge": "Público general",
+      "categoria": "Identidad y acceso",
+      "categoria_id": "identidad",
+      "riesgo": "Crítico",
+      "canal": [
+        "Operadora móvil",
+        "Telefonía"
+      ],
+      "objetivo": [
+        "SMS OTP",
+        "Cuenta bancaria",
+        "Recuperación de cuentas"
+      ],
+      "senales": [
+        "Pérdida súbita de cobertura",
+        "SIM sin servicio",
+        "Avisos de cambio",
+        "Accesos inesperados"
+      ],
+      "respuesta_rapida": "Contacta inmediatamente con la operadora y el banco. Revoca accesos y bloquea operaciones.",
+      "flujo": [
+        "Suplantación",
+        "Duplicado SIM",
+        "OTP capturado"
+      ],
+      "vector": "Identity fraud → SIM takeover → account recovery",
+      "defensa_principal": {
+        "titulo": "MFA sin SMS",
+        "enlace": "../defensas/verificacion-dos-pasos.html"
+      }
     },
     {
       "id": "invoice-fraud",
       "exp": "EXP // 10",
-      "titulo": "Fraude de Factura Falsa (Invoice Fraud)",
-      "descripcion": "Suplantación de proveedores con modificación de IBAN. Afecta a departamentos financieros de PYMEs y grandes empresas.",
+      "titulo": "Fraude de Factura Falsa",
+      "descripcion": "Suplantación de un proveedor o compromiso del correo para sustituir el IBAN y desviar una transferencia legítima.",
       "icono": "factura",
       "enlace": "invoice-fraud.html",
-      "tags": ["factura", "invoice", "proveedor", "iban", "finanzas", "pyme", "empresa", "transferencia"],
+      "tags": [
+        "factura",
+        "invoice",
+        "proveedor",
+        "iban",
+        "finanzas",
+        "empresa"
+      ],
       "publico": "profesionales",
-      "badge": "Profesionales / Empresas"
+      "badge": "Profesionales / Empresas",
+      "categoria": "Fraude económico",
+      "categoria_id": "economico",
+      "riesgo": "Crítico",
+      "canal": [
+        "Correo corporativo",
+        "Factura"
+      ],
+      "objetivo": [
+        "Transferencia",
+        "Tesorería",
+        "IBAN"
+      ],
+      "senales": [
+        "Cambio de cuenta",
+        "Urgencia",
+        "Proveedor conocido",
+        "Correo similar al real"
+      ],
+      "respuesta_rapida": "No cambies un IBAN por correo sin validación por un canal independiente y con doble aprobación.",
+      "flujo": [
+        "Proveedor falso",
+        "IBAN cambiado",
+        "Transferencia"
+      ],
+      "vector": "BEC / supplier impersonation → payment diversion",
+      "defensa_principal": {
+        "titulo": "Verificación fuera de banda",
+        "enlace": "../defensas/index.html"
+      }
     },
     {
       "id": "sextorsion",
       "exp": "EXP // 11",
       "titulo": "Sextorsión y Chantaje Digital",
-      "descripcion": "Correos que afirman tener vídeos comprometidos y exigen pago en criptomonedas. Pura ingeniería social.",
+      "descripcion": "Mensajes que afirman disponer de vídeos íntimos o acceso al dispositivo y exigen criptomonedas bajo amenaza de difusión.",
       "icono": "chantaje",
       "enlace": "sextorsion.html",
-      "tags": ["sextorsion", "chantaje", "criptomonedas", "correo", "extorsion", "bitcoin", "pago"],
+      "tags": [
+        "sextorsión",
+        "chantaje",
+        "bitcoin",
+        "extorsión",
+        "correo",
+        "pago"
+      ],
       "publico": "publico-general",
-      "badge": "Público general"
+      "badge": "Público general",
+      "categoria": "Extorsión y chantaje",
+      "categoria_id": "extorsion",
+      "riesgo": "Alto",
+      "canal": [
+        "Correo electrónico"
+      ],
+      "objetivo": [
+        "Pago",
+        "Miedo",
+        "Confirmación de cuenta activa"
+      ],
+      "senales": [
+        "Sin prueba real",
+        "Bitcoin",
+        "Cuenta atrás",
+        "Amenaza de exposición"
+      ],
+      "respuesta_rapida": "No pagues ni respondas. Guarda el mensaje, cambia credenciales antiguas y pide ayuda.",
+      "flujo": [
+        "Amenaza",
+        "Vergüenza",
+        "Pago cripto"
+      ],
+      "vector": "Mass extortion → psychological pressure",
+      "defensa_principal": {
+        "titulo": "Contraseñas únicas",
+        "enlace": "../defensas/contrasenas-seguras.html"
+      }
     },
     {
       "id": "ransomware-estafa",
       "exp": "EXP // 12",
       "titulo": "Ransomware como Estafa",
-      "descripcion": "Enganches que llevan a descarga de malware que cifra datos y exige rescate. Prevención y respuesta.",
+      "descripcion": "Descargas, adjuntos o accesos iniciales que terminan cifrando información y exigiendo un rescate por la recuperación.",
       "icono": "ransomware",
       "enlace": "ransomware-estafa.html",
-      "tags": ["ransomware", "malware", "rescate", "cifrado", "datos", "virus", "pago"],
+      "tags": [
+        "ransomware",
+        "malware",
+        "rescate",
+        "cifrado",
+        "datos",
+        "backup"
+      ],
       "publico": "publico-general",
-      "badge": "Público general"
+      "badge": "Público general",
+      "categoria": "Malware y extorsión",
+      "categoria_id": "malware",
+      "riesgo": "Crítico",
+      "canal": [
+        "Correo",
+        "Descarga",
+        "Acceso remoto"
+      ],
+      "objetivo": [
+        "Datos",
+        "Disponibilidad",
+        "Rescate"
+      ],
+      "senales": [
+        "Archivo inesperado",
+        "Cifrado de ficheros",
+        "Nota de rescate",
+        "Extensiones cambiadas"
+      ],
+      "respuesta_rapida": "Aísla el equipo de la red, no borres evidencias y activa el procedimiento de respuesta y recuperación.",
+      "flujo": [
+        "Acceso inicial",
+        "Cifrado",
+        "Rescate"
+      ],
+      "vector": "Initial access → encryption → extortion",
+      "defensa_principal": {
+        "titulo": "Copias de seguridad 3-2-1",
+        "enlace": "../defensas/copias-seguridad.html"
+      }
     },
     {
       "id": "estafas-segunda-mano",
       "exp": "EXP // 13",
       "titulo": "Estafas en Plataformas de Segunda Mano",
-      "descripcion": "Suplantación de compradores/vendedores en Wallapop, Vinted, Milanuncios con enlaces de pago falsos.",
+      "descripcion": "Compradores o vendedores falsos sacan la conversación de la plataforma y utilizan enlaces de pago, transporte o cobro fraudulentos.",
       "icono": "compra",
       "enlace": "estafas-segunda-mano.html",
-      "tags": ["wallapop", "vinted", "milanuncios", "segunda mano", "compra", "venta", "pago"],
+      "tags": [
+        "wallapop",
+        "vinted",
+        "milanuncios",
+        "segunda mano",
+        "pago",
+        "venta"
+      ],
       "publico": "publico-general",
-      "badge": "Público general"
+      "badge": "Público general",
+      "categoria": "Fraude económico",
+      "categoria_id": "economico",
+      "riesgo": "Alto",
+      "canal": [
+        "Marketplace",
+        "Mensajería"
+      ],
+      "objetivo": [
+        "Tarjeta",
+        "Pago",
+        "Datos personales"
+      ],
+      "senales": [
+        "Salir de la plataforma",
+        "Enlace externo",
+        "Falso transportista",
+        "Pago urgente"
+      ],
+      "respuesta_rapida": "Mantén conversación y pago dentro de la plataforma. No uses enlaces enviados por el comprador.",
+      "flujo": [
+        "Contacto",
+        "Fuera de plataforma",
+        "Pago falso"
+      ],
+      "vector": "Marketplace social engineering → payment phishing",
+      "defensa_principal": {
+        "titulo": "Verificación y canal oficial",
+        "enlace": "../defensas/index.html"
+      }
     },
     {
       "id": "compras-online",
       "exp": "EXP // 14",
       "titulo": "Fraude en Compras Online",
-      "descripcion": "Tiendas fantasma, dropshipping fraudulento y anuncios falsos en redes sociales que nunca envían el producto.",
+      "descripcion": "Tiendas fantasma, anuncios falsos y comercios clonados que ofrecen productos atractivos para capturar pagos y datos de tarjeta.",
       "icono": "compra",
       "enlace": "compras-online.html",
-      "tags": ["tienda online", "ecommerce", "dropshipping", "anuncio falso", "compra", "instagram shop"],
+      "tags": [
+        "tienda online",
+        "ecommerce",
+        "anuncio falso",
+        "compra",
+        "pago",
+        "web falsa"
+      ],
       "publico": "publico-general",
-      "badge": "Público general"
+      "badge": "Público general",
+      "categoria": "Fraude económico",
+      "categoria_id": "economico",
+      "riesgo": "Alto",
+      "canal": [
+        "Web",
+        "Redes sociales",
+        "Publicidad"
+      ],
+      "objetivo": [
+        "Pago",
+        "Tarjeta",
+        "Datos personales"
+      ],
+      "senales": [
+        "Precio imposible",
+        "Dominio reciente",
+        "Sin datos legales",
+        "Urgencia o stock falso"
+      ],
+      "respuesta_rapida": "Comprueba el dominio, la identidad del comercio y métodos de pago antes de comprar.",
+      "flujo": [
+        "Anuncio",
+        "Tienda falsa",
+        "Pago"
+      ],
+      "vector": "Malvertising / fake shop → payment fraud",
+      "defensa_principal": {
+        "titulo": "Verificación del comercio",
+        "enlace": "../defensas/index.html"
+      }
     },
     {
       "id": "bulos-fake-news",
       "exp": "EXP // 15",
       "titulo": "Bulos y Fake News como Vector de Fraude",
-      "descripcion": "Noticias falsas, vídeos manipulados y falsas alarmas usadas para captar víctimas de estafas de inversión y pánico.",
+      "descripcion": "Contenido falso o manipulado que utiliza actualidad, alarma o figuras conocidas para conducir a inversiones fraudulentas, pagos o captación de datos.",
       "icono": "ia",
       "enlace": "bulos-fake-news.html",
-      "tags": ["bulo", "fake news", "desinformación", "noticia falsa", "deepfake", "manipulación"],
+      "tags": [
+        "bulo",
+        "fake news",
+        "desinformación",
+        "deepfake",
+        "inversión",
+        "manipulación"
+      ],
       "publico": "publico-general",
-      "badge": "Público general"
+      "badge": "Público general",
+      "categoria": "IA y manipulación",
+      "categoria_id": "ia",
+      "riesgo": "Medio",
+      "canal": [
+        "Redes sociales",
+        "Vídeo",
+        "Web"
+      ],
+      "objetivo": [
+        "Confianza",
+        "Inversión",
+        "Difusión"
+      ],
+      "senales": [
+        "Titular emocional",
+        "Fuente dudosa",
+        "Vídeo manipulado",
+        "Llamada a invertir"
+      ],
+      "respuesta_rapida": "Contrasta la información en fuentes independientes antes de compartir, pagar o registrarte.",
+      "flujo": [
+        "Contenido falso",
+        "Impacto emocional",
+        "Captación"
+      ],
+      "vector": "Disinformation → trust exploitation → fraud funnel",
+      "defensa_principal": {
+        "titulo": "Privacidad e identidad digital",
+        "enlace": "../defensas/privacidad-identidad-digital.html"
+      }
     }
   ]
 }

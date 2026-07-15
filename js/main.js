@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const inSubfolder = /\/(amenazas|guia|legal|primeros-auxilios)\//.test(window.location.pathname);
     const basePath = inSubfolder ? '../' : '';
 
-    let amenazasCatalogo = [];   // catálogo completo (para buscador)
     let amenazasHome = [];       // subset destacadas para tarjetas
 
     // ==============================
@@ -45,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
         fetch(basePath + 'data/fraudes.json', { cache: 'no-store' }).then(r => { if (!r.ok) throw new Error(`fraudes.json: HTTP ${r.status}`); return r.json(); }).catch(() => ({ destacadas: [] })),
         fetch(basePath + 'data/fraudes-incibe.json?v=' + Date.now(), { cache: 'no-store' }).then(r => { if (!r.ok) throw new Error(`fraudes-incibe.json: HTTP ${r.status}`); return r.json(); }).catch(() => ({ alertas: [] }))
     ]).then(([amenazasJson, fraudesJson, incibeJson]) => {
-        amenazasCatalogo = amenazasJson.amenazas || [];
+        const amenazasCatalogo = amenazasJson.amenazas || [];
         const destacadas = fraudesJson.destacadas || [];
         const byId = Object.fromEntries(amenazasCatalogo.map(a => [a.id, a]));
 
@@ -64,30 +63,38 @@ document.addEventListener("DOMContentLoaded", function() {
     // ==============================
     function renderAlerts(alertasParseadas) {
         const container = document.getElementById("alerts-container");
-        if(!container) return;
+        if (!container) return;
 
         if (!alertasParseadas || alertasParseadas.length === 0) {
             container.innerHTML = '';
             return;
         }
 
-        const MAX_HOME = 5; // + tarjeta "ver todas" = 6 → encaja perfecto en grid de 3 columnas
+        const MAX_HOME = 3;
         const fmtFecha = (window.FDIncibe && window.FDIncibe.formatFecha) || (f => f);
         const truncar = (window.FDIncibe && window.FDIncibe.truncar) || (t => t);
 
+        const iconSvg = `
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16v16H4z"></path>
+                <path d="m4 7 8 6 8-6"></path>
+            </svg>`;
+
         container.innerHTML = alertasParseadas.slice(0, MAX_HOME).map((a, index) => `
             <a href="${basePath}alertas-incibe/#alerta-${a.id}" class="alert-card">
-                <span style="display:inline-block; font-family:'Courier New',monospace; font-size:10px; font-weight:700; letter-spacing:0.05em; color:#dc2626; text-transform:uppercase; margin-right:8px;">INCIBE · ${fmtFecha(a.fecha)}</span>
-                ${index === 0 ? '<span style="display:inline-block; font-family:\'Courier New\',monospace; font-size:10px; font-weight:800; letter-spacing:0.06em; color:#ffffff; background:#dc2626; padding:3px 7px; border-radius:3px; text-transform:uppercase;">NUEVO</span>' : ''}
-                <br>
-                <strong>${a.titulo}</strong>
-                <span style="display:block; font-size:0.85rem; color:#64748b; font-weight:400; margin-top:4px;">${truncar(a.descripcion, 110)}</span>
+                <div class="home-alert-head">
+                    <span class="home-alert-type">${iconSvg} Alerta INCIBE</span>
+                    <span class="home-alert-date">${fmtFecha(a.fecha)}</span>
+                </div>
+                <div class="home-alert-body">
+                    ${index === 0 ? '<span class="home-alert-new">Nuevo</span>' : ''}
+                    <strong>${a.titulo}</strong>
+                    <p class="home-alert-desc">${truncar(a.descripcion, 130)}</p>
+                    <span class="home-alert-link">Ver análisis →</span>
+                </div>
             </a>
-        `).join('') + (alertasParseadas.length > MAX_HOME ? `
-            <a href="${basePath}alertas-incibe/" class="alert-card" style="text-align:center; font-weight:700; color:#dc2626; display:flex; align-items:center; justify-content:center;">
-                Ver las ${alertasParseadas.length} alertas de INCIBE →
-            </a>
-        ` : '');
+        `).join('');
     }
 
     // ==============================
@@ -113,39 +120,4 @@ document.addEventListener("DOMContentLoaded", function() {
         }).join('');
     }
 
-    // ==============================
-    // Buscador en tiempo real (usa el catálogo completo, no solo destacadas)
-    // ==============================
-    const searchInput = document.getElementById("search-input");
-    const searchResults = document.getElementById("search-results");
-
-    if(searchInput) {
-        searchInput.addEventListener("input", function(e) {
-            const query = e.target.value.toLowerCase().trim();
-            if(query.length < 2) {
-                if(searchResults) searchResults.style.display = "none";
-                return;
-            }
-
-            const filtered = amenazasCatalogo.filter(item =>
-                item.titulo.toLowerCase().includes(query) ||
-                item.descripcion.toLowerCase().includes(query) ||
-                (item.tags || []).some(kw => kw.toLowerCase().includes(query))
-            );
-
-            if(!searchResults) return;
-
-            if(filtered.length > 0) {
-                searchResults.innerHTML = filtered.map(item => `
-                    <a href="${basePath}amenazas/${item.enlace}" class="search-item">
-                        <strong>${item.titulo}</strong> — ${item.descripcion}
-                    </a>
-                `).join('');
-                searchResults.style.display = "block";
-            } else {
-                searchResults.innerHTML = `<div class="search-item" style="color:#64748b;">No se encontraron amenazas coincidentes...</div>`;
-                searchResults.style.display = "block";
-            }
-        });
-    }
 });

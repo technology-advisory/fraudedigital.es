@@ -1,34 +1,30 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=3.0" name="viewport"/>
 <title>Privacidad e Identidad Digital · FraudeDigital.es</title>
-<meta name="description" content="Qué información tuya circula ya en internet, cómo minimizar tu huella digital y por qué eso te hace menos vulnerable a la ingeniería social. Guía para todos y técnicos.">
-<meta name="keywords" content="privacidad, huella digital, osint, reputación online, identidad digital">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://fraudedigital.es/defensas/privacidad-identidad-digital.html">
-
-<meta property="og:title" content="Privacidad e Identidad Digital: lo que ya saben de ti sin que lo sepas">
-<meta property="og:description" content="Cómo minimizar tu huella digital y por qué eso te hace menos vulnerable a la ingeniería social.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://fraudedigital.es/defensas/privacidad-identidad-digital.html">
-<meta property="og:image" content="https://fraudedigital.es/img/og-privacidad-identidad-digital.png">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Privacidad e Identidad Digital · FraudeDigital.es">
-<meta name="twitter:description" content="Lo que ya saben de ti sin que lo sepas.">
-<meta name="twitter:image" content="https://fraudedigital.es/img/og-privacidad-identidad-digital.png">
-
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-<link rel="stylesheet" href="../css/global.css">
-<link rel="stylesheet" href="../css/dossier-core.css">
-<link rel="stylesheet" href="../css/dossier-defensa.css">
-
+<meta content="Qué información tuya circula ya en internet, cómo minimizar tu huella digital y por qué eso te hace menos vulnerable a la ingeniería social. Guía para todos y técnicos." name="description"/>
+<meta content="privacidad, huella digital, osint, reputación online, identidad digital" name="keywords"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://fraudedigital.es/defensas/privacidad-identidad-digital.html" rel="canonical"/>
+<meta content="Privacidad e Identidad Digital: lo que ya saben de ti sin que lo sepas" property="og:title"/>
+<meta content="Cómo minimizar tu huella digital y por qué eso te hace menos vulnerable a la ingeniería social." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://fraudedigital.es/defensas/privacidad-identidad-digital.html" property="og:url"/>
+<meta content="https://fraudedigital.es/img/og-privacidad-identidad-digital.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Privacidad e Identidad Digital · FraudeDigital.es" name="twitter:title"/>
+<meta content="Lo que ya saben de ti sin que lo sepas." name="twitter:description"/>
+<meta content="https://fraudedigital.es/img/og-privacidad-identidad-digital.png" name="twitter:image"/>
+<link href="/favicon.ico" rel="icon" sizes="any"/>
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="../css/global.css" rel="stylesheet"/>
+<link href="../css/dossier-core.css" rel="stylesheet"/>
+<link href="../css/dossier-defensa.css" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -52,7 +48,6 @@
   "inLanguage": "es-ES"
 }
 </script>
-
 <style>
   .defensa-meta {
     border-top: none !important;
@@ -61,18 +56,16 @@
     margin: 5px 0 0 0 !important;
   }
 </style>
-
-<meta name="author" content="Miguel Ángel Carriazo">
-<meta name="theme-color" content="#16a34a">
-<meta http-equiv="Content-Language" content="es">
-<meta property="og:site_name" content="FraudeDigital.es">
-<meta property="og:locale" content="es_ES">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="article:published_time" content="2026-07-03">
-<meta property="article:author" content="Miguel Ángel Carriazo">
-<link rel="manifest" href="/manifest.json">
-
+<meta content="Miguel Ángel Carriazo" name="author"/>
+<meta content="#16a34a" name="theme-color"/>
+<meta content="es" http-equiv="Content-Language"/>
+<meta content="FraudeDigital.es" property="og:site_name"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="2026-07-03" property="article:published_time"/>
+<meta content="Miguel Ángel Carriazo" property="article:author"/>
+<link href="/manifest.json" rel="manifest"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -84,274 +77,263 @@
   ]
 }
 </script>
-</head>
+<link href="../css/defensa-expediente-v2.css?v=20260711" rel="stylesheet"/><link href="../css/operativa-v3.css?v=20260711" rel="stylesheet"/></head>
 <body style="margin:0; padding:0; background-color:#f8fafc;">
-
 <div class="card-wrapper ds-page">
 <div class="card">
-
-  <div id="menu-container"></div>
-  <div class="accent-bar" style="background: #16a34a;"></div>
-
-  <div class="ds-meta">
-    <span><span class="dot" style="background:#16a34a;"></span>FraudeDigital // defensa: privacidad-identidad-digital</span>
-    <span>clase: <strong>guía dual · público + técnico</strong></span>
-  </div>
-
-  <div style="padding: 32px 48px 24px; border-bottom: 1px solid #e2e8f0;">
-
-    <div style="font-family:monospace; font-size:11px; text-transform:uppercase; color:#16a34a; letter-spacing:0.1em; font-weight:700; margin-bottom:6px;">Defensa Avanzada · Reducción de Superficie de Ataque Humano</div>
-    <h1 style="font-size: clamp(28px, 5vw, 42px); font-weight: 800; color: #0f172a; margin: 0 0 10px; line-height: 1.15;">Privacidad e Identidad Digital: <span style="color:#16a34a;">lo que ya saben de ti sin que lo sepas</span></h1>
-    <p style="font-size: 17px; color: #475569; line-height: 1.6; margin: 0; max-width: 900px; padding-bottom: 16px;">
-      <strong>Para todos:</strong> qué información tuya está expuesta ahora mismo y cómo reducirla.
-      <strong>Para profesionales:</strong> OSINT pasivo, superficie de ataque humana y minimización de metadatos.
-    </p>
-
-    <div class="defensa-meta">
-      <span class="defensa-meta-item">
-        <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="6" r="2.6"/><path d="M3.5 15c0-2.6 2.5-4.6 5.5-4.6s5.5 2 5.5 4.6"/></svg>
-        <strong>Miguel Ángel Carriazo</strong>
-      </span>
-      <span class="defensa-meta-item">
-        <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="3" width="13" height="12.5" rx="1.3"/><path d="M2.5 6.5h13M6 2v2.4M12 2v2.4"/></svg>
-        3 julio 2026
-      </span>
-      <span class="defensa-meta-item">
-        <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="6.8"/><path d="M9 5.3V9l2.8 1.7"/></svg>
-        4 min de lectura
-      </span>
-    </div>
-  </div>
-
-  <div style="padding: 24px 48px 24px;">
-    <a href="../defensas/index.html" class="defensa-btn-back">← Volver a Defensas</a>
-  </div>
-
-  <div class="defensa-layout">
-
-    <div class="defensa-main">
-
-      <div class="block" id="s1">
-        <div class="block-meta">
+<div id="menu-container"></div>
+<div class="accent-bar" style="background: #16a34a;"></div>
+<div class="ds-meta">
+<span><span class="dot" style="background:#16a34a;"></span>FraudeDigital // defensa: privacidad-identidad-digital</span>
+<span>clase: <strong>guía dual · público + técnico</strong></span>
+</div><div class="fd-top-back-wrap"><a class="fd-top-back" href="index.html"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M19 12H5"></path><path d="M12 19l-7-7 7-7"></path></svg><span>Volver a Defensas</span></a></div>
+<section class="def-v2-hero">
+<div>
+<div class="def-v2-kicker">Defensa Avanzada · Personas e Identidad</div>
+<h1>Privacidad e Identidad Digital: <span style="color:#16a34a;">reducir la materia prima de la ingeniería social</span></h1>
+<p class="def-v2-lead"><strong>Para todos:</strong> descubrir qué información expones y crear mecanismos de verificación. <strong>Para profesionales:</strong> OSINT pasivo, minimización, segregación de identidades y control de exposición.</p>
+<div class="defensa-meta">
+<span class="defensa-meta-item">
+<svg fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 18 18"><circle cx="9" cy="6" r="2.6"></circle><path d="M3.5 15c0-2.6 2.5-4.6 5.5-4.6s5.5 2 5.5 4.6"></path></svg>
+<strong>Miguel Ángel Carriazo</strong>
+</span>
+<span class="defensa-meta-item">
+<svg fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 18 18"><rect height="12.5" rx="1.3" width="13" x="2.5" y="3"></rect><path d="M2.5 6.5h13M6 2v2.4M12 2v2.4"></path></svg>
+            revisado julio 2026
+          </span>
+<span class="defensa-meta-item">
+<svg fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 18 18"><circle cx="9" cy="9" r="6.8"></circle><path d="M9 5.3V9l2.8 1.7"></path></svg>
+            guía dual · público + técnico
+          </span>
+</div>
+</div>
+<div class="def-v2-hero-visual">
+<div class="def-v2-hero-visual-label">Dónde actúa el control</div>
+<svg aria-label="Comparación entre el flujo del ataque y la defensa" role="img" viewbox="0 0 500 145">
+<text fill="#fecaca" font-family="Courier New, monospace" font-size="10" x="20" y="16">SIN CONTROL</text>
+<rect fill="#450a0a" height="40" rx="8" stroke="#ef4444" width="130" x="20" y="25"></rect><text fill="#fee2e2" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" x="85" y="49">OSINT público</text><line stroke="#ef4444" stroke-width="2" x1="153" x2="178" y1="45" y2="45"></line><path d="M178 45 l-8 -5 v10 z" fill="#ef4444"></path><rect fill="#450a0a" height="40" rx="8" stroke="#ef4444" width="130" x="185" y="25"></rect><text fill="#fee2e2" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" x="250" y="49">Pretexto creíble</text><line stroke="#ef4444" stroke-width="2" x1="318" x2="343" y1="45" y2="45"></line><path d="M343 45 l-8 -5 v10 z" fill="#ef4444"></path><rect fill="#450a0a" height="40" rx="8" stroke="#ef4444" width="130" x="350" y="25"></rect><text fill="#fee2e2" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" x="415" y="49">Suplantación dirigida</text>
+<text fill="#86efac" font-family="Courier New, monospace" font-size="10" x="20" y="88">CON CONTROL</text>
+<rect fill="#14532d" height="40" rx="8" stroke="#4ade80" width="130" x="20" y="98"></rect><text fill="#f0fdf4" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" x="85" y="122">Minimizar</text><line stroke="#4ade80" stroke-width="2" x1="153" x2="178" y1="118" y2="118"></line><path d="M178 118 l-8 -5 v10 z" fill="#4ade80"></path><rect fill="#14532d" height="40" rx="8" stroke="#4ade80" width="130" x="185" y="98"></rect><text fill="#f0fdf4" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" x="250" y="122">Verificar</text><line stroke="#4ade80" stroke-width="2" x1="318" x2="343" y1="118" y2="118"></line><path d="M343 118 l-8 -5 v10 z" fill="#4ade80"></path><rect fill="#14532d" height="40" rx="8" stroke="#4ade80" width="130" x="350" y="98"></rect><text fill="#f0fdf4" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" x="415" y="122">Romper el pretexto</text>
+</svg>
+</div>
+</section>
+<section class="def-v2-map">
+<div class="def-v2-map-head">
+<div>
+<h2>Mapa del control</h2>
+<p>Qué aplicamos, qué fase del ataque interrumpimos y qué resultado esperamos obtener.</p>
+</div>
+</div>
+<div class="def-v2-map-grid"><div class="def-v2-map-card"><svg fill="none" stroke="#16a34a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 12l5 5L20 6"></path></svg><div class="def-v2-map-label">Control primario</div><div class="def-v2-map-value">Minimización de huella y verificación independiente</div></div><div class="def-v2-map-card"><svg fill="none" stroke="#16a34a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 3v18M3 12h18"></path></svg><div class="def-v2-map-label">Fase que rompe</div><div class="def-v2-map-value">Construcción del pretexto y abuso de confianza</div></div><div class="def-v2-map-card"><svg fill="none" stroke="#16a34a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 18l5-5 4 4 7-8"></path></svg><div class="def-v2-map-label">Resultado</div><div class="def-v2-map-value">Menos contexto útil y más fricción para suplantar</div></div></div>
+</section>
+<div class="defensa-layout">
+<div class="defensa-main">
+<div class="block" id="s1">
+<div class="block-meta">
           01 // Para todos
           <span class="defensa-badge-all">Público general</span>
-        </div>
-        <h2>¿Por qué lo que compartes hoy es munición para mañana?</h2>
-        <div class="body-text">
-          <p>Cada foto, cada check-in de ubicación, cada dato en tu perfil público de LinkedIn o Instagram es una pieza de información que un atacante puede usar para construir un ataque de ingeniería social creíble. No hace falta hackear nada: <strong>basta con mirar lo que ya publicas tú mismo</strong>.</p>
-
-          <p>Este proceso de recopilar información pública dispersa para construir un perfil de alguien se llama <strong>OSINT</strong> (Open Source Intelligence), y no requiere ninguna habilidad técnica especial — cualquiera con tiempo puede hacerlo.</p>
-
-          <div class="defensa-box-warning">
-            <strong>⚠️ Ejemplo real que te puede pasar mañana:</strong>
-            <p>Publicas en LinkedIn que empiezas un nuevo trabajo como responsable de compras en una empresa. Tres días después recibes un email "del CEO" (en realidad suplantado) pidiéndote una transferencia urgente a un proveedor, con detalles que suenan creíbles porque el atacante ha investigado tu empresa, tu cargo y tu jefe real en cuestión de minutos. Es la base del fraude del CEO — ver nuestro expediente de <a href="../amenazas/ingenieria-social.html">Ingeniería Social & OSINT</a>.</p>
+</div>
+<h2>¿Por qué lo que compartes hoy es munición para mañana?</h2>
+<div class="body-text">
+<p>Cada foto, cada check-in de ubicación, cada dato en tu perfil público de LinkedIn o Instagram es una pieza de información que un atacante puede usar para construir un ataque de ingeniería social creíble. No hace falta hackear nada: <strong>basta con mirar lo que ya publicas tú mismo</strong>.</p>
+<p>Este proceso de recopilar información pública dispersa para construir un perfil de alguien se llama <strong>OSINT</strong> (Open Source Intelligence), y no requiere ninguna habilidad técnica especial — cualquiera con tiempo puede hacerlo.</p>
+<div class="defensa-box-warning">
+<strong>⚠️ Ejemplo real que te puede pasar mañana:</strong>
+<p>Publicas en LinkedIn que empiezas un nuevo trabajo como responsable de compras en una empresa. Tres días después recibes un email "del CEO" (en realidad suplantado) pidiéndote una transferencia urgente a un proveedor, con detalles que suenan creíbles porque el atacante ha investigado tu empresa, tu cargo y tu jefe real en cuestión de minutos. Es la base del fraude del CEO — ver nuestro expediente de <a href="../amenazas/ingenieria-social.html">Ingeniería Social &amp; OSINT</a>.</p>
+</div>
+<p><strong>¿Qué tipo de información es la más peligrosa si está expuesta?</strong></p>
+<ul class="defensa-signal-list">
+<li>
+<span class="signal-num">①</span>
+<span><strong>Tu cargo y empresa actual</strong> — base de cualquier fraude del CEO o suplantación corporativa dirigida.</span>
+</li>
+<li>
+<span class="signal-num">②</span>
+<span><strong>Rutinas y ubicaciones habituales</strong> — dónde vives, dónde trabajas, cuándo viajas — información útil para robos físicos y para dar credibilidad a estafas de "he tenido un accidente cerca de X".</span>
+</li>
+<li>
+<span class="signal-num">③</span>
+<span><strong>Relaciones familiares visibles</strong> — nombres de hijos, pareja, padres — usados en estafas de deepfake de voz familiar (ver <a href="../ejemplos/deepfake-voz-familiar.html">nuestro caso real</a>).</span>
+</li>
+<li>
+<span class="signal-num">④</span>
+<span><strong>Respuestas de seguridad "obvias"</strong> — nombre de mascota, colegio, ciudad natal — visibles a menudo en publicaciones de nostalgia o presentaciones personales.</span>
+</li>
+</ul>
+<div class="defensa-box-success">
+<strong>✅ Regla de oro:</strong> no necesitas desaparecer de internet. Necesitas <strong>revisar quién ve qué</strong>: perfiles personales en privado, perfiles profesionales solo con lo estrictamente necesario, y pensar dos veces antes de publicar en tiempo real dónde estás.
           </div>
-
-          <p><strong>¿Qué tipo de información es la más peligrosa si está expuesta?</strong></p>
-
-          <ul class="defensa-signal-list">
-            <li>
-              <span class="signal-num">①</span>
-              <span><strong>Tu cargo y empresa actual</strong> — base de cualquier fraude del CEO o suplantación corporativa dirigida.</span>
-            </li>
-            <li>
-              <span class="signal-num">②</span>
-              <span><strong>Rutinas y ubicaciones habituales</strong> — dónde vives, dónde trabajas, cuándo viajas — información útil para robos físicos y para dar credibilidad a estafas de "he tenido un accidente cerca de X".</span>
-            </li>
-            <li>
-              <span class="signal-num">③</span>
-              <span><strong>Relaciones familiares visibles</strong> — nombres de hijos, pareja, padres — usados en estafas de deepfake de voz familiar (ver <a href="../ejemplos/deepfake-voz-familiar.html">nuestro caso real</a>).</span>
-            </li>
-            <li>
-              <span class="signal-num">④</span>
-              <span><strong>Respuestas de seguridad "obvias"</strong> — nombre de mascota, colegio, ciudad natal — visibles a menudo en publicaciones de nostalgia o presentaciones personales.</span>
-            </li>
-          </ul>
-
-          <div class="defensa-box-success">
-            <strong>✅ Regla de oro:</strong> no necesitas desaparecer de internet. Necesitas <strong>revisar quién ve qué</strong>: perfiles personales en privado, perfiles profesionales solo con lo estrictamente necesario, y pensar dos veces antes de publicar en tiempo real dónde estás.
-          </div>
-        </div>
-      </div>
-
-      <div class="block" id="s2">
-        <div class="block-meta">
+</div>
+</div>
+<div class="block" id="s2">
+<div class="block-meta">
           02 // Para todos
           <span class="defensa-badge-all">Checklist rápido de revisión</span>
-        </div>
-        <h2>Auditoría rápida de tu huella digital (20 minutos)</h2>
-        <div class="body-text">
-          <p>Un repaso práctico, red social por red social:</p>
-
-          <ol>
-            <li><strong>Busca tu propio nombre en Google</strong> — mira qué aparece en las primeras 2 páginas de resultados. Sorprende a mucha gente lo que encuentra.</li>
-            <li><strong>Revisa la privacidad de Instagram/Facebook</strong> — cuenta privada si no necesitas alcance público, revisa quién puede ver tus publicaciones antiguas.</li>
-            <li><strong>En LinkedIn, limita lo que ven los "no conectados"</strong> — tu actividad reciente, cambios de cargo, no tiene por qué ser visible para cualquiera fuera de tu red.</li>
-            <li><strong>Revisa las respuestas de seguridad de tus cuentas críticas</strong> (banco, email) — si la respuesta es algo que has publicado alguna vez, cámbiala por algo que nunca compartirías.</li>
-            <li><strong>Desactiva la geolocalización automática</strong> en las fotos que subes, y evita publicar ubicaciones en tiempo real (mejor publicar cuando ya te has ido).</li>
-            <li><strong>Habla con tu familia sobre la palabra clave</strong> mencionada en nuestro caso de <a href="../ejemplos/deepfake-voz-familiar.html">deepfake de voz</a> — es la defensa más efectiva ante suplantación familiar.</li>
-          </ol>
-        </div>
-      </div>
-
-      <div class="defensa-divider">
-        <span class="label"><span class="gear">🛡️</span> A PARTIR DE AQUÍ · PARA ADMINISTRADORES Y TÉCNICOS <span class="gear">🛡️</span></span>
-      </div>
-
-      <div class="block" id="s3">
-        <div class="block-meta">
+</div>
+<h2>Auditoría rápida de tu huella digital (20 minutos)</h2>
+<div class="body-text">
+<p>Un repaso práctico, red social por red social:</p>
+<ol>
+<li><strong>Busca tu propio nombre en Google</strong> — mira qué aparece en las primeras 2 páginas de resultados. Sorprende a mucha gente lo que encuentra.</li>
+<li><strong>Revisa la privacidad de Instagram/Facebook</strong> — cuenta privada si no necesitas alcance público, revisa quién puede ver tus publicaciones antiguas.</li>
+<li><strong>En LinkedIn, limita lo que ven los "no conectados"</strong> — tu actividad reciente, cambios de cargo, no tiene por qué ser visible para cualquiera fuera de tu red.</li>
+<li><strong>Revisa las respuestas de seguridad de tus cuentas críticas</strong> (banco, email) — si la respuesta es algo que has publicado alguna vez, cámbiala por algo que nunca compartirías.</li>
+<li><strong>Desactiva la geolocalización automática</strong> en las fotos que subes, y evita publicar ubicaciones en tiempo real (mejor publicar cuando ya te has ido).</li>
+<li><strong>Habla con tu familia sobre la palabra clave</strong> mencionada en nuestro caso de <a href="../ejemplos/deepfake-voz-familiar.html">deepfake de voz</a> — es la defensa más efectiva ante suplantación familiar.</li>
+</ol>
+</div>
+</div>
+<div class="defensa-divider">
+<span class="label"><span class="gear">🛡️</span> A PARTIR DE AQUÍ · PARA ADMINISTRADORES Y TÉCNICOS <span class="gear">🛡️</span></span>
+</div>
+<div class="block" id="s3">
+<div class="block-meta">
           03 // Para técnicos
           <span class="defensa-badge-tech">OSINT · Superficie de Ataque Humana</span>
-        </div>
-        <h2>Metodología OSINT pasiva desde la perspectiva del atacante</h2>
-        <div class="body-text">
-          <p>Entender cómo se construye un perfil OSINT ayuda a saber qué reducir:</p>
-
-          <div class="defensa-box-tech">
-            <div style="margin-bottom: 14px;">
-              <strong style="color: #0f172a; font-size: 15px;">🔹 Agregación de fuentes públicas dispersas</strong>
-              <p style="margin: 4px 0 0 0; color: #334155;">Un atacante combina LinkedIn (cargo, organigrama), Instagram (rutinas, familia), registros públicos (Colegio Registradores, BOE), y filtraciones previas (email en brechas conocidas) para construir un perfil completo sin interactuar nunca con el objetivo.</p>
-            </div>
-
-            <div style="margin-bottom: 14px;">
-              <strong style="color: #0f172a; font-size: 15px;">🔹 Metadatos EXIF en imágenes</strong>
-              <p style="margin: 4px 0 0 0; color: #334155;">Fotos subidas sin limpiar metadatos pueden contener coordenadas GPS exactas, modelo de dispositivo y hora de captura. La mayoría de redes sociales las eliminan automáticamente, pero WhatsApp, email y algunos foros no siempre lo hacen.</p>
-            </div>
-
-            <div>
-              <strong style="color: #0f172a; font-size: 15px;">🔹 Correlación de nombres de usuario entre plataformas</strong>
-              <p style="margin: 4px 0 0 0; color: #334155;">Reutilizar el mismo nombre de usuario en múltiples plataformas (Twitter/X, Reddit, foros de nicho) permite correlacionar identidad y actividad entre contextos que la persona asumía separados — herramientas como Sherlock automatizan esta correlación.</p>
-            </div>
-          </div>
-
-          <p><strong>Dato relevante:</strong> el fraude del CEO y el spear-phishing dirigido tienen tasas de éxito significativamente más altas que el phishing masivo precisamente porque se apoyan en OSINT — el mensaje "encaja" con la realidad del objetivo.</p>
-        </div>
-      </div>
-
-      <div class="block" id="s4">
-        <div class="block-meta">
+</div>
+<h2>Metodología OSINT pasiva desde la perspectiva del atacante</h2>
+<div class="body-text">
+<p>Entender cómo se construye un perfil OSINT ayuda a saber qué reducir:</p>
+<div class="defensa-box-tech">
+<div style="margin-bottom: 14px;">
+<strong style="color: #0f172a; font-size: 15px;">🔹 Agregación de fuentes públicas dispersas</strong>
+<p style="margin: 4px 0 0 0; color: #334155;">Un atacante combina LinkedIn (cargo, organigrama), Instagram (rutinas, familia), registros públicos (Colegio Registradores, BOE), y filtraciones previas (email en brechas conocidas) para construir un perfil completo sin interactuar nunca con el objetivo.</p>
+</div>
+<div style="margin-bottom: 14px;">
+<strong style="color: #0f172a; font-size: 15px;">🔹 Metadatos EXIF en imágenes</strong>
+<p style="margin: 4px 0 0 0; color: #334155;">Fotos subidas sin limpiar metadatos pueden contener coordenadas GPS exactas, modelo de dispositivo y hora de captura. La mayoría de redes sociales las eliminan automáticamente, pero WhatsApp, email y algunos foros no siempre lo hacen.</p>
+</div>
+<div>
+<strong style="color: #0f172a; font-size: 15px;">🔹 Correlación de nombres de usuario entre plataformas</strong>
+<p style="margin: 4px 0 0 0; color: #334155;">Reutilizar el mismo nombre de usuario en múltiples plataformas (Twitter/X, Reddit, foros de nicho) permite correlacionar identidad y actividad entre contextos que la persona asumía separados — herramientas como Sherlock automatizan esta correlación.</p>
+</div>
+</div>
+<p><strong>Dato relevante:</strong> el fraude del CEO y el spear-phishing dirigido tienen tasas de éxito significativamente más altas que el phishing masivo precisamente porque se apoyan en OSINT — el mensaje "encaja" con la realidad del objetivo.</p>
+</div>
+</div>
+<div class="block" id="s4">
+<div class="block-meta">
           04 // Para técnicos
           <span class="defensa-badge-tech">Minimización de superficie</span>
-        </div>
-        <h2>Estrategias de minimización de superficie de exposición</h2>
-        <div class="body-text">
-          <p>Medidas técnicas concretas más allá de la configuración de privacidad básica:</p>
-
-          <div class="defensa-box-tech">
-            <div style="margin-bottom: 14px;">
-              <strong style="color: #0f172a; font-size: 15px;">🔹 Alertas de Google (Google Alerts)</strong>
-              <p style="margin: 4px 0 0 0; color: #334155;">Configurar una alerta con tu nombre completo permite detectar nuevas menciones públicas casi en tiempo real, útil para identificar filtraciones de información o suplantaciones tempranas.</p>
-            </div>
-
-            <div style="margin-bottom: 14px;">
-              <strong style="color: #0f172a; font-size: 15px;">🔹 Separación de identidad profesional/personal</strong>
-              <p style="margin: 4px 0 0 0; color: #334155;">Para roles con alta exposición (directivos, personal de finanzas), es recomendable mantener perfiles profesionales y personales completamente desvinculados, sin nombres de usuario ni fotos compartidas que permitan correlación automática.</p>
-            </div>
-
-            <div>
-              <strong style="color: #0f172a; font-size: 15px;">🔹 Concienciación organizativa sobre publicaciones corporativas</strong>
-              <p style="margin: 4px 0 0 0; color: #334155;">Los anuncios de "nuevo empleado", cambios organizativos o proyectos en curso publicados en RRSS corporativas son, sin quererlo, un mapa de organigrama gratuito para atacantes que preparan fraude del CEO dirigido.</p>
-            </div>
-          </div>
-
-          <p><strong>Resumen:</strong> la privacidad no es "no usar redes sociales" — es <strong>controlar conscientemente qué información sirve a un potencial atacante</strong> y reducir esa superficie sin renunciar a la presencia online que necesitas.</p>
-        </div>
-      </div>
-
-      <div class="defensa-foot" style="padding: 32px 0 0; margin-top: 40px; border-top: 1px solid #e2e8f0; display: flex; gap: 48px; flex-wrap: wrap; align-items: flex-start;">
-        <div class="defensa-author" style="flex: 1 1 0%; min-width: 0;">
-          <div class="defensa-foot-label">Sobre el autor</div>
-          <div class="defensa-author-name">Miguel Ángel Carriazo <span>· vCISO</span></div>
-          <p class="defensa-author-bio">vCISO · Arquitecto de Soluciones de Infraestructura y Ciberseguridad | Gobierno, Riesgo y Cumplimiento (GRC) | Gobierno de IA · ISO 42001 | Fundador de FraudeDigital.es</p>
-        </div>
-        <div class="defensa-share" style="flex: 0 0 auto; padding-left: 40px; border-left: 1px solid #e2e8f0;">
-          <div class="defensa-foot-label">Compartir artículo</div>
-          <a href="#" id="shareLinkedin" target="_blank" class="defensa-share-btn" aria-label="Compartir en LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-          </a>
-        </div>
-      </div>
-
-    </div>
-
-    <aside class="defensa-toc">
-
-      <div class="defensa-control">
-        <div class="title">Ficha de Control</div>
-        <table>
-            <tr><td class="label">Público objetivo</td><td class="value">Todos + Técnicos</td></tr>
-            <tr><td class="label">Defensa básica</td><td class="value">Auditoría de privacidad en RRSS</td></tr>
-            <tr><td class="label">Defensa avanzada</td><td class="value highlight">Minimización OSINT · Separación de identidades</td></tr>
-            <tr><td class="label">Estándar</td><td class="value">RGPD · Minimización de datos</td></tr>
-        </table>
-      </div>
-
-      <div>
-        <div class="defensa-toc-label">Contenido</div>
-        <nav class="defensa-toc-nav" id="artTocNav">
-          <a href="#s1" class="active">01. Para todos · Por qué importa</a>
-          <a href="#s2">02. Para todos · Auditoría rápida</a>
-          <a href="#s3">03. Técnico · Metodología OSINT</a>
-          <a href="#s4">04. Técnico · Minimización</a>
-        </nav>
-        <div style="margin-top: 14px; font-size: 12px; color: #94a3b8; border-top: 1px solid #e2e8f0; padding-top: 10px;">
-          <span style="display: block; background: #16a34a; color: #fff; padding: 4px 10px; border-radius: 4px; text-align: center; font-weight: 700; font-size: 11px;">🛡️ Dual · Para todos + técnicos</span>
-        </div>
-      </div>
-
-      <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid #e2e8f0;">
-        <div class="defensa-toc-label">Neutraliza estas amenazas</div>
-        <div style="display: flex; flex-direction: column; gap: 6px; margin-top: 8px;">
-          <a href="../amenazas/ingenieria-social.html" style="font-size: 13px; color: #dc2626; text-decoration: none; font-weight: 600;">→ Ingeniería Social & OSINT</a>
-          <a href="../amenazas/ia-estafas.html" style="font-size: 13px; color: #dc2626; text-decoration: none; font-weight: 600;">→ IA & Deepfakes</a>
-          <a href="../amenazas/bulos-fake-news.html" style="font-size: 13px; color: #dc2626; text-decoration: none; font-weight: 600;">→ Bulos y Fake News</a>
-        </div>
-      </div>
-
-    </aside>
-
-  </div>
-
-  <div class="defensa-related">
-    <div class="defensa-related-label">Sigue leyendo</div>
-    <div class="defensa-related-title">Defensas relacionadas</div>
-    <div class="defensa-related-grid">
-      <a href="../amenazas/ingenieria-social.html" class="defensa-related-card">
-        <span class="defensa-related-pill">Amenaza</span>
-        <h3>Ingeniería Social & OSINT</h3>
-        <p>Cómo se construye un ataque dirigido.</p>
-        <div class="defensa-related-meta"><span>18 junio 2026</span><span>4 min</span></div>
-      </a>
-      <a href="../ejemplos/deepfake-voz-familiar.html" class="defensa-related-card">
-        <span class="defensa-related-pill">Caso real</span>
-        <h3>Deepfake de Voz Familiar</h3>
-        <p>Por qué la palabra clave familiar te protege.</p>
-        <div class="defensa-related-meta"><span>2 julio 2026</span><span>—</span></div>
-      </a>
-      <a href="contrasenas-seguras.html" class="defensa-related-card">
-        <span class="defensa-related-pill">Contraseñas</span>
-        <h3>Gestión de Contraseñas Seguras</h3>
-        <p>Preguntas de seguridad que no deberías usar.</p>
-        <div class="defensa-related-meta"><span>3 julio 2026</span><span>4 min</span></div>
-      </a>
-    </div>
-  </div>
-
-  <div id="footer-container"></div>
-
+</div>
+<h2>Estrategias de minimización de superficie de exposición</h2>
+<div class="body-text">
+<p>Medidas técnicas concretas más allá de la configuración de privacidad básica:</p>
+<div class="defensa-box-tech">
+<div style="margin-bottom: 14px;">
+<strong style="color: #0f172a; font-size: 15px;">🔹 Alertas de Google (Google Alerts)</strong>
+<p style="margin: 4px 0 0 0; color: #334155;">Configurar una alerta con tu nombre completo permite detectar nuevas menciones públicas casi en tiempo real, útil para identificar filtraciones de información o suplantaciones tempranas.</p>
+</div>
+<div style="margin-bottom: 14px;">
+<strong style="color: #0f172a; font-size: 15px;">🔹 Separación de identidad profesional/personal</strong>
+<p style="margin: 4px 0 0 0; color: #334155;">Para roles con alta exposición (directivos, personal de finanzas), es recomendable mantener perfiles profesionales y personales completamente desvinculados, sin nombres de usuario ni fotos compartidas que permitan correlación automática.</p>
+</div>
+<div>
+<strong style="color: #0f172a; font-size: 15px;">🔹 Concienciación organizativa sobre publicaciones corporativas</strong>
+<p style="margin: 4px 0 0 0; color: #334155;">Los anuncios de "nuevo empleado", cambios organizativos o proyectos en curso publicados en RRSS corporativas son, sin quererlo, un mapa de organigrama gratuito para atacantes que preparan fraude del CEO dirigido.</p>
 </div>
 </div>
-
+<p><strong>Resumen:</strong> la privacidad no es "no usar redes sociales" — es <strong>controlar conscientemente qué información sirve a un potencial atacante</strong> y reducir esa superficie sin renunciar a la presencia online que necesitas.</p>
+</div>
+</div>
+<section class="def-v2-cases">
+<div class="def-v2-cases-head">
+<div class="eyebrow">Casos reales y patrones observados</div>
+<h2>El control explicado sobre incidentes y técnicas reales</h2>
+<p>La teoría es útil; el valor del control aparece cuando entendemos qué fase concreta del incidente habría limitado.</p>
+</div>
+<div class="def-v2-case-grid"><a class="def-v2-case" href="../ejemplos/deepfake-voz-familiar.html" rel="" target="_self">
+<span class="def-v2-case-tag">Caso real analizado</span>
+<h3>La voz de tu hijo pidiendo dinero: deepfake de voz</h3>
+<p>El caso de FraudeDigital muestra por qué una voz reconocible ya no debe ser una prueba de identidad. La defensa útil no es 'escuchar mejor', sino introducir una comprobación independiente y previamente acordada.</p>
+<span class="def-v2-case-source">FraudeDigital · Caso real →</span>
+</a><a class="def-v2-case" href="https://www.police.gov.hk/info/doc/fcq/2026/sfc_e.pdf" rel="noopener" target="_blank">
+<span class="def-v2-case-tag">Casos públicos · Deepfake</span>
+<h3>Hong Kong documentó fraudes con videoconferencias pregrabadas y deepfake</h3>
+<p>La Policía de Hong Kong informó de casos de fraude con deepfake y videoconferencias pregrabadas. El contexto visual o la presencia aparente de varias personas ya no basta para validar una instrucción sensible.</p>
+<span class="def-v2-case-source">Fuente: Hong Kong Police Force →</span>
+</a></div>
+</section><div class="defensa-foot" style="padding: 32px 0 0; margin-top: 40px; border-top: 1px solid #e2e8f0; display: flex; gap: 48px; flex-wrap: wrap; align-items: flex-start;">
+<div class="defensa-author" style="flex: 1 1 0%; min-width: 0;">
+<div class="defensa-foot-label">Sobre el autor</div>
+<div class="defensa-author-name">Miguel Ángel Carriazo <span>· vCISO</span></div>
+<p class="defensa-author-bio">vCISO · Arquitecto de Soluciones de Infraestructura y Ciberseguridad | Gobierno, Riesgo y Cumplimiento (GRC) | Gobierno de IA · ISO 42001 | Fundador de FraudeDigital.es</p>
+</div>
+<div class="defensa-share" style="flex: 0 0 auto; padding-left: 40px; border-left: 1px solid #e2e8f0;">
+<div class="defensa-foot-label">Compartir artículo</div>
+<a aria-label="Compartir en LinkedIn" class="defensa-share-btn" href="#" id="shareLinkedin" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+<aside class="defensa-toc">
+<div class="defensa-control">
+<div class="title">Ficha de Control</div>
+<table>
+<tr><td class="label">Público objetivo</td><td class="value">Todos + Técnicos</td></tr>
+<tr><td class="label">Defensa básica</td><td class="value">Auditoría de privacidad en RRSS</td></tr>
+<tr><td class="label">Defensa avanzada</td><td class="value highlight">Minimización OSINT · Separación de identidades</td></tr>
+<tr><td class="label">Estándar</td><td class="value">RGPD · Minimización de datos</td></tr>
+</table>
+</div>
+<div>
+<div class="defensa-toc-label">Contenido</div>
+<nav class="defensa-toc-nav" id="artTocNav">
+<a class="active" href="#s1">01. Para todos · Por qué importa</a>
+<a href="#s2">02. Para todos · Auditoría rápida</a>
+<a href="#s3">03. Técnico · Metodología OSINT</a>
+<a href="#s4">04. Técnico · Minimización</a>
+</nav>
+<div style="margin-top: 14px; font-size: 12px; color: #94a3b8; border-top: 1px solid #e2e8f0; padding-top: 10px;">
+<span style="display: block; background: #16a34a; color: #fff; padding: 4px 10px; border-radius: 4px; text-align: center; font-weight: 700; font-size: 11px;">🛡️ Dual · Para todos + técnicos</span>
+</div>
+</div>
+<div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid #e2e8f0;">
+<div class="defensa-toc-label">Neutraliza estas amenazas</div>
+<div style="display: flex; flex-direction: column; gap: 6px; margin-top: 8px;">
+<a href="../amenazas/ingenieria-social.html" style="font-size: 13px; color: #dc2626; text-decoration: none; font-weight: 600;">→ Ingeniería Social &amp; OSINT</a>
+<a href="../amenazas/ia-estafas.html" style="font-size: 13px; color: #dc2626; text-decoration: none; font-weight: 600;">→ IA &amp; Deepfakes</a>
+<a href="../amenazas/bulos-fake-news.html" style="font-size: 13px; color: #dc2626; text-decoration: none; font-weight: 600;">→ Bulos y Fake News</a>
+</div>
+</div>
+</aside>
+</div>
+<div class="defensa-related">
+<div class="defensa-related-label">Sigue leyendo</div>
+<div class="defensa-related-title">Defensas relacionadas</div>
+<div class="defensa-related-grid">
+<a class="defensa-related-card" href="../amenazas/ingenieria-social.html">
+<span class="defensa-related-pill">Amenaza</span>
+<h3>Ingeniería Social &amp; OSINT</h3>
+<p>Cómo se construye un ataque dirigido.</p>
+<div class="defensa-related-meta"><span>18 junio 2026</span><span>4 min</span></div>
+</a>
+<a class="defensa-related-card" href="../ejemplos/deepfake-voz-familiar.html">
+<span class="defensa-related-pill">Caso real</span>
+<h3>Deepfake de Voz Familiar</h3>
+<p>Por qué la palabra clave familiar te protege.</p>
+<div class="defensa-related-meta"><span>2 julio 2026</span><span>—</span></div>
+</a>
+<a class="defensa-related-card" href="contrasenas-seguras.html">
+<span class="defensa-related-pill">Contraseñas</span>
+<h3>Gestión de Contraseñas Seguras</h3>
+<p>Preguntas de seguridad que no deberías usar.</p>
+<div class="defensa-related-meta"><span>3 julio 2026</span><span>4 min</span></div>
+</a>
+</div>
+</div>
+<div id="footer-container"></div>
+</div>
+</div>
 <script src="../js/menu.js"></script>
 <script src="../js/footer.js"></script>
-
 <script>
   var shareBtn = document.getElementById('shareLinkedin');
   if (shareBtn) {
     shareBtn.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(window.location.href);
   }
 </script>
-
 <script>
   var tocLinks = Array.from(document.querySelectorAll('.defensa-toc-nav a'));
   var sections = tocLinks.map(a => document.querySelector(a.getAttribute('href')));
@@ -373,6 +355,5 @@
     sections.forEach(function(s){ if (s) observer.observe(s); });
   }
 </script>
-
 </body>
 </html>

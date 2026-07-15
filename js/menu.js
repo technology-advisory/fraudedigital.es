@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (!menuContainer) return;
 
     // Detectar subcarpeta
-    const isInSubfolder = /\/(amenazas|legal|guia|primeros-auxilios|herramientas|ejemplos|defensas|alertas-incibe)\//.test(window.location.pathname);
+    const isInSubfolder = /\/(amenazas|legal|guia|primeros-auxilios|herramientas|ejemplos|defensas|alertas-incibe|hablemos)\//.test(window.location.pathname);
     const basePath = isInSubfolder ? '../' : '';
 
     // ============================================================
@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function() {
           icon: '<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>' },
         { key: 'defensas',           href: `${basePath}defensas/index.html`,              label: 'Defensas',
           icon: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/>' },
+        { key: 'hablemos',           href: `${basePath}hablemos/index.html`,              label: 'Hablemos',
+          icon: '<path d="M21 15a4 4 0 0 1-4 4H8l-5 3 1.7-5.1A7 7 0 0 1 3 12c0-4.4 4-8 9-8s9 3.6 9 8v3z"/>' },
         { key: 'alertas-incibe',     href: `${basePath}alertas-incibe/index.html`,        label: 'Alertas INCIBE',
           icon: '<path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>' },
         { key: 'guia',               href: `${basePath}guia/fraude-digital.html`,         label: 'Guía',
@@ -112,9 +114,10 @@ document.addEventListener("DOMContentLoaded", function() {
         const cleanHref = href.replace(/^\.\.\//, '').replace(/#.*$/, '');
         let isActive = false;
 
-        if (cleanHref === 'index.html' && (currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/index.html') && !currentPath.includes('/amenazas/') && !currentPath.includes('/ejemplos/') && !currentPath.includes('/herramientas/') && !currentPath.includes('/primeros-auxilios/') && !currentPath.includes('/defensas/') && !currentPath.includes('/alertas-incibe/'))) isActive = true;
+        if (cleanHref === 'index.html' && (currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/index.html') && !currentPath.includes('/amenazas/') && !currentPath.includes('/ejemplos/') && !currentPath.includes('/herramientas/') && !currentPath.includes('/primeros-auxilios/') && !currentPath.includes('/defensas/') && !currentPath.includes('/alertas-incibe/') && !currentPath.includes('/hablemos/'))) isActive = true;
         else if (cleanHref === 'amenazas/index.html' && currentPath.includes('/amenazas/')) isActive = true;
         else if (cleanHref === 'defensas/index.html' && currentPath.includes('/defensas/')) isActive = true;
+        else if (cleanHref === 'hablemos/index.html' && currentPath.includes('/hablemos/')) isActive = true;
         else if (cleanHref === 'alertas-incibe/index.html' && currentPath.includes('/alertas-incibe/')) isActive = true;
         else if (cleanHref === 'guia/fraude-digital.html' && currentPath.includes('/guia/')) isActive = true;
         else if (cleanHref === 'ejemplos/index.html' && currentPath.includes('/ejemplos/')) isActive = true;
