@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             <!-- Barra Inferior Legal -->
             <div style="max-width: 1200px; margin: 2rem auto 0; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; font-size: 0.85rem; color: #64748b;">
-                <p>© 2026 FraudeDigital.es — Enfoque Técnico y Práctico contra el Cibercrimen.</p>
+                <p>© 2026 FraudeDigital.es - Todos los derechos reservados - OpenTrust Group</p>
                 <div style="display: flex; gap: 1.5rem;">
                     <a href="/legal/aviso-legal.html" style="color: #64748b; text-decoration: none;">Aviso Legal</a>
                     <a href="/legal/privacidad.html" style="color: #64748b; text-decoration: none;">Política de Privacidad</a>
