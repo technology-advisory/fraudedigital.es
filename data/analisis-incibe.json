@@ -1,6 +1,6 @@
 {
-  "actualizado": "2026-07-11T15:00:00+02:00",
-  "version": 4,
+  "actualizado": "2026-08-01T09:46:00+02:00",
+  "version": 5,
   "descripcion": "Capa editorial independiente de FraudeDigital.es con análisis técnico ampliado a partir de las evidencias visuales de cada campaña.",
   "analisis": {
     "suplantan-la-policia-nacional-la-guardia-civil-y-incibe-traves-de-notificaciones": {
@@ -675,6 +675,87 @@
         "Marca variable"
       ],
       "relacionadas": []
+    },
+    "suplantan-hoteles-traves-de-whatsapp-y-otros-medios-para-solicitar-la": {
+      "estado": "publicado",
+      "fecha_publicacion": "2026-08-01",
+      "autor": "FraudeDigital.es",
+      "nivel_riesgo": "alto",
+      "tipo": "Phishing dirigido con suplantación de hoteles y servicios de alojamiento",
+      "objetivo": "Obtener datos personales, información de pago u otra información sensible mediante una falsa validación de reserva",
+      "canales": [
+        "WhatsApp",
+        "Mensajería instantánea",
+        "Correo electrónico",
+        "Llamada telefónica",
+        "Sitio web fraudulento"
+      ],
+      "resumen_ejecutivo": "Se ha identificado una campaña de phishing dirigido en la que los ciberdelincuentes suplantan a hoteles o a sus servicios de atención al cliente y contactan con personas que tienen una reserva real. Los mensajes incluyen información como el nombre del alojamiento, las fechas de estancia, el nombre del huésped o una referencia de reserva, y utilizan como pretexto la necesidad de confirmar, validar o completar la reserva. El enlace facilitado conduce a una página fraudulenta cuyo objetivo puede ser recopilar datos personales, información bancaria u otra información sensible. La principal fortaleza de la campaña no es la calidad técnica del mensaje, sino la utilización de contexto real para que la petición parezca legítima.",
+      "como_identificarlo": [
+        "El contacto llega por WhatsApp u otro canal que no coincide con el utilizado habitualmente por el alojamiento o la plataforma de reservas.",
+        "El mensaje afirma que la reserva está pendiente de confirmación, validación o revisión y condiciona su mantenimiento a completar un formulario.",
+        "Se facilita un enlace externo cuyo dominio no pertenece claramente al hotel ni al servicio oficial con el que se realizó la reserva.",
+        "El perfil utiliza nombres genéricos como «Customer Support», «Guest Service» o similares para aparentar atención oficial.",
+        "Aparecen traducciones poco naturales, mezcla de idiomas, frases ambiguas o explicaciones innecesariamente complejas sobre una supuesta comprobación.",
+        "Se mencionan datos reales de la reserva para generar confianza, pero se solicita continuar el proceso fuera de la web o aplicación oficial.",
+        "La comunicación puede indicar que se realizará una comprobación de pago, una autorización temporal o una validación automática."
+      ],
+      "riesgos": [
+        "Robo de datos personales y de contacto.",
+        "Captura de datos de tarjeta o credenciales bancarias.",
+        "Realización de cargos, autorizaciones o pagos fraudulentos.",
+        "Reutilización de la información obtenida en campañas posteriores de suplantación.",
+        "Pérdida de control sobre credenciales si la página solicita iniciar sesión.",
+        "Mayor exposición a fraude dirigido debido a que el atacante ya dispone de información contextual sobre la estancia."
+      ],
+      "que_hacer": [
+        "No accedas al enlace y no continúes la conversación con el remitente.",
+        "Comprueba el estado de la reserva desde la aplicación, la web oficial o un teléfono obtenido directamente del sitio oficial del hotel.",
+        "No facilites datos personales, bancarios, contraseñas, códigos SMS ni documentos a través del enlace recibido.",
+        "Bloquea el número o perfil y conserva capturas del mensaje, el remitente, el enlace y cualquier página mostrada.",
+        "Si abriste el enlace pero no introdujiste información, cierra la página y no vuelvas a acceder.",
+        "Si facilitaste datos bancarios, contacta inmediatamente con tu entidad, revisa movimientos y solicita las medidas de protección necesarias.",
+        "Si entregaste credenciales, cámbialas desde un dispositivo seguro y revoca sesiones activas.",
+        "Presenta denuncia si has sufrido un perjuicio o has entregado información sensible, aportando todas las evidencias disponibles.",
+        "Contacta con el 017 de INCIBE si necesitas asesoramiento."
+      ],
+      "analisis_tecnico": "Las evidencias muestran una campaña basada en ingeniería social contextual. El atacante no parte de un mensaje genérico, sino de una reserva que la víctima puede reconocer como real. Ese conocimiento reduce la desconfianza inicial y permite introducir una acción aparentemente rutinaria: confirmar la estancia, completar un paso pendiente o revisar la información de pago. La conversación se presenta desde perfiles con apariencia empresarial y utiliza nombres como «Customer Support», botones de confirmación y mensajes de seguridad de la propia plataforma para reforzar la legitimidad visual. Sin embargo, esos elementos solo describen el tipo de cuenta o la interfaz de mensajería; no verifican que quien controla el perfil sea el hotel. El punto de ruptura es siempre el mismo: sacar a la víctima del canal oficial y llevarla a un dominio controlado por el atacante. La presencia de fechas, nombres y referencias reales debe interpretarse como un elemento de persuasión, no como una prueba de identidad. La fuente concreta de esos datos no queda acreditada en el aviso, por lo que no debe atribuirse automáticamente a una brecha del hotel o de la plataforma. Desde el punto de vista defensivo, la comprobación debe realizarse por un canal independiente y conocido: aplicación oficial, web escrita manualmente o llamada a un número obtenido fuera del mensaje.",
+      "indicadores_clave": [
+        "Reserva pendiente de validación",
+        "Confirmación previa a la llegada",
+        "Cuenta de empresa",
+        "Customer Support",
+        "Guest Service",
+        "Enlace externo",
+        "Datos reales de estancia",
+        "Revisión de pago",
+        "Autorización temporal",
+        "Formulario protegido"
+      ],
+      "relacionadas": [
+        "netflix-no-esta-enviando-correos-electronicos-solicitan-ingresar-un-nuevo-metodo",
+        "campana-de-smishing-que-suplanta-empresas-de-paqueteria-con-la-excusa-de-que"
+      ],
+      "evidencias": [
+        {
+          "imagen": "img/incibe/suplantan-hoteles-traves-de-whatsapp-y-otros-medios-para-solicitar-la/evidencia-01.png",
+          "titulo": "Falsa actualización de reserva por WhatsApp",
+          "senal": "El perfil aparece como cuenta de empresa y utiliza el nombre, las fechas y el código de reserva para solicitar que la víctima complete un formulario mediante un enlace.",
+          "analisis": "La información contextual hace que el mensaje parezca legítimo. El indicador decisivo no es que conozcan la reserva, sino que intenten trasladar la validación a un dominio externo recibido por mensajería."
+        },
+        {
+          "imagen": "img/incibe/suplantan-hoteles-traves-de-whatsapp-y-otros-medios-para-solicitar-la/evidencia-02.png",
+          "titulo": "Variantes en español e inglés",
+          "senal": "Los mensajes presentan la confirmación como un paso rutinario y mencionan comprobaciones automáticas, plazos o posibles ajustes de la reserva.",
+          "analisis": "La campaña adapta el idioma y la narrativa, pero mantiene el mismo patrón: normalizar una acción excepcional y conducir a la víctima a una página no verificada."
+        },
+        {
+          "imagen": "img/incibe/suplantan-hoteles-traves-de-whatsapp-y-otros-medios-para-solicitar-la/evidencia-03.png",
+          "titulo": "Perfil genérico de soporte y botón de confirmación",
+          "senal": "El remitente utiliza la identidad genérica «Customer Support», apariencia corporativa y una llamada a la acción como «CONFIRM BOOKING INFO».",
+          "analisis": "La etiqueta de empresa, el diseño del perfil y el botón no acreditan la identidad del hotel. La reserva debe verificarse desde la aplicación, web o teléfono oficial obtenidos por separado."
+        }
+      ]
     }
   }
 }

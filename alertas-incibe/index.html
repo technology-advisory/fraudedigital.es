@@ -248,6 +248,43 @@
     .ai-lightbox-info{padding:19px 18px}
   }
 
+
+  .ai-related-link {
+    display:block;
+    width:fit-content;
+    color:#dc2626;
+    font-weight:750;
+    text-decoration:none;
+    margin-top:10px;
+    line-height:1.45;
+  }
+
+  .ai-related-link:hover,
+  .ai-related-link:focus-visible {
+    color:#991b1b;
+    text-decoration:underline;
+    text-underline-offset:3px;
+  }
+
+  .ai-related-link:focus-visible {
+    outline:2px solid #dc2626;
+    outline-offset:4px;
+    border-radius:3px;
+  }
+
+  .ai-card.ai-related-target {
+    animation:aiRelatedTarget 1.8s ease;
+  }
+
+  @keyframes aiRelatedTarget {
+    0%, 100% { box-shadow:0 10px 28px rgba(15,23,42,.08); }
+    35% { box-shadow:0 0 0 4px rgba(220,38,38,.18), 0 16px 34px rgba(15,23,42,.14); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ai-card.ai-related-target { animation:none; }
+  }
+
 </style>
 <style>
   .ai-wrapper{padding:30px 40px 40px}
@@ -461,9 +498,22 @@
       const published = ed?.estado === 'publicado';
 
       const related = published && Array.isArray(ed.relacionadas)
-        ? ed.relacionadas.filter(x => titleBySlug[x]).map(x =>
-            `<a href="#alerta-${esc(alertas.find(z => slugFromUrl(z.url) === x)?.id || '')}">→ ${esc(titleBySlug[x])}</a>`
-          ).join('')
+        ? ed.relacionadas
+            .filter(relatedSlug => titleBySlug[relatedSlug])
+            .map(relatedSlug => {
+              const relatedAlert = alertas.find(item => slugFromUrl(item.url) === relatedSlug);
+              if (!relatedAlert) return '';
+
+              return `
+                <a
+                  class="ai-related-link"
+                  href="#alerta-${esc(relatedAlert.id)}"
+                  data-related-id="${esc(relatedAlert.id)}"
+                  data-related-slug="${esc(relatedSlug)}"
+                >→ ${esc(titleBySlug[relatedSlug])}</a>
+              `;
+            })
+            .join('')
         : '';
 
       const editorialBlock = published ? `
@@ -615,6 +665,57 @@
         if (target) setTimeout(() => target.scrollIntoView({behavior:'smooth', block:'start'}), 120);
       }
     };
+
+    /*
+     * Navegación entre campañas relacionadas.
+     *
+     * Las alertas están paginadas de tres en tres. Un enlace de ancla normal
+     * no funciona cuando la campaña de destino está en otra página porque su
+     * artículo todavía no existe en el DOM. Este manejador:
+     * 1) localiza la alerta relacionada,
+     * 2) vuelve al filtro "Todas",
+     * 3) abre la página correcta,
+     * 4) renderiza,
+     * 5) desplaza hasta la alerta.
+     */
+    list.addEventListener('click', event => {
+      const relatedLink = event.target.closest('.ai-related-link');
+      if (!relatedLink) return;
+
+      event.preventDefault();
+
+      const relatedId = relatedLink.dataset.relatedId || '';
+      const targetIndex = alertas.findIndex(alerta => String(alerta.id) === String(relatedId));
+      if (targetIndex < 0) return;
+
+      activeFilter = 'todas';
+      currentPage = Math.floor(targetIndex / PAGE_SIZE) + 1;
+
+      filterButtons.querySelectorAll('button[data-filter]').forEach(button => {
+        button.classList.toggle('is-active', button.dataset.filter === 'todas');
+        button.setAttribute(
+          'aria-pressed',
+          button.dataset.filter === 'todas' ? 'true' : 'false'
+        );
+      });
+
+      const url = new URL(location.href);
+      if (currentPage > 1) url.searchParams.set('page', String(currentPage));
+      else url.searchParams.delete('page');
+      url.hash = `alerta-${relatedId}`;
+      history.pushState({}, '', url);
+
+      renderPage();
+
+      requestAnimationFrame(() => {
+        const target = document.getElementById(`alerta-${relatedId}`);
+        if (target) {
+          target.scrollIntoView({behavior:'smooth', block:'start'});
+          target.classList.add('ai-related-target');
+          window.setTimeout(() => target.classList.remove('ai-related-target'), 1800);
+        }
+      });
+    });
 
     filterButtons.addEventListener('click', event => {
       const button = event.target.closest('.ai-filter-btn');
