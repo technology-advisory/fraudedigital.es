@@ -1,6 +1,6 @@
 {
-  "actualizado": "2026-08-01T09:46:00+02:00",
-  "version": 5,
+  "actualizado": "2026-08-19T15:01:00+02:00",
+  "version": 6,
   "descripcion": "Capa editorial independiente de FraudeDigital.es con análisis técnico ampliado a partir de las evidencias visuales de cada campaña.",
   "analisis": {
     "suplantan-la-policia-nacional-la-guardia-civil-y-incibe-traves-de-notificaciones": {
@@ -754,6 +754,106 @@
           "titulo": "Perfil genérico de soporte y botón de confirmación",
           "senal": "El remitente utiliza la identidad genérica «Customer Support», apariencia corporativa y una llamada a la acción como «CONFIRM BOOKING INFO».",
           "analisis": "La etiqueta de empresa, el diseño del perfil y el botón no acreditan la identidad del hotel. La reserva debe verificarse desde la aplicación, web o teléfono oficial obtenidos por separado."
+        }
+      ]
+    },
+    "campana-de-smishing-suplantando-la-seguridad-social": {
+      "estado": "publicado",
+      "fecha_publicacion": "2026-08-19",
+      "autor": "FraudeDigital.es",
+      "nivel_riesgo": "alto",
+      "tipo": "Smishing con suplantación de la Tesorería General de la Seguridad Social (TGSS)",
+      "objetivo": "Robar datos personales y bancarios mediante una falsa actualización y una prestación económica inexistente",
+      "canales": [
+        "SMS",
+        "Sitio web fraudulento"
+      ],
+      "resumen_ejecutivo": "La campaña comienza con un SMS que suplanta a la Seguridad Social y comunica una supuesta actualización pendiente. El enlace conduce a una web fraudulenta que construye un proceso progresivo de confianza: primero presenta una falsa verificación de seguridad, después solicita el DNI/NIE, comunica una prestación económica pendiente de 305,85 euros, recopila la dirección postal y termina solicitando los datos completos de la tarjeta. La secuencia está diseñada para que cada nueva petición parezca consecuencia natural del paso anterior y para transformar una simple actualización administrativa en una falsa oportunidad de cobro.",
+      "como_identificarlo": [
+        "El SMS informa de una actualización pendiente y contiene un enlace para gestionar el supuesto trámite.",
+        "La URL recibida no pertenece a un dominio oficial de la Seguridad Social, aunque pueda intentar parecer legítima.",
+        "La web introduce una falsa comprobación «No soy un robot» para aparentar seguridad antes de solicitar información.",
+        "Se pide el DNI/NIE para consultar una supuesta ayuda o prestación económica.",
+        "Se presenta una cantidad concreta, 305,85 euros, con conceptos desglosados para simular un expediente real.",
+        "El proceso solicita progresivamente dirección postal y, finalmente, número de tarjeta, caducidad y CVV/CVC.",
+        "Se justifica la tarjeta mediante una falsa verificación de titularidad y una supuesta retención temporal de 1,50 euros."
+      ],
+      "riesgos": [
+        "Robo de DNI/NIE y datos de domicilio.",
+        "Robo de los datos completos de la tarjeta bancaria.",
+        "Cargos no autorizados y posible compromiso de la tarjeta.",
+        "Suplantación de identidad utilizando la información recopilada.",
+        "Vishing, smishing o phishing posteriores mucho más personalizados.",
+        "Combinación de identidad, dirección y datos financieros para nuevos fraudes dirigidos."
+      ],
+      "que_hacer": [
+        "No pulses el enlace del SMS y bloquea al remitente.",
+        "Comprueba cualquier trámite entrando manualmente en la web o sede oficial de la Seguridad Social.",
+        "No facilites DNI/NIE, domicilio, datos bancarios, tarjeta ni códigos de verificación desde enlaces recibidos por SMS.",
+        "Si facilitaste datos de tarjeta, contacta inmediatamente con tu entidad bancaria para bloquearla y revisar movimientos.",
+        "Conserva el SMS, la URL y las capturas como evidencias del fraude.",
+        "Presenta denuncia si has entregado información sensible o sufrido un perjuicio económico.",
+        "Vigila durante los próximos meses posibles usos indebidos de los datos personales facilitados.",
+        "Contacta con el 017 de INCIBE si necesitas asesoramiento."
+      ],
+      "analisis_tecnico": "Las siete evidencias muestran una cadena de ingeniería social construida por etapas. El SMS inicial no promete directamente dinero: utiliza una supuesta «actualización pendiente» de la Seguridad Social, un pretexto administrativo suficientemente genérico como para resultar plausible a un gran número de destinatarios. La URL es el punto de ruptura entre la apariencia del mensaje y el servicio real.\n\nLa primera pantalla fraudulenta añade una falsa «Verificación de seguridad» con la casilla «No soy un robot». Este paso no aporta ninguna garantía técnica sobre la legitimidad del sitio; funciona como una capa de confianza y normaliza la idea de que la víctima está entrando en un procedimiento protegido. A continuación, la página adopta la identidad visual de organismos públicos y solicita el DNI/NIE bajo el pretexto de consultar un censo de beneficiarios.\n\nEl siguiente paso es especialmente eficaz desde el punto de vista de persuasión. La web afirma haber localizado una prestación pendiente y no se limita a mostrar una cifra redonda: desglosa un supuesto subsidio básico de 245,00 euros, un ajuste por inflación de 42,15 euros y un complemento familiar de energía de 18,70 euros hasta alcanzar 305,85 euros. Esa precisión artificial busca convertir un mensaje genérico en la sensación de un expediente individual calculado para la víctima.\n\nDespués de activar el deseo de cobrar la prestación, el fraude solicita la dirección postal con la excusa de calcular un complemento regional. De este modo amplía el perfil de identidad antes de llegar al objetivo financiero. La última pantalla presenta la entrega de la tarjeta como una «verificación de titularidad» y afirma que se realizará una retención temporal de 1,50 euros que será liberada en 24 a 48 horas. Esta explicación intenta resolver anticipadamente la objeción más evidente: por qué sería necesaria una tarjeta para recibir una transferencia.\n\nEl valor del ataque está precisamente en esta progresión. La víctima no recibe una petición abrupta de todos sus datos; cada pantalla justifica la siguiente y aumenta el coste psicológico de abandonar el proceso. Al final, el atacante puede disponer simultáneamente de un identificador oficial, domicilio y datos completos de tarjeta. Desde el punto de vista defensivo, ningún diseño, logotipo, CAPTCHA aparente o cantidad detallada sustituye la comprobación del dominio y del trámite mediante un canal oficial independiente.",
+      "indicadores_clave": [
+        "Actualización pendiente",
+        "Suplantación TGSS",
+        "Falso CAPTCHA",
+        "DNI/NIE",
+        "Prestación de 305,85 €",
+        "Dirección postal",
+        "Datos de tarjeta",
+        "Retención de 1,50 €"
+      ],
+      "relacionadas": [
+        "mi-carpeta-ciudadana-no-esta-enviando-notificaciones-los-ciudadanos-para-recibir",
+        "la-agencia-tributaria-no-ha-emitido-ninguna-comunicacion-dirigida-usted",
+        "campana-de-smishing-que-suplanta-empresas-de-paqueteria-con-la-excusa-de-que"
+      ],
+      "evidencias": [
+        {
+          "imagen": "img/incibe/campana-de-smishing-suplantando-la-seguridad-social/evidencia-01.jpg",
+          "titulo": "SMS con una supuesta actualización pendiente",
+          "senal": "El mensaje utiliza el nombre de la Seguridad Social y presenta un trámite pendiente que debe gestionarse desde un enlace.",
+          "analisis": "El pretexto administrativo es deliberadamente genérico. La autenticidad no debe evaluarse por el texto del SMS, sino comprobando el trámite desde los canales oficiales."
+        },
+        {
+          "imagen": "img/incibe/campana-de-smishing-suplantando-la-seguridad-social/evidencia-02.jpg",
+          "titulo": "Segunda variante del SMS fraudulento",
+          "senal": "La campaña utiliza diferentes direcciones web manteniendo prácticamente la misma narrativa de actualización pendiente.",
+          "analisis": "Cambiar de dominio permite mantener activa la campaña cuando una dirección es bloqueada. El patrón del mensaje es más estable que la URL concreta utilizada."
+        },
+        {
+          "imagen": "img/incibe/campana-de-smishing-suplantando-la-seguridad-social/evidencia-03.jpg",
+          "titulo": "Falsa verificación de seguridad",
+          "senal": "La primera pantalla pide marcar «No soy un robot» y afirma que la comprobación protege los datos.",
+          "analisis": "La comprobación funciona como teatro de seguridad. Introduce una interacción aparentemente inocua para aumentar la confianza antes de solicitar información sensible."
+        },
+        {
+          "imagen": "img/incibe/campana-de-smishing-suplantando-la-seguridad-social/evidencia-04.jpg",
+          "titulo": "Captura del DNI/NIE bajo una falsa ayuda pública",
+          "senal": "La web imita la identidad institucional y solicita el documento para consultar un supuesto censo de beneficiarios.",
+          "analisis": "El atacante comienza la recopilación de identidad antes de revelar el incentivo económico. Un DNI/NIE puede reutilizarse posteriormente en suplantaciones y fraudes dirigidos."
+        },
+        {
+          "imagen": "img/incibe/campana-de-smishing-suplantando-la-seguridad-social/evidencia-05.jpg",
+          "titulo": "Falsa prestación pendiente de 305,85 euros",
+          "senal": "La página muestra un expediente al 100 % y desglosa varios conceptos hasta obtener una cantidad concreta pendiente de cobro.",
+          "analisis": "El desglose y la cifra exacta fabrican sensación de personalización. La recompensa económica convierte la curiosidad inicial en motivación para completar el resto del proceso."
+        },
+        {
+          "imagen": "img/incibe/campana-de-smishing-suplantando-la-seguridad-social/evidencia-06.jpg",
+          "titulo": "Recopilación de la dirección postal",
+          "senal": "Para continuar con la supuesta ayuda se solicita calle, código postal y provincia o ciudad.",
+          "analisis": "El fraude amplía progresivamente el perfil de la víctima. La excusa de calcular un complemento regional hace que la petición de domicilio parezca coherente con la prestación ficticia."
+        },
+        {
+          "imagen": "img/incibe/campana-de-smishing-suplantando-la-seguridad-social/evidencia-07.jpg",
+          "titulo": "Captura completa de la tarjeta bancaria",
+          "senal": "La falsa verificación de cuenta solicita titular, número, caducidad y CVV/CVC y justifica una retención temporal de 1,50 euros.",
+          "analisis": "Pedir una tarjeta para recibir una transferencia debería romper la narrativa. La supuesta retención de 1,50 euros intenta anticiparse a esa duda y legitimar la captura de todos los datos necesarios para realizar operaciones con la tarjeta."
         }
       ]
     }
