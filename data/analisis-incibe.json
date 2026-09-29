@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-08-19T15:01:00+02:00",
+  "actualizado": "2026-09-29T23:19:00+02:00",
   "version": 6,
   "descripcion": "Capa editorial independiente de FraudeDigital.es con análisis técnico ampliado a partir de las evidencias visuales de cada campaña.",
   "analisis": {
@@ -757,103 +757,103 @@
         }
       ]
     },
-    "campana-de-smishing-suplantando-la-seguridad-social": {
+    "correos-y-sms-suplantan-la-dgt-para-robar-tus-datos-con-falsas-multas": {
       "estado": "publicado",
-      "fecha_publicacion": "2026-08-19",
+      "fecha_publicacion": "2026-09-29",
       "autor": "FraudeDigital.es",
       "nivel_riesgo": "alto",
-      "tipo": "Smishing con suplantación de la Tesorería General de la Seguridad Social (TGSS)",
-      "objetivo": "Robar datos personales y bancarios mediante una falsa actualización y una prestación económica inexistente",
+      "tipo": "Phishing y smishing con suplantación de la DGT",
+      "objetivo": "Robar datos personales y datos completos de tarjeta mediante falsas multas y expedientes de tráfico",
       "canales": [
+        "Correo electrónico",
         "SMS",
         "Sitio web fraudulento"
       ],
-      "resumen_ejecutivo": "La campaña comienza con un SMS que suplanta a la Seguridad Social y comunica una supuesta actualización pendiente. El enlace conduce a una web fraudulenta que construye un proceso progresivo de confianza: primero presenta una falsa verificación de seguridad, después solicita el DNI/NIE, comunica una prestación económica pendiente de 305,85 euros, recopila la dirección postal y termina solicitando los datos completos de la tarjeta. La secuencia está diseñada para que cada nueva petición parezca consecuencia natural del paso anterior y para transformar una simple actualización administrativa en una falsa oportunidad de cobro.",
+      "resumen_ejecutivo": "La campaña suplanta a la Dirección General de Tráfico (DGT) mediante correos electrónicos y SMS que anuncian una supuesta multa o un expediente pendiente. Los mensajes utilizan recargos, plazos muy breves y referencias administrativas para provocar una reacción rápida. El enlace conduce a una web que imita la identidad visual de la DGT y construye un recorrido progresivo: falsa comprobación de acceso, solicitud de nombre, apellidos y matrícula, presentación de una sanción ficticia con descuento y, finalmente, un formulario de pago que solicita los datos completos de la tarjeta. El objetivo no es regularizar una sanción real, sino obtener información personal y financiera de la víctima.",
       "como_identificarlo": [
-        "El SMS informa de una actualización pendiente y contiene un enlace para gestionar el supuesto trámite.",
-        "La URL recibida no pertenece a un dominio oficial de la Seguridad Social, aunque pueda intentar parecer legítima.",
-        "La web introduce una falsa comprobación «No soy un robot» para aparentar seguridad antes de solicitar información.",
-        "Se pide el DNI/NIE para consultar una supuesta ayuda o prestación económica.",
-        "Se presenta una cantidad concreta, 305,85 euros, con conceptos desglosados para simular un expediente real.",
-        "El proceso solicita progresivamente dirección postal y, finalmente, número de tarjeta, caducidad y CVV/CVC.",
-        "Se justifica la tarjeta mediante una falsa verificación de titularidad y una supuesta retención temporal de 1,50 euros."
+        "El correo o SMS anuncia una multa, expediente pendiente o recargo y contiene un enlace para revisarlo o pagarlo.",
+        "Se utilizan plazos muy cortos, como 24 horas, y amenazas de incrementos importantes del importe para generar urgencia.",
+        "La dirección del remitente o el dominio del enlace no pertenecen a los canales oficiales de la DGT.",
+        "La web puede mostrar logotipos de la DGT y del Gobierno de España, pero la apariencia visual no acredita su autenticidad.",
+        "Una falsa comprobación de acceso o hCaptcha se presenta como si aportara seguridad al proceso.",
+        "La página solicita nombre, apellidos y matrícula antes de mostrar una supuesta sanción.",
+        "El proceso termina solicitando titular, número de tarjeta, fecha de caducidad y CVV para efectuar el supuesto pago."
       ],
       "riesgos": [
-        "Robo de DNI/NIE y datos de domicilio.",
-        "Robo de los datos completos de la tarjeta bancaria.",
-        "Cargos no autorizados y posible compromiso de la tarjeta.",
-        "Suplantación de identidad utilizando la información recopilada.",
-        "Vishing, smishing o phishing posteriores mucho más personalizados.",
-        "Combinación de identidad, dirección y datos financieros para nuevos fraudes dirigidos."
+        "Robo de datos personales asociados al conductor y al vehículo.",
+        "Compromiso de los datos completos de la tarjeta bancaria.",
+        "Cargos fraudulentos y otras operaciones no autorizadas.",
+        "Uso combinado de nombre y matrícula para campañas posteriores más creíbles.",
+        "Suplantación de identidad o nuevos intentos de phishing, smishing y vishing.",
+        "Pérdida económica si la víctima completa el falso pago."
       ],
       "que_hacer": [
-        "No pulses el enlace del SMS y bloquea al remitente.",
-        "Comprueba cualquier trámite entrando manualmente en la web o sede oficial de la Seguridad Social.",
-        "No facilites DNI/NIE, domicilio, datos bancarios, tarjeta ni códigos de verificación desde enlaces recibidos por SMS.",
-        "Si facilitaste datos de tarjeta, contacta inmediatamente con tu entidad bancaria para bloquearla y revisar movimientos.",
-        "Conserva el SMS, la URL y las capturas como evidencias del fraude.",
-        "Presenta denuncia si has entregado información sensible o sufrido un perjuicio económico.",
-        "Vigila durante los próximos meses posibles usos indebidos de los datos personales facilitados.",
+        "No respondas al correo o SMS y no accedas al enlace recibido.",
+        "Comprueba cualquier posible sanción entrando por tu cuenta en los canales oficiales de la DGT.",
+        "Recuerda que las sanciones se notifican por correo postal o mediante la Dirección Electrónica Vial (DEV); los avisos de la DEV no deben confundirse con enlaces externos de pago.",
+        "Bloquea al remitente y conserva el mensaje, la URL y las capturas como evidencias.",
+        "Si introdujiste datos personales, permanece atento a nuevos intentos de fraude que utilicen esa información.",
+        "Si facilitaste datos de tarjeta, contacta inmediatamente con tu entidad bancaria por un canal oficial y sigue sus indicaciones de protección o bloqueo.",
+        "Revisa movimientos y operaciones posteriores y comunica cualquier cargo no autorizado.",
+        "Presenta denuncia si has sufrido un perjuicio o se han utilizado tus datos de forma fraudulenta.",
         "Contacta con el 017 de INCIBE si necesitas asesoramiento."
       ],
-      "analisis_tecnico": "Las siete evidencias muestran una cadena de ingeniería social construida por etapas. El SMS inicial no promete directamente dinero: utiliza una supuesta «actualización pendiente» de la Seguridad Social, un pretexto administrativo suficientemente genérico como para resultar plausible a un gran número de destinatarios. La URL es el punto de ruptura entre la apariencia del mensaje y el servicio real.\n\nLa primera pantalla fraudulenta añade una falsa «Verificación de seguridad» con la casilla «No soy un robot». Este paso no aporta ninguna garantía técnica sobre la legitimidad del sitio; funciona como una capa de confianza y normaliza la idea de que la víctima está entrando en un procedimiento protegido. A continuación, la página adopta la identidad visual de organismos públicos y solicita el DNI/NIE bajo el pretexto de consultar un censo de beneficiarios.\n\nEl siguiente paso es especialmente eficaz desde el punto de vista de persuasión. La web afirma haber localizado una prestación pendiente y no se limita a mostrar una cifra redonda: desglosa un supuesto subsidio básico de 245,00 euros, un ajuste por inflación de 42,15 euros y un complemento familiar de energía de 18,70 euros hasta alcanzar 305,85 euros. Esa precisión artificial busca convertir un mensaje genérico en la sensación de un expediente individual calculado para la víctima.\n\nDespués de activar el deseo de cobrar la prestación, el fraude solicita la dirección postal con la excusa de calcular un complemento regional. De este modo amplía el perfil de identidad antes de llegar al objetivo financiero. La última pantalla presenta la entrega de la tarjeta como una «verificación de titularidad» y afirma que se realizará una retención temporal de 1,50 euros que será liberada en 24 a 48 horas. Esta explicación intenta resolver anticipadamente la objeción más evidente: por qué sería necesaria una tarjeta para recibir una transferencia.\n\nEl valor del ataque está precisamente en esta progresión. La víctima no recibe una petición abrupta de todos sus datos; cada pantalla justifica la siguiente y aumenta el coste psicológico de abandonar el proceso. Al final, el atacante puede disponer simultáneamente de un identificador oficial, domicilio y datos completos de tarjeta. Desde el punto de vista defensivo, ningún diseño, logotipo, CAPTCHA aparente o cantidad detallada sustituye la comprobación del dominio y del trámite mediante un canal oficial independiente.",
+      "analisis_tecnico": "La campaña combina phishing y smishing dentro de una misma narrativa de fraude. El elemento central no es el canal inicial, sino la transición desde una supuesta obligación administrativa hacia un proceso de pago controlado por el atacante.\n\nLas evidencias muestran dos mecanismos de presión complementarios. Por un lado, se presenta un expediente aparentemente en curso; por otro, se amenaza con recargos crecientes y plazos de apenas 24 horas. Esta combinación explota la autoridad de un organismo público, el temor a una sanción y la aversión a una pérdida económica mayor. La promesa de devolver parte del incremento si se paga inmediatamente añade además un incentivo para actuar sin verificar.\n\nUna vez que la víctima abandona el mensaje y entra en la web fraudulenta, el recorrido está diseñado para construir legitimidad por etapas. La pantalla de «Acceso seguro» con hCaptcha introduce una señal visual asociada habitualmente a servicios legítimos, pero solo demuestra que existe un mecanismo de comprobación en esa página; no acredita quién controla el dominio. Después se reproducen logotipos, menús y referencias de la DGT y se solicitan nombre, apellidos y matrícula. Con esos datos, la página puede presentar una sanción aparentemente personalizada, reforzando la impresión de que el expediente existe realmente.\n\nLa fase de cobro utiliza otra técnica de persuasión: una supuesta sanción de 140 euros se presenta reducida a 70 euros y se destaca que es el último día para beneficiarse de la reducción. El número de expediente, el código de barras y las referencias normativas aportan densidad administrativa a la pantalla, pero ninguno de esos elementos demuestra que exista una sanción real.\n\nEl objetivo final queda expuesto en la última fase. Bajo la etiqueta «Pago seguro» se solicitan titular, PAN, caducidad y CVV. La presencia de logotipos de medios de pago o textos sobre protección de datos tampoco valida el canal. Desde el punto de vista defensivo, la ruptura del fraude debe producirse antes de interactuar con el enlace: la existencia de una multa debe verificarse iniciando una sesión independiente en los canales oficiales de la DGT, nunca continuando el recorrido propuesto por el mensaje recibido.",
       "indicadores_clave": [
-        "Actualización pendiente",
-        "Suplantación TGSS",
-        "Falso CAPTCHA",
-        "DNI/NIE",
-        "Prestación de 305,85 €",
-        "Dirección postal",
-        "Datos de tarjeta",
-        "Retención de 1,50 €"
+        "Falsa multa DGT",
+        "Phishing",
+        "Smishing",
+        "Recargo en 24 horas",
+        "Dominio no oficial",
+        "Falso hCaptcha",
+        "Nombre y matrícula",
+        "Falso expediente",
+        "Descuento urgente",
+        "Captura de tarjeta"
       ],
-      "relacionadas": [
-        "mi-carpeta-ciudadana-no-esta-enviando-notificaciones-los-ciudadanos-para-recibir",
-        "la-agencia-tributaria-no-ha-emitido-ninguna-comunicacion-dirigida-usted",
-        "campana-de-smishing-que-suplanta-empresas-de-paqueteria-con-la-excusa-de-que"
-      ],
+      "relacionadas": [],
       "evidencias": [
         {
-          "imagen": "img/incibe/campana-de-smishing-suplantando-la-seguridad-social/evidencia-01.jpg",
-          "titulo": "SMS con una supuesta actualización pendiente",
-          "senal": "El mensaje utiliza el nombre de la Seguridad Social y presenta un trámite pendiente que debe gestionarse desde un enlace.",
-          "analisis": "El pretexto administrativo es deliberadamente genérico. La autenticidad no debe evaluarse por el texto del SMS, sino comprobando el trámite desde los canales oficiales."
+          "imagen": "img/incibe/correos-y-sms-suplantan-la-dgt-para-robar-tus-datos-con-falsas-multas/evidencia-01.png",
+          "titulo": "Correo que simula la revisión de un expediente",
+          "senal": "El mensaje utiliza identidad visual institucional y un enlace para revisar un supuesto expediente en curso.",
+          "analisis": "La referencia a un expediente administrativo busca trasladar la confianza en la DGT al enlace incluido. La autenticidad debe comprobarse fuera del correo."
         },
         {
-          "imagen": "img/incibe/campana-de-smishing-suplantando-la-seguridad-social/evidencia-02.jpg",
-          "titulo": "Segunda variante del SMS fraudulento",
-          "senal": "La campaña utiliza diferentes direcciones web manteniendo prácticamente la misma narrativa de actualización pendiente.",
-          "analisis": "Cambiar de dominio permite mantener activa la campaña cuando una dirección es bloqueada. El patrón del mensaje es más estable que la URL concreta utilizada."
+          "imagen": "img/incibe/correos-y-sms-suplantan-la-dgt-para-robar-tus-datos-con-falsas-multas/evidencia-02.png",
+          "titulo": "SMS con falsas sanciones pendientes",
+          "senal": "Los mensajes aparecen bajo el nombre DGT y utilizan multas pendientes, recargos y enlaces como llamada a la acción.",
+          "analisis": "El nombre visible del remitente no acredita el origen. El patrón relevante es urgencia más enlace externo más solicitud posterior de datos."
         },
         {
-          "imagen": "img/incibe/campana-de-smishing-suplantando-la-seguridad-social/evidencia-03.jpg",
-          "titulo": "Falsa verificación de seguridad",
-          "senal": "La primera pantalla pide marcar «No soy un robot» y afirma que la comprobación protege los datos.",
-          "analisis": "La comprobación funciona como teatro de seguridad. Introduce una interacción aparentemente inocua para aumentar la confianza antes de solicitar información sensible."
+          "imagen": "img/incibe/correos-y-sms-suplantan-la-dgt-para-robar-tus-datos-con-falsas-multas/evidencia-03.png",
+          "titulo": "Amenaza de recargos para forzar el pago",
+          "senal": "El correo presenta incrementos sucesivos del importe y un plazo de 24 horas para evitar una cantidad todavía mayor.",
+          "analisis": "La presión económica reduce el tiempo disponible para verificar. La promesa de recuperar el incremento si se paga inmediatamente refuerza la decisión impulsiva."
         },
         {
-          "imagen": "img/incibe/campana-de-smishing-suplantando-la-seguridad-social/evidencia-04.jpg",
-          "titulo": "Captura del DNI/NIE bajo una falsa ayuda pública",
-          "senal": "La web imita la identidad institucional y solicita el documento para consultar un supuesto censo de beneficiarios.",
-          "analisis": "El atacante comienza la recopilación de identidad antes de revelar el incentivo económico. Un DNI/NIE puede reutilizarse posteriormente en suplantaciones y fraudes dirigidos."
+          "imagen": "img/incibe/correos-y-sms-suplantan-la-dgt-para-robar-tus-datos-con-falsas-multas/evidencia-04.png",
+          "titulo": "Falsa comprobación de acceso seguro",
+          "senal": "La web muestra una casilla hCaptcha y el mensaje «Acceso seguro: haga clic para confirmar».",
+          "analisis": "Un CAPTCHA puede existir en una página fraudulenta. Verificar que quien navega es una persona no verifica la identidad ni la legitimidad del sitio."
         },
         {
-          "imagen": "img/incibe/campana-de-smishing-suplantando-la-seguridad-social/evidencia-05.jpg",
-          "titulo": "Falsa prestación pendiente de 305,85 euros",
-          "senal": "La página muestra un expediente al 100 % y desglosa varios conceptos hasta obtener una cantidad concreta pendiente de cobro.",
-          "analisis": "El desglose y la cifra exacta fabrican sensación de personalización. La recompensa económica convierte la curiosidad inicial en motivación para completar el resto del proceso."
+          "imagen": "img/incibe/correos-y-sms-suplantan-la-dgt-para-robar-tus-datos-con-falsas-multas/evidencia-05.jpg",
+          "titulo": "Captura de nombre, apellidos y matrícula",
+          "senal": "La falsa sede de la DGT solicita datos personales y del vehículo bajo «Sanción pendiente de regularización».",
+          "analisis": "La recopilación permite construir una segunda pantalla aparentemente personalizada. Que después aparezcan el nombre o la matrícula introducidos no demuestra que el expediente sea real."
         },
         {
-          "imagen": "img/incibe/campana-de-smishing-suplantando-la-seguridad-social/evidencia-06.jpg",
-          "titulo": "Recopilación de la dirección postal",
-          "senal": "Para continuar con la supuesta ayuda se solicita calle, código postal y provincia o ciudad.",
-          "analisis": "El fraude amplía progresivamente el perfil de la víctima. La excusa de calcular un complemento regional hace que la petición de domicilio parezca coherente con la prestación ficticia."
+          "imagen": "img/incibe/correos-y-sms-suplantan-la-dgt-para-robar-tus-datos-con-falsas-multas/evidencia-06.png",
+          "titulo": "Expediente ficticio con descuento de pago",
+          "senal": "La web presenta una supuesta infracción por exceso de velocidad, referencias administrativas y una reducción de 140 a 70 euros.",
+          "analisis": "La combinación de expediente, código de barras, referencias normativas y descuento aporta apariencia administrativa. Son elementos visuales controlados por el atacante."
         },
         {
-          "imagen": "img/incibe/campana-de-smishing-suplantando-la-seguridad-social/evidencia-07.jpg",
-          "titulo": "Captura completa de la tarjeta bancaria",
-          "senal": "La falsa verificación de cuenta solicita titular, número, caducidad y CVV/CVC y justifica una retención temporal de 1,50 euros.",
-          "analisis": "Pedir una tarjeta para recibir una transferencia debería romper la narrativa. La supuesta retención de 1,50 euros intenta anticiparse a esa duda y legitimar la captura de todos los datos necesarios para realizar operaciones con la tarjeta."
+          "imagen": "img/incibe/correos-y-sms-suplantan-la-dgt-para-robar-tus-datos-con-falsas-multas/evidencia-07.png",
+          "titulo": "Pasarela falsa para capturar la tarjeta",
+          "senal": "El formulario «Pago seguro» solicita titular, número de tarjeta, caducidad y CVV.",
+          "analisis": "Esta pantalla revela el objetivo financiero del recorrido. Los logotipos de medios de pago y los mensajes de seguridad no convierten el formulario en un canal legítimo."
         }
       ]
     }
