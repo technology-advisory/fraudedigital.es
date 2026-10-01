@@ -309,7 +309,9 @@
   .ai-ficha-value{font-size:12.5px;font-weight:700;color:#334155;line-height:1.4}
   .ai-analysis{margin:18px 0;padding:21px 23px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:9px}
   .ai-analysis h3,.ai-panel h3,.ai-tech h3{margin:0 0 11px;color:#0f172a;font-size:16px}
-  .ai-analysis p,.ai-tech p{margin:0;color:#334155;font-size:14px;line-height:1.7}
+  .ai-analysis p{margin:0;color:#334155;font-size:14px;line-height:1.7}
+  .ai-tech p{margin:0 0 14px;color:#334155;font-size:14px;line-height:1.7}
+  .ai-tech p:last-child{margin-bottom:0}
   .ai-grid-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:16px 0}
   .ai-panel{border:1px solid #e2e8f0;border-radius:9px;padding:19px 20px;background:#fff}
   .ai-panel ul,.ai-analysis ul{margin:0;padding-left:20px}
@@ -410,6 +412,23 @@
 
   const renderList = items => Array.isArray(items) && items.length
     ? `<ul>${items.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : '';
+
+  const renderParagraphs = value => String(value || '')
+    .split(/\n\s*\n/)
+    .filter(Boolean)
+    .map(p => `<p>${esc(p.trim())}</p>`)
+    .join('');
+
+  const getIncibeIdentifier = alerta => {
+    const source = [
+      alerta?.identificador,
+      alerta?.id,
+      alerta?.descripcion,
+      alerta?.detalle
+    ].filter(Boolean).join(' ');
+    const match = source.match(/\bINCIBE-\d{4}-\d+\b/i);
+    return match ? match[0].toUpperCase() : 'INCIBE';
+  };
 
   const fetchJson = async (url, fallback) => {
     try {
@@ -538,7 +557,7 @@
 
         <section class="ai-tech">
           <h3>🧠 Análisis técnico de FraudeDigital</h3>
-          <p>${esc(ed.analisis_tecnico)}</p>
+          ${renderParagraphs(ed.analisis_tecnico)}
         </section>
 
         ${Array.isArray(ed.evidencias) && ed.evidencias.length ? `
@@ -597,7 +616,7 @@
           <div class="ai-card-top">
             <div class="ai-card-mainhead">
               <div class="ai-card-badges">
-                <span class="ai-alert-number">Alerta ${String(index + 1).padStart(2, '0')} · INCIBE</span>
+                <span class="ai-alert-number">${esc(getIncibeIdentifier(a))}</span>
                 ${index === 0 ? '<span class="ai-badge ai-badge-new">Nuevo</span>' : ''}
                 ${published ? '<span class="ai-badge ai-badge-published">✓ Análisis publicado</span>' : '<span class="ai-badge ai-badge-study">⌛ En estudio</span>'}
                 ${published && ed.nivel_riesgo ? `<span class="ai-badge ai-badge-risk">Riesgo ${esc(ed.nivel_riesgo)}</span>` : ''}
