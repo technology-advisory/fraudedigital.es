@@ -1,6 +1,6 @@
 {
-  "actualizado": "2026-09-29T23:19:00+02:00",
-  "version": 6,
+  "actualizado": "2026-10-01T19:16:00+02:00",
+  "version": 7,
   "descripcion": "Capa editorial independiente de FraudeDigital.es con análisis técnico ampliado a partir de las evidencias visuales de cada campaña.",
   "analisis": {
     "suplantan-la-policia-nacional-la-guardia-civil-y-incibe-traves-de-notificaciones": {
@@ -754,6 +754,106 @@
           "titulo": "Perfil genérico de soporte y botón de confirmación",
           "senal": "El remitente utiliza la identidad genérica «Customer Support», apariencia corporativa y una llamada a la acción como «CONFIRM BOOKING INFO».",
           "analisis": "La etiqueta de empresa, el diseño del perfil y el botón no acreditan la identidad del hotel. La reserva debe verificarse desde la aplicación, web o teléfono oficial obtenidos por separado."
+        }
+      ]
+    },
+    "campana-de-smishing-suplantando-la-seguridad-social": {
+      "estado": "publicado",
+      "fecha_publicacion": "2026-08-19",
+      "autor": "FraudeDigital.es",
+      "nivel_riesgo": "alto",
+      "tipo": "Smishing con suplantación de la Seguridad Social / TGSS",
+      "objetivo": "Robar datos personales y bancarios mediante una falsa actualización y una supuesta prestación económica",
+      "canales": [
+        "SMS",
+        "Sitio web fraudulento"
+      ],
+      "resumen_ejecutivo": "La campaña comienza con SMS que suplantan a la Tesorería General de la Seguridad Social (TGSS) y anuncian una supuesta actualización pendiente. El enlace dirige a una web fraudulenta que imita la identidad de la Seguridad Social. El recorrido introduce una falsa verificación de seguridad, solicita DNI/NIE, presenta una supuesta prestación pendiente de cobro por 305,85 € y continúa recopilando datos personales hasta solicitar los datos de la tarjeta para efectuar un supuesto ingreso. La secuencia está diseñada para que cada paso legitime el siguiente y la víctima entregue progresivamente información de mayor sensibilidad.",
+      "como_identificarlo": [
+        "El SMS comunica una actualización pendiente de la TGSS e incluye un enlace para gestionarla.",
+        "La URL utiliza un dominio que intenta parecer relacionado con la Seguridad Social, pero no corresponde a sus canales oficiales.",
+        "La web introduce una falsa comprobación de seguridad con la casilla «No soy un robot».",
+        "Se solicita DNI/NIE para consultar una supuesta ayuda o prestación.",
+        "La página presenta una cantidad concreta pendiente de cobro para aumentar la credibilidad del engaño.",
+        "El proceso continúa solicitando más datos personales y termina pidiendo los datos de la tarjeta.",
+        "La identidad visual, logotipos o una supuesta verificación de seguridad no demuestran que el dominio sea legítimo."
+      ],
+      "riesgos": [
+        "Robo de DNI/NIE y otros datos identificativos.",
+        "Compromiso de los datos de la tarjeta bancaria.",
+        "Operaciones o cargos no autorizados.",
+        "Suplantación de identidad.",
+        "Nuevos intentos de phishing, smishing o vishing utilizando los datos recopilados.",
+        "Fraudes posteriores más creíbles al combinar identidad, domicilio, teléfono y datos financieros."
+      ],
+      "que_hacer": [
+        "No pulses el enlace recibido por SMS y no respondas al mensaje.",
+        "Verifica cualquier trámite accediendo directamente a IMPORTASS o a la Sede Electrónica de la Seguridad Social.",
+        "Bloquea al remitente y conserva capturas, URL y mensajes como evidencias antes de eliminarlos.",
+        "Si facilitaste datos personales, permanece atento a comunicaciones posteriores que utilicen esa información.",
+        "Si facilitaste datos bancarios o de tarjeta, contacta cuanto antes con tu entidad bancaria por sus canales oficiales.",
+        "Revisa los movimientos y comunica cualquier operación que no reconozcas.",
+        "Presenta denuncia si tus datos se han utilizado fraudulentamente o has sufrido un perjuicio.",
+        "Contacta con el 017 de INCIBE si necesitas asesoramiento."
+      ],
+      "analisis_tecnico": "La campaña utiliza una cadena de ingeniería social progresiva. El SMS no intenta obtener toda la información en el primer contacto: introduce una supuesta gestión pendiente de la TGSS y traslada a la víctima a un entorno web controlado por el atacante. Esta separación entre mensaje y captura de datos permite que la página falsa asuma el papel de una sede electrónica y aumente la sensación de legitimidad.\n\nLa primera pantalla web utiliza una «Verificación de seguridad» y una casilla «No soy un robot». Este elemento funciona como teatro de seguridad: una comprobación de este tipo puede existir en cualquier web y no acredita quién controla el dominio. Su función dentro del recorrido es reducir la desconfianza antes de solicitar información identificativa.\n\nA continuación se presenta una supuesta «Asistencia para la adaptación energética 2026» y se solicita el DNI/NIE. Después, la web afirma haber localizado una prestación pendiente y muestra una estimación detallada que suma 305,85 €. La cantidad exacta, el desglose y la barra de lectura de expediente aportan una apariencia de personalización y procedimiento administrativo. Sin embargo, todos esos elementos son contenido de la propia página fraudulenta y no prueban que exista un expediente real.\n\nEl recorrido continúa solicitando información adicional y finalmente los datos de la tarjeta bajo el pretexto de realizar el ingreso. Este cambio es especialmente significativo: una supuesta prestación económica se convierte en una petición de datos financieros. La estrategia defensiva más eficaz es romper la cadena antes de entrar en el enlace y verificar cualquier trámite iniciando de forma independiente el acceso a los canales oficiales de la Seguridad Social.",
+      "indicadores_clave": [
+        "SMS de actualización pendiente",
+        "Suplantación TGSS",
+        "Dominio no oficial",
+        "Falsa verificación",
+        "DNI/NIE",
+        "Prestación de 305,85 €",
+        "Recopilación progresiva",
+        "Datos de tarjeta"
+      ],
+      "relacionadas": [
+        "la-agencia-tributaria-no-ha-emitido-ninguna-comunicacion-dirigida-usted",
+        "mi-carpeta-ciudadana-no-esta-enviando-notificaciones-los-ciudadanos-para-recibir",
+        "correos-y-sms-suplantan-la-dgt-para-robar-tus-datos-con-falsas-multas"
+      ],
+      "evidencias": [
+        {
+          "imagen": "img/incibe/campana-de-smishing-suplantando-la-seguridad-social/evidencia-01.jpg",
+          "titulo": "SMS con falsa actualización pendiente",
+          "senal": "El mensaje se presenta como Seguridad Social y dirige a un enlace para gestionar un supuesto trámite pendiente.",
+          "analisis": "El enlace convierte una notificación breve en el punto de entrada al fraude. La gestión debe comprobarse siempre desde un canal oficial iniciado por el usuario."
+        },
+        {
+          "imagen": "img/incibe/campana-de-smishing-suplantando-la-seguridad-social/evidencia-02.jpg",
+          "titulo": "Segunda variante del SMS fraudulento",
+          "senal": "La campaña utiliza más de una variante de mensaje y diferentes direcciones web con la misma finalidad.",
+          "analisis": "El texto o la URL pueden cambiar. El patrón estable es la suplantación de la TGSS, una gestión inesperada y un enlace externo."
+        },
+        {
+          "imagen": "img/incibe/campana-de-smishing-suplantando-la-seguridad-social/evidencia-03.jpg",
+          "titulo": "Falsa verificación de seguridad",
+          "senal": "La web muestra «Verificación de seguridad» y una casilla «No soy un robot».",
+          "analisis": "Un control visual de este tipo no acredita la identidad del sitio. Se utiliza para generar confianza antes de solicitar información sensible."
+        },
+        {
+          "imagen": "img/incibe/campana-de-smishing-suplantando-la-seguridad-social/evidencia-04.jpg",
+          "titulo": "Solicitud de DNI/NIE",
+          "senal": "La página presenta una supuesta ayuda de adaptación energética y solicita el documento identificativo.",
+          "analisis": "La captura del DNI/NIE inicia la construcción de un perfil de identidad y prepara una respuesta aparentemente personalizada en la siguiente fase."
+        },
+        {
+          "imagen": "img/incibe/campana-de-smishing-suplantando-la-seguridad-social/evidencia-05.jpg",
+          "titulo": "Falsa prestación pendiente de 305,85 €",
+          "senal": "La web muestra un supuesto expediente, un desglose de importes y un total pendiente de cobro de 305,85 €.",
+          "analisis": "La cifra exacta y el desglose aportan falsa precisión. Son datos generados por la página y no demuestran que exista una prestación real."
+        },
+        {
+          "imagen": "img/incibe/campana-de-smishing-suplantando-la-seguridad-social/evidencia-06.jpg",
+          "titulo": "Recopilación adicional de datos personales",
+          "senal": "Tras solicitar la transferencia, el fraude continúa ampliando la información personal de la víctima.",
+          "analisis": "La recopilación por etapas normaliza cada nueva petición y aumenta el valor del perfil obtenido para posibles fraudes posteriores."
+        },
+        {
+          "imagen": "img/incibe/campana-de-smishing-suplantando-la-seguridad-social/evidencia-07.jpg",
+          "titulo": "Solicitud final de datos de tarjeta",
+          "senal": "El proceso termina solicitando información de la tarjeta para realizar el supuesto ingreso.",
+          "analisis": "La petición de datos financieros revela el objetivo final. Una prestación legítima no debe verificarse siguiendo un enlace recibido por SMS."
         }
       ]
     },
